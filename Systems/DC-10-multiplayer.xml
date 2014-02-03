@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas DC-10 -->
+<!-- Multiplayer-broadcast properties -->
+
+<!-- This is a custom XML specification parsed by Nasal scripts, not standardized -->
+
+<PropertyList>
+
+	<!-- Integers -->
+	<reference>
+		<type>int</type>
+		<index type="int">0</index>
+		<property>systems/electrical/outputs/nav-lights</property>
+	</reference>
+	<reference>
+		<type>int</type>
+		<index type="int">1</index>
+		<property>systems/electrical/outputs/beacon[0]</property>
+	</reference>
+	<reference>
+		<type>int</type>
+		<index type="int">2</index>
+		<property>systems/electrical/outputs/beacon[1]</property>
+	</reference>
+	<reference>
+		<type>int</type>
+		<index type="int">3</index>
+		<property>systems/electrical/outputs/strobe[0]</property>
+	</reference>
+	<reference>
+		<type>int</type>
+		<index type="int">4</index>
+		<property>systems/electrical/outputs/strobe[1]</property>
+	</reference>
+	<reference>
+		<type>int</type>
+		<index type="int">5</index>
+		<property>systems/electrical/outputs/landing-light-port</property>
+	</reference>
+	<reference>
+		<type>int</type>
+		<index type="int">6</index>
+		<property>systems/electrical/outputs/landing-light-nose[0]</property>
+	</reference>
+	<reference>
+		<type>int</type>
+		<index type="int">7</index>
+		<property>systems/electrical/outputs/landing-light-nose[1]</property>
+	</reference>
+	<reference>
+		<type>int</type>
+		<index type="int">8</index>
+		<property>systems/electrical/outputs/landing-light-stbd</property>
+	</reference>
+	<reference>
+		<type>int</type>
+		<index type="int">9</index>
+		<property>systems/electrical/outputs/logo-lights</property>
+	</reference>
+
+	<!-- Floats -->
+	<reference>
+		<type>float</type>
+		<index type="int">0</index>
+		<property>surface-positions/slat-pos-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">1</index>
+		<property>surface-positions/spoiler-inner-pos-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">2</index>
+		<property>surface-positions/left-spoiler-outer-pos-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">3</index>
+		<property>surface-positions/right-spoiler-outer-pos-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">4</index>
+		<property>engines/engine[0]/reverser-pos-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">5</index>
+		<property>engines/engine[1]/reverser-pos-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">6</index>
+		<property>engines/engine[2]/reverser-pos-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">7</index>
+		<property>sim/model/door-positions/pax-l1/position-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">8</index>
+		<property>sim/model/door-positions/pax-l2/position-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">9</index>
+		<property>sim/model/door-positions/pax-l3/position-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">10</index>
+		<property>sim/model/door-positions/pax-l4/position-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">11</index>
+		<property>sim/model/door-positions/pax-r1/position-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">12</index>
+		<property>sim/model/door-positions/pax-r2/position-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">13</index>
+		<property>sim/model/door-positions/pax-r3/position-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">14</index>
+		<property>sim/model/door-positions/pax-r4/position-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">15</index>
+		<property>sim/model/door-positions/pax-l1/position-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">16</index>
+		<property>sim/model/door-positions/cargo-fwd/position-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">17</index>
+		<property>sim/model/door-positions/cargo-aft/position-norm</property>
+	</reference>
+	<reference>
+		<type>float</type>
+		<index type="int">18</index>
+		<property>sim/model/door-positions/cargo-main/position-norm</property>
+	</reference>
+	<reference> <!-- Boom for KC-10A -->
+		<type>float</type>
+		<index type="int">19</index>
+		<property>sim/model/door-positions/boom/position-norm</property>
+	</reference>
+
+	<!-- Strings -->
+	<reference> <!-- Configuration for DC-10-30CF -->
+		<type>string</type>
+		<index type="int">0</index>
+		<property>sim/model/configuration</property>
+	</reference>
+
+</PropertyList>

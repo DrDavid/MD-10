@@ -1,0 +1,915 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>cockpit.ac</path>
+	
+			  <animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>chrome1.png</texture>
+<object-name>gearlever.glass</object-name>
+</animation>
+
+
+
+	<!-- Throttle quadrant -->
+	<animation>
+		<name>Engine 1 throttle lever pick</name>
+		<type>pick</type>
+		<object-name>throttle.1</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/throttle</property>
+				<step type="double">0.02</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/throttle</property>
+				<step type="double">-0.02</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 1 throttle lever</name>
+		<type>rotate</type>
+		<object-name>throttle.1</object-name>
+		<object-name>reverse.1</object-name>
+		<property>controls/engines/engine[0]/throttle</property>
+		<factor>40</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-27.1594</x-m>
+			<y-m>0.246</y-m>
+			<z-m>6.6700</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Engine 1 reverser lever pick</name>
+		<type>pick</type>
+		<object-name>reverse.1</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[0]/reverser</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 1 reverser lever</name>
+		<type>rotate</type>
+		<object-name>reverse.1</object-name>
+		<property>engines/engine[0]/reverser-pos-norm</property>
+		<interpolation>
+			<entry><ind>0.6</ind><dep>70.0</dep></entry>
+			<entry><ind>0.0</ind><dep>0.0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-27.1173</x-m>
+			<y-m>0</y-m>
+			<z-m>6.8224</z-m>
+		</center>
+	</animation>
+	
+		<animation>
+		<name>Engine 2 throttle lever pick</name>
+		<type>pick</type>
+		<object-name>throttle.2</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[1]/throttle</property>
+				<step type="double">0.02</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[1]/throttle</property>
+				<step type="double">-0.02</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 2 throttle lever</name>
+		<type>rotate</type>
+		<object-name>throttle.2</object-name>
+		<object-name>reverse.2</object-name>
+		<property>controls/engines/engine[1]/throttle</property>
+		<factor>40</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-27.1594</x-m>
+			<y-m>0.246</y-m>
+			<z-m>6.6700</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Engine 2 reverser lever pick</name>
+		<type>pick</type>
+		<object-name>reverse.2</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[1]/reverser</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 2 reverser lever</name>
+		<type>rotate</type>
+		<object-name>reverse.2</object-name>
+		<property>engines/engine[1]/reverser-pos-norm</property>
+		<interpolation>
+			<entry><ind>0.6</ind><dep>70.0</dep></entry>
+			<entry><ind>0.0</ind><dep>0.0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-27.1173</x-m>
+			<y-m>0</y-m>
+			<z-m>6.8224</z-m>
+		</center>
+	</animation>
+	
+	<animation>
+		<name>Engine 3 throttle lever pick</name>
+		<type>pick</type>
+		<object-name>throttle.3</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[2]/throttle</property>
+				<step type="double">0.02</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[2]/throttle</property>
+				<step type="double">-0.02</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 3 throttle lever</name>
+		<type>rotate</type>
+		<object-name>throttle.3</object-name>
+		<object-name>reverse.3</object-name>
+		<property>controls/engines/engine[2]/throttle</property>
+		<factor>40</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-27.1594</x-m>
+			<y-m>0.246</y-m>
+			<z-m>6.6700</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Engine 3 reverser lever pick</name>
+		<type>pick</type>
+		<object-name>reverse.3</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[2]/reverser</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 3 reverser lever</name>
+		<type>rotate</type>
+		<object-name>reverse.3</object-name>
+		<property>engines/engine[2]/reverser-pos-norm</property>
+		<interpolation>
+			<entry><ind>0.6</ind><dep>70.0</dep></entry>
+			<entry><ind>0.0</ind><dep>0.0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-27.1173</x-m>
+			<y-m>0</y-m>
+			<z-m>6.8224</z-m>
+		</center>
+	</animation>
+	
+	
+	<animation>
+ <type>translate</type>
+ <object-name>pedals.left</object-name>
+ <property>controls/flight/rudder</property>
+ <factor>0.08</factor>
+ <axis>
+  <x>1.0</x>
+  <y>0.0</y>
+  <z>0.0</z>
+ </axis>
+</animation>
+
+<animation>
+ <type>translate</type>
+ <object-name>pedals.right</object-name>
+ <property>controls/flight/rudder</property>
+ <factor>-0.08</factor>
+ <axis>
+  <x>1.0</x>
+  <y>0.0</y>
+  <z>0.0</z>
+ </axis>
+</animation>
+
+<!-- CAPTAIN -->
+<!-- Yokes -->
+
+<animation>
+ <type>rotate</type>
+ <object-name>yoke.left.chart</object-name>
+ <object-name>yoke.left.column</object-name>
+ <object-name>yoke.left</object-name>
+   <object-name>yoke.noseup</object-name>
+   <object-name>yoke.nosedown</object-name>
+    <object-name>yoke.autodsg</object-name>
+        <object-name>yoke.piece</object-name>
+  <object-name>autopilot_disengage</object-name>
+ <property>controls/flight/elevator</property>
+ <factor>15</factor>
+ <center>
+  <x-m>-27.362</x-m>
+  <y-m>0</y-m>
+  <z-m>6.3659</z-m>
+ </center>
+ <axis>
+  <x>0.0</x>
+  <y>-1.0</y>
+  <z>0.0</z>
+ </axis>
+</animation>
+
+<animation>
+ <type>rotate</type>
+ <object-name>yoke.left</object-name>
+  <object-name>yoke.noseup</object-name>
+   <object-name>yoke.nosedown</object-name>
+    <object-name>yoke.autodsg</object-name>
+            <object-name>yoke.piece</object-name>
+  <object-name>autopilot_disengage</object-name>
+ <property>controls/flight/aileron</property>
+ <factor>45</factor>
+ <center>
+  <x-m>-27.3152</x-m>
+  <y-m>-0.524</y-m>
+  <z-m>6.9135</z-m>
+ </center>
+ <axis>
+  <x>-1.0</x>
+  <y>0.0</y>
+  <z>0.0</z>
+ </axis>
+</animation>
+
+<!-- Cutoff switches -->
+	<animation>
+		<name>Engine 1 cutoff switch pick</name>
+		<type>pick</type>
+		<object-name>Eng1Cutoff</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[0]/cutoff</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 1 cutoff switch</name>
+		<type>rotate</type>
+		<object-name>Eng1Cutoff</object-name>
+		<property>controls/engines/engine[0]/cutoff</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-30</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-27.0496</x-m>
+			<y-m>0</y-m>
+			<z-m>6.7176</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Engine 2 cutoff switch pick</name>
+		<type>pick</type>
+		<object-name>Eng2Cutoff</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[1]/cutoff</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 2 cutoff switch</name>
+		<type>rotate</type>
+		<object-name>Eng2Cutoff</object-name>
+		<property>controls/engines/engine[1]/cutoff</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-30</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-27.0496</x-m>
+			<y-m>0</y-m>
+			<z-m>6.7176</z-m>
+		</center>
+	</animation>
+	
+		<animation>
+		<name>Engine 3 cutoff switch pick</name>
+		<type>pick</type>
+		<object-name>Eng3Cutoff</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[2]/cutoff</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Engine 3 cutoff switch</name>
+		<type>rotate</type>
+		<object-name>Eng3Cutoff</object-name>
+		<property>controls/engines/engine[2]/cutoff</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-30</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-27.0496</x-m>
+			<y-m>0</y-m>
+			<z-m>6.7176</z-m>
+		</center>
+	</animation>
+	
+	  <animation>
+    <type>rotate</type>
+		<object-name>Tiller</object-name>
+		<condition>
+			<property>/controls/gear/gear-down</property>
+		</condition>
+    <property>gear/gear[0]/steering-norm</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m>-27.2143</x-m>
+      <y-m>-0.9685</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x> 0 </x> 
+      <y> 0 </y> 
+      <z> 1 </z> 
+    </axis>
+  </animation>
+  
+  	<!-- Gear lever -->
+	<animation>
+		<name>Gear lever rotate</name>
+		<type>rotate</type>
+		<object-name>gearlever</object-name>
+		<object-name>gearlever.glass</object-name>
+		<property>controls/gear/gear-down</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-60</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-27.5502</x-m>
+			<y-m>-0.2913</y-m>
+			<z-m>6.9061</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Gear lever pick</name>
+		<type>pick</type>
+		<object-name>gearlever</object-name>
+		<object-name>gearlever.glass</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/gear/gear-down</property>
+			</binding>
+		</action>
+	</animation>
+  
+  
+  
+  
+<!-- MCP -->
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>HDG.led1</object-name>
+		<property>controls/autoflight/heading-select</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>HDG.led2</object-name>
+		<property>controls/autoflight/heading-select</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>HDG.led3</object-name>
+		<property>controls/autoflight/heading-select</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+		<animation>
+		<type>textranslate</type>
+		<object-name>IAS.led1</object-name>
+		<property>autopilot/settings/target-speed-kt</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>IAS.led2</object-name>
+		<property>autopilot/settings/target-speed-kt</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>IAS.led3</object-name>
+		<property>autopilot/settings/target-speed-kt</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<name>Speed knob pick</name>
+		<type>pick</type>
+		<object-name>SpdKnob1</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script><![CDATA[
+				 var setting = getprop("autopilot/settings/speed-mode");
+				 if (setting == "mach")
+				  {
+				  var newSpeed = getprop("autopilot/settings/target-speed-mach") + 0.01;
+				  if (newSpeed <= 9.99)
+				   {
+				   setprop("autopilot/settings/target-speed-mach", newSpeed);
+				   }
+				  }
+				 else
+				  {
+				  var newSpeed = getprop("autopilot/settings/target-speed-kt") + 1;
+				  if (newSpeed <= 999)
+				   {
+				   setprop("autopilot/settings/target-speed-kt", newSpeed);
+				   }
+				  }
+				]]></script>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script><![CDATA[
+				 var setting = getprop("autopilot/settings/speed-mode");
+				 if (setting == "mach")
+				  {
+				  var newSpeed = getprop("autopilot/settings/target-speed-mach") - 0.01;
+				  if (newSpeed >= 0)
+				   {
+				   setprop("autopilot/settings/target-speed-mach", newSpeed);
+				   }
+				  }
+				 else
+				  {
+				  var newSpeed = getprop("autopilot/settings/target-speed-kt") - 1;
+				  if (newSpeed >= 0)
+				   {
+				   setprop("autopilot/settings/target-speed-kt", newSpeed);
+				   }
+				  }
+				]]></script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Speed knob kt rotate</name>
+		<type>rotate</type>
+		<object-name>SpdKnob</object-name>
+		<property>autopilot/settings/target-speed-kt</property>
+		<factor>2</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-27.3758</x-m>
+			<y-m>-0.0924</y-m>
+			<z-m>7.1214</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Speed knob Mach rotate</name>
+		<type>rotate</type>
+		<object-name>SpdKnob</object-name>
+		<property>autopilot/settings/target-speed-mach</property>
+		<factor>2000</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-27.3758</x-m>
+			<y-m>-0.0924</y-m>
+			<z-m>7.1214</z-m>
+		</center>
+	</animation>
+	
+		<animation>
+		<name>IAS/Mach toggle</name>
+		<type>pick</type>
+		<object-name>IasMach.btn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>autopilot/settings/speed-mode</property>
+				<value>knots</value>
+				<value>mach</value>
+			</binding>
+		</action>
+	</animation>
+		<animation>
+		<name>Mach setting select</name>
+		<type>select</type>
+		<object-name>mach.ind</object-name>
+		<object-name>MACH.led1</object-name>
+		<object-name>MACH.led2</object-name>
+		<object-name>MACH.led3</object-name>
+		<condition>
+			<equals>
+				<property>autopilot/settings/speed-mode</property>
+				<value>mach</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<name>IAS setting select</name>
+		<type>select</type>
+		<object-name>ias.ind</object-name>
+		<object-name>IAS.led1</object-name>
+		<object-name>IAS.led2</object-name>
+		<object-name>IAS.led3</object-name>
+		<condition>
+			<equals>
+				<property>autopilot/settings/speed-mode</property>
+				<value>knots</value>
+			</equals>
+		</condition>
+	</animation>
+	
+		<animation>
+		<name>Mach setting 1's</name>
+		<type>textranslate</type>
+		<object-name>MACH.led1</object-name>
+		<property>autopilot/settings/target-speed-mach</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Mach setting .1's</name>
+		<type>textranslate</type>
+		<object-name>MACH.led2</object-name>
+		<property>autopilot/settings/target-speed-mach</property>
+		<step>0.1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Mach setting .01's</name>
+		<type>textranslate</type>
+		<object-name>MACH.led3</object-name>
+		<property>autopilot/settings/target-speed-mach</property>
+		<factor>10</factor>
+		<step>0.01</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	
+	
+		<animation>
+		<name>Altitude setting 10,000's</name>
+		<type>textranslate</type>
+		<object-name>alt.circle1</object-name>
+				<property>controls/autoflight/altitude-select</property>
+		<factor>0.00001</factor>
+		<step>10000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Altitude setting 1,000's</name>
+		<type>textranslate</type>
+		<object-name>alt.circle2</object-name>
+				<property>controls/autoflight/altitude-select</property>
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Altitude setting 100's</name>
+		<type>textranslate</type>
+		<object-name>alt.circle3</object-name>
+				<property>controls/autoflight/altitude-select</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Altitude setting 10's</name>
+		<type>textranslate</type>
+		<object-name>alt.circle4</object-name>
+				<property>controls/autoflight/altitude-select</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Altitude setting 1's</name>
+		<type>rotate</type>
+		<object-name>alt.circle5</object-name>
+				<property>controls/autoflight/altitude-select</property>
+		<factor>36</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>SpdKnob</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/autoflight/autothrottle-engage[0]</property>
+			</binding>
+						<binding>
+				<command>property-toggle</command>
+				<property>controls/autoflight/autothrottle-engage[1]</property>
+			</binding>
+		</action>
+		<action>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+		<property>autopilot/settings/target-speed-kt</property>
+				<step>2</step>
+			</binding>
+		</action>
+				<action>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+		<property>autopilot/settings/target-speed-kt</property>
+				<step>-2</step>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>auto.engage</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/autopilot[0]/engage-mode</property>
+				<step>2</step>
+				<max>2</max>
+				<min>-2</min>
+			</binding>
+		</action>
+		</animation>
+		
+			<animation>
+		<name>IAS setting select</name>
+		<type>select</type>
+		<object-name>IAS.led1</object-name>
+		<object-name>IAS.led2</object-name>
+		<object-name>IAS.led3</object-name>
+		<condition>
+			<equals>
+				<property>controls/autoflight/autothrottle-engage[0]</property>
+				<value>true</value>
+			</equals>
+		</condition>
+	</animation>
+	
+				<animation>
+		<name>IAS setting select</name>
+		<type>select</type>
+		<object-name>at_dis1</object-name>
+		<condition>
+			<equals>
+				<property>controls/autoflight/autothrottle-engage[0]</property>
+				<value>false</value>
+			</equals>
+		</condition>
+	</animation>
+	
+		<!-- Disengage -->
+	<animation>
+		<type>pick</type>
+		<object-name>auto.engage</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/autopilot[0]/engage-mode</property>
+				<step>-2</step>
+				<max>2</max>
+				<min>-2</min>
+			</binding>
+		</action>
+		</animation>
+	<animation>
+		<name>Disengage bar</name>
+		<type>translate</type>
+		<object-name>AP.disengage</object-name>
+				<property>controls/autoflight/autopilot[0]/engage-mode</property>
+		<factor>0.013</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+	
+
+</PropertyList>

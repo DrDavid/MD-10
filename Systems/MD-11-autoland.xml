@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas DC-10 -->
+<!-- Autoland system -->
+
+<!-- The autoland is a separate system to save complexity -->
+
+<!--
+ Properties:
+ /autopilot/autoland/engaged			on/off
+ /autopilot/autoland/align-phase		align phase
+ /autopilot/autoland/flare-phase		flare phase
+ /autopilot/autoland/rollout-phase		rollout phase
+ /autopilot/autoland/target-pitch-deg		internal target pitch
+ /fcs/autoland/aileron-cmd-norm			aileron command position
+ /fcs/autoland/elevator-cmd-norm		elevator command position
+
+-->
+
+<PropertyList>
+
+	<!-- Logic -->
+	<logic>
+		<name>Autoland on logic</name>
+		<input>
+			<and>
+				<equals>
+					<property>controls/autoflight/vertical-mode</property>
+					<value>4</value>
+				</equals>
+				<or>
+					<property>autopilot/internal[0]/autoflight-engaged</property>
+					<property>autopilot/internal[1]/autoflight-engaged</property>
+				</or>
+			</and>
+		</input>
+		<output>autopilot/autoland/engaged</output>
+	</logic>
+	<logic>
+		<name>Align phase logic</name>
+		<input>
+			<and>
+				<property>autopilot/autoland/engaged</property>
+				<less-than>
+					<property>instrumentation/radar-altimeter[0]/radar-altitude-ft</property>
+					<value>100</value>
+				</less-than>
+				<not>
+					<property>autopilot/autoland/flare-phase</property>
+				</not>
+				<not>
+					<property>autopilot/autoland/rollout-phase</property>
+				</not>
+			</and>
+		</input>
+		<output>autopilot/autoland/align-phase</output>
+	</logic>
+	<logic>
+		<name>Flare phase logic</name>
+		<input>
+			<and>
+				<property>autopilot/autoland/engaged</property>
+				<!-- This is how the real thing is programmed, but it's not particularly reliable in FG -->
+				<!--less-than>
+					<property>instrumentation/radar-altimeter[0]/radar-altitude-ft</property>
+					<value>200</value>
+				</less-than-->
+				<less-than>
+					<property>position/altitude-agl-ft</property>
+					<value>50</value>
+				</less-than>
+				<not>
+					<property>gear/gear[2]/wow</property>
+				<not>
+				</not>
+					<property>gear/gear[4]/wow</property>
+				</not>
+				<not>
+					<property>autopilot/autoland/rollout-phase</property>
+				</not>
+			</and>
+		</input>
+		<output>autopilot/autoland/flare-phase</output>
+	</logic>
+	<logic>
+		<name>Rollout phase logic</name>
+		<input>
+			<and>
+				<property>autopilot/autoland/engaged</property>
+				<property>gear/gear[2]/wow</property>
+				<property>gear/gear[4]/wow</property>
+				<not>
+					<property>gear/gear[0]/wow</property>
+				</not>
+			</and>
+		</input>
+		<output>autopilot/autoland/rollout-phase</output>
+	</logic>
+
+	<!-- PHASE 1 : Align -->
+	<pid-controller>
+		<name>Wing leveler</name>
+		<debug type="bool">false</debug>
+		<enable>
+			<condition>
+				<or>
+					<property>autopilot/autoland/align-phase</property>
+					<property>autopilot/autoland/flare-phase</property>
+					<property>autopilot/autoland/rollout-phase</property>
+				</or>
+			</condition>
+		</enable>
+		<input>
+			<property>instrumentation/attitude-indicator[0]/indicated-roll-deg</property>
+		</input>
+		<reference>
+			<value>0</value>
+		</reference>
+		<output>fcs/autoland/aileron-cmd-norm</output>
+		<config>
+			<Kp>0.5</Kp>
+			<beta>1</beta>
+			<alpha>0.1</alpha>
+			<gamma>0</gamma>
+			<Ti>10</Ti>
+			<Td>0.00001</Td>
+			<u_min>-1</u_min>
+			<u_max>1</u_max>
+		</config>
+	</pid-controller>
+	<pi-simple-controller>
+		<name>ILS rudder controller</name>
+		<debug type="bool">false</debug>
+		<enable>
+			<condition>
+				<or>
+					<property>autopilot/autoland/align-phase</property>
+					<property>autopilot/autoland/flare-phase</property>
+					<property>autopilot/autoland/rollout-phase</property>
+				</or>
+			</condition>
+		</enable>
+		<input>
+			<property>autopilot/internal[0]/nav-heading-error-deg</property>
+			<scale>0.5</scale>
+		</input>
+		<reference>
+			<value>0</value>
+		</reference>
+		<output>fcs/autoland/rudder-cmd-norm</output>
+		<config>
+			<Kp>-0.6</Kp>
+			<Ki>0</Ki>
+		</config>
+		<min>-0.25</min>
+		<max>0.25</max>
+	</pi-simple-controller>
+
+	<!-- PHASE 2 : Flare -->
+	<filter>
+		<name>Flare pitch controller</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<condition>
+				<property>autopilot/autoland/flare-phase</property>
+			</condition>
+		</enable>
+		<input>
+			<value>1.5</value>
+		</input>
+		<output>
+			<property>autopilot/internal[0]/target-pitch-deg</property>
+			<property>autopilot/internal[1]/target-pitch-deg</property>
+		</output>
+	</filter>
+
+	<!-- PHASE 3 : Rollout -->
+	<!-- Slowly interpolate the target pitch -->
+	<filter>
+		<name>Rollout controller</name>
+		<type>noise-spike</type>
+		<debug type="bool">false</debug>
+		<max-rate-of-change>0.3</max-rate-of-change>
+		<enable>
+			<condition>
+				<property>autopilot/autoland/rollout-phase</property>
+			</condition>
+		</enable>
+		<input>
+			<value>-1</value>
+		</input>
+		<output>
+			<property>autopilot/internal[0]/target-pitch-deg</property>
+			<property>autopilot/internal[1]/target-pitch-deg</property>
+		</output>
+	</filter>
+
+</PropertyList>

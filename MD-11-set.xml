@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<PropertyList include="MD-11-main.xml">
+
+	<sim>
+		<description>Boeing/McDonnell Douglas MD-11</description>
+		<flight-model>yasim</flight-model>
+		<aero>MD-11</aero>
+
+		<model>
+
+		</model>
+
+		<weight n="1">
+			<name>Passengers/Baggage</name>
+		</weight>
+
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>McDonnell Douglas MD-11</label>
+				</menu>
+			</default>
+		</menubar>
+	</sim>
+
+</PropertyList>
