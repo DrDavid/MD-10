@@ -569,65 +569,6 @@
 	</animation>
 	
 	<animation>
-		<name>Speed knob pick</name>
-		<type>pick</type>
-		<object-name>SpdKnob1</object-name>
-		<action>
-			<button>0</button>
-			<button>3</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>nasal</command>
-				<script><![CDATA[
-				 var setting = getprop("autopilot/settings/speed-mode");
-				 if (setting == "mach")
-				  {
-				  var newSpeed = getprop("autopilot/settings/target-speed-mach") + 0.01;
-				  if (newSpeed <= 9.99)
-				   {
-				   setprop("autopilot/settings/target-speed-mach", newSpeed);
-				   }
-				  }
-				 else
-				  {
-				  var newSpeed = getprop("autopilot/settings/target-speed-kt") + 1;
-				  if (newSpeed <= 999)
-				   {
-				   setprop("autopilot/settings/target-speed-kt", newSpeed);
-				   }
-				  }
-				]]></script>
-			</binding>
-		</action>
-		<action>
-			<button>1</button>
-			<button>4</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>nasal</command>
-				<script><![CDATA[
-				 var setting = getprop("autopilot/settings/speed-mode");
-				 if (setting == "mach")
-				  {
-				  var newSpeed = getprop("autopilot/settings/target-speed-mach") - 0.01;
-				  if (newSpeed >= 0)
-				   {
-				   setprop("autopilot/settings/target-speed-mach", newSpeed);
-				   }
-				  }
-				 else
-				  {
-				  var newSpeed = getprop("autopilot/settings/target-speed-kt") - 1;
-				  if (newSpeed >= 0)
-				   {
-				   setprop("autopilot/settings/target-speed-kt", newSpeed);
-				   }
-				  }
-				]]></script>
-			</binding>
-		</action>
-	</animation>
-	<animation>
 		<name>Speed knob kt rotate</name>
 		<type>rotate</type>
 		<object-name>SpdKnob</object-name>
@@ -677,20 +618,7 @@
 			</binding>
 		</action>
 	</animation>
-		<animation>
-		<name>Mach setting select</name>
-		<type>select</type>
-		<object-name>mach.ind</object-name>
-		<object-name>MACH.led1</object-name>
-		<object-name>MACH.led2</object-name>
-		<object-name>MACH.led3</object-name>
-		<condition>
-			<equals>
-				<property>autopilot/settings/speed-mode</property>
-				<value>mach</value>
-			</equals>
-		</condition>
-	</animation>
+	
 	
 	<animation>
 		<name>IAS setting select</name>

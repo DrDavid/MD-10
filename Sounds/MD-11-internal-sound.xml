@@ -9,7 +9,7 @@
 	<!-- Engine 1 sound -->
 	<engine>
 		<name>Engine 1 sound 1 internal</name>
-		<path>Aircraft/DC-10-30/Sounds/737NG-jet.wav</path>
+		<path>Aircraft/MD-11/Sounds/737NG-jet.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -33,7 +33,7 @@
 	</engine>
 	<engine>
 		<name>Engine 1 sound 2 internal</name>
-		<path>Aircraft/DC-10-30/Sounds/737NG-jet2.wav</path>
+		<path>Aircraft/MD-11/Sounds/737NG-jet2.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -53,7 +53,7 @@
 	<!-- Engine 2 sound -->
 	<engine>
 		<name>Engine 2 sound 1 internal</name>
-		<path>Aircraft/DC-10-30/Sounds/737NG-jet.wav</path>
+		<path>Aircraft/MD-11/Sounds/737NG-jet.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -77,7 +77,7 @@
 	</engine>
 	<engine>
 		<name>Engine 2 sound 2 internal</name>
-		<path>Aircraft/DC-10-30/Sounds/737NG-jet2.wav</path>
+		<path>Aircraft/MD-11/Sounds/737NG-jet2.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -97,7 +97,7 @@
 	<!-- Engine 3 sound -->
 	<engine>
 		<name>Engine 3 sound 1 internal</name>
-		<path>Aircraft/DC-10-30/Sounds/737NG-jet.wav</path>
+		<path>Aircraft/MD-11/Sounds/737NG-jet.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -121,7 +121,7 @@
 	</engine>
 	<engine>
 		<name>Engine 3 sound 2 internal</name>
-		<path>Aircraft/DC-10-30/Sounds/737NG-jet2.wav</path>
+		<path>Aircraft/MD-11/Sounds/737NG-jet2.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
