@@ -248,18 +248,18 @@
 <model>
 <path>Aircraft/MD-11/Models/Lights/light-logo.xml</path>
 	<offsets>
-		<x-m>62.4380</x-m>
-		<y-m>-5.4934</y-m>
-		<z-m>3.3460</z-m>
+		<x-m>26.268</x-m>
+		<y-m>-5.1541</y-m>
+		<z-m>9.7902</z-m>
 	</offsets>
 </model> 
 
 <model>
 <path>Aircraft/MD-11/Models/Lights/light-logo2.xml</path>
 	<offsets>
-		<x-m>62.4380</x-m>
-		<y-m>5.4934</y-m>
-		<z-m>3.3460</z-m>
+		<x-m>26.268</x-m>
+		<y-m>5.1541</y-m>
+		<z-m>9.7902</z-m>
 	</offsets>
 </model> 
 
@@ -284,6 +284,7 @@
 		<z-m>1.4161</z-m>
 	</offsets>
 </model> 
+
 
 <animation>
 	<type>select</type>

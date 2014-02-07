@@ -13,7 +13,9 @@
             <cockpit type="int">3</cockpit>
             <model type="int">5</model>
         </rating>
-
+		<instrument-options>
+			<canvas-popup-enable type="bool">true</canvas-popup-enable>
+		</instrument-options>
 	<model>
 	    <door>
 		<position-x-m type="float">-22.647</position-x-m>
@@ -47,15 +49,6 @@
 
 	<instrumentation>
 	    <path>Aircraft/MD-11/Systems/MD-11-instrumentation.xml</path>
- <cdu>
-  <display>IDENT</display>
-  <ident>
-   <model>747-400</model>
-   <engines>-80C2B1F</engines>
-  </ident>
-  <input type="string"/>
-  <serviceable type="bool">true</serviceable>
- </cdu>
 	</instrumentation>
 
 	<sound>
@@ -215,25 +208,10 @@
     </sim>
 
     <autopilot>
-	<autoflight-serviceable type="bool">true</autoflight-serviceable>
+  <autoflight-serviceable type="bool">true</autoflight-serviceable>
 	<autoflight-serviceable type="bool">true</autoflight-serviceable>
 	<autothrottle-serviceable type="bool">true</autothrottle-serviceable>
 	<autothrottle-serviceable type="bool">true</autothrottle-serviceable>
-			<settings>
-			<autothrottle type="bool">false</autothrottle>
-			<engaged type="bool">false</engaged>
-			<flight-director type="bool">false</flight-director>
-			<speed-mode>knots</speed-mode>
-			<heading-bug-deg type="double">360</heading-bug-deg>
-			<target-speed-kt type="double">250</target-speed-kt>
-			<target-speed-mach type="double">0</target-speed-mach>
-			<target-altitude-ft type="double">0</target-altitude-ft>
-			<altitude-setting-ft type="double">10000</altitude-setting-ft>
-      <altitude-setting-m type="double">5000</altitude-setting-m>
-			<vertical-speed-fpm type="double">1800</vertical-speed-fpm>
-			<minimum-bank-deg type="double">-25</minimum-bank-deg>
-			<maximum-bank-deg type="double">25</maximum-bank-deg>
-		</settings>
     </autopilot>
 
     <consumables>
@@ -260,7 +238,7 @@
     </consumables>
 
     <controls>
-	<autoflight>
+    	<autoflight>
 	    <enable-mode-annunciators type="bool">true</enable-mode-annunciators>
 	    <autopilot>
 		<engage-mode type="int">0</engage-mode>
@@ -312,6 +290,9 @@
 	    <tiller-steer-deg type="double">0</tiller-steer-deg>
 	    <ABS-select type="int">0</ABS-select>
 	</gear>
+		<lighting>
+  <flood-panel-norm type="double">0.2</flood-panel-norm>
+	</lighting>
     </controls>
 
     <engines>
@@ -567,7 +548,7 @@
 	</keyboard>
     </input>
 
-    <nasal>
+  <nasal>
 	<MD11>
 	    <file>Aircraft/MD-11/Nasal/electrical.nas</file>
 	    <file>Aircraft/MD-11/Nasal/engines.nas</file>
@@ -575,7 +556,7 @@
 	    <file>Aircraft/MD-11/Nasal/doors.nas</file>
 	    <file>Aircraft/MD-11/Nasal/multiplayer.nas</file>
 	    <file>Aircraft/MD-11/Nasal/systems.nas</file>
-      <file>Aircraft/MD-11/Models/cockpit/instruments/ND/ND.nas</file>
+	    <file>Aircraft/MD-11/Models/cockpit/instruments/ND/ND.nas</file>
 	</MD11>
   	<tyresmoke>
 		<file>Aircraft/MD-11/Nasal/tyresmoke.nas</file>
@@ -583,6 +564,6 @@
 	   <walk>
  <file>Aircraft/MD-11/Nasal/walk.nas</file>
  </walk>
-    </nasal>
+</nasal>
 
 </PropertyList>
