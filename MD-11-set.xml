@@ -8,13 +8,6 @@
 		<flight-model>yasim</flight-model>
 		<aero>MD-11</aero>
 
-		<model>
-
-		</model>
-
-		<weight n="1">
-			<name>Passengers/Baggage</name>
-		</weight>
 
 		<menubar>
 			<default>
@@ -23,6 +16,35 @@
 				</menu>
 			</default>
 		</menubar>
+		
+		
+		         <weight n="1">
+            <!--  328 pax max @ 180 lbs + cargo -->
+            <name>Pax/Baggage</name>
+            <weight-lb type="double">44840</weight-lb>
+            <max-lb type="double">125530</max-lb>
+            <min-lb type="double">0</min-lb>
+        </weight>
 	</sim>
+
+    <instrumentation n="0">
+        <cdu n="0">
+            <ident n="0">
+                <model>MD-11</model>
+                <engines>Engine</engines>
+            </ident>
+        </cdu>
+    </instrumentation>
+
+    <autopilot n="0">
+        <constant>
+            <flare-base type="double">0.315</flare-base>
+			<flch-thrust type="double">0.85</flch-thrust>
+			<descent-profile-high-base type="double">0.13</descent-profile-high-base>
+			<descent-profile-high-rate type="double">-0.00094203</descent-profile-high-rate>
+			<descent-profile-low-base type="double">0.12</descent-profile-low-base>
+			<descent-profile-low-rate type="double">-0.00050725</descent-profile-low-rate>
+        </constant>
+    </autopilot>
 
 </PropertyList>

@@ -8,7 +8,7 @@
 
 <model>
 <path>Aircraft/MD-11/Models/Lights/greennav.xml</path>
-<name>greennav</name>     
+<name>GreenLight</name>     
    <condition>
 		<property>controls/lighting/nav-lights</property>
    </condition>
@@ -37,7 +37,7 @@
 
 <model>
 <path>Aircraft/MD-11/Models/Lights/rednav.xml</path>
-<name>rednav</name>     
+<name>RedLight</name>     
    <condition>
 		<property>controls/lighting/nav-lights</property>
    </condition>
@@ -89,16 +89,16 @@
  </offsets>
 </model>
 
-<animation>
-	<type>select</type>
-	<object-name>Strobelight.1</object-name>
-	<condition>
-		<equals>
-			<property>/sim/model/lights/strobe/state</property>
-			<value>1</value>
-		</equals>
-	</condition>
-</animation>
+    <animation>
+        <type>select</type>
+        <object-name>Strobelight.1</object-name>
+        <condition>
+            <greater-than>
+                <property>sim/multiplay/generic/int[0]</property>
+                <value>5</value>
+            </greater-than>
+        </condition>
+    </animation>
 
 	<!-- Strobe left-->
 
@@ -128,16 +128,16 @@
  </offsets>
 </model>
 
-<animation>
-	<type>select</type>
-	<object-name>Strobelight.2</object-name>
-	<condition>
-		<equals>
-			<property>/sim/model/lights/strobe/state</property>
-			<value>1</value>
-		</equals>
-	</condition>
-</animation>
+    <animation>
+        <type>select</type>
+        <object-name>Strobelight.2</object-name>
+        <condition>
+            <greater-than>
+                <property>sim/multiplay/generic/int[0]</property>
+                <value>5</value>
+            </greater-than>
+        </condition>
+    </animation>
 
 <!-- Beacon light -->
 
@@ -200,6 +200,7 @@
 
 
 <model>
+<name>nose.landing1</name>
 <path>Aircraft/MD-11/Models/Lights/landing-nose-fuselage.xml</path>
 	<offsets>
 		<x-m>-22.9504</x-m>
@@ -210,6 +211,7 @@
 
 
 <model>
+<name>nose.landing2</name>
 <path>Aircraft/MD-11/Models/Lights/landing-nose-fuselage.xml</path>
 	<offsets>
 		<x-m>-22.9504</x-m>
@@ -217,6 +219,31 @@
 		<z-m>4.9867</z-m>
 	</offsets>
 </model> 
+
+
+
+<model>
+<name>taxi1</name>
+<path>Aircraft/MD-11/Models/Lights/taxi-nose.xml</path>
+	<offsets>
+		<x-m>-20.3912</x-m>
+		<y-m>-0.1901</y-m>
+		<z-m>3.2395</z-m>
+	</offsets>
+</model> 
+
+
+<model>
+<name>taxi2</name>
+<path>Aircraft/MD-11/Models/Lights/taxi-nose.xml</path>
+	<offsets>
+		<x-m>-20.3912</x-m>
+		<y-m>0.1901</y-m>
+		<z-m>3.2395</z-m>
+	</offsets>
+</model> 
+
+
 
 <model>
 <path>Aircraft/MD-11/Models/Lights/light-cone.xml</path>
@@ -263,15 +290,16 @@
 	</offsets>
 </model> 
 
+
 <!-- Wing lights -->
 
 <model>
 <path>Aircraft/MD-11/Models/Lights/wing-light-right.xml</path>
 <name>wing-light-right</name>
 	<offsets>
-		<x-m>13.9957</x-m>
-		<y-m>3.0384</y-m>
-		<z-m>1.4161</z-m>
+		<x-m>-7.3573</x-m>
+		<y-m>2.9867</y-m>
+		<z-m>6.2788</z-m>
 	</offsets>
 </model> 
 
@@ -279,12 +307,11 @@
 <path>Aircraft/MD-11/Models/Lights/wing-light-left.xml</path>
 <name>wing-light-left</name>
 	<offsets>
-		<x-m>13.9957</x-m>
-		<y-m>-3.0384</y-m>
-		<z-m>1.4161</z-m>
+		<x-m>-7.3573</x-m>
+		<y-m>-2.9867</y-m>
+		<z-m>6.2788</z-m>
 	</offsets>
 </model> 
-
 
 <animation>
 	<type>select</type>

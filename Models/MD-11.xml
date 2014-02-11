@@ -16,14 +16,166 @@
   </unload>
  </nasal>
 	
+	
+	
+				<!-- Wing flex -->
+				
+		<animation>
+		<type>rotate</type>
+		<object-name>wing1.grey.part2</object-name>
+    <object-name>wing1.grey.part3</object-name>
+		<object-name>wing.1.part2</object-name>
+    <object-name>wing.1.part3</object-name>
+    <object-name>winglet.left</object-name>
+    <object-name>wing.glass.left</object-name>
+		<object-name>slat.1.part3</object-name>
+    <object-name>slat.1.part2</object-name>
+    <object-name>sp.brake.left.outer</object-name>
+    <object-name>wing.glass.left</object-name>
+    <object-name>flap.1</object-name>
+    <object-name>flap.2</object-name>
+    <object-name>flap.9</object-name>
+    <object-name>flap.9.part2</object-name>
+    <object-name>flap.10</object-name>
+    <object-name>flap.10.part2</object-name>
+    <object-name>wing.antennas.left</object-name>
+    <object-name>AileronL2</object-name>
+    <object-name>redlightsphere</object-name>
+    <object-name>RedLight</object-name>
+    <object-name>Strobelight.1</object-name>
+		<property>accelerations/pilot-g</property>
+		<interpolation>
+      <entry><ind>5</ind><dep>-10.0</dep></entry>
+			<entry><ind>1.0</ind><dep>0</dep></entry>
+			<entry><ind>-5</ind><dep>10.0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>3.7271</x-m>
+			<y-m>-9.4415</y-m>
+			<z-m>5.3725</z-m>
+		</center>
+	</animation>
+	
+										<animation>
+		<type>rotate</type>
+    <object-name>wing1.grey.part3</object-name>
+    <object-name>slat.1.part3</object-name>
+    <object-name>winglet.left</object-name>
+    <object-name>wing.glass.left</object-name>
+    <object-name>wing.antennas.left</object-name>
+    <object-name>AileronL2</object-name>
+    <object-name>wing.1.part3</object-name>
+    <object-name>redlightsphere</object-name>
+    <object-name>RedLight</object-name>
+    <object-name>Strobelight.1</object-name>
+		<property>accelerations/pilot-g</property>
+		<interpolation>
+      <entry><ind>5</ind><dep>-10.0</dep></entry>
+			<entry><ind>0</ind><dep>2.0</dep></entry>
+			<entry><ind>-5</ind><dep>10.0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>8.7968</x-m>
+			<y-m>-17.6849</y-m>
+			<z-m>5.7059</z-m>
+		</center>
+	</animation>
+	
+			<animation>
+		<type>rotate</type>
+		<object-name>wing2.grey.part2</object-name>
+    <object-name>wing2.grey.part3</object-name>
+		<object-name>wing.2.part2</object-name>
+    <object-name>wing.2.part3</object-name>
+    <object-name>winglet.right</object-name>
+    <object-name>wing.glass.right</object-name>
+		<object-name>slat.4.part3</object-name>
+    <object-name>slat.4.part2</object-name>
+    <object-name>sp.brake.right.outer</object-name>
+    <object-name>wing.glass.right</object-name>
+    <object-name>flap.7</object-name>
+    <object-name>flap.8</object-name>
+    <object-name>flap.13</object-name>
+    <object-name>flap.13.part2</object-name>
+    <object-name>flap.14</object-name>
+    <object-name>flap.14.part2</object-name>
+    <object-name>wing.antennas.right</object-name>
+    <object-name>AileronR2</object-name>
+    <object-name>greenlightsphere</object-name>
+    <object-name>GreenLight</object-name>
+    <object-name>Strobelight.2</object-name>
+		<property>accelerations/pilot-g</property>
+		<interpolation>
+      <entry><ind>5</ind><dep>10.0</dep></entry>
+			<entry><ind>1.0</ind><dep>0</dep></entry>
+			<entry><ind>-5</ind><dep>-10.0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>3.7271</x-m>
+			<y-m>9.4415</y-m>
+			<z-m>5.3725</z-m>
+		</center>
+	</animation>
+	
+										<animation>
+		<type>rotate</type>
+    <object-name>wing2.grey.part3</object-name>
+    <object-name>slat.4.part3</object-name>
+    <object-name>winglet.right</object-name>
+    <object-name>wing.glass.right</object-name>
+    <object-name>wing.antennas.right</object-name>
+    <object-name>AileronR2</object-name>
+    <object-name>wing.2.part3</object-name>
+    <object-name>greenlightsphere</object-name>
+    <object-name>GreenLight</object-name>
+    <object-name>Strobelight.2</object-name>
+		<property>accelerations/pilot-g</property>
+		<interpolation>
+      <entry><ind>5</ind><dep>10.0</dep></entry>
+			<entry><ind>0</ind><dep>-2.0</dep></entry>
+			<entry><ind>-5</ind><dep>-10.0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>8.7968</x-m>
+			<y-m>17.6849</y-m>
+			<z-m>5.7059</z-m>
+		</center>
+	</animation>	
+	
+	
+	
 		  <animation>
 <type>shader</type>
 <shader>chrome</shader>
 <texture>chrome1.png</texture>
 <object-name>Windshield</object-name>
 <object-name>cabin_windows</object-name>
+<object-name>cabin_windows.finnair</object-name>
 <object-name>ldglight.left.glass</object-name>
+<object-name>cabin_windows.klm</object-name>
 <object-name>ldglight.right.glass</object-name>
+<object-name>wing.glass.left</object-name>
+<object-name>wing.glass.right</object-name>
 </animation>
 
 	<animation>
@@ -51,7 +203,7 @@
 		<type>spin</type>
 		<object-name>fan_1</object-name>
 		<factor>-67</factor>
-		<property>engines/engine[0]/rpm</property>
+		<property>engines/engine[0]/n1</property>
 	<axis>
 	    <x1-m>-4.8064</x1-m>
 	    <y1-m>-8.2552</y1-m>
@@ -67,7 +219,7 @@
 		<type>spin</type>
 		<object-name>fan_2</object-name>
 		<factor>-67</factor>
-		<property>engines/engine[2]/rpm</property>
+		<property>engines/engine[2]/n1</property>
 	<axis>
 	    <x1-m>-4.8064</x1-m>
 	    <y1-m>8.2552</y1-m>
@@ -83,7 +235,7 @@
 		<type>spin</type>
 		<object-name>fan_3</object-name>
 		<factor>-67</factor>
-		<property>engines/engine[1]/rpm</property>
+		<property>engines/engine[1]/n1</property>
 	<axis>
 	    <x1-m>25.7008</x1-m>
 	    <y1-m>0</y1-m>
@@ -164,7 +316,7 @@
 		<name>Left inner aileron</name>
 		<type>rotate</type>
 		<object-name>AileronL1</object-name>
-		<property>surface-positions/left-aileron-inner-pos-norm</property>
+        <property>surface-positions/left-aileron-pos-norm</property>
 		<factor>-30</factor>
 		<axis>
 			<x1-m>5.6584</x1-m>
@@ -175,12 +327,17 @@
 			<z2-m>5.2618</z2-m>
 		</axis>
 	</animation>
-	<animation>
-		<name>Left outer aileron</name>
-		<type>rotate</type>
+	    <animation>
+        <type>rotate</type>
 		<object-name>AileronL2</object-name>
-		<property>surface-positions/left-aileron-outer-pos-norm</property>
-		<factor>30</factor>
+        <condition>
+			<greater-than>
+		        <property>surface-positions/flap-pos-norm</property>
+				<value>0</value>
+			</greater-than>
+        </condition>
+        <property>surface-positions/left-aileron-pos-norm</property>
+        <factor>15</factor>
 		<axis>
 			<x1-m>13.1821</x1-m>
 			<y1-m>-22.7524</y1-m>
@@ -189,13 +346,13 @@
 			<y2-m>-18.2087</y2-m>
 			<z2-m>5.7281</z2-m>
 		</axis>
-	</animation>
+    </animation>
 	
 		<animation>
 		<name>Right inner aileron</name>
 		<type>rotate</type>
 		<object-name>AileronR1</object-name>
-		<property>surface-positions/right-aileron-inner-pos-norm</property>
+        <property>surface-positions/right-aileron-pos-norm</property>
 		<factor>30</factor>
 		<axis>
 			<x1-m>5.6584</x1-m>
@@ -206,12 +363,18 @@
 			<z2-m>5.2618</z2-m>
 		</axis>
 	</animation>
-	<animation>
-		<name>Right outer aileron</name>
-		<type>rotate</type>
+	
+	    <animation>
+        <type>rotate</type>
 		<object-name>AileronR2</object-name>
-		<property>surface-positions/right-aileron-outer-pos-norm</property>
-		<factor>-30</factor>
+        <condition>
+			<greater-than>
+		        <property>surface-positions/flap-pos-norm</property>
+				<value>0</value>
+			</greater-than>
+        </condition>
+        <property>surface-positions/right-aileron-pos-norm</property>
+        <factor>-15</factor>
 		<axis>
 			<x1-m>13.1821</x1-m>
 			<y1-m>22.7524</y1-m>
@@ -220,7 +383,7 @@
 			<y2-m>18.2087</y2-m>
 			<z2-m>5.7281</z2-m>
 		</axis>
-	</animation>
+    </animation>
 	
 				<animation>
 		<type>rotate</type>
@@ -394,7 +557,7 @@
 <object-name>nose.scissor.up</object-name>
 <object-name>front.strut.low</object-name>
     <object-name>front.strut.high.2</object-name>
-		<property>gear/gear[0]/steering-norm</property>
+        <property>controls/gear/nosegear-steering-cmd-norm</property>
 		<factor>68</factor>
 	 	<axis>
 			<x1-m>-20.4239</x1-m>
@@ -1099,7 +1262,8 @@
 <object-name>lgdoor.right.front</object-name>
 <object-name>lgdoor.left.front</object-name>
 <object-name>center.reverser</object-name>
-<object-name>winglet</object-name>
+<object-name>winglet.left</object-name>
+<object-name>winglet.right</object-name>
 <object-name>flap.3.part2</object-name>
 <object-name>flap.5.part2</object-name>
 <object-name>cargo1</object-name>
@@ -1111,14 +1275,30 @@
 <inherits-from>Aircraft/MD-11/Models/Effects/bumpspec-wing</inherits-from>
 <object-name>wing.1</object-name>
 <object-name>wing.2</object-name>
+<object-name>wing1.grey.part1</object-name>
+<object-name>wing2.grey.part1</object-name>
+<object-name>wing1.grey.part2</object-name>
+<object-name>wing1.grey.part3</object-name>
+<object-name>wing.1.part2</object-name>
+<object-name>wing.1.part3</object-name>
+<object-name>wing2.grey.part2</object-name>
+<object-name>wing2.grey.part3</object-name>
+<object-name>wing.2.part2</object-name>
+<object-name>wing.2.part3</object-name>
 <object-name>wing1.part2</object-name>
 <object-name>wing2.part2</object-name>
 <object-name>flap.1</object-name>
 <object-name>flap.3</object-name>
 <object-name>flap.2</object-name>
 <object-name>flap.4</object-name>
-<object-name>slat.1</object-name>
+<object-name>slat.1.part3</object-name>
+<object-name>slat.1.part2</object-name>
+<object-name>slat.1.part1</object-name>
+<object-name>slat.4.part3</object-name>
+<object-name>slat.4.part2</object-name>
+<object-name>slat.4.part1</object-name>
 <object-name>slat.2</object-name>
+<object-name>slat.3</object-name>
 <object-name>AileronL1</object-name>
 <object-name>AileronL2</object-name>
 <object-name>sp.brake.left.outer</object-name>
@@ -1137,8 +1317,25 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>sp.brake.left.outer</object-name>
-		<property>surface-positions/left-spoiler-outer-pos-norm</property>
-		<factor>50</factor>
+		<property>controls/flight/speedbrake-angle</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.6</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>30</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>60</dep>
+            </entry>
+        </interpolation>
 		<axis>
 			<x1-m>6.1986</x1-m>
 			<y1-m>-10.5629</y1-m>
@@ -1152,8 +1349,25 @@
 		<animation>
 		<type>rotate</type>
 		<object-name>sp.brake.left.inner</object-name>
-		<property>surface-positions/spoiler-inner-pos-norm</property>
-		<factor>80</factor>
+		<property>controls/flight/speedbrake-angle</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.6</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>30</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>60</dep>
+            </entry>
+        </interpolation>
 		<axis>
 			<x1-m>4.6240</x1-m>
 			<y1-m>-4.2563</y1-m>
@@ -1167,8 +1381,25 @@
 			<animation>
 		<type>rotate</type>
 		<object-name>sp.brake.right.outer</object-name>
-		<property>surface-positions/right-spoiler-outer-pos-norm</property>
-		<factor>-50</factor>
+		<property>controls/flight/speedbrake-angle</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.6</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>-30</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>-60</dep>
+            </entry>
+        </interpolation>
 		<axis>
 			<x1-m>6.1986</x1-m>
 			<y1-m>10.5629</y1-m>
@@ -1182,8 +1413,25 @@
 			<animation>
 		<type>rotate</type>
 		<object-name>sp.brake.right.inner</object-name>
-		<property>surface-positions/spoiler-inner-pos-norm</property>
-		<factor>-80</factor>
+		<property>controls/flight/speedbrake-angle</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.6</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>-30</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>-60</dep>
+            </entry>
+        </interpolation>
 		<axis>
 			<x1-m>4.6240</x1-m>
 			<y1-m>4.2563</y1-m>
@@ -1200,7 +1448,7 @@
 		<name>Left inner slat translate</name>
 		<type>translate</type>
 		<object-name>slat.2</object-name>
-		<property>surface-positions/slat-inner-pos-norm</property>
+        <property>surface-positions/slats</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.3</ind><dep>-0.7</dep></entry>
@@ -1217,7 +1465,7 @@
 		<name>Left inner slat rotate</name>
 		<type>rotate</type>
 		<object-name>slat.2</object-name>
-		<property>surface-positions/slat-inner-pos-norm</property>
+        <property>surface-positions/slats</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.3</ind><dep>0</dep></entry>
@@ -1236,8 +1484,10 @@
 		<animation>
 		<name>Left outer slat translate</name>
 		<type>translate</type>
-		<object-name>slat.1</object-name>
-		<property>surface-positions/slat-outer-pos-norm</property>
+<object-name>slat.1.part3</object-name>
+<object-name>slat.1.part2</object-name>
+<object-name>slat.1.part1</object-name>
+        <property>surface-positions/slats</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.3</ind><dep>-0.6</dep></entry>
@@ -1252,8 +1502,10 @@
 	<animation>
 		<name>Left outer slat rotate</name>
 		<type>rotate</type>
-		<object-name>slat.1</object-name>
-		<property>surface-positions/slat-outer-pos-norm</property>
+<object-name>slat.1.part3</object-name>
+<object-name>slat.1.part2</object-name>
+<object-name>slat.1.part1</object-name>
+        <property>surface-positions/slats</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.3</ind><dep>0</dep></entry>
@@ -1275,7 +1527,7 @@
 		<name>Right inner slat translate</name>
 		<type>translate</type>
 		<object-name>slat.3</object-name>
-		<property>surface-positions/slat-inner-pos-norm</property>
+        <property>surface-positions/slats</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.3</ind><dep>-0.7</dep></entry>
@@ -1292,7 +1544,7 @@
 		<name>Right inner slat rotate</name>
 		<type>rotate</type>
 		<object-name>slat.3</object-name>
-		<property>surface-positions/slat-inner-pos-norm</property>
+        <property>surface-positions/slats</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.3</ind><dep>0</dep></entry>
@@ -1311,8 +1563,10 @@
 		<animation>
 		<name>Right outer slat translate</name>
 		<type>translate</type>
-		<object-name>slat.4</object-name>
-		<property>surface-positions/slat-outer-pos-norm</property>
+<object-name>slat.4.part3</object-name>
+<object-name>slat.4.part2</object-name>
+<object-name>slat.4.part1</object-name>
+        <property>surface-positions/slats</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.3</ind><dep>-0.6</dep></entry>
@@ -1327,8 +1581,10 @@
 	<animation>
 		<name>Right outer slat rotate</name>
 		<type>rotate</type>
-		<object-name>slat.4</object-name>
-		<property>surface-positions/slat-outer-pos-norm</property>
+<object-name>slat.4.part3</object-name>
+<object-name>slat.4.part2</object-name>
+<object-name>slat.4.part1</object-name>
+        <property>surface-positions/slats</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.3</ind><dep>0</dep></entry>
@@ -1345,15 +1601,12 @@
 	</animation>
 	
 	
-	
-	
-	
 		<animation>
 		<name>Left inner flap translate</name>
 		<type>translate</type>
 		<object-name>flap.3</object-name>
 <object-name>flap.3.part2</object-name>
-		<property>surface-positions/flap-inner-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>1</factor>
 		<axis>
 			<x>1</x>
@@ -1367,7 +1620,7 @@
 		<type>rotate</type>
 		<object-name>flap.3</object-name>
 		<object-name>flap.3.part2</object-name>
-		<property>surface-positions/flap-inner-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>50</factor>
 		<axis>
 			<x1-m>5.0679</x1-m>
@@ -1383,7 +1636,7 @@
 		<name>Left inner flap translate</name>
 		<type>translate</type>
 		<object-name>flap.4</object-name>
-		<property>surface-positions/flap-inner-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>0.6</factor>
 		<axis>
 			<x>1</x>
@@ -1396,7 +1649,7 @@
 		<name>Left inner flap rotate</name>
 		<type>rotate</type>
 		<object-name>flap.11</object-name>
-		<property>surface-positions/flap-inner-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>50</factor>
 		<axis>
 			<x1-m>5.7575</x1-m>
@@ -1412,7 +1665,7 @@
 		<name>Left inner flap translate</name>
 		<type>translate</type>
 		<object-name>flap.11</object-name>
-		<property>surface-positions/flap-inner-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>0.15</factor>
 		<axis>
 			<x>1</x>
@@ -1427,7 +1680,7 @@
 		<name>Left outer flap translate</name>
 		<type>translate</type>
 		<object-name>flap.1</object-name>
-		<property>surface-positions/flap-outer-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>0.8</factor>
 		<axis>
 			<x>1</x>
@@ -1440,7 +1693,7 @@
 		<name>Left outer flap rotate</name>
 		<type>rotate</type>
 		<object-name>flap.1</object-name>
-		<property>surface-positions/flap-outer-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>50</factor>
 		<axis>
 			<x1-m>10.2613</x1-m>
@@ -1456,7 +1709,7 @@
 		<name>Left outer flap translate</name>
 		<type>translate</type>
 		<object-name>flap.2</object-name>
-		<property>surface-positions/flap-outer-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>0.2</factor>
 		<axis>
 			<x>1</x>
@@ -1469,7 +1722,7 @@
 		<name>Left outer flap rotate</name>
 		<type>rotate</type>
 		<object-name>flap.10</object-name>
-		<property>surface-positions/flap-outer-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>50</factor>
 		<axis>
 			<x1-m>7.6163</x1-m>
@@ -1485,7 +1738,7 @@
 		<name>Left outer flap rotate</name>
 		<type>rotate</type>
 		<object-name>flap.9</object-name>
-		<property>surface-positions/flap-outer-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>50</factor>
 		<axis>
 			<x1-m>9.6552</x1-m>
@@ -1508,7 +1761,7 @@
 		<type>translate</type>
 		<object-name>flap.5</object-name>
 		<object-name>flap.5.part2</object-name>
-		<property>surface-positions/flap-inner-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>1</factor>
 		<axis>
 			<x>1</x>
@@ -1522,7 +1775,7 @@
 		<type>rotate</type>
 		<object-name>flap.5</object-name>
 		<object-name>flap.5.part2</object-name>
-		<property>surface-positions/flap-inner-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>-50</factor>
 		<axis>
 			<x1-m>5.0679</x1-m>
@@ -1538,7 +1791,7 @@
 		<name>Right inner flap translate</name>
 		<type>translate</type>
 		<object-name>flap.6</object-name>
-		<property>surface-positions/flap-inner-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>0.6</factor>
 		<axis>
 			<x>1</x>
@@ -1551,7 +1804,7 @@
 		<name>Right inner flap rotate</name>
 		<type>rotate</type>
 		<object-name>flap.12</object-name>
-		<property>surface-positions/flap-inner-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>-50</factor>
 		<axis>
 			<x1-m>5.7575</x1-m>
@@ -1567,7 +1820,7 @@
 		<name>Right inner flap translate</name>
 		<type>translate</type>
 		<object-name>flap.12</object-name>
-		<property>surface-positions/flap-inner-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>0.15</factor>
 		<axis>
 			<x>1</x>
@@ -1582,7 +1835,7 @@
 		<name>Right outer flap translate</name>
 		<type>translate</type>
 		<object-name>flap.7</object-name>
-		<property>surface-positions/flap-outer-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>0.8</factor>
 		<axis>
 			<x>1</x>
@@ -1595,7 +1848,7 @@
 		<name>Right outer flap rotate</name>
 		<type>rotate</type>
 		<object-name>flap.7</object-name>
-		<property>surface-positions/flap-outer-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>-50</factor>
 		<axis>
 			<x1-m>10.2613</x1-m>
@@ -1611,7 +1864,7 @@
 		<name>Right outer flap translate</name>
 		<type>translate</type>
 		<object-name>flap.8</object-name>
-		<property>surface-positions/flap-outer-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>0.2</factor>
 		<axis>
 			<x>1</x>
@@ -1624,7 +1877,7 @@
 		<name>Right outer flap rotate</name>
 		<type>rotate</type>
 		<object-name>flap.13</object-name>
-		<property>surface-positions/flap-outer-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>-50</factor>
 		<axis>
 			<x1-m>7.6163</x1-m>
@@ -1640,7 +1893,7 @@
 		<name>Right outer flap rotate</name>
 		<type>rotate</type>
 		<object-name>flap.14</object-name>
-		<property>surface-positions/flap-outer-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
 		<factor>-50</factor>
 		<axis>
 			<x1-m>9.6552</x1-m>
@@ -1675,7 +1928,8 @@
 <object-name>lgdoor.right.front</object-name>
 <object-name>lgdoor.left.front.2</object-name>
 <object-name>lgdoor.left.front</object-name>
-<object-name>winglet</object-name>
+<object-name>winglet.left</object-name>
+<object-name>winglet.right</object-name>
 <object-name>cargo1</object-name>
 <object-name>cargo2</object-name>
 <object-name>cargo3</object-name>
@@ -1839,13 +2093,7 @@
 	    <z-m>0</z-m>
 	</center>
     </animation>
-    
-    	<animation>
-		<type>select</type>
-		<object-name>cabin_windows.finnair</object-name>
-		<condition>
-			<property>sim/multiplay/generic/int[8]</property>
-		</condition>
-	</animation>
+
+
 
 </PropertyList>
