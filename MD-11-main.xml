@@ -754,7 +754,7 @@
             <file>Aircraft/MD-11/Nasal/gpws.nas</file>
             <file>Aircraft/MD-11/Nasal/brakesystem.nas</file>
             <file>Aircraft/MD-11/Nasal/ground_steering.nas</file>
-            <file>Aircraft/777/Models/Instruments/ND/ND.nas</file>
+            <file>Aircraft/MD-11/Models/cockpit/instruments/ND/ND.nas</file>
             <file>Aircraft/MD-11/Models/cockpit/instruments/MFD/mfd.nas</file>
             <file>Aircraft/MD-11/Models/cockpit/instruments/MFD/fctl.nas</file>
             <file>Aircraft/MD-11/Models/cockpit/instruments/MFD/eng.nas</file>
