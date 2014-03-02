@@ -643,6 +643,9 @@ var Startup = func{
 	setprop("controls/hydraulics/system[1]/C1ADP-switch", 1);
 	setprop("controls/hydraulics/system[1]/C2ADP-switch", 1);
 	setprop("controls/hydraulics/system[2]/RACMP-switch", 1);
+	setprop("instrumentation/afds/inputs/at-armed", 1);
+	setprop("instrumentation/afds/inputs/at-armed[1]", 1);
+	setprop("instrumentation/afds/inputs/at-armed[2]", 1);
 }
 
 var Shutdown = func{

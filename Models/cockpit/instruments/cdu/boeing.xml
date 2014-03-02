@@ -4,9 +4,9 @@
 
        <animation>
   <type>scale</type>
-  <x-offset>0.85</x-offset>
-  <y-offset>0.85</y-offset>
-  <z-offset>0.85</z-offset>
+  <x-offset>0.80</x-offset>
+  <y-offset>0.80</y-offset>
+  <z-offset>0.80</z-offset>
  </animation>
 
 
@@ -24,7 +24,6 @@
 		<condition><use>/instrumentation/cdu/serviceable</use></condition>
 		<factor><use>/controls/lighting/panel-norm</use></factor>
 	</parameters>
-	<object-name>CDU</object-name>
  	<object-name>Btn.A</object-name>
 	<object-name>Btn.B</object-name>
 	<object-name>Btn.C</object-name>

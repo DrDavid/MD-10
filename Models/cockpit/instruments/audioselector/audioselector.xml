@@ -1,0 +1,13 @@
+﻿<PropertyList>
+
+    <path>audioselector.ac</path>
+    
+         		  <animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>chrome_cockpit.png</texture>
+<object-name>audioselector.buttons</object-name>
+</animation>
+
+
+</PropertyList>

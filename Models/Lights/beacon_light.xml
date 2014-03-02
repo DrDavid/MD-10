@@ -51,7 +51,7 @@
 	<object-name>LightNavStbd</object-name>
 	<condition>
 		<equals>
-			<property>/sim/model/lights/beacon/state</property>
+			<property>controls/lighting/beacon-state/state</property>
 			<value>1</value>
 		</equals>
 	</condition>

@@ -7,16 +7,10 @@
         <!-- ensure output is consistent when no mode is selected-->
         <enable>
             <condition>
-                <or>
                 <equals>
                     <property>autopilot/autobrake/step</property>
-                    <value>0</value> <!-- DISARM -->
-                </equals>
-                <equals>
-                    <property>autopilot/autobrake/step</property>
-                    <value>-1</value> <!-- OFF -->
-                </equals>
-                </or>
+                    <value>0</value> <!-- OFF -->
+                    </equals>
             </condition>
         </enable>
         <input><false/></input>
@@ -29,22 +23,10 @@
         <input>
             <equals>
                 <property>autopilot/autobrake/step</property>
-                <value>-2</value>
+                <value>-1</value>
             </equals>
         </input>
         <output>autopilot/autobrake/rto-selected</output>
-    </logic>
-
-    <logic>
-        <name>Autobrake Selected</name>
-        <update-interval-secs type="double">0.2</update-interval-secs>
-        <input>
-            <greater-than>
-                <property>autopilot/autobrake/step</property>
-                <value>0</value>
-            </greater-than>
-        </input>
-        <output>autopilot/autobrake/selected</output>
     </logic>
 
     <logic>
@@ -68,6 +50,7 @@
                     </less-than>
                     <property>controls/engines/engine[1]/reverser-act</property>
                 </or>
+                <!-- engine 2 -->
                 <or>
                     <less-than>
                         <property>controls/engines/engine[2]/throttle-act</property>
@@ -182,7 +165,7 @@
             </condition>
         </enable>
         
-        <input><value>-1</value></input> <!-- move to 'off' -->
+        <input><value>0</value></input> <!-- move to 'off' -->
         <output>autopilot/autobrake/step</output>
     </filter>
     
@@ -223,7 +206,7 @@
             </condition>
         </enable>
         
-        <input><value>0</value></input> <!-- move to 'disarm' -->
+        <input><value>0</value></input> <!-- move to 'off' -->
         <output>autopilot/autobrake/step</output>
     </filter>
 
@@ -266,10 +249,9 @@
                 <table>
                     <property>autopilot/autobrake/step</property> 
                     <entry><ind>0</ind><dep>0</dep></entry>
-                    <entry><ind>1</ind><dep>4</dep></entry>
+                    <entry><ind>1</ind><dep>3</dep></entry>
                     <entry><ind>2</ind><dep>5</dep></entry>
-                    <entry><ind>3</ind><dep>6</dep></entry>
-                    <entry><ind>4</ind><dep>7</dep></entry>
+                    <entry><ind>3</ind><dep>7</dep></entry>
                 </table>
             </expression>
         </input>

@@ -68,6 +68,8 @@ var RDSPLST = aircraft.door.new("controls/switches/RDSPLSwitchTimer", duration);
 var RAIRDATAST = aircraft.door.new("controls/switches/RAIRDATASwitchTimer", duration);
 var CDSPLST = aircraft.door.new("controls/switches/CDSPLSwitchTimer", duration);
 var AFAST = aircraft.door.new("controls/switches/AFASwitchTimer", duration);
+var GEARLEVER = aircraft.door.new("controls/gear/gearlever", 2);
+var PBRAKELEVER = aircraft.door.new("controls/gear/parkbrakelever", 0.5);
 
 setlistener("controls/electric/battery-switch", func {
 		if(getprop("controls/electric/battery-switch")) BATTST.open();
@@ -332,5 +334,13 @@ setlistener("controls/switches/c_dspl_switch", func {
 setlistener("controls/switches/afa_switch", func {
 		if(getprop("controls/switches/afa_switch")) AFAST.open();
 		else AFAST.close();
+});
+setlistener("controls/gear/gear-down", func {
+		if(getprop("controls/gear/gear-down")) GEARLEVER.open();
+		else GEARLEVER.close();
+});
+setlistener("controls/gear/brake-parking", func {
+		if(getprop("controls/gear/brake-parking")) PBRAKELEVER.open();
+		else PBRAKELEVER.close();
 });
 

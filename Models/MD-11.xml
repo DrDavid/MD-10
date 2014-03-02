@@ -262,6 +262,11 @@
 		</axis>
 	</animation>
 	
+		<effect>
+		<inherits-from>Aircraft/MD-11/Models/Effects/engine</inherits-from>
+    <object-name>engines.chrome</object-name>
+	</effect>
+	
 		<animation>
 		<name>Engine reverser 2</name>
 		<type>translate</type>
@@ -431,9 +436,9 @@
 		<object-name>elevator.1</object-name>
 		<property>controls/flight/elevator-trim</property>
 		<interpolation>
-			<entry><ind>1.0</ind><dep>-10.0</dep></entry>
+			<entry><ind>1.0</ind><dep>10.0</dep></entry>
 			<entry><ind>0.0</ind><dep>0.0</dep></entry>
-			<entry><ind>-1.0</ind><dep>10.0</dep></entry>
+			<entry><ind>-1.0</ind><dep>-10.0</dep></entry>
 		</interpolation>
 		<axis>
 			<x>0</x>
@@ -2054,12 +2059,8 @@
 	<type>rotate</type>
 	<object-name>ldglight.right.glass</object-name>
   <object-name>ldglight.right</object-name>
-    <property>systems/electrical/outputs/landing-light-nose[0]</property>
-		<interpolation>
-			<entry><ind>5.0</ind><dep>90</dep></entry>
-			<entry><ind>1.0</ind><dep>0</dep></entry>
-			<entry><ind>0.0</ind><dep>0</dep></entry>
-		</interpolation>
+    <property>controls/lighting/landing-light</property>
+<factor>90</factor>
 	<axis>
 	    <x>0</x>
 	    <y>0</y>
@@ -2076,12 +2077,8 @@
 	<type>rotate</type>
 	<object-name>ldglight.left.glass</object-name>
   <object-name>ldglight.left</object-name>
-    <property>systems/electrical/outputs/landing-light-nose[1]</property>
-		<interpolation>
-			<entry><ind>5.0</ind><dep>-90</dep></entry>
-			<entry><ind>1.0</ind><dep>0</dep></entry>
-			<entry><ind>0.0</ind><dep>0</dep></entry>
-		</interpolation>
+    <property>controls/lighting/landing-light</property>
+<factor>-90</factor>
 	<axis>
 	    <x>0</x>
 	    <y>0</y>

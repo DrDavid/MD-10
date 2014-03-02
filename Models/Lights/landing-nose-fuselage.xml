@@ -8,11 +8,8 @@
 		<name>On/off</name>
 		<type>select</type>
 		<condition>
-			<greater-than>
-				<property>systems/electrical/outputs/landing-light-nose[0]</property>
-				<value>5</value>
-			</greater-than>
-		</condition>
+    <property>controls/lighting/landing-light</property>
+    </condition>
 	</animation>
 	<animation>
 		<type>light</type>

@@ -194,8 +194,8 @@
         
 	<flaps>
 	    <setting>0.00</setting>	<!-- 0 -->
-	    <setting>0.30</setting>	<!-- 15 -->
 	    <setting>0.44</setting>	<!-- 22 -->
+	    <setting>0.56</setting>	<!-- 28-->
 	    <setting>0.70</setting>	<!-- 35 -->
 	    <setting>1.00</setting>	<!-- 50 -->
 	</flaps>

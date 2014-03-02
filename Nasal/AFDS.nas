@@ -21,13 +21,13 @@ var AFDS = {
 	new : func{
 		var m = {parents:[AFDS]};
 
-		m.spd_list=["","THR","THR REF","HOLD","IDLE","SPD"];
+		m.spd_list=["","THR","THR REF","HOLD","IDLE","THRUST"];
 
-		m.roll_list=["","HDG SEL","HDG HOLD","LNAV","LOC","ROLLOUT",
+		m.roll_list=["","HDG SEL","HEADING","LNAV","LOC","ROLLOUT",
 		"TRK SEL","TRK HOLD","ATT","TO/GA"];
 
-		m.pitch_list=["","ALT","V/S","VNAV PTH","VNAV SPD",
-		"VNAV ALT","G/S","FLARE","FLCH SPD","FPA","TO/GA"];
+		m.pitch_list=["","ALT","V/S","VNAV PTH","VNAV THRUST",
+		"VNAV ALT","G/S","FLARE","FLCH THRUST","FPA","TO/GA"];
 
 		m.step=0;
 		m.descent_step=0;
@@ -94,7 +94,7 @@ var AFDS = {
 		m.remaining_distance = m.AFDS_inputs.initNode("remaining-distance",0,"DOUBLE");
 		m.reference_deg = m.AFDS_inputs.initNode("reference-deg",0,"DOUBLE");
 
-		m.ias_setting = m.AP_settings.initNode("target-speed-kt",200);# 100 - 399 #
+		m.ias_setting = m.AP_settings.initNode("target-speed-kt",250);# 100 - 399 #
 		m.mach_setting = m.AP_settings.initNode("target-speed-mach",0.40);# 0.40 - 0.95 #
 		m.vs_setting = m.AP_settings.initNode("vertical-speed-fpm",0); # -8000 to +6000 #
 		m.hdg_setting = m.AP_settings.initNode("heading-bug-deg",360,"INT"); # 1 to 360
@@ -224,7 +224,7 @@ var AFDS = {
 					{
 						var alt = int((current_alt+50)/100)*100;
 						me.target_alt.setValue(alt);
-						me.autothrottle_mode.setValue(5);	# A/T SPD
+						me.autothrottle_mode.setValue(5);	# A/T THRUST
 					}
 					else
 					{
@@ -243,7 +243,7 @@ var AFDS = {
 					{
 						me.target_alt.setValue(current_alt);
 					}
-					me.autothrottle_mode.setValue(5);	# A/T SPD
+					me.autothrottle_mode.setValue(5);	# A/T THRUST
 				}
 				if(btn==4)
 				{
@@ -292,7 +292,7 @@ var AFDS = {
 						if(vnav_mode == 3)			# Current mode is VNAV PTH
 						{
 						}
-						elsif(vnav_mode == 4)		# Current mode is VNAV SPD
+						elsif(vnav_mode == 4)		# Current mode is VNAV THRUST
 						{
 						}
 						elsif(vnav_mode == 5)		# Current mode is VNAV ALT
@@ -315,7 +315,7 @@ var AFDS = {
 						}
 					}
 				}
-				if(btn==8)		# FLCH SPD
+				if(btn==8)		# FLCH THRUST
 				{
 					# change flight level
 					if(((current_alt
@@ -752,9 +752,9 @@ var AFDS = {
 		var VS = getprop("velocities/vertical-speed-fps");
 		var TAS = getprop("instrumentation/airspeed-indicator/true-speed-kt") * KT2FPS; # keeping TAS as fps
 		me.indicated_vs_fpm.setValue(int((abs(VS) * 60 + 50) / 100) * 100);
-		if(getprop("instrumentation/airspeed-indicator/indicated-speed-kt") < 30)
+		if(getprop("instrumentation/airspeed-indicator/indicated-speed-kt") < 0)
 		{
-			setprop("instrumentation/airspeed-indicator/indicated-speed-kt", 30);
+			setprop("instrumentation/airspeed-indicator/indicated-speed-kt", 0);
 		}
 		# This value is used for displaying negative altitude 
 		if(current_alt < 0)
@@ -780,7 +780,7 @@ var AFDS = {
 		}
 		if(me.AP.getValue())
 		{
-			msg="A/P";
+			msg="AP1";
 			if(me.rollout_armed.getValue())
 			{
 				msg="LAND 3";
@@ -1234,7 +1234,7 @@ var AFDS = {
 					{
 						if(me.autothrottle_mode.getValue() != 0)
 						{
-							me.autothrottle_mode.setValue(5);	# A/T SPD
+							me.autothrottle_mode.setValue(5);	# A/T THRUST
 						}
 						me.vs_setting.setValue(0);
 						me.vnav_path_mode.setValue(0);
@@ -1257,7 +1257,7 @@ var AFDS = {
 						{
 							me.target_alt.setValue(me.optimal_alt);
 						}
-						idx = 4;	# VNAV SPD
+						idx = 4;	# VNAV THRUST
 					}
 					if((me.mach_setting.getValue() >= me.FMC_cruise_mach.getValue())
 						and (me.ias_mach_selected.getValue() == 0))
@@ -1284,7 +1284,7 @@ var AFDS = {
 					}
 				}
 			}
-			elsif(idx == 4)		# VNAV SPD
+			elsif(idx == 4)		# VNAV THRUST
 			{
 				if(getprop("controls/flight/flaps") > 0)		# flaps down
 				{
@@ -1360,7 +1360,7 @@ var AFDS = {
 					}
 					if(me.autothrottle_mode.getValue() != 0)
 					{
-						me.autothrottle_mode.setValue(5);	# A/T SPD
+						me.autothrottle_mode.setValue(5);	# A/T THRUST
 					}
 					me.vs_setting.setValue(0);
 				}
@@ -1380,7 +1380,7 @@ var AFDS = {
 					if(current_alt < (me.altitude_restriction - 500))
 					{
 						me.target_alt.setValue(me.altitude_restriction);
-						idx = 4;		# VNAV SPD
+						idx = 4;		# VNAV THRUST
 					}
 				}
 				elsif((current_alt <  (me.optimal_alt - 500))
@@ -1394,7 +1394,7 @@ var AFDS = {
 					{
 						me.target_alt.setValue(me.intervention_alt);
 					}
-					idx = 4;		# VNAV SPD
+					idx = 4;		# VNAV THRUST
 				}
 			}
 			elsif(idx == 6)				# G/S
@@ -1415,7 +1415,7 @@ var AFDS = {
 			}
 			else
 			{
-				if(me.autothrottle_mode.getValue() == 5)	# SPD
+				if(me.autothrottle_mode.getValue() == 5)	# THRUST
 				{
 					if(getprop("position/gear-agl-ft") < 50)
 					{
@@ -1452,7 +1452,7 @@ var AFDS = {
 					}
 					else
 					{
-						idx = 4;		# VNAV SPD
+						idx = 4;		# VNAV THRUST
 					}
 					me.intervention_alt = me.alt_setting.getValue();
 					if(me.intervention_alt > me.FMC_cruise_alt.getValue())
@@ -1501,10 +1501,10 @@ var AFDS = {
 			var thrust_lmt = 0.96;
 			if(current_alt < 25000)
 			{
-				if((me.vertical_mode.getValue() == 8)			# FLCH SPD mode
-					or(me.vertical_mode.getValue() == 4))		# VNAV SPD mode
+				if((me.vertical_mode.getValue() == 8)			# FLCH THRUST mode
+					or(me.vertical_mode.getValue() == 4))		# VNAV THRUST mode
 				{
-					if(me.vertical_mode.getValue() == 4)		# VNAV SPD mode
+					if(me.vertical_mode.getValue() == 4)		# VNAV THRUST mode
 					{
 						thrust_lmt = derate / 25000 * abs(current_alt) + (0.95 - derate);
 					}
@@ -1564,9 +1564,9 @@ var AFDS = {
 					and (me.vertical_mode.getValue() != 5))		# not VNAV ALT
 				{
 					if((getprop("controls/flight/flaps") == 0)		# FLAPs up
-						and (me.vertical_mode.getValue() != 4))		# not VNAV SPD
+						and (me.vertical_mode.getValue() != 4))		# not VNAV THRUST
 					{
-						me.autothrottle_mode.setValue(5);		# SPD
+						me.autothrottle_mode.setValue(5);		# THRUST
 					}
 					else
 					{
@@ -1576,7 +1576,7 @@ var AFDS = {
 				}
 			}
 			elsif((me.autothrottle_mode.getValue() == 4)		# Auto throttle mode IDLE 
-				and ((me.vertical_mode.getValue() == 8)			# FLCH SPD mode
+				and ((me.vertical_mode.getValue() == 8)			# FLCH THRUST mode
 					or (me.vertical_mode.getValue() == 3))		# VNAV PTH mode
 				and (int(me.flight_idle.getValue() * 1000) == int(getprop("controls/engines/engine[0]/throttle-act") * 1000))		# #1Thrust is actual flight idle
 				and (int(me.flight_idle.getValue() * 1000) == int(getprop("controls/engines/engine[1]/throttle-act") * 1000)))		# #2Thrust is actual flight idle
@@ -1600,14 +1600,14 @@ var AFDS = {
 				{
 					if(getprop("controls/flight/flaps") == 0)
 					{
-						me.autothrottle_mode.setValue(5);		# SPD
+						me.autothrottle_mode.setValue(5);		# THRUST
 					}
 					else
 					{
 						me.autothrottle_mode.setValue(2);		# THR REF
 					}
 				}
-				elsif(me.vertical_mode.getValue() == 4)			# VNAV SPD
+				elsif(me.vertical_mode.getValue() == 4)			# VNAV THRUST
 				{
 					me.autothrottle_mode.setValue(2);			# THR REF
 				}
@@ -1622,18 +1622,18 @@ var AFDS = {
 					}
 					else
 					{
-						me.autothrottle_mode.setValue(5);		# SPD
+						me.autothrottle_mode.setValue(5);		# THRUST
 					}
 				}
 				elsif(me.vertical_mode.getValue() == 5)			# VNAV ALT
 				{
-					me.autothrottle_mode.setValue(5);		# SPD
+					me.autothrottle_mode.setValue(5);		# THRUST
 				}
 			}
 			elsif((getprop("position/gear-agl-ft") > 100)		# Approach mode and above 100 ft
 					and (me.vertical_mode.getValue() == 6)) 
 			{
-				me.autothrottle_mode.setValue(5);				# SPD
+				me.autothrottle_mode.setValue(5);				# THRUST
 			}
 			idx = me.autothrottle_mode.getValue();
 			if((me.AP_speed_mode.getValue() != me.spd_list[idx])

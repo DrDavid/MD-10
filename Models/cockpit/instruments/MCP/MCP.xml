@@ -730,18 +730,10 @@
 				<command>property-toggle</command>
 				<property>instrumentation/afds/inputs/FD</property>
 			</binding>
-						<binding>
-				<command>property-toggle</command>
-				<property>instrumentation/afds/inputs/at-armed</property>
-			</binding>
-						<binding>
-				<command>property-toggle</command>
-				<property>instrumentation/afds/inputs/at-armed[1]</property>
-			</binding>
-						<binding>
-				<command>property-toggle</command>
-				<property>instrumentation/afds/inputs/at-armed[2]</property>
-			</binding>
+        <binding>
+       <command>nasal</command>
+      <script>MD11.afds.input(2,5);</script>
+      </binding>
 		</action>
 	</animation>
 

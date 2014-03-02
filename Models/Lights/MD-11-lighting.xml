@@ -92,12 +92,9 @@
     <animation>
         <type>select</type>
         <object-name>Strobelight.1</object-name>
-        <condition>
-            <greater-than>
-                <property>sim/multiplay/generic/int[0]</property>
-                <value>5</value>
-            </greater-than>
-        </condition>
+	<condition>
+		<property>controls/lighting/strobe-state/state</property>
+	</condition>
     </animation>
 
 	<!-- Strobe left-->
@@ -131,12 +128,9 @@
     <animation>
         <type>select</type>
         <object-name>Strobelight.2</object-name>
-        <condition>
-            <greater-than>
-                <property>sim/multiplay/generic/int[0]</property>
-                <value>5</value>
-            </greater-than>
-        </condition>
+	<condition>
+		<property>controls/lighting/strobe-state/state</property>
+	</condition>
     </animation>
 
 <!-- Beacon light -->

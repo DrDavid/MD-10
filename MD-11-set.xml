@@ -7,6 +7,9 @@
 		<description>Boeing/McDonnell Douglas MD-11</description>
 		<flight-model>yasim</flight-model>
 		<aero>MD-11</aero>
+		        <startup>
+            <splash-texture>Aircraft/MD-11/splash.png</splash-texture>
+        </startup>
 
 
 		<menubar>
@@ -31,7 +34,7 @@
         <cdu n="0">
             <ident n="0">
                 <model>MD-11</model>
-                <engines>Engine</engines>
+                <engines>CF6</engines>
             </ident>
         </cdu>
     </instrumentation>
