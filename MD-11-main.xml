@@ -536,8 +536,6 @@
                 <line-spacing type="float">0.01</line-spacing>
             </font>
             <lightning type="bool">true</lightning>
-            <radar-texture-path type="string">Aircraft/777/Models/Instruments/ND/od_wxradar.png</radar-texture-path>
-            <echo-texture-path type="string">Aircraft/777/Models/Instruments/ND/wxecho.png</echo-texture-path>
             <minimized type="bool">false</minimized>
             <heading-marker type="bool">true</heading-marker>
             <limit-deg type="int">360</limit-deg>

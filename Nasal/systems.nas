@@ -781,12 +781,32 @@ switch_ind = func() {
 			setprop("controls/electric/b-lidg", 0);
 		}
 	}
+# Center generator switch
+	if(cpt_flt_inst.getValue() < 24)
+	{
+		setprop("controls/electric/b-cidg", 1);
+	}
+	elsif(getprop("controls/electric/engine[1]/gen-switch") == 0)
+	{
+		setprop("controls/electric/b-cidg", 0);
+	}
+	else
+	{
+		if(cidg.get_output_volts() > 80)
+		{
+			setprop("controls/electric/b-cidg", 1);
+		}
+		else
+		{
+			setprop("controls/electric/b-cidg", 0);
+		}
+	}
 # Right generator switch
 	if(cpt_flt_inst.getValue() < 24)
 	{
 		setprop("controls/electric/b-ridg", 1);
 	}
-	elsif(getprop("controls/electric/engine[1]/gen-switch") == 0)
+	elsif(getprop("controls/electric/engine[2]/gen-switch") == 0)
 	{
 		setprop("controls/electric/b-ridg", 0);
 	}
@@ -814,12 +834,25 @@ switch_ind = func() {
 	{
 		setprop("controls/electric/b-lbugen", 1);
 	}
+# Center backup generator switch
+	if(cpt_flt_inst.getValue() < 24)
+	{
+		setprop("controls/electric/b-cbugen", 1);
+	}
+	elsif(getprop("controls/electric/engine[1]/gen-bu-switch") == 0)
+	{
+		setprop("controls/electric/b-cbugen", 0);
+	}
+	else
+	{
+		setprop("controls/electric/b-cbugen", 1);
+	}
 # Right backup generator switch
 	if(cpt_flt_inst.getValue() < 24)
 	{
 		setprop("controls/electric/b-rbugen", 1);
 	}
-	elsif(getprop("controls/electric/engine[1]/gen-bu-switch") == 0)
+	elsif(getprop("controls/electric/engine[2]/gen-bu-switch") == 0)
 	{
 		setprop("controls/electric/b-rbugen", 0);
 	}
@@ -1009,7 +1042,7 @@ switch_ind = func() {
 	{
 		setprop("controls/engines/engine/b-eec-switch", 1);
 	}
-#EEC Right
+#EEC Center
 	if((getprop("controls/engines/engine[1]/eec-switch") == 0)
 			and (cpt_flt_inst.getValue() > 24))
 	{
@@ -1018,6 +1051,16 @@ switch_ind = func() {
 	else
 	{
 		setprop("controls/engines/engine[1]/b-eec-switch", 1);
+	}
+#EEC Right
+	if((getprop("controls/engines/engine[2]/eec-switch") == 0)
+			and (cpt_flt_inst.getValue() > 24))
+	{
+		setprop("controls/engines/engine[2]/b-eec-switch", 0);
+	}
+	else
+	{
+		setprop("controls/engines/engine[2]/b-eec-switch", 1);
 	}
 #WINDOWS HEAT
 	if((getprop("controls/anti-ice/window-heat-ls-switch") == 0)
@@ -1099,6 +1142,7 @@ var update_systems = func {
     Efis.update_temp();
     LHeng.update();
     RHeng.update();
+    CHeng.update();
     #wiper.active(); # not implemented yet!
     if(getprop("controls/gear/gear-down")){
         setprop("sim/multiplay/generic/float[0]",getprop("gear/gear[0]/compression-m"));

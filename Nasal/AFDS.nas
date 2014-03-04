@@ -1572,6 +1572,7 @@ var AFDS = {
 					{
 						setprop("controls/engines/engine[0]/throttle", thrust_lmt);
 						setprop("controls/engines/engine[1]/throttle", thrust_lmt);
+						setprop("controls/engines/engine[2]/throttle", thrust_lmt);
 					}
 				}
 			}

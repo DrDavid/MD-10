@@ -13,10 +13,6 @@
 <object-name>dial-a-flap.glass</object-name>
 </animation>
 
-  <effect>
-<inherits-from>Aircraft/MD-11/Models/Effects/bumpspec-dashboard</inherits-from>
-<object-name>dashboar</object-name>
- </effect>
 	
 	    <animation>
         <type>select</type>
@@ -1014,6 +1010,235 @@
             <z>0</z>
         </axis>
     </animation>
+    
+    <!-- 1. starter -->
+    
+        <animation>
+        <type>pick</type>
+        <object-name>starter.1.off</object-name>
+        <object-name>starter.1.on</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/StartIgnition-knob[0]</property>
+                <step>-1</step>
+                <min>-1</min>
+                <max>0</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>starter.1.off</object-name>
+        <object-name>starter.1.on</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/StartIgnition-knob[0]</property>
+                <step>1</step>
+                <min>-1</min>
+                <max>0</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+    </animation>
+    
+    		<animation>
+		<type>translate</type>
+    <object-name>starter.1.off</object-name>
+    <object-name>starter.1.on</object-name>
+    <property>controls/engines/StartIgnition-knob[0]</property>
+		<factor>0.003</factor>
+	<axis>
+	    <x1-m>-27.0331</x1-m>
+	    <y1-m>-0.0303</y1-m>
+	    <z1-m>6.7497</z1-m>
+	    <x2-m>-27.0376</x2-m>
+	    <y2-m>-0.0303</y2-m>
+	    <z2-m>6.7467</z2-m>
+	</axis>
+	</animation>
+	
+				<animation>
+		<type>select</type>
+    <object-name>starter.1.off</object-name>
+		<condition>
+		<equals>
+				<property>controls/engines/StartIgnition-knob[0]</property>
+				<value>0</value>
+				</equals>
+		</condition>
+	</animation>
+	
+				<animation>
+		<type>select</type>
+    <object-name>starter.1.on</object-name>
+		<condition>
+		<equals>
+				<property>controls/engines/StartIgnition-knob[0]</property>
+				<value>-1</value>
+				</equals>
+		</condition>
+	</animation>
+	
+	
+	   <!-- 2. starter -->
+    
+        <animation>
+        <type>pick</type>
+        <object-name>starter.2.off</object-name>
+        <object-name>starter.2.on</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/StartIgnition-knob[1]</property>
+                <step>-1</step>
+                <min>-1</min>
+                <max>0</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>starter.2.off</object-name>
+        <object-name>starter.2.on</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/StartIgnition-knob[1]</property>
+                <step>1</step>
+                <min>-1</min>
+                <max>0</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+    </animation>
+    
+    		<animation>
+		<type>translate</type>
+    <object-name>starter.2.off</object-name>
+    <object-name>starter.2.on</object-name>
+    <property>controls/engines/StartIgnition-knob[1]</property>
+		<factor>0.003</factor>
+	<axis>
+	    <x1-m>-27.0331</x1-m>
+	    <y1-m>-0.0303</y1-m>
+	    <z1-m>6.7497</z1-m>
+	    <x2-m>-27.0376</x2-m>
+	    <y2-m>-0.0303</y2-m>
+	    <z2-m>6.7467</z2-m>
+	</axis>
+	</animation>
+	
+				<animation>
+		<type>select</type>
+    <object-name>starter.2.off</object-name>
+		<condition>
+		<equals>
+				<property>controls/engines/StartIgnition-knob[1]</property>
+				<value>0</value>
+				</equals>
+		</condition>
+	</animation>
+	
+				<animation>
+		<type>select</type>
+    <object-name>starter.2.on</object-name>
+		<condition>
+		<equals>
+				<property>controls/engines/StartIgnition-knob[1]</property>
+				<value>-1</value>
+				</equals>
+		</condition>
+	</animation>
+	
+		   <!-- 3. starter -->
+    
+        <animation>
+        <type>pick</type>
+        <object-name>starter.3.off</object-name>
+        <object-name>starter.3.on</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/StartIgnition-knob[2]</property>
+                <step>-1</step>
+                <min>-1</min>
+                <max>0</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>starter.3.off</object-name>
+        <object-name>starter.3.on</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/StartIgnition-knob[2]</property>
+                <step>1</step>
+                <min>-1</min>
+                <max>0</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+    </animation>
+    
+    		<animation>
+		<type>translate</type>
+    <object-name>starter.3.off</object-name>
+    <object-name>starter.3.on</object-name>
+    <property>controls/engines/StartIgnition-knob[2]</property>
+		<factor>0.003</factor>
+	<axis>
+	    <x1-m>-27.0331</x1-m>
+	    <y1-m>-0.0303</y1-m>
+	    <z1-m>6.7497</z1-m>
+	    <x2-m>-27.0376</x2-m>
+	    <y2-m>-0.0303</y2-m>
+	    <z2-m>6.7467</z2-m>
+	</axis>
+	</animation>
+	
+				<animation>
+		<type>select</type>
+    <object-name>starter.3.off</object-name>
+		<condition>
+		<equals>
+				<property>controls/engines/StartIgnition-knob[2]</property>
+				<value>0</value>
+				</equals>
+		</condition>
+	</animation>
+	
+				<animation>
+		<type>select</type>
+    <object-name>starter.3.on</object-name>
+		<condition>
+		<equals>
+				<property>controls/engines/StartIgnition-knob[2]</property>
+				<value>-1</value>
+				</equals>
+		</condition>
+	</animation>
     
 
     

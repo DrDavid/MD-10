@@ -28,12 +28,10 @@
             <expression>
                 <table>
                     <property>controls/flight/flaps</property> 
-                    <entry><ind>0.033</ind><dep>255</dep></entry>
-                    <entry><ind>0.166</ind><dep>235</dep></entry>
-                    <entry><ind>0.5</ind><dep>215</dep></entry>
-                    <entry><ind>0.666</ind><dep>200</dep></entry>
-                    <entry><ind>0.833</ind><dep>190</dep></entry>
-                    <entry><ind>1.0</ind><dep>180</dep></entry>
+                    <entry><ind>0.44</ind><dep>220</dep></entry>
+                    <entry><ind>0.56</ind><dep>210</dep></entry>
+                    <entry><ind>0.70</ind><dep>190</dep></entry>
+                    <entry><ind>1.0</ind><dep>175</dep></entry>
                 </table>
             </expression>
         </input>
@@ -45,7 +43,7 @@
                     <value>0.0</value>
                 </greater-than>
             </condition>
-            <value>270</value>
+            <value>260</value>
         </input>
 
         <input> 
@@ -429,10 +427,10 @@
 			<Kp>
 				<condition>
 					<and>
-						<eauals>
+						<equals>
 							<property>instrumentation/afds/ap-modes/pitch-mode</property>
 							<value>G/S</value>
-						</eauals>
+						</equals>
 						<less-than>
 							<property>position/gear-agl-ft</property>
 							<value>150</value>

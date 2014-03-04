@@ -28,7 +28,16 @@ var AIR = {
 			setprop("controls/air/lpack", 0);
 		}
 		if((cpt_flt_inst.getValue() < 24)
-				or (getprop("engines/engine[1]/run") and getprop("controls/air/rpack-switch")))
+				or (getprop("engines/engine[1]/run") and getprop("controls/air/cpack-switch")))
+		{
+			setprop("controls/air/cpack", 1);
+		}
+		else
+		{
+			setprop("controls/air/cpack", 0);
+		}
+		if((cpt_flt_inst.getValue() < 24)
+				or (getprop("engines/engine[2]/run") and getprop("controls/air/rpack-switch")))
 		{
 			setprop("controls/air/rpack", 1);
 		}
@@ -36,6 +45,8 @@ var AIR = {
 		{
 			setprop("controls/air/rpack", 0);
 		}
+		
+		
 		if((cpt_flt_inst.getValue() < 24)
 				or getprop("controls/air/ltrim-switch"))
 		{
@@ -48,7 +59,7 @@ var AIR = {
 		if((cpt_flt_inst.getValue() < 24)
 				or (getprop("engines/engine[2]/run") and getprop("controls/air/r2pack-switch")))
 		{
-			setprop("controls/air/r2pack", 1);
+			setprop("controls/air/rpack", 1);
 		}
 		else
 		{
@@ -118,7 +129,7 @@ var AIR = {
 			setprop("controls/air/bleedapu", 0);
 		}
 		if((cpt_flt_inst.getValue() < 24)
-				or (getprop("engines/engine/run") and getprop("controls/air/bleedengl-switch")))
+				or (getprop("engines/engine[2]/run")  and getprop("controls/air/bleedengl-switch")))
 		{
 			setprop("controls/air/bleedengl", 1);
 		}
@@ -134,6 +145,15 @@ var AIR = {
 		else
 		{
 			setprop("controls/air/bleedengr", 0);
+		}
+		if((cpt_flt_inst.getValue() < 24)
+				or (getprop("engines/engine/run") and getprop("controls/air/bleedengc-switch")))
+		{
+			setprop("controls/air/bleedengc", 1);
+		}
+		else
+		{
+			setprop("controls/air/bleedengc", 0);
 		}
 	}
 };
@@ -155,8 +175,10 @@ var update_air = func {
 	setprop("controls/air/cabin_temp", 0.5);
 	setprop("controls/air/lpack-switch", 1);
 	setprop("controls/air/rpack-switch", 1);
+	setprop("controls/air/cpack-switch", 1);
 	setprop("controls/air/ltrim-switch", 1);
 	setprop("controls/air/rtrim-switch", 1);
+	setprop("controls/air/ctrim-switch", 1);
 	setprop("controls/air/ofvfwd-switch", 1);
 	setprop("controls/air/ofvaft-switch", 1);
 	setprop("controls/air/islationl-switch", 1);
@@ -165,6 +187,7 @@ var update_air = func {
 	setprop("controls/air/bleedapu-switch", 1);
 	setprop("controls/air/bleedengl-switch", 1);
 	setprop("controls/air/bleedengr-switch", 1);
+	setprop("controls/air/bleedengc-switch", 1);
 	setprop("controls/anti-ice/wing-antiice-knob", 1);
 	setprop("controls/anti-ice/engin/antiice-knob", 1);
 	setprop("controls/anti-ice/engin[1]/antiice-knob", 1);

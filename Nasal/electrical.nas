@@ -495,6 +495,29 @@ update_virtual_bus = func( dt ) {
 		l_main_ac.setValue(0);
 	}
 	l_xfr.setValue(l_main_ac.getValue());
+	
+	
+	if(cidg.valid)
+	{
+		c_main_ac.setValue(cidg.get_output_volts());
+	}
+	elsif(external_primary.valid)
+	{
+		c_main_ac.setValue(115);
+	}
+	elsif(external_secondary.valid)
+	{
+		c_main_ac.setValue(115);
+	}
+	elsif(apu.valid)
+	{
+		c_main_ac.setValue(115);
+	}
+	elsif(lidg.valid)
+	{
+		c_main_ac.setValue(lidg.get_output_volts());
+	}
+	
 		
 	if(ridg.valid)
 	{
@@ -601,6 +624,19 @@ rh_bus = func(bv) {
         var srvc = rbus_input[i].getValue();
         load += rbus_load[i] * srvc;
         rbus_output[i].setValue(bus_volts * srvc);
+    }
+    return load;
+}
+
+ch_bus = func(bv) {
+    var bus_volts = bv;
+    var load = 0.0;
+    var srvc = 0.0;
+
+    for(var i=0; i<size(cbus_input); i+=1) {
+        var srvc = cbus_input[i].getValue();
+        load += cbus_load[i] * srvc;
+        cbus_output[i].setValue(bus_volts * srvc);
     }
     return load;
 }

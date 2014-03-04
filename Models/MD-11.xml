@@ -203,7 +203,7 @@
 		<type>spin</type>
 		<object-name>fan_1</object-name>
 		<factor>-67</factor>
-		<property>engines/engine[0]/n1</property>
+		<property>engines/engine[0]/rpm</property>
 	<axis>
 	    <x1-m>-4.8064</x1-m>
 	    <y1-m>-8.2552</y1-m>
@@ -219,7 +219,7 @@
 		<type>spin</type>
 		<object-name>fan_2</object-name>
 		<factor>-67</factor>
-		<property>engines/engine[2]/n1</property>
+		<property>engines/engine[2]/rpm</property>
 	<axis>
 	    <x1-m>-4.8064</x1-m>
 	    <y1-m>8.2552</y1-m>
@@ -235,7 +235,7 @@
 		<type>spin</type>
 		<object-name>fan_3</object-name>
 		<factor>-67</factor>
-		<property>engines/engine[1]/n1</property>
+		<property>engines/engine[1]/rpm</property>
 	<axis>
 	    <x1-m>25.7008</x1-m>
 	    <y1-m>0</y1-m>
@@ -265,6 +265,14 @@
 		<effect>
 		<inherits-from>Aircraft/MD-11/Models/Effects/engine</inherits-from>
     <object-name>engines.chrome</object-name>
+<object-name>slat.1.part3</object-name>
+<object-name>slat.1.part2</object-name>
+<object-name>slat.1.part1</object-name>
+<object-name>slat.4.part3</object-name>
+<object-name>slat.4.part2</object-name>
+<object-name>slat.4.part1</object-name>
+<object-name>slat.2</object-name>
+<object-name>slat.3</object-name>
 	</effect>
 	
 		<animation>

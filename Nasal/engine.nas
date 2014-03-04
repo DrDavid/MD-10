@@ -143,7 +143,7 @@ var Engine = {
                 if(me.starterSwitch.getValue() == -1)
                 {
                     if(getprop("controls/electric/APU-generator")
-                            or getprop("engines/engine[0]/run")
+                            or getprop("engines/engine/run")
                             or getprop("engines/engine[1]/run")
                             or getprop("engines/engine[2]/run")
                             or getprop("controls/electric/external-power")

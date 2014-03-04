@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- 777-200ER custom flight recorder configuration
      Thorsten Brehm, September 2011 
@@ -14,7 +14,7 @@
  -->
 
     <config n="0">
-        <name type="string">B777 Flight Recorder</name>
+        <name type="string">MD11 Flight Recorder</name>
 
         <!-- include generic stuff -->
         <signals include="Aircraft/Generic/flightrecorder/components/position.xml" />
@@ -119,6 +119,9 @@
                 <type>bool</type><property type="string">instrumentation/afds/inputs/at-armed[1]</property>
             </signal>
             <signal>
+                <type>bool</type><property type="string">instrumentation/afds/inputs/at-armed[2]</property>
+            </signal>
+            <signal>
                 <type>int8</type><property type="string">controls/flight/speedbrake-lever</property>
             </signal>
             <signal>
@@ -157,11 +160,15 @@
             </signal>
             <signal>
                 <type>float</type>
-                <property type="string">gear/gear[3]/compression-m</property> <!-- "virtual gear", contact point for left axle -->
+                <property type="string">gear/gear[3]/compression-m</property>
             </signal>
             <signal>
                 <type>float</type>
-                <property type="string">gear/gear[4]/compression-m</property> <!-- "virtual gear", contact point for right axle -->
+                <property type="string">gear/gear[4]/compression-m</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">gear/gear[5]/compression-m</property>
             </signal>
 
             <signal>
@@ -189,6 +196,10 @@
             <signal>
                 <type>float</type>
                 <property type="string">surface-positions/reverser-norm[1]</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">surface-positions/reverser-norm[2]</property>
             </signal>
 
         </signals>

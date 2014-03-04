@@ -7,91 +7,6 @@ Syd Adams
 
  <path>PFD_L.ac</path>
 
-    <animation>
-        <type>select</type>
-        <object-name>Power.off</object-name>
-        <condition>
-            <less-than>
-                <property>systems/electrical/outputs/efis</property>
-                <value>15</value>
-            </less-than>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>Box-alt-alert</object-name>
-        <condition>
-			<property>autopilot/internal/alt-alert</property>
-		</condition>
-    </animation>
-
-	<animation>
-		<type>textranslate</type>
-		<object-name>Display_0</object-name>
-		<property>autopilot/internal/alt-alert</property>
-		<factor>0.070</factor>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>Box-mode</object-name>
-        <condition>
-			<property>autopilot/settings/autopilot-transition</property>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>Box-pitch</object-name>
-        <condition>
-			<property>autopilot/settings/pitch-transition</property>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>Box-roll</object-name>
-        <condition>
-			<property>autopilot/settings/roll-transition</property>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>Box-speed</object-name>
-        <condition>
-			<property>autopilot/settings/speed-transition</property>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>locscale</object-name>
-        <condition>
-			<and>
-				<property>instrumentation/nav/in-range</property>
-				<property>instrumentation/nav/nav-loc</property>
-			</and>
-        </condition>
-    </animation>
-
- 	<animation>
-		<type>textranslate</type>
-		<object-name>locscale</object-name>
-		<property>autopilot/internal/presision-loc</property>
-		<factor>0.055</factor>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
-	</animation>
 
     <animation>
         <type>select</type>
@@ -428,7 +343,10 @@ Syd Adams
             <y>0</y>
             <z>1</z>
         </axis>
-        <factor>0.00102</factor>
+        <interpolation>
+            <entry><ind>80</ind><dep>0.0510</dep></entry>
+            <entry><ind>-80</ind><dep>-0.0510</dep></entry>
+        </interpolation>
     </animation>
 
     <animation>
@@ -516,40 +434,20 @@ Syd Adams
         </axis>
     </animation>
 
-    <animation>
-        <type>rotate</type>
-        <object-name>Heading_mark</object-name>
-        <property>autopilot/internal/crab-angle-hdg</property>
-        <interpolation>
-            <entry><ind>-54</ind><dep>-54</dep></entry>
-            <entry><ind>0</ind><dep>0</dep></entry>
-            <entry><ind>54</ind><dep>54</dep></entry>
-        </interpolation>
-        <center>
-            <x-m>0.002</x-m>
-            <y-m>-0.012</y-m>
-            <z-m>-0.120</z-m>
-        </center>
-        <axis>
-            <x>-1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
 
     <animation>
         <type>rotate</type>
         <object-name>hdg-bug</object-name>
         <property>autopilot/internal/heading-bug-error-deg</property>
         <interpolation>
-            <entry><ind>-54</ind><dep>-54</dep></entry>
+            <entry><ind>-35</ind><dep>-35</dep></entry>
             <entry><ind>0</ind><dep>0</dep></entry>
-            <entry><ind>54</ind><dep>54</dep></entry>
+            <entry><ind>35</ind><dep>35</dep></entry>
         </interpolation>
         <center>
             <x-m>0.002</x-m>
             <y-m>-0.012</y-m>
-            <z-m>-0.120</z-m>
+            <z-m>-0.165</z-m>
         </center>
         <axis>
             <x>-1</x>
@@ -558,26 +456,6 @@ Syd Adams
         </axis>
     </animation>
 
-    <animation>
-        <type>rotate</type>
-        <object-name>Track</object-name>
-        <property>autopilot/internal/crab-angle-trk</property>
-        <interpolation>
-            <entry><ind>-54</ind><dep>-54</dep></entry>
-            <entry><ind>0</ind><dep>0</dep></entry>
-            <entry><ind>54</ind><dep>54</dep></entry>
-        </interpolation>
-        <center>
-            <x-m>0.002</x-m>
-            <y-m>-0.012</y-m>
-            <z-m>-0.120</z-m>
-        </center>
-        <axis>
-            <x>1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
 
     <animation>
         <type>rotate</type>
@@ -906,18 +784,6 @@ Syd Adams
     </animation>
 
     <animation>
-        <type>textranslate</type>
-        <object-name>runway_bar</object-name>
-        <property>instrumentation/pfd/runway-elevation-diff</property>
-        <axis>
-            <x>0</x>
-            <y>-1</y>
-            <z>0</z>
-        </axis>
-        <factor>0.00038</factor>
-    </animation>
-
-    <animation>
         <type>select</type>
         <object-name>minimum_head</object-name>
         <condition>
@@ -936,18 +802,6 @@ Syd Adams
         <property>instrumentation/afds/ap-modes/roll-mode</property>
 				<value>HEADING</value>
 				</equals>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>minimum_tail</object-name>
-        <condition>
-			<property>instrumentation/efis/inputs/minimums-mode</property>
-			<less-than>
-				<property>instrumentation/pfd/minimum-diff</property>
-				<value>0</value>
-			</less-than>
         </condition>
     </animation>
 
@@ -1178,8 +1032,8 @@ Syd Adams
         <name>RALT</name>
         <offsets>
             <x-m>0.004</x-m>
-            <y-m>-0.0105</y-m>
-            <z-m>-0.029</z-m>
+            <y-m>-0.0127</y-m>
+            <z-m>-0.0304</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1189,7 +1043,7 @@ Syd Adams
         <truncate type="bool">true</truncate>
         <property>autopilot/settings/radio-altimeter-indication</property>
         <font>helvetica_bold.txf</font>
-        <character-size>0.009</character-size>
+        <character-size>0.006</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
         <font-resolution>
             <width type="int">32</width>
@@ -1795,7 +1649,6 @@ Syd Adams
 
     <animation>
         <type>material</type><!--white-->
-        <object-name>RALT</object-name>
         <object-name>MACH</object-name>
         <object-name>ASIdigits</object-name>
         <object-name>ALTdigits</object-name>
@@ -1863,6 +1716,32 @@ Syd Adams
             <blue>0</blue>
         </specular>
     </animation>
+    
+        <animation>
+        <type>material</type><!--yellow-->
+        <object-name>RALT</object-name>
+        <emission>
+            <red>1</red>
+            <green>1</green>
+            <blue>0</blue>
+        </emission>
+        <ambient>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </ambient>
+        <diffuse>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </diffuse>
+        <specular>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </specular>
+    </animation>
+
 
     <animation>
         <type>material</type><!--yellow-->
