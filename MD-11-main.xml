@@ -40,9 +40,9 @@
 		<jetway-hood-deg type="float">1</jetway-hood-deg>
 	    </door>
 <path>Aircraft/MD-11/Models/MD-11.xml</path>
-            <livery>
-                <file type="string">FIN</file>
-            </livery>
+        <livery>
+        <file type="string">FIN</file>
+      </livery>
 </model>
 		<shutterspeed type="double">0.18</shutterspeed>
 		
@@ -694,7 +694,7 @@
         <gear>
             <brake-parking type="bool">1</brake-parking>
             <tiller-cmd-norm type="double">0</tiller-cmd-norm>
-            <tiller-enabled type="bool">false</tiller-enabled>
+            <tiller-enabled type="bool">true</tiller-enabled>
             <nosegear-steering-cmd-norm type="double">0</nosegear-steering-cmd-norm>
             <maingear-steering-cmd-norm type="double">0</maingear-steering-cmd-norm>
         </gear>
@@ -759,6 +759,7 @@
             <file>Aircraft/MD-11/Nasal/SWanimation.nas</file>
             <file>Aircraft/Generic/limits.nas</file>
             <file>Aircraft/MD-11/Nasal/warnsystem.nas</file>
+            <file>Aircraft/MD-11/Nasal/doors.nas</file>
         </MD11>
         <dialogs>
             <file>Aircraft/MD-11/Nasal/dialogs.nas</file>
@@ -770,33 +771,26 @@
     
         <limits n="0">
         <max-flap-extension-speed>
-            <flaps>0.033</flaps>
-            <speed>255</speed>
+            <flaps>0.44</flaps>
+            <speed>220</speed>
         </max-flap-extension-speed>
         <max-flap-extension-speed>
-            <flaps>0.166</flaps>
-            <speed>235</speed>
+            <flaps>0.56</flaps>
+            <speed>210</speed>
         </max-flap-extension-speed>
         <max-flap-extension-speed>
-            <flaps>0.500</flaps>
-            <speed>215</speed>
+            <flaps>0.70</flaps>
+            <speed>190</speed>
         </max-flap-extension-speed>
         <max-flap-extension-speed>
-            <flaps>0.666</flaps>
-            <speed>195</speed>
+            <flaps>1.0</flaps>
+            <speed>175</speed>
         </max-flap-extension-speed>
-        <max-flap-extension-speed>
-            <flaps>0.833</flaps>
-            <speed>185</speed>
-        </max-flap-extension-speed>
-        <max-flap-extension-speed>
-            <flaps>1.000</flaps>
-            <speed>170</speed>
-        </max-flap-extension-speed>
-        <max-gear-extension-speed>270</max-gear-extension-speed>
+        <max-gear-extension-speed>260</max-gear-extension-speed>
         <vne>600</vne>
         <max-positive-g>2.5</max-positive-g>
         <max-negative-g>-1.76</max-negative-g>
     </limits>
+    
 
 </PropertyList>

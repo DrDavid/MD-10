@@ -86,26 +86,6 @@ Syd Adams
         </condition>
     </animation>
 
-    <animation>
-        <type>select</type>
-        <object-name>coarseGSPointer</object-name>
-        <condition>
-			<or>
-				<greater-than>
-			        <property>instrumentation/nav/gs-needle-deflection-norm</property>
-					<value>0.976</value>
-				</greater-than>
-				<less-than>
-			        <property>instrumentation/nav/gs-needle-deflection-norm</property>
-					<value>-0.976</value>
-				</less-than>
-			</or>
-        </condition>
-        <property>instrumentation/nav/gs-needle-deflection-norm</property>
-        <condition>
-            <not><property>instrumentation/nav/gs-in-range</property></not>
-        </condition>
-    </animation>
 
     <animation>
         <type>select</type>
@@ -172,7 +152,6 @@ Syd Adams
     <animation>
         <type>translate</type>
         <object-name>gspointer</object-name>
-        <object-name>coarseGSPointer</object-name>
         <property>instrumentation/nav/gs-needle-deflection-norm</property>
         <factor>0.04</factor>
         <axis>
@@ -180,18 +159,6 @@ Syd Adams
             <y>0</y>
             <z>1</z>
         </axis>
-    </animation>
-
-    <animation>
-        <object-name>VrefMark</object-name>
-        <property>instrumentation/pfd/vref-diff</property>
-        <type>translate</type>
-        <axis>
-            <x>0</x>
-            <y>0</y>
-            <z>1</z>
-        </axis>
-        <factor>0.00102</factor>
     </animation>
 
     <animation>
@@ -390,47 +357,37 @@ Syd Adams
             <z>0</z>
         </axis>
     </animation>
-
-    <animation>
-        <type>translate</type>
-        <object-name>VSI.needle</object-name>
+    
+    
+        <animation>
+        <type>textranslate</type>
+        <object-name>VSI.positive</object-name>
         <property>instrumentation/inst-vertical-speed-indicator/indicated-speed-fps</property>
         <interpolation>
-            <entry><ind>-100</ind><dep>-0.0385</dep></entry>
-            <entry><ind>-33.3333</ind><dep>-0.0265</dep></entry>
-            <entry><ind>-16.6666</ind><dep>-0.0147</dep></entry>
-            <entry><ind>16.6666</ind><dep>0.0147</dep></entry>
-            <entry><ind>33.3333</ind><dep>0.0265</dep></entry>
-            <entry><ind>100</ind><dep>0.0385</dep></entry>
+            <entry><ind>0</ind><dep>0</dep></entry>
+            <entry><ind>16.666</ind><dep>0.28</dep></entry>
+            <entry><ind>33.333</ind><dep>0.385</dep></entry>
+            <entry><ind>66.666</ind><dep>0.49</dep></entry>
         </interpolation>
         <axis>
             <x>0</x>
-            <y>0</y>
-            <z>1</z>
+            <y>-1</y>
         </axis>
     </animation>
 
-    <animation>
-        <type>rotate</type>
-        <object-name>VSI.needle</object-name>
+        <animation>
+        <type>textranslate</type>
+        <object-name>VSI.negative</object-name>
         <property>instrumentation/inst-vertical-speed-indicator/indicated-speed-fps</property>
         <interpolation>
-            <entry><ind>-100</ind><dep>-60.0</dep></entry>
-            <entry><ind>-33.3333</ind><dep>-50.0</dep></entry>
-            <entry><ind>-16.6666</ind><dep>-34.0</dep></entry>
-            <entry><ind>16.6666</ind><dep>34.0</dep></entry>
-            <entry><ind>33.3333</ind><dep>50.0</dep></entry>
-            <entry><ind>100</ind><dep>60.0</dep></entry>
+            <entry><ind>0</ind><dep>0</dep></entry>
+            <entry><ind>-16.666</ind><dep>0.28</dep></entry>
+            <entry><ind>-33.333</ind><dep>0.385</dep></entry>
+            <entry><ind>-66.666</ind><dep>0.49</dep></entry>
         </interpolation>
-        <center>
-            <x-m>0.002</x-m>
-            <y-m>0.082</y-m>
-            <z-m>0.007</z-m>
-        </center>
         <axis>
-            <x>-1</x>
-            <y>0</y>
-            <z>0</z>
+            <x>0</x>
+            <y>-1</y>
         </axis>
     </animation>
 
@@ -783,16 +740,6 @@ Syd Adams
         <factor>0.000142</factor>
     </animation>
 
-    <animation>
-        <type>select</type>
-        <object-name>minimum_head</object-name>
-        <condition>
-			<less-than>
-				<property>instrumentation/pfd/minimum-diff</property>
-				<value>0</value>
-			</less-than>
-        </condition>
-    </animation>
     
         <animation>
         <type>select</type>
@@ -805,43 +752,7 @@ Syd Adams
         </condition>
     </animation>
 
-    <animation>
-        <type>select</type>
-        <object-name>minimum_head_a</object-name>
-        <condition>
-			<greater-than>
-				<property>instrumentation/pfd/minimum-diff</property>
-				<value>0</value>
-			</greater-than>
-        </condition>
-    </animation>
 
-    <animation>
-        <type>select</type>
-        <object-name>minimum_tail_a</object-name>
-        <condition>
-			<property>instrumentation/efis/inputs/minimums-mode</property>
-			<greater-than>
-				<property>instrumentation/pfd/minimum-diff</property>
-				<value>0</value>
-			</greater-than>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>translate</type>
-        <object-name>minimum_head</object-name>
-        <object-name>minimum_tail</object-name>
-        <object-name>minimum_head_a</object-name>
-        <object-name>minimum_tail_a</object-name>
-        <property>instrumentation/pfd/minimum-diff</property>
-        <axis>
-            <x>0</x>
-            <y>0</y>
-            <z>1</z>
-        </axis>
-        <factor>0.000142</factor>
-    </animation>
 
 <!-- Text -->
 
@@ -1084,38 +995,19 @@ Syd Adams
     </text>
 
     <text>
-        <name>BARO-source</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>0.038</y-m>
-            <z-m>-0.061</z-m>
-        </offsets>
-        <alignment>center-center</alignment>
-        <axis-alignment>yz-plane</axis-alignment>
-        <type type="string">text-value</type>
-        <property>instrumentation/altimeter/source-barometric</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.008</character-size>
-        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">32</width>
-            <height type="int">32</height>
-        </font-resolution>
-    </text>
-    <text>
         <name>INHG</name>
         <offsets>
             <x-m>0.004</x-m>
-            <y-m>0.058</y-m>
-            <z-m>-0.061</z-m>
+            <y-m>0.0641</y-m>
+            <z-m>-0.0518</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
-        <format type="string">%2.2f IN</format>
+        <format type="string">QNH %2.2f</format>
         <property>instrumentation/altimeter/setting-inhg</property>
         <font>helvetica_bold.txf</font>
-        <character-size>0.008</character-size>
+        <character-size>0.006</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
         <font-resolution>
             <width type="int">32</width>
@@ -1459,27 +1351,6 @@ Syd Adams
     </text>
 
     <text>
-        <name>DME</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>-0.040</y-m>
-            <z-m>0.0714</z-m>
-        </offsets>
-        <alignment>center-center</alignment>
-        <axis-alignment>yz-plane</axis-alignment>
-        <type type="string">number-value</type>
-        <format type="string">DME %3.1f</format>
-        <property>instrumentation/dme/indicated-distance-nm</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.007</character-size>
-        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">32</width>
-            <height type="int">32</height>
-        </font-resolution>
-    </text>
-
-    <text>
         <name>MACH-annun</name>
         <offsets>
             <x-m>0.001</x-m>
@@ -1586,7 +1457,6 @@ Syd Adams
     <animation>
         <type>material</type><!--green-->
         <object-name>PITCH</object-name>
-        <object-name>INHG</object-name>
         <object-name>INHG-STD</object-name>
         <object-name>HPA</object-name>
         <object-name>TRU-annun</object-name>
@@ -1659,7 +1529,6 @@ Syd Adams
         <object-name>BARO-source</object-name>
         <object-name>INHG-WHT</object-name>
         <object-name>HPA-WHT</object-name>
-        <object-name>DME</object-name>
         <object-name>ASI-taxi</object-name>
         <object-name>MAG-annun</object-name>
         <object-name>HDG-annun</object-name>
@@ -1668,6 +1537,7 @@ Syd Adams
         <object-name>ROLL</object-name>
         <object-name>ROLL-HEADING</object-name>
         <object-name>MACH-annun</object-name>
+        <object-name>INHG</object-name>
         <emission>
             <red>0.7</red>
             <green>0.7</green>
@@ -1790,14 +1660,6 @@ Syd Adams
                 <property>instrumentation/inst-vertical-speed-indicator/indicated-speed-fps</property>
                 <value>-6.67</value>
             </less-than-equals>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>DME</object-name>
-        <condition>
-            <property>instrumentation/dme/in-range</property>
         </condition>
     </animation>
 
@@ -2244,45 +2106,7 @@ Syd Adams
             <height type="int">32</height>
         </font-resolution>
     </text>
-    <text>
-        <name>mins</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>0.03</y-m>
-            <z-m>-0.054</z-m>
-        </offsets>
-        <alignment>right-center</alignment>
-        <axis-alignment>yz-plane</axis-alignment>
-        <type type="string">text-value</type>
-        <property>instrumentation/efis/minimums-mode-text</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.006</character-size>
-        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">32</width>
-            <height type="int">32</height>
-        </font-resolution>
-    </text>
-    <text>
-        <name>mins</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>0.03</y-m>
-            <z-m>-0.06</z-m>
-        </offsets>
-        <alignment>right-center</alignment>
-        <axis-alignment>yz-plane</axis-alignment>
-        <type type="string">number-value</type>
-        <format type="string">%3.0f</format>
-        <property>instrumentation/efis/minimums</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.008</character-size>
-        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">32</width>
-            <height type="int">32</height>
-        </font-resolution>
-    </text>
+
 
     <animation>
         <object-name>speedtrend.up</object-name>
