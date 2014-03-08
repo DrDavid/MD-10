@@ -4,12 +4,20 @@
 
 	<path>cockpit.ac</path>
 	
-	
+	  <effect>
+<inherits-from>Aircraft/MD-11/Models/Effects/bumpspec-floor</inherits-from>
+<object-name>floor</object-name>
+ </effect>
+
 	    		  <animation>
 <type>shader</type>
 <shader>chrome</shader>
 <texture>chrome_cockpit.png</texture>
 <object-name>ctr.gear.glass</object-name>
+<<<<<<< HEAD
+=======
+<object-name>crank.handle.left</object-name>
+>>>>>>> Seats ready
 </animation>
 
 	
@@ -34,10 +42,48 @@
 </model>
 
 <model>
+<<<<<<< HEAD
 	<name>Pedestal</name>
 	<path>Aircraft/MD-11/Models/cockpit/pedestal.xml</path>
 </model>
 
+=======
+	<name>1st seat</name>
+	<path>Aircraft/MD-11/Models/cockpit/seat.xml</path>
+			<offsets>
+      <x-m>-26.8662</x-m>
+      <y-m>-0.5256</y-m>
+      <z-m>6.3334</z-m>
+		</offsets>
+</model>
+
+<model>
+	<name>2nd seat</name>
+	<path>Aircraft/MD-11/Models/cockpit/seat.xml</path>
+			<offsets>
+      <x-m>-26.8662</x-m>
+      <y-m>0.5256</y-m>
+      <z-m>6.3334</z-m>
+		</offsets>
+</model>
+
+<model>
+	<name>3rd seat</name>
+	<path>Aircraft/MD-11/Models/cockpit/seat.xml</path>
+			<offsets>
+      <heading-deg>-90</heading-deg>
+      <x-m>-26.0424</x-m>
+      <y-m>0.436</y-m>
+      <z-m>6.2319</z-m>
+		</offsets>
+</model>
+
+<model>
+	<name>Pedestal</name>
+	<path>Aircraft/MD-11/Models/cockpit/pedestal.xml</path>
+</model>
+
+>>>>>>> Seats ready
 
 <model>
 	<name>3. Audio selector</name>
@@ -68,7 +114,7 @@
 	<path>Aircraft/MD-11/Models/cockpit/instruments/PFD/PFD_L.xml</path>
 			<offsets>
             <x-m>-27.5138</x-m>
-            <y-m>0.562</y-m>
+            <y-m>0.555</y-m>
             <z-m>6.9072</z-m>
 			<pitch-deg>-11.51</pitch-deg>
 		</offsets>
@@ -120,6 +166,29 @@
     </axis>
   </animation>
   
+<<<<<<< HEAD
+=======
+  	  <animation>
+    <type>rotate</type>
+		<object-name>Tiller.2</object-name>
+		<condition>
+			<property>controls/gear/tiller-enabled</property>
+		</condition>
+    <property>sim/gui/dialogs/tiller-steering/value</property>
+    <factor>-1</factor>
+    <center>
+      <x-m>-27.2143</x-m>
+      <y-m>0.9685</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x> 0 </x> 
+      <y> 0 </y> 
+      <z> 1 </z> 
+    </axis>
+  </animation>
+  
+>>>>>>> Seats ready
   
   	<!-- Gear lever -->
 	<animation>

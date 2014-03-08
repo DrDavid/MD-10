@@ -550,6 +550,15 @@
 				<command>property-toggle</command>
 				<property>controls/engines/engine[0]/cutoff</property>
 			</binding>
+<<<<<<< HEAD
+=======
+			<binding>
+				<command>nasal</command>
+				<script>
+					controls.click(3);
+				</script>
+			</binding>
+>>>>>>> Seats ready
 		</action>
 	</animation>
 	<animation>
@@ -584,6 +593,15 @@
 				<command>property-toggle</command>
 				<property>controls/engines/engine[1]/cutoff</property>
 			</binding>
+<<<<<<< HEAD
+=======
+			<binding>
+				<command>nasal</command>
+				<script>
+					controls.click(3);
+				</script>
+			</binding>
+>>>>>>> Seats ready
 		</action>
 	</animation>
 	<animation>
@@ -618,6 +636,15 @@
 				<command>property-toggle</command>
 				<property>controls/engines/engine[2]/cutoff</property>
 			</binding>
+<<<<<<< HEAD
+=======
+			<binding>
+				<command>nasal</command>
+				<script>
+					controls.click(3);
+				</script>
+			</binding>
+>>>>>>> Seats ready
 		</action>
 	</animation>
 	<animation>

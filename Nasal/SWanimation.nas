@@ -70,6 +70,10 @@ var CDSPLST = aircraft.door.new("controls/switches/CDSPLSwitchTimer", duration);
 var AFAST = aircraft.door.new("controls/switches/AFASwitchTimer", duration);
 var GEARLEVER = aircraft.door.new("controls/gear/gearlever", 2);
 var PBRAKELEVER = aircraft.door.new("controls/gear/parkbrakelever", 0.5);
+<<<<<<< HEAD
+=======
+var ARMREST = aircraft.door.new("controls/switches/armrest", 1);
+>>>>>>> Seats ready
 LIGHTPROTECT = aircraft.door.new("/sim/model/door-positions/lightprotect", 1, 0);
 
 setlistener("controls/electric/battery-switch", func {
@@ -344,4 +348,10 @@ setlistener("controls/gear/brake-parking", func {
 		if(getprop("controls/gear/brake-parking")) PBRAKELEVER.open();
 		else PBRAKELEVER.close();
 });
+
+setlistener("sim/model/armrest", func {
+		if(getprop("sim/model/armrest")) ARMREST.open();
+		else ARMREST.close();
+});
+
 
