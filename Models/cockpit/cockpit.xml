@@ -14,10 +14,7 @@
 <shader>chrome</shader>
 <texture>chrome_cockpit.png</texture>
 <object-name>ctr.gear.glass</object-name>
-<<<<<<< HEAD
-=======
 <object-name>crank.handle.left</object-name>
->>>>>>> Seats ready
 </animation>
 
 	
@@ -42,12 +39,6 @@
 </model>
 
 <model>
-<<<<<<< HEAD
-	<name>Pedestal</name>
-	<path>Aircraft/MD-11/Models/cockpit/pedestal.xml</path>
-</model>
-
-=======
 	<name>1st seat</name>
 	<path>Aircraft/MD-11/Models/cockpit/seat.xml</path>
 			<offsets>
@@ -83,7 +74,6 @@
 	<path>Aircraft/MD-11/Models/cockpit/pedestal.xml</path>
 </model>
 
->>>>>>> Seats ready
 
 <model>
 	<name>3. Audio selector</name>
@@ -166,8 +156,6 @@
     </axis>
   </animation>
   
-<<<<<<< HEAD
-=======
   	  <animation>
     <type>rotate</type>
 		<object-name>Tiller.2</object-name>
@@ -188,7 +176,6 @@
     </axis>
   </animation>
   
->>>>>>> Seats ready
   
   	<!-- Gear lever -->
 	<animation>

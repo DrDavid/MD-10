@@ -9,4 +9,11 @@
 			</livery>  	  
 		</model>
 	</sim>
+	
+	        <controls>
+      <cabin>
+        <cabinwindows type="int">2</cabinwindows>
+		</cabin>
+    </controls>
+    
 </PropertyList>

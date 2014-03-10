@@ -8,10 +8,12 @@
 			<texture>md11.png</texture>
 		</livery> 
 	</model> 
-			<binding>
-				<command>property-adjust</command>
-			<property>sim/multiplay/generic/int[8]</property>
-			</binding>
 </sim> 
+
+      <controls>
+      <cabin>
+        <cabinwindows type="int">0</cabinwindows>
+		</cabin>
+    </controls>
 
 </PropertyList> 

@@ -6,8 +6,14 @@
 			<livery>
 				<name>Royal Dutch Airlines</name>
 				<texture>Liveries/KLM.png</texture>
-							<property>sim/multiplay/generic/int[8]</property>
-			</livery>  	  
+			</livery>
 		</model>
 	</sim>
+	
+    <controls>
+      <cabin>
+        <cabinwindows type="int">1</cabinwindows>
+		</cabin>
+    </controls>
+
 </PropertyList>

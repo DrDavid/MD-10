@@ -1,7 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas DC-10 -->
-
 <PropertyList>
 
 	<path>MD-11.ac</path>
@@ -15,6 +13,180 @@
    livery_update.stop();
   </unload>
  </nasal>
+ 
+ 				<animation>
+		<type>select</type>
+    <object-name>cabin_windows.finnair.paint</object-name>
+		<condition>
+		<or>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>0</value>
+				</equals>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>3</value>
+				</equals>
+				</or>
+		</condition>
+	</animation>
+	
+	 				<animation>
+		<type>select</type>
+    <object-name>cabin_windows.finnair</object-name>
+		<condition>
+		<or>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>1</value>
+				</equals>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>2</value>
+				</equals>
+				</or>
+		</condition>
+	</animation>
+	
+	 				<animation>
+		<type>select</type>
+    <object-name>cabin_windows.klm.paint</object-name>
+		<condition>
+		<or>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>1</value>
+				</equals>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>3</value>
+				</equals>
+				</or>
+		</condition>
+	</animation>
+	
+	 				<animation>
+		<type>select</type>
+    <object-name>cabin_windows.klm</object-name>
+		<condition>
+		<or>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>0</value>
+				</equals>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>2</value>
+				</equals>
+				</or>
+		</condition>
+	</animation>
+	
+		 				<animation>
+		<type>select</type>
+    <object-name>cabin_windows.klm.finnair.paint</object-name>
+		<condition>
+		<or>
+				<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>0</value>
+				</equals>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>1</value>
+				</equals>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>3</value>
+				</equals>
+				</or>
+		</condition>
+	</animation>
+	
+	 				<animation>
+		<type>select</type>
+    <object-name>cabin_windows.klm.finnair</object-name>
+		<condition>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>2</value>
+				</equals>
+		</condition>
+	</animation>
+	
+			 				<animation>
+		<type>select</type>
+    <object-name>cabin_windows.paint</object-name>
+		<condition>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>3</value>
+				</equals>
+		</condition>
+	</animation>
+	
+	 				<animation>
+		<type>select</type>
+    <object-name>cabin_windows</object-name>
+		<condition>
+		<or>
+				<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>0</value>
+				</equals>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>1</value>
+				</equals>
+		<equals>
+				<property>controls/cabin/cabinwindows</property>
+				<value>2</value>
+				</equals>
+				</or>
+		</condition>
+	</animation>
+	
+
+ <model>
+ <path>Aircraft/A330-300/Models/Services/Stairs/stairs.xml</path>
+ <name>l1</name>
+ <offsets>
+  <x-m>-24.053</x-m>
+  <y-m>-2.4309</y-m>
+  <z-m>5.8497</z-m>
+  <heading-deg>-12</heading-deg>
+ </offsets>
+ <condition>
+  <property>/services/stairs/l1</property>
+ </condition>
+</model>
+
+<model>
+ <name>l2</name>
+ <path>Aircraft/A330-300/Models/Services/Stairs/stairs.xml</path>
+ <offsets>
+  <x-m>-14.4742</x-m>
+  <y-m>-2.9444</y-m>
+  <z-m>5.8497</z-m>
+ </offsets>
+ <condition>
+  <property>/services/stairs/l2</property>
+ </condition>
+</model>
+
+<model>
+ <path>Aircraft/A330-300/Models/Services/Stairs/stairs.xml</path>
+ <name>l4</name>
+ <offsets>
+  <x-m>18.1755</x-m>
+  <y-m>-2.5346</y-m>
+  <z-m>5.8497</z-m>
+  <heading-deg>7.81</heading-deg>
+ </offsets>
+ <condition>
+  <property>/services/stairs/l4</property>
+ </condition>
+</model>
 	
 	
 	
@@ -176,6 +348,8 @@
 <object-name>ldglight.right.glass</object-name>
 <object-name>wing.glass.left</object-name>
 <object-name>wing.glass.right</object-name>
+<object-name>cabin_windows.klm.finnair</object-name>
+<object-name>cabin_windows.cargo</object-name>
 </animation>
 
 	<animation>
@@ -218,7 +392,7 @@
 		<name>Fan2</name>
 		<type>spin</type>
 		<object-name>fan_2</object-name>
-		<factor>-67</factor>
+		<factor>67</factor>
 		<property>engines/engine[2]/rpm</property>
 	<axis>
 	    <x1-m>-4.8064</x1-m>
@@ -234,7 +408,7 @@
 		<name>Fan3</name>
 		<type>spin</type>
 		<object-name>fan_3</object-name>
-		<factor>-67</factor>
+		<factor>67</factor>
 		<property>engines/engine[1]/rpm</property>
 	<axis>
 	    <x1-m>25.7008</x1-m>
@@ -1282,6 +1456,12 @@
 <object-name>cargo1</object-name>
 <object-name>cargo2</object-name>
 <object-name>cargo3</object-name>
+<object-name>flap.3.part2</object-name>
+<object-name>flap.5.part2</object-name>
+<object-name>cabin_windows.klm.paint</object-name>
+<object-name>cabin_windows.finnair.paint</object-name>
+<object-name>cabin_windows.klm.finnair.paint</object-name>
+<object-name>cabin_windows.paint</object-name>
  </effect>
  
    <effect>
@@ -1946,6 +2126,15 @@
 <object-name>cargo1</object-name>
 <object-name>cargo2</object-name>
 <object-name>cargo3</object-name>
+<object-name>flap.3.part2</object-name>
+<object-name>flap.5.part2</object-name>
+<object-name>cabin_windows.klm.paint</object-name>
+<object-name>cabin_windows.finnair.paint</object-name>
+<object-name>cabin_windows.klm.finnair.paint</object-name>
+<object-name>cabin_windows.paint</object-name>
+<object-name>fan_1</object-name>
+<object-name>fan_2</object-name>
+<object-name>fan_3</object-name>
 <property-base>sim/model/livery</property-base>
 <texture-prop>texture</texture-prop>
 <texture>md11.png</texture>

@@ -73,7 +73,7 @@
       <default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
 	    </config>
 	</view>
-	<chase-distance-m type="double">-80</chase-distance-m>
+	<chase-distance-m type="double">-100</chase-distance-m>
 
 
 	<weight n="0">
@@ -698,12 +698,16 @@
             <nosegear-steering-cmd-norm type="double">0</nosegear-steering-cmd-norm>
             <maingear-steering-cmd-norm type="double">0</maingear-steering-cmd-norm>
         </gear>
+        <lighting>
+        <flood-panel-norm type="double">0.5</flood-panel-norm>
+        </lighting>
         <flight>
-            <speedbrake-lever type="int">0</speedbrake-lever>
+            <speedbrake-lever type="bool">0</speedbrake-lever>
         </flight>
 		<cabin>
 			<NoSmoking-knob type="int" >1 </NoSmoking-knob>
 			<SeatBelt-knob type="int" >1 </SeatBelt-knob>
+        <cabinwindows type="int">0</cabinwindows>
 		</cabin>
     </controls>
 
@@ -753,9 +757,6 @@
             <file>Aircraft/MD-11/Nasal/brakesystem.nas</file>
             <file>Aircraft/MD-11/Nasal/ground_steering.nas</file>
             <file>Aircraft/MD-11/Models/cockpit/instruments/ND/ND.nas</file>
-            <file>Aircraft/MD-11/Models/cockpit/instruments/MFD/mfd.nas</file>
-            <file>Aircraft/MD-11/Models/cockpit/instruments/MFD/fctl.nas</file>
-            <file>Aircraft/MD-11/Models/cockpit/instruments/MFD/eng.nas</file>
             <file>Aircraft/MD-11/Nasal/SWanimation.nas</file>
             <file>Aircraft/Generic/limits.nas</file>
             <file>Aircraft/MD-11/Nasal/warnsystem.nas</file>
