@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>overhead_1.ac</path>
+	
+	
+		    		  <animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>chrome_cockpit.png</texture>
+<object-name>oh.glass</object-name>
+</animation>
+	
+	
+		<animation>
+		<type>textranslate</type>
+		<object-name>ltank.1</object-name>
+		<property>consumables/fuel/tank/level-lbs</property>
+		<factor>0.00001</factor>
+		<step>10000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ltank.2</object-name>
+		<property>consumables/fuel/tank/level-lbs</property>
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ltank.3</object-name>
+		<property>consumables/fuel/tank/level-lbs</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ltank.4</object-name>
+		<property>consumables/fuel/tank/level-lbs</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ltank.5</object-name>
+		<property>consumables/fuel/tank/level-lbs</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+			<animation>
+		<type>textranslate</type>
+		<object-name>ctank.1</object-name>
+		<property>consumables/fuel/tank[1]/level-lbs</property>
+		<factor>0.00001</factor>
+		<step>10000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ctank.2</object-name>
+		<property>consumables/fuel/tank[1]/level-lbs</property>
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ctank.3</object-name>
+		<property>consumables/fuel/tank[1]/level-lbs</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ctank.4</object-name>
+		<property>consumables/fuel/tank[1]/level-lbs</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ctank.5</object-name>
+		<property>consumables/fuel/tank[1]/level-lbs</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+			<animation>
+		<type>textranslate</type>
+		<object-name>rtank.1</object-name>
+		<property>consumables/fuel/tank[2]/level-lbs</property>
+		<factor>0.00001</factor>
+		<step>10000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>rtank.2</object-name>
+		<property>consumables/fuel/tank[2]/level-lbs</property>
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>rtank.3</object-name>
+		<property>consumables/fuel/tank[2]/level-lbs</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>rtank.4</object-name>
+		<property>consumables/fuel/tank[2]/level-lbs</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>rtank.5</object-name>
+		<property>consumables/fuel/tank[2]/level-lbs</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+				<animation>
+		<type>textranslate</type>
+		<object-name>atank.1</object-name>
+		<property>consumables/fuel/tank[3]/level-lbs</property>
+		<factor>0.00001</factor>
+		<step>10000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>atank.2</object-name>
+		<property>consumables/fuel/tank[3]/level-lbs</property>
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>atank.3</object-name>
+		<property>consumables/fuel/tank[3]/level-lbs</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>atank.4</object-name>
+		<property>consumables/fuel/tank[3]/level-lbs</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>atank.5</object-name>
+		<property>consumables/fuel/tank[3]/level-lbs</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ttank.2</object-name>
+		<property>consumables/fuel/tank[4]/level-lbs</property>
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ttank.3</object-name>
+		<property>consumables/fuel/tank[4]/level-lbs</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ttank.4</object-name>
+		<property>consumables/fuel/tank[4]/level-lbs</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ttank.5</object-name>
+		<property>consumables/fuel/tank[4]/level-lbs</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	    <animation>
+        <type>rotate</type>
+        <object-name>apuknob</object-name>
+        <object-name>apuknob.light</object-name>
+        <property>controls/APU/off-start-run</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-45.0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>45.0</dep>
+            </entry>		
+        </interpolation>
+        <center>
+            <x-m>-21.7996</x-m>
+            <y-m>-0.1204</y-m>
+            <z-m>-17.8164</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>pick</type>
+        <object-name>apuknob</object-name>
+        <action>
+            <button>0</button>
+            <button>3</button>
+           <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/APU/off-start-run</property>
+                <step>1</step>
+                <min>0</min>
+                <max>2</max>
+            </binding>
+        </action>
+    </animation>
+    
+    <animation>
+        <type>pick</type>
+        <object-name>apuknob</object-name>
+        <action>
+            <button>1</button>
+            <button>4</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/APU/off-start-run</property>
+                <step>-1</step>
+                <min>0</min>
+                <max>2</max>
+            </binding>
+        </action>
+    </animation>
+	
+</PropertyList>

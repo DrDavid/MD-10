@@ -28,6 +28,23 @@
             </less-than>
         </condition>
     </animation>
+    
+<model>
+	<name>Overhead 1</name>
+	<path>Aircraft/MD-11/Models/cockpit/overhead_1.xml</path>
+			<offsets>
+			<pitch-deg>55</pitch-deg>
+		</offsets>
+</model>
+
+<model>
+	<name>Overhead 2</name>
+	<path>Aircraft/MD-11/Models/cockpit/overhead_2.xml</path>
+			<offsets>
+			<pitch-deg>69.19</pitch-deg>
+		</offsets>
+</model>
+	
 	
 
 <model>

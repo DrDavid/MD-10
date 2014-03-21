@@ -8,7 +8,7 @@ MATERIAL "magenta_rembrandt" rgb 0.7000 0.0531 0.5509  amb 1.0000 1.0000 1.0000 
 MATERIAL "Material.002" rgb 0.3285 0.5041 0.8000  amb 1.0000 1.0000 1.0000  emis 0.8000 0.8000 0.8000  spec 0.2500 0.2500 0.2500  shi 50 trans 0.0000
 OBJECT world
 name "Blender_export__PFD_L.ac"
-kids 61
+kids 60
 OBJECT poly
 name "AI"
 loc 0.0011105 -0.0005577 0.0017807
@@ -9564,22 +9564,6 @@ refs 4
 0 0.787109 0.263379
 1 0.787109 0.000439
 2 0.796875 0.000439
-kids 0
-OBJECT poly
-name "VSI.needle"
-numvert 4
-0.0023667 0.0102872 -0.3349127
-0.0023667 0.0090852 -0.3349127
-0.0023667 0.0090852 -0.3553615
-0.0023667 0.0102872 -0.3553615
-numsurf 1
-SURF 0X0
-mat 1
-refs 4
-3 0 0
-0 0 0
-1 0 0
-2 0 0
 kids 0
 OBJECT poly
 name "VSI.negative"

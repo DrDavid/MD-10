@@ -146,9 +146,14 @@
 		</condition>
 	</animation>
 	
+	 <model>
+ <path>Aircraft/MD-11/Models/Cabin/cabin.xml</path>
+ <name>Cabin</name>
+</model>
+	
 
  <model>
- <path>Aircraft/A330-300/Models/Services/Stairs/stairs.xml</path>
+ <path>Aircraft/MD-11/Models/Services/Stairs/stairs.xml</path>
  <name>l1</name>
  <offsets>
   <x-m>-24.053</x-m>
@@ -163,7 +168,7 @@
 
 <model>
  <name>l2</name>
- <path>Aircraft/A330-300/Models/Services/Stairs/stairs.xml</path>
+ <path>Aircraft/MD-11/Models/Services/Stairs/stairs.xml</path>
  <offsets>
   <x-m>-14.4742</x-m>
   <y-m>-2.9444</y-m>
@@ -175,7 +180,7 @@
 </model>
 
 <model>
- <path>Aircraft/A330-300/Models/Services/Stairs/stairs.xml</path>
+ <path>Aircraft/MD-11/Models/Services/Stairs/stairs.xml</path>
  <name>l4</name>
  <offsets>
   <x-m>18.1755</x-m>
@@ -185,6 +190,48 @@
  </offsets>
  <condition>
   <property>/services/stairs/l4</property>
+ </condition>
+</model>
+
+ <model>
+ <path>Aircraft/MD-11/Models/Services/Stairs/stairs.xml</path>
+ <name>l1_2</name>
+ <offsets>
+  <x-m>-24.053</x-m>
+  <y-m>2.4309</y-m>
+  <z-m>5.8497</z-m>
+  <heading-deg>-168</heading-deg>
+ </offsets>
+ <condition>
+  <property>/services/stairs/l1_2</property>
+ </condition>
+</model>
+
+<model>
+ <name>l2_2</name>
+ <path>Aircraft/MD-11/Models/Services/Stairs/stairs.xml</path>
+ <offsets>
+  <x-m>-14.4742</x-m>
+  <y-m>2.9444</y-m>
+  <z-m>5.8497</z-m>
+ <heading-deg>180</heading-deg>
+ </offsets>
+ <condition>
+  <property>/services/stairs/l2_2</property>
+ </condition>
+</model>
+
+<model>
+ <path>Aircraft/MD-11/Models/Services/Stairs/stairs.xml</path>
+ <name>l4_2</name>
+ <offsets>
+  <x-m>18.1755</x-m>
+  <y-m>2.5346</y-m>
+  <z-m>5.8497</z-m>
+  <heading-deg>172.2</heading-deg>
+ </offsets>
+ <condition>
+  <property>/services/stairs/l4_2</property>
  </condition>
 </model>
 	
@@ -352,10 +399,6 @@
 <object-name>cabin_windows.cargo</object-name>
 </animation>
 
-	<animation>
-		<type>noshadow</type>
-	  <object-name>Cockpit</object-name>     
-	</animation>
 
 <model>
 	<name>Pushback</name>
@@ -1462,6 +1505,8 @@
 <object-name>cabin_windows.finnair.paint</object-name>
 <object-name>cabin_windows.klm.finnair.paint</object-name>
 <object-name>cabin_windows.paint</object-name>
+<object-name>rdoor.1</object-name>
+<object-name>ldoor.1</object-name>
  </effect>
  
    <effect>
@@ -2135,6 +2180,8 @@
 <object-name>fan_1</object-name>
 <object-name>fan_2</object-name>
 <object-name>fan_3</object-name>
+<object-name>rdoor.1</object-name>
+<object-name>ldoor.1</object-name>
 <property-base>sim/model/livery</property-base>
 <texture-prop>texture</texture-prop>
 <texture>md11.png</texture>
@@ -2289,5 +2336,100 @@
     </animation>
 
 
+	        <animation>
+        <type>translate</type>
+        <object-name>rdoor.1</object-name>
+        <property>/sim/model/door-positions/rightDoor1/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.15</ind><dep>0.15</dep></entry>
+		</interpolation>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+        </axis>
+    </animation>
+    
+        <animation>
+	<type>rotate</type>
+        <object-name>rdoor.1</object-name>
+        <property>/sim/model/door-positions/rightDoor1/position-norm</property>
+		<interpolation>
+			<entry><ind>0.10</ind><dep>0</dep></entry>
+			<entry><ind>1.0</ind><dep>46</dep></entry>
+		</interpolation>
+	<axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	</axis>
+	<center>
+	    <x-m>0</x-m>
+	    <y-m>0</y-m>
+	    <z-m>6.3273</z-m>
+	</center>
+    </animation>
+    
+ <animation>
+   <type>pick</type>
+        <object-name>rdoor.1</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>MD11.rightDoor1.toggle();</script>
+     </binding>
+   </action>
+ </animation>
+ 
+ 	        <animation>
+        <type>translate</type>
+        <object-name>ldoor.1</object-name>
+        <property>/sim/model/door-positions/leftDoor1/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.15</ind><dep>0.15</dep></entry>
+		</interpolation>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+        </axis>
+    </animation>
+    
+        <animation>
+	<type>rotate</type>
+        <object-name>ldoor.1</object-name>
+        <property>/sim/model/door-positions/leftDoor1/position-norm</property>
+		<interpolation>
+			<entry><ind>0.10</ind><dep>0</dep></entry>
+			<entry><ind>1.0</ind><dep>-46</dep></entry>
+		</interpolation>
+	<axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	</axis>
+	<center>
+	    <x-m>0</x-m>
+	    <y-m>0</y-m>
+	    <z-m>6.3273</z-m>
+	</center>
+    </animation>
+    
+ <animation>
+   <type>pick</type>
+        <object-name>ldoor.1</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>MD11.leftDoor1.toggle();</script>
+     </binding>
+   </action>
+ </animation>
 
 </PropertyList>
