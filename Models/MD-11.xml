@@ -1507,6 +1507,12 @@
 <object-name>cabin_windows.paint</object-name>
 <object-name>rdoor.1</object-name>
 <object-name>ldoor.1</object-name>
+<object-name>rdoor.2</object-name>
+<object-name>ldoor.2</object-name>
+<object-name>rdoor.3</object-name>
+<object-name>ldoor.3</object-name>
+<object-name>rdoor.4</object-name>
+<object-name>ldoor.4</object-name>
  </effect>
  
    <effect>
@@ -2182,6 +2188,12 @@
 <object-name>fan_3</object-name>
 <object-name>rdoor.1</object-name>
 <object-name>ldoor.1</object-name>
+<object-name>rdoor.2</object-name>
+<object-name>ldoor.2</object-name>
+<object-name>rdoor.3</object-name>
+<object-name>ldoor.3</object-name>
+<object-name>rdoor.4</object-name>
+<object-name>ldoor.4</object-name>
 <property-base>sim/model/livery</property-base>
 <texture-prop>texture</texture-prop>
 <texture>md11.png</texture>
@@ -2386,6 +2398,151 @@
  
  	        <animation>
         <type>translate</type>
+        <object-name>rdoor.2</object-name>
+        <property>/sim/model/door-positions/rightDoor2/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.15</ind><dep>0.15</dep></entry>
+		</interpolation>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+        </axis>
+    </animation>
+    
+        <animation>
+	<type>rotate</type>
+        <object-name>rdoor.2</object-name>
+        <property>/sim/model/door-positions/rightDoor2/position-norm</property>
+		<interpolation>
+			<entry><ind>0.10</ind><dep>0</dep></entry>
+			<entry><ind>1.0</ind><dep>46</dep></entry>
+		</interpolation>
+	<axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	</axis>
+	<center>
+	    <x-m>0</x-m>
+	    <y-m>0</y-m>
+	    <z-m>6.3273</z-m>
+	</center>
+    </animation>
+    
+ <animation>
+   <type>pick</type>
+        <object-name>rdoor.2</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>MD11.rightDoor2.toggle();</script>
+     </binding>
+   </action>
+ </animation>
+ 
+  	        <animation>
+        <type>translate</type>
+        <object-name>rdoor.3</object-name>
+        <property>/sim/model/door-positions/rightDoor3/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.15</ind><dep>0.15</dep></entry>
+		</interpolation>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+        </axis>
+    </animation>
+    
+        <animation>
+	<type>rotate</type>
+        <object-name>rdoor.3</object-name>
+        <property>/sim/model/door-positions/rightDoor3/position-norm</property>
+		<interpolation>
+			<entry><ind>0.10</ind><dep>0</dep></entry>
+			<entry><ind>1.0</ind><dep>46</dep></entry>
+		</interpolation>
+	<axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	</axis>
+	<center>
+	    <x-m>0</x-m>
+	    <y-m>0</y-m>
+	    <z-m>6.3273</z-m>
+	</center>
+    </animation>
+    
+ <animation>
+   <type>pick</type>
+        <object-name>rdoor.3</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>MD11.rightDoor3.toggle();</script>
+     </binding>
+   </action>
+ </animation>
+ 
+  	        <animation>
+        <type>translate</type>
+        <object-name>rdoor.4</object-name>
+        <property>/sim/model/door-positions/rightDoor4/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.15</ind><dep>0.15</dep></entry>
+		</interpolation>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+        </axis>
+    </animation>
+    
+        <animation>
+	<type>rotate</type>
+        <object-name>rdoor.4</object-name>
+        <property>/sim/model/door-positions/rightDoor4/position-norm</property>
+		<interpolation>
+			<entry><ind>0.10</ind><dep>0</dep></entry>
+			<entry><ind>1.0</ind><dep>46</dep></entry>
+		</interpolation>
+	<axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	</axis>
+	<center>
+	    <x-m>0</x-m>
+	    <y-m>0</y-m>
+	    <z-m>6.3273</z-m>
+	</center>
+    </animation>
+    
+ <animation>
+   <type>pick</type>
+        <object-name>rdoor.4</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>MD11.rightDoor4.toggle();</script>
+     </binding>
+   </action>
+ </animation>
+ 
+ 
+ 	        <animation>
+        <type>translate</type>
         <object-name>ldoor.1</object-name>
         <property>/sim/model/door-positions/leftDoor1/position-norm</property>
 		<interpolation>
@@ -2428,6 +2585,150 @@
      <binding>
        <command>nasal</command>
        <script>MD11.leftDoor1.toggle();</script>
+     </binding>
+   </action>
+ </animation>
+ 
+  	        <animation>
+        <type>translate</type>
+        <object-name>ldoor.2</object-name>
+        <property>/sim/model/door-positions/leftDoor2/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.15</ind><dep>0.15</dep></entry>
+		</interpolation>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+        </axis>
+    </animation>
+    
+        <animation>
+	<type>rotate</type>
+        <object-name>ldoor.2</object-name>
+        <property>/sim/model/door-positions/leftDoor2/position-norm</property>
+		<interpolation>
+			<entry><ind>0.10</ind><dep>0</dep></entry>
+			<entry><ind>1.0</ind><dep>-46</dep></entry>
+		</interpolation>
+	<axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	</axis>
+	<center>
+	    <x-m>0</x-m>
+	    <y-m>0</y-m>
+	    <z-m>6.3273</z-m>
+	</center>
+    </animation>
+    
+ <animation>
+   <type>pick</type>
+        <object-name>ldoor.2</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>MD11.leftDoor2.toggle();</script>
+     </binding>
+   </action>
+ </animation>
+ 
+   	        <animation>
+        <type>translate</type>
+        <object-name>ldoor.3</object-name>
+        <property>/sim/model/door-positions/leftDoor3/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.15</ind><dep>0.15</dep></entry>
+		</interpolation>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+        </axis>
+    </animation>
+    
+        <animation>
+	<type>rotate</type>
+        <object-name>ldoor.3</object-name>
+        <property>/sim/model/door-positions/leftDoor3/position-norm</property>
+		<interpolation>
+			<entry><ind>0.10</ind><dep>0</dep></entry>
+			<entry><ind>1.0</ind><dep>-46</dep></entry>
+		</interpolation>
+	<axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	</axis>
+	<center>
+	    <x-m>0</x-m>
+	    <y-m>0</y-m>
+	    <z-m>6.3273</z-m>
+	</center>
+    </animation>
+    
+ <animation>
+   <type>pick</type>
+        <object-name>ldoor.3</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>MD11.leftDoor3.toggle();</script>
+     </binding>
+   </action>
+ </animation>
+ 
+    	        <animation>
+        <type>translate</type>
+        <object-name>ldoor.4</object-name>
+        <property>/sim/model/door-positions/leftDoor4/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.15</ind><dep>0.15</dep></entry>
+		</interpolation>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+        </axis>
+    </animation>
+    
+        <animation>
+	<type>rotate</type>
+        <object-name>ldoor.4</object-name>
+        <property>/sim/model/door-positions/leftDoor4/position-norm</property>
+		<interpolation>
+			<entry><ind>0.10</ind><dep>0</dep></entry>
+			<entry><ind>1.0</ind><dep>-46</dep></entry>
+		</interpolation>
+	<axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	</axis>
+	<center>
+	    <x-m>0</x-m>
+	    <y-m>0</y-m>
+	    <z-m>6.3273</z-m>
+	</center>
+    </animation>
+    
+ <animation>
+   <type>pick</type>
+        <object-name>ldoor.4</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>MD11.leftDoor4.toggle();</script>
      </binding>
    </action>
  </animation>

@@ -5,9 +5,6 @@ var SndOut = props.globals.getNode("sim/sound/Ovolume",1);
 var chronometer = aircraft.timer.new("instrumentation/clock/ET-sec",1);
 var vmodel = substr(getprop("sim/aero"), 3);
 
-## Livery select
-aircraft.livery.init("Aircraft/MD-11/Models/Liveries/");
-
 #EFIS specific class
 # ie: var efis = EFIS.new("instrumentation/efis");
 var EFIS = {
@@ -1162,3 +1159,8 @@ var update_systems = func {
 
     settimer(update_systems,0);
 }
+
+var dialogs =
+{
+	doors: gui.Dialog.new("sim/gui/dialogs/doors/dialog", "Aircraft/MD-11/Systems/doors-dlg.xml"),
+};

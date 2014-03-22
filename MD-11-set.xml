@@ -20,6 +20,27 @@
 			</default>
 		</menubar>
 		
+	<model n="0">
+	    <door>
+		<position-x-m type="float">-22.647</position-x-m>
+		<position-y-m type="float">-2.312</position-y-m>
+		<position-z-m type="float">4.746</position-z-m>
+		<jetway-hood-deg type="float">2</jetway-hood-deg>
+	    </door>
+      <armrest type="double">0</armrest>
+	    <door>
+		<position-x-m type="float">-13.006</position-x-m>
+		<position-y-m type="float">-2.944</position-y-m>
+		<position-z-m type="float">4.746</position-z-m>
+		<jetway-hood-deg type="float">1</jetway-hood-deg>
+	    </door>
+<path>Aircraft/MD-11/Models/MD-11.xml</path>
+        <livery>
+        <file type="string">FIN</file>
+      </livery>
+</model>
+		<shutterspeed type="double">0.18</shutterspeed>
+		
 		
 		         <weight n="1">
             <!--  328 pax max @ 180 lbs + cargo -->
@@ -49,5 +70,11 @@
 			<descent-profile-low-rate type="double">-0.00050725</descent-profile-low-rate>
         </constant>
     </autopilot>
+    
+    <nasal n="0">
+        <MD11>
+            <file>Aircraft/MD-11/Nasal/liveries.nas</file>
+        </MD11>
+    </nasal>
 
 </PropertyList>

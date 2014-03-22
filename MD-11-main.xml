@@ -25,27 +25,6 @@
 			<min-runway-length-ft>4500</min-runway-length-ft>
 		</navdb>
 		
-	<model n="0">
-	    <door>
-		<position-x-m type="float">-22.647</position-x-m>
-		<position-y-m type="float">-2.312</position-y-m>
-		<position-z-m type="float">4.746</position-z-m>
-		<jetway-hood-deg type="float">2</jetway-hood-deg>
-	    </door>
-      <armrest type="double">0</armrest>
-	    <door>
-		<position-x-m type="float">-13.006</position-x-m>
-		<position-y-m type="float">-2.944</position-y-m>
-		<position-z-m type="float">4.746</position-z-m>
-		<jetway-hood-deg type="float">1</jetway-hood-deg>
-	    </door>
-<path>Aircraft/MD-11/Models/MD-11.xml</path>
-        <livery>
-        <file type="string">FIN</file>
-      </livery>
-</model>
-		<shutterspeed type="double">0.18</shutterspeed>
-		
 
 
 	<view n="0">
@@ -109,14 +88,15 @@
 							<dialog-name>handyviewer</dialog-name>
 						</binding>
 					</item>
-                    <item >
-						<label>doors-dlg</label>
-						<name>doors-dlg</name>
-						<binding>
-							<command>dialog-show</command>
-							<dialog-name>doors-dlg</dialog-name>
-						</binding>
-					</item>
+		    <item>
+			<label>Doors</label>
+			<binding>
+			    <command>nasal</command>
+			    <script>
+				MD11.dialogs.doors.open();
+			    </script>
+			</binding>
+		    </item>
                     <item >
                         <label>Ground Services Control</label>
                         <binding>

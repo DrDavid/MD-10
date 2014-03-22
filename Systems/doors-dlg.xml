@@ -5,401 +5,482 @@
     <layout>vbox</layout>
     <padding>20</padding>
 
-<group>
-  <layout>hbox</layout>
-  <text>
-     <label>Doors</label>
-  </text>
-  <empty><stretch>true</stretch></empty>
+	<group>
+		<layout>hbox</layout>
 
-  <button>
-      <legend/>
-      <key>Esc</key>
-      <pref-width>16</pref-width>
-      <pref-height>16</pref-height>
-      <border>2</border>
-      <binding>
-        <command>dialog-close</command>
-      </binding>
-    </button>
+		<empty>
+			<stretch>1</stretch>
+		</empty>
 
- </group>
+		<text>
+			<label>Doors</label>
+		</text>
 
-<hrule/>
+		<empty>
+			<stretch>1</stretch>
+		</empty>
 
-<!-- Cockpit Views -->
+		<button>
+			<pref-width>16</pref-width>
+			<pref-height>16</pref-height>
+			<legend></legend>
+			<keynum>27</keynum>
+			<border>2</border>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+	</group>
 
-  <group>
-    <stretch>true</stretch>  
-    <layout>hbox</layout>
-    <halign>center</halign>  
-    <text> 
-	    <label>Cockpit</label>
-    </text>
-  </group>
+	<hrule />
 
-  <hrule/>
+	<text>
+		<halign>center</halign>
+		<label>Open and close the doors by using the controls below, or simply</label>
+	</text>
 
-  <group>  
-    <stretch>true</stretch>
-    <layout>hbox</layout>
-    <halign>fill</halign>
-    <valign>top</valign>
-    <default-padding>6</default-padding>
+	<text>
+		<halign>center</halign>
+		<label>click them on the model. (Press Ctrl-C to outline clickable objects.)</label>
+	</text>
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>CPT view</desc>
-      	<legend>CPT</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "0");
-	      		view.resetView();
-	    		</script>
-	  	</binding>
-    </button>
+	<hrule />
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>FO view</desc>
-      	<legend>FO</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "8");
-	      		view.resetView();
-	    		</script>
-	  	</binding>
-    </button>
+	<text>
+		<label>PAX doors</label>
+	</text>
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>Radio-CDU view</desc>
-      	<legend>Radio-CDU</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "9");
-	      		view.resetView();
-	    		</script>
-	  	</binding>
-    </button>
+	<group>
+		<layout>hbox</layout>
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>OH View</desc>
-      	<legend>OH Panel</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "10");
-	      		view.resetView();
-	    		</script>
-	  	</binding>
-    </button>
-</group>
+		<group>
+			<layout>table</layout>
 
-<group>
-    <stretch>true</stretch>
-    <layout>hbox</layout>
-    <halign>fill</halign>
-    <valign>top</valign>
-    <default-padding>6</default-padding>
+			<text>
+				<row>0</row>
+				<col>0</col>
+				<label>Left door 1</label>
+			</text>
+			<button>
+				<row>0</row>
+				<col>1</col>
+				<legend>Open/Close</legend>
+				<binding>
+					<command>nasal</command>
+       <script>MD11.leftDoor1.toggle();</script>
+				</binding>
+			</button>
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>Observer 1 View</desc>
-      	<legend>OBS 1</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "13");
-	      		view.resetView();
-	    		</script>
-	  	</binding>
-    </button>
+			<text>
+				<row>1</row>
+				<col>0</col>
+				<label>Left door 2</label>
+			</text>
+			<button>
+				<row>1</row>
+				<col>1</col>
+				<legend>Open/Close</legend>
+				<binding>
+					<command>nasal</command>
+       <script>MD11.leftDoor2.toggle();</script>
+				</binding>
+			</button>
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>Observer 2 View</desc>
-      	<legend>OBS 2</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "14");
-	      		view.resetView();
-	    		</script>
-	  	</binding>
-    </button>
+			<text>
+				<row>2</row>
+				<col>0</col>
+				<label>Left door 3</label>
+			</text>
+			<button>
+				<row>2</row>
+				<col>1</col>
+				<legend>Open/Close</legend>
+				<binding>
+					<command>nasal</command>
+       <script>MD11.leftDoor3.toggle();</script>
+				</binding>
+			</button>
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>TopLeft View</desc>
-      	<legend>TopLeft</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "15");
-	      		view.resetView();
-	    		</script>
-	  	</binding>
-    </button>
-     
-    <button>
-            <pref-width>70</pref-width>
-		<desc>To be SET</desc>
-      	<legend>TobeSET</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "15");
-	    		</script>
-	  	</binding>
-    </button>
-  </group>
+			<text>
+				<row>3</row>
+				<col>0</col>
+				<label>Left door 4</label>
+			</text>
+			<button>
+				<row>3</row>
+				<col>1</col>
+				<legend>Open/Close</legend>
+				<binding>
+					<command>nasal</command>
+       <script>MD11.leftDoor4.toggle();</script>
+				</binding>
+			</button>
+		</group>
 
-  <hrule><stretch>true</stretch></hrule>
+		<vrule />
 
-<!-- External Views -->
+		<group>
+			<layout>table</layout>
 
-  <group>
-    <stretch>true</stretch>  
-    <layout>hbox</layout>
-    <halign>center</halign>  
-    <text> 
-	    <label>External</label>
-    </text>
-  </group>
+			<text>
+				<row>0</row>
+				<col>0</col>
+				<label>Right door 1</label>
+			</text>
+			<button>
+				<row>0</row>
+				<col>1</col>
+				<legend>Open/Close</legend>
+				<binding>
+					<command>nasal</command>
+       <script>MD11.rightDoor1.toggle();</script>
+				</binding>
+			</button>
 
-  <hrule/>
+			<text>
+				<row>1</row>
+				<col>0</col>
+				<label>Right door 2</label>
+			</text>
+			<button>
+				<row>1</row>
+				<col>1</col>
+				<legend>Open/Close</legend>
+				<binding>
+					<command>nasal</command>
+       <script>MD11.rightDoor2.toggle();</script>
+				</binding>
+			</button>
 
-  <group>  
-    <stretch>true</stretch>
-    <layout>hbox</layout>
-    <halign>fill</halign>
-    <valign>top</valign>
-    <default-padding>6</default-padding>
+			<text>
+				<row>2</row>
+				<col>0</col>
+				<label>Right door 3</label>
+			</text>
+			<button>
+				<row>2</row>
+				<col>1</col>
+				<legend>Open/Close</legend>
+				<binding>
+					<command>nasal</command>
+       <script>MD11.rightDoor3.toggle();</script>
+				</binding>
+			</button>
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>Front Gear view</desc>
-      	<legend>FGear</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "12");
-	      		view.resetView();
-	    		</script>
-	  	</binding>
-    </button>
+			<text>
+				<row>3</row>
+				<col>0</col>
+				<label>Right door 4</label>
+			</text>
+			<button>
+				<row>3</row>
+				<col>1</col>
+				<legend>Open/Close</legend>
+				<binding>
+					<command>nasal</command>
+       <script>MD11.rightDoor4.toggle();</script>
+				</binding>
+			</button>
+		</group>
+	</group>
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>Right Side view</desc>
-      	<legend>Right</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "11");
-	      		view.resetView();
-	    		</script>
-	  	</binding>
-    </button>
+	<hrule />
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>LWing view</desc>
-      	<legend>LWing</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "16");
-	      		view.resetView();
-	    		</script>
-	  	</binding>
-    </button>
+	<group>
+		<layout>table</layout>
+		
+			<text>
+				<row>0</row>
+				<col>0</col>
+				<label>Cargo Door</label>
+			<visible>
+				<or>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-11F</value>
+					</equals>
+				</or>
+			</visible>
+			</text>
+			<button>
+				<row>0</row>
+				<col>1</col>
+				<legend>Open/Close</legend>
+				<binding>
+					<command>nasal</command>
+       <script>MD11.cargoDoor.toggle();</script>
+				</binding>
+			<visible>
+				<or>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-11F</value>
+					</equals>
+				</or>
+			</visible>
+			</button>
+			
+			<text>
+				<row>1</row>
+				<col>0</col>
+				<label>Nose cone</label>
+			</text>
+			<button>
+				<row>1</row>
+				<col>1</col>
+				<legend>Open/Close</legend>
+				<binding>
+					<command>nasal</command>
+       <script>MD11.nose_cone.toggle();</script>
+				</binding>
+			</button>
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>RWing view</desc>
-      	<legend>RWing</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "17");
-	      		view.resetView();
-	    		</script>
-	  	</binding>
-    </button>
-</group>
+		<text>
+			<row>0</row>
+			<col>0</col>
+			<label>Forward cargo door</label>
+			<visible>
+				<or>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30ER</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30CF</value>
+					</equals>
+				</or>
+			</visible>
+		</text>
+		<button>
+			<row>0</row>
+			<col>1</col>
+			<legend>Open</legend>
+			<visible>
+				<or>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30ER</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30CF</value>
+					</equals>
+				</or>
+			</visible>
+			<color>
+				<red>0</red>
+				<green>1</green>
+				<blue>0</blue>
+			</color>
+			<binding>
+				<command>nasal</command>
+				<script>
+					DC10.doors.cargo_fwd.open();
+				</script>
+			</binding>
+		</button>
+		<button>
+			<row>0</row>
+			<col>2</col>
+			<legend>Close</legend>
+			<visible>
+				<or>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30ER</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30CF</value>
+					</equals>
+				</or>
+			</visible>
+			<color>
+				<red>1</red>
+				<green>0</green>
+				<blue>0</blue>
+			</color>
+			<binding>
+				<command>nasal</command>
+				<script>
+					DC10.doors.cargo_fwd.close();
+				</script>
+			</binding>
+		</button>
 
-<group>
-    <stretch>true</stretch>
-    <layout>hbox</layout>
-    <halign>fill</halign>
-    <valign>top</valign>
-    <default-padding>6</default-padding>
+		<text>
+			<row>1</row>
+			<col>0</col>
+			<label>Aft cargo door</label>
+			<visible>
+				<or>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30ER</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30CF</value>
+					</equals>
+				</or>
+			</visible>
+		</text>
+		<button>
+			<row>1</row>
+			<col>1</col>
+			<legend>Open</legend>
+			<visible>
+				<or>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30ER</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30CF</value>
+					</equals>
+				</or>
+			</visible>
+			<color>
+				<red>0</red>
+				<green>1</green>
+				<blue>0</blue>
+			</color>
+			<binding>
+				<command>nasal</command>
+				<script>
+					DC10.doors.cargo_aft.open();
+				</script>
+			</binding>
+		</button>
+		<button>
+			<row>1</row>
+			<col>2</col>
+			<legend>Close</legend>
+			<visible>
+				<or>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30ER</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>DC-10-30CF</value>
+					</equals>
+				</or>
+			</visible>
+			<color>
+				<red>1</red>
+				<green>0</green>
+				<blue>0</blue>
+			</color>
+			<binding>
+				<command>nasal</command>
+				<script>
+					DC10.doors.cargo_aft.close();
+				</script>
+			</binding>
+		</button>
 
-<button>
-            <pref-width>70</pref-width>
-		<desc>Tail view</desc>
-      	<legend>Tail</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "18");
-	      		view.resetView();
-	    		</script>
-	  	</binding>
-    </button>
+		<text>
+			<row>2</row>
+			<col>0</col>
+			<label>Main cargo door</label>
+			<visible>
+				<equals>
+					<property>sim/model/configuration</property>
+					<value>cargo</value>
+				</equals>
+			</visible>
+		</text>
+		<button>
+			<row>2</row>
+			<col>1</col>
+			<legend>Open</legend>
+			<visible>
+				<equals>
+					<property>sim/model/configuration</property>
+					<value>cargo</value>
+				</equals>
+			</visible>
+			<color>
+				<red>0</red>
+				<green>1</green>
+				<blue>0</blue>
+			</color>
+			<binding>
+				<command>nasal</command>
+				<script>
+					DC10.doors.cargo_main.open();
+				</script>
+			</binding>
+		</button>
+		<button>
+			<row>2</row>
+			<col>2</col>
+			<legend>Close</legend>
+			<visible>
+				<equals>
+					<property>sim/model/configuration</property>
+					<value>cargo</value>
+				</equals>
+			</visible>
+			<color>
+				<red>1</red>
+				<green>0</green>
+				<blue>0</blue>
+			</color>
+			<binding>
+				<command>nasal</command>
+				<script>
+					DC10.doors.cargo_main.close();
+				</script>
+			</binding>
+		</button>
+	</group>
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>To be Set</desc>
-      	<legend>TobeSET</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "18");
-	    		</script>
-	  	</binding>
-    </button>
+	<hrule/>
 
-    <button>
-            <pref-width>70</pref-width>
-		<desc>To be Set</desc>
-      	<legend>TobeSET</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "18");
-	    		</script>
-	  	</binding>
-    </button>
-     
-    <button>
-            <pref-width>70</pref-width>
-		<desc>To be Set</desc>
-      	<legend>TobeSET</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "18");
-	    		</script>
-	  	</binding>
-    </button>
-  </group>
+	<group>
+		<layout>vbox</layout>
 
-<group>
-    <stretch>true</stretch>
-    <layout>hbox</layout>
-    <halign>fill</halign>
-    <valign>top</valign>
-    <default-padding>6</default-padding>
-
-    <button>
-            <pref-width>70</pref-width>
-		<desc>Helicopter View</desc>
-      	<legend>Heli</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "1");
-	    		</script>
-	  	</binding>
-    </button>
-
-    <button>
-            <pref-width>70</pref-width>
-		<desc>Chase view</desc>
-      	<legend>Chase</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "2");
-	    		</script>
-	  	</binding>
-    </button>
-
-    <button>
-            <pref-width>70</pref-width>
-		<desc>Chase without Yaw view</desc>
-      	<legend>Chase no Y</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "5");
-	    		</script>
-	  	</binding>
-    </button>
-     
-    <button>
-            <pref-width>70</pref-width>
-		<desc>Model view</desc>
-      	<legend>Model</legend>
-      	<equal>true</equal>
-	  	<repeatable type="bool">false</repeatable>
-	  	<binding>
-	    		<command>nasal</command>
-	    		<script>
-	      		setprop("/sim/current-view/view-number", "7");
-	    		</script>
-	  	</binding>
-    </button>
-  </group>
-
-
-   <group>
-        <layout>hbox</layout>
-        <halign>right</halign>
-        <default-padding>6</default-padding>
-
-        <button>
-            <legend>Close</legend>
-            <key>Esc</key>
-            <binding>
-                <command>dialog-close</command>
-            </binding>
-        </button>
-   
-   </group>
+		<button>
+			<legend>Close</legend>
+			<default>true</default>
+			<key>Esc</key>
+			<padding>10</padding>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+		
+	</group>
 </PropertyList>
