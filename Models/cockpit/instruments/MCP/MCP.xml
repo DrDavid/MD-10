@@ -1416,7 +1416,7 @@
 	</animation>
 	
 		    	<animation>
-		<name>Flood light knob</name>
+		<name>MCP light knob</name>
 		<type>pick</type>
 		<object-name>mcp.light.knob</object-name>
     <object-name>mcp.light.knob.indicator</object-name>

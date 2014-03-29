@@ -71,7 +71,7 @@ var AFAST = aircraft.door.new("controls/switches/AFASwitchTimer", duration);
 var GEARLEVER = aircraft.door.new("controls/gear/gearlever", 2);
 var PBRAKELEVER = aircraft.door.new("controls/gear/parkbrakelever", 0.5);
 var ARMREST = aircraft.door.new("controls/switches/armrest", 1);
-LIGHTPROTECT = aircraft.door.new("/sim/model/door-positions/lightprotect", 1, 0);
+COMPASS = aircraft.door.new("/sim/model/door-positions/compass", 1, 0);
 
 setlistener("controls/electric/battery-switch", func {
 		if(getprop("controls/electric/battery-switch")) BATTST.open();

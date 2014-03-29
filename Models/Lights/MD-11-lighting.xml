@@ -316,6 +316,82 @@
 	</condition>
 </animation>
 
+<!-- Dashboard -->
 
+<model>
+<path>Aircraft/MD-11/Models/Lights/dashboard-light.xml</path>
+	<offsets>
+		<x-m>-27.4411</x-m>
+		<y-m>0</y-m>
+		<z-m>7.1449</z-m>
+	</offsets>
+</model> 
+
+<model>
+<path>Aircraft/MD-11/Models/Lights/dashboard-light.xml</path>
+	<offsets>
+    <heading-deg>90</heading-deg>
+		<x-m>-27.4411</x-m>
+		<y-m>0.5393</y-m>
+		<z-m>7.1288</z-m>
+	</offsets>
+</model> 
+
+<model>
+<path>Aircraft/MD-11/Models/Lights/dashboard-light.xml</path>
+	<offsets>
+    <heading-deg>-90</heading-deg>
+		<x-m>-27.4411</x-m>
+		<y-m>-0.5393</y-m>
+		<z-m>7.1288</z-m>
+	</offsets>
+</model> 
+
+<!-- MCP -->
+
+<model>
+<path>Aircraft/MD-11/Models/Lights/mcp-light.xml</path>
+	<offsets>
+		<x-m>-27.2623</x-m>
+		<y-m>0</y-m>
+		<z-m>7.2209</z-m>
+	</offsets>
+</model> 
+
+<model>
+<path>Aircraft/MD-11/Models/Lights/mcp-light.xml</path>
+	<offsets>
+		<x-m>-27.2623</x-m>
+		<y-m>0.075</y-m>
+		<z-m>7.2209</z-m>
+	</offsets>
+</model> 
+
+<model>
+<path>Aircraft/MD-11/Models/Lights/mcp-light.xml</path>
+	<offsets>
+		<x-m>-27.2623</x-m>
+		<y-m>0.15</y-m>
+		<z-m>7.2209</z-m>
+	</offsets>
+</model> 
+
+<model>
+<path>Aircraft/MD-11/Models/Lights/mcp-light.xml</path>
+	<offsets>
+		<x-m>-27.2623</x-m>
+		<y-m>-0.15</y-m>
+		<z-m>7.2209</z-m>
+	</offsets>
+</model> 
+
+<model>
+<path>Aircraft/MD-11/Models/Lights/mcp-light.xml</path>
+	<offsets>
+		<x-m>-27.2623</x-m>
+		<y-m>-0.075</y-m>
+		<z-m>7.2209</z-m>
+	</offsets>
+</model> 
 
 </PropertyList>

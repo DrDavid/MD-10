@@ -38,6 +38,41 @@
 </model>
 
 <model>
+	<name>Compass</name>
+	<path>Aircraft/MD-11/Models/cockpit/instruments/compass/compass.xml</path>
+				<offsets>
+      <x-m>0.05</x-m>
+		</offsets>
+</model>
+
+ <animation>
+   <type>pick</type>
+   <object-name>Compass</object-name>
+   <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+       <command>nasal</command>
+       <script>MD11.COMPASS.toggle();</script>
+     </binding>
+   </action>
+ </animation>
+ 
+ 
+ 		<animation>
+		<type>translate</type>
+		<object-name>Compass</object-name>
+    <property>/sim/model/door-positions/compass/position-norm</property>
+		<factor>0.05</factor>
+ <axis>
+  <x>0</x>
+  <y>0.0</y>
+  <z>1</z>
+ </axis>
+	</animation>
+
+<model>
 	<name>Overhead 2</name>
 	<path>Aircraft/MD-11/Models/cockpit/overhead_2.xml</path>
 			<offsets>
@@ -111,6 +146,17 @@
 			<offsets>
             <x-m>-27.5138</x-m>
             <y-m>-0.555</y-m>
+            <z-m>6.9072</z-m>
+			<pitch-deg>-11.51</pitch-deg>
+		</offsets>
+</model>
+
+<model>
+	<name>EAD 1</name>
+	<path>Aircraft/MD-11/Models/cockpit/instruments/EAD/EAD_1.xml</path>
+			<offsets>
+            <x-m>-27.5138</x-m>
+            <y-m>-0.15</y-m>
             <z-m>6.9072</z-m>
 			<pitch-deg>-11.51</pitch-deg>
 		</offsets>

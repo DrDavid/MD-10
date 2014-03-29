@@ -16,9 +16,9 @@
 		<z>0 </z>
 	</position>
 	<direction>
-		<x>0</x>
+		<x>-1</x>
 		<y>0</y>
-		<z>-1.0</z>
+		<z>-0.6</z>
 	</direction>
 	<ambient>
 		<r>0.03</r>
@@ -48,7 +48,7 @@
 	</attenuation>
 	<exponent>15</exponent>
 	<near-m>0.001</near-m>
-	<far-m>3</far-m>
+	<far-m>0.2</far-m>
 	<cutoff>110</cutoff>
 </animation>
 
