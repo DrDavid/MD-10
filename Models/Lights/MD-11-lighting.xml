@@ -192,33 +192,19 @@
 <!-- Landing lights -->
  
 
-
 <model>
-<name>nose.landing1</name>
-<path>Aircraft/MD-11/Models/Lights/landing-nose-fuselage.xml</path>
-	<offsets>
-		<x-m>-22.9504</x-m>
-		<y-m>2.423</y-m>
-		<z-m>4.9867</z-m>
-	</offsets>
-</model> 
-
-
-<model>
-<name>nose.landing2</name>
-<path>Aircraft/MD-11/Models/Lights/landing-nose-fuselage.xml</path>
-	<offsets>
-		<x-m>-22.9504</x-m>
-		<y-m>-2.423</y-m>
-		<z-m>4.9867</z-m>
-	</offsets>
-</model> 
-
-
-
-<model>
-<name>taxi1</name>
+<name>landing.nose.1</name>
 <path>Aircraft/MD-11/Models/Lights/taxi-nose.xml</path>
+	<offsets>
+		<x-m>-30.3489</x-m>
+		<y-m>-0.1179</y-m>
+		<z-m>0.0</z-m>
+	</offsets>
+</model>
+
+<model>
+<name>landing.nose.1</name>
+<path>Aircraft/MD-11/Models/Lights/transparentlight.xml</path>
 	<offsets>
 		<x-m>-20.3912</x-m>
 		<y-m>-0.1901</y-m>
@@ -228,8 +214,18 @@
 
 
 <model>
-<name>taxi2</name>
+<name>landing.nose.2</name>
 <path>Aircraft/MD-11/Models/Lights/taxi-nose.xml</path>
+	<offsets>
+		<x-m>-30.3489</x-m>
+		<y-m>0.1179</y-m>
+		<z-m>0.0</z-m>
+	</offsets>
+</model> 
+
+<model>
+<name>landing.nose.2</name>
+<path>Aircraft/MD-11/Models/Lights/transparentlight.xml</path>
 	<offsets>
 		<x-m>-20.3912</x-m>
 		<y-m>0.1901</y-m>
@@ -240,29 +236,84 @@
 
 
 <model>
-<path>Aircraft/MD-11/Models/Lights/light-cone.xml</path>
-	<name>R.landing.light</name>
-			<condition>
-			<property>controls/lighting/landing-light[2]</property>
-		</condition>
+<name>turnoff_right</name>
+<path>Aircraft/MD-11/Models/Lights/taxi-nose.xml</path>
 	<offsets>
-		<x-m>23</x-m>
-		<y-m>4.1318</y-m>
-		<z-m>-0.1950</z-m>
+	<heading-deg>-30</heading-deg>
+		<x-m>-7.6805</x-m>
+		<y-m>3.7108</y-m>
+		<z-m>0.0</z-m>
 	</offsets>
 </model> 
 
 <model>
-<path>Aircraft/MD-11/Models/Lights/whitelight.xml</path>
-			<condition>
-			<property>controls/lighting/landing-light[2]</property>
-		</condition>
+<name>turnoff_right</name>
+<path>Aircraft/MD-11/Models/Lights/transparentlight.xml</path>
 	<offsets>
-		<x-m>23</x-m>
-		<y-m>4.1318</y-m>
-		<z-m>-0.1950</z-m>
+	<heading-deg>-30</heading-deg>
+		<x-m>-8.5061</x-m>
+		<y-m>3</y-m>
+		<z-m>5.1012</z-m>
 	</offsets>
 </model> 
+
+<model>
+<name>turnoff_left</name>
+<path>Aircraft/MD-11/Models/Lights/transparentlight.xml</path>
+	<offsets>
+	<heading-deg>30</heading-deg>
+		<x-m>-8.5061</x-m>
+		<y-m>-3</y-m>
+		<z-m>5.1012</z-m>
+	</offsets>
+</model> 
+
+
+<model>
+<name>turnoff_left</name>
+<path>Aircraft/MD-11/Models/Lights/taxi-nose.xml</path>
+	<offsets>
+	<heading-deg>30</heading-deg>
+		<x-m>-7.6805</x-m>
+		<y-m>-3.7108</y-m>
+		<z-m>0.0</z-m>
+	</offsets>
+</model> 
+
+<animation>
+	<type>select</type>
+<object-name>turnoff_left</object-name>
+<object-name>turnoff_right</object-name>
+	<condition>
+	<and>
+			<equals><property>controls/lighting/turn-off-lights</property>
+			<value>1</value>
+			</equals>
+        <equals>
+        <property>systems/electrical/outputs/avionics</property>
+        <value>1</value>
+        </equals>
+      </and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+<object-name>landing.nose.1</object-name>
+<object-name>landing.nose.2</object-name>
+	<condition>
+	<and>
+			<equals>
+			<property>controls/lighting/landing-light[1]</property>
+			<value>1</value>
+			</equals>
+        <equals>
+        <property>systems/electrical/outputs/avionics</property>
+        <value>1</value>
+        </equals>
+      </and>
+	</condition>
+</animation>
 
 <!-- Logo light -->
 

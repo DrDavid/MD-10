@@ -8,16 +8,10 @@
 		<name>On/off</name>
 		<type>select</type>
 		<condition>
-			<and>
 				<equals>
 					<property>gear/gear[0]/position-norm</property>
 					<value>1</value>
 				</equals>
-				<greater-than>
-					<property>systems/electrical/outputs/landing-light-nose[1]</property>
-					<value>5</value>
-				</greater-than>
-			</and>
 		</condition>
 	</animation>
 	<animation>
@@ -39,7 +33,7 @@
 			<r>0.8</r>
 			<g>0.8</g>
 			<b>0.8</b>
-			<a>1.0</a>
+			<a>0.1</a>
 		</ambient>
 		<diffuse>
 			<r>0.7</r>
@@ -63,25 +57,6 @@
 		<far-m>1500</far-m>
 		<cutoff>2000</cutoff>
 	</animation>
-	<animation>
-		<type>flash</type>
-		<object-name>Light</object-name>
-		<power>10</power>
-		<factor>3</factor>
-		<min>1</min>
-		<max>6</max>
-		<two-sides type="bool">false</two-sides>
-		<axis>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
 
-	<effect>
-		<name>REMBRANDT transparency</name>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>Light</object-name>
-	</effect>
 
 </PropertyList>

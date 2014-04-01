@@ -490,6 +490,8 @@
 <object-name>slat.4.part1</object-name>
 <object-name>slat.2</object-name>
 <object-name>slat.3</object-name>
+<object-name>wiper.left</object-name>
+<object-name>wiper.right</object-name>
 	</effect>
 	
 		<animation>

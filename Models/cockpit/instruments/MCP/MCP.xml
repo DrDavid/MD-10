@@ -1452,7 +1452,7 @@
 		<property>controls/lighting/flood-panel-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.5</ind><dep>-280</dep></entry>
+			<entry><ind>0.5</ind><dep>-329</dep></entry>
 		</interpolation>
 		<axis>
 			<x>1</x>
@@ -1469,7 +1469,7 @@
 
 
 				<animation>
-		<name>Flood panel light rotate</name>
+		<name>panel light rotate</name>
 		<type>rotate</type>
 		<object-name>mcp.light.knob</object-name>
     <object-name>mcp.light.knob.indicator</object-name>

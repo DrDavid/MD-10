@@ -4,5 +4,35 @@
 
 	<path>overhead_2.ac</path>
 	
+			<animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>chrome_cockpit.png</texture>
+<object-name>oh.glass.2</object-name>
+</animation>
+
+			<animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>chrome_cockpit_red.png</texture>
+<object-name>engine.fire.glass</object-name>
+</animation>
+
+    		<animation>
+		<name>Panel lighting</name>
+		<type>material</type>
+		<object-name>overhead.text.2</object-name>
+		<emission>
+			<red>1.5</red>
+			<green>1.27</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/ovhd-panel-norm</factor-prop>
+		</emission>
+	</animation>
+
+			<effect>
+		<inherits-from>Aircraft/MD-11/Models/Effects/engine</inherits-from>
+    <object-name>oh_2_buttons</object-name>
+	</effect>
 	
 </PropertyList>

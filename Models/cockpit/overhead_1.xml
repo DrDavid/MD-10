@@ -5,12 +5,124 @@
 	<path>overhead_1.ac</path>
 	
 	
-		    		  <animation>
+		<animation>
 <type>shader</type>
 <shader>chrome</shader>
 <texture>chrome_cockpit.png</texture>
 <object-name>oh.glass</object-name>
 </animation>
+
+    		<animation>
+		<name>Panel lighting</name>
+		<type>material</type>
+		<object-name>overhead.text</object-name>
+    <object-name>ovhd_pnl_indicator</object-name>
+    <object-name>ovhd_flood_indicator</object-name>
+    <object-name>dashboard.text.indicator</object-name>
+    <object-name>dashboard.light.indicator</object-name>
+    <object-name>light.knobs</object-name>
+		<emission>
+			<red>1.5</red>
+			<green>1.27</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/ovhd-panel-norm</factor-prop>
+		</emission>
+	</animation>
+	
+		    		<animation>
+		<name>Panel lighting</name>
+		<type>material</type>
+		<object-name>ovhd_lcd</object-name>
+		<emission>
+			<red>1.39</red>
+			<green>0</green>
+			<blue>0</blue>
+			<factor-prop>controls/lighting/ovhd-panel-norm</factor-prop>
+		</emission>
+	</animation>
+	
+			    	<animation>
+		<name>OVHD light knob</name>
+		<type>pick</type>
+		<object-name>ovhd_pnl_knob</object-name>
+    <object-name>ovhd_pnl_indicator</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/ovhd-panel-norm</property>
+				<step>0.025</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/ovhd-panel-norm</property>
+				<step>-0.025</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	
+					<animation>
+		<name>OVHD panel light rotate</name>
+		<type>rotate</type>
+		<object-name>ovhd_pnl_knob</object-name>
+    <object-name>ovhd_pnl_indicator</object-name>
+				<property>controls/lighting/ovhd-panel-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>-329</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-21.7975</x-m>
+			<y-m>-0.1138</y-m>
+			<z-m>-18.0476</z-m>
+		</center>
+	</animation>
+
+			<animation>
+		<type>select</type>
+		<object-name>ltank.1</object-name>
+		<object-name>ltank.2</object-name>
+		<object-name>ltank.3</object-name>
+		<object-name>ltank.4</object-name>
+		<object-name>ltank.5</object-name>
+		<object-name>ctank.1</object-name>
+		<object-name>ctank.2</object-name>
+		<object-name>ctank.3</object-name>
+		<object-name>ctank.4</object-name>
+		<object-name>ctank.5</object-name>
+		<object-name>rtank.1</object-name>
+		<object-name>rtank.2</object-name>
+		<object-name>rtank.3</object-name>
+		<object-name>rtank.4</object-name>
+		<object-name>rtank.5</object-name>
+		<object-name>atank.1</object-name>
+		<object-name>atank.2</object-name>
+		<object-name>atank.3</object-name>
+		<object-name>atank.4</object-name>
+		<object-name>atank.5</object-name>
+		<object-name>ttank.1</object-name>
+		<object-name>ttank.2</object-name>
+		<object-name>ttank.3</object-name>
+		<object-name>ttank.4</object-name>
+		<object-name>ttank.5</object-name>
+		<condition>
+				<property>systems/electrical/outputs/avionics</property>
+		</condition>
+	</animation>
 	
 	
 		<animation>
@@ -266,6 +378,19 @@
 		<property>consumables/fuel/tank[3]/level-lbs</property>
 		<factor>0.1</factor>
 		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+		<animation>
+		<type>textranslate</type>
+		<object-name>ttank.1</object-name>
+		<property>consumables/fuel/tank[4]/level-lbs</property>
+		<factor>0.00001</factor>
+		<step>10000</step>
 		<axis>
 			<x>0</x>
 			<y>1</y>
@@ -614,6 +739,7 @@
         <object-name>R-Lnd.toggle</object-name>
     <object-name>thunderstorm</object-name>
     <object-name>seatbelts.lever</object-name>
+        <object-name>emer_light_switch</object-name>
 	</effect>
 	
 	    <animation>
@@ -654,6 +780,12 @@
    <type>textranslate</type>
    <object-name>BCN.btn</object-name>
         <property>controls/lighting/beacon</property>
+        <condition>
+        <equals>
+        <property>systems/electrical/outputs/avionics</property>
+        <value>1</value>
+        </equals>
+        </condition>
         <interpolation>
             <entry>
                 <ind>0</ind>
@@ -692,6 +824,12 @@
    <type>textranslate</type>
    <object-name>NAV.btn</object-name>
    <property>controls/lighting/nav-lights</property>
+        <condition>
+        <equals>
+        <property>systems/electrical/outputs/avionics</property>
+        <value>1</value>
+        </equals>
+        </condition>
         <interpolation>
             <entry>
                 <ind>0</ind>
@@ -730,6 +868,12 @@
    <type>textranslate</type>
    <object-name>LOGO.btn</object-name>
       <property>controls/lighting/logo-lights</property>
+        <condition>
+        <equals>
+        <property>systems/electrical/outputs/avionics</property>
+        <value>1</value>
+        </equals>
+        </condition>
         <interpolation>
             <entry>
                 <ind>1</ind>
@@ -738,6 +882,52 @@
             <entry>
                 <ind>0</ind>
                 <dep>0.1875</dep>
+            </entry>
+        </interpolation>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+ 
+         <animation>
+        <type>pick</type>
+        <object-name>turnoff.left</object-name>
+        <object-name>turnoff.right</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/turn-off-lights</property>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>controls.click(2);</script>
+            </binding>
+        </action>
+    </animation>
+    
+     <animation>
+   <type>textranslate</type>
+        <object-name>turnoff.left</object-name>
+        <object-name>turnoff.right</object-name>
+                <property>controls/lighting/turn-off-lights</property>
+        <condition>
+        <equals>
+        <property>systems/electrical/outputs/avionics</property>
+        <value>1</value>
+        </equals>
+        </condition>
+        <interpolation>
+            <entry>
+                <ind>1</ind>
+                <dep>0.0625</dep>
+            </entry>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
             </entry>
         </interpolation>
    <axis>
@@ -769,6 +959,12 @@
    <type>textranslate</type>
       <object-name>STRB.toggle</object-name>
         <property>controls/lighting/strobe</property>
+        <condition>
+        <equals>
+        <property>systems/electrical/outputs/avionics</property>
+        <value>1</value>
+        </equals>
+        </condition>
         <interpolation>
             <entry>
                 <ind>0</ind>
