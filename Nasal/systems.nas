@@ -370,25 +370,29 @@ setlistener("sim/signals/fdm-initialized", func {
     props.globals.initNode("instrumentation/clock/set-knob",0,"INT");
 #    setprop("instrumentation/groundradar/id",getprop("sim/tower/airport-id"));
     setprop("sim/flaps/current-setting", 0);
+
 	balance_fuel();
-    setprop("controls/fuel/tank[0]/boost-pump-switch[0]",1);
-    setprop("controls/fuel/tank[0]/boost-pump-switch[1]",1);
-    setprop("controls/fuel/tank[2]/boost-pump-switch[0]",1);
-    setprop("controls/fuel/tank[2]/boost-pump-switch[1]",1);
+#    setprop("controls/fuel/tank[0]/boost-pump-switch[0]",1);
+#    setprop("controls/fuel/tank[0]/boost-pump-switch[1]",1);
+#    setprop("controls/fuel/tank[2]/boost-pump-switch[0]",1);
+#    setprop("controls/fuel/tank[2]/boost-pump-switch[1]",1);
+
 	setprop("autopilot/route-manager/cruise/speed-kts",320);
 	setprop("autopilot/route-manager/cruise/speed-mach",0.840);
 	setprop("controls/engines/autostart",1);
 	setprop("controls/engines/engine/eec-switch",1);
 	setprop("controls/engines/engine[1]/eec-switch",1);
 	setprop("controls/engines/engine[2]/eec-switch",1);
+
 #Fuel Jittson Arm
-	setprop("controls/fuel/b-jtsnarm", 1);
-	setprop("controls/fuel/tank[0]/b-nozzle", 1);
-	setprop("controls/fuel/tank[2]/b-nozzle", 1);
+#	setprop("controls/fuel/b-jtsnarm", 1);
+#	setprop("controls/fuel/tank[0]/b-nozzle", 1);
+#	setprop("controls/fuel/tank[2]/b-nozzle", 1);
 #XFD valve
-	setprop("controls/fuel/b-xfdfwd-vlv", 1);
-	setprop("controls/fuel/b-xfdaft-vlv", 1);
-	setprop("controls/fuel/b-xfdaft-vlv", 1);
+#	setprop("controls/fuel/b-xfdfwd-vlv", 1);
+#	setprop("controls/fuel/b-xfdaft-vlv", 1);
+#	setprop("controls/fuel/b-xfdaft-vlv", 1);
+
 	setprop("controls/anti-ice/window-heat-ls-switch", 1);
 	setprop("controls/anti-ice/window-heat-lf-switch", 1);
 	setprop("controls/anti-ice/window-heat-rf-switch", 1);
@@ -416,25 +420,24 @@ var start_updates = func {
         setprop("instrumentation/afds/inputs/lateral-index", 9);
     	setprop("instrumentation/afds/inputs/at-armed", 1);
     	setprop("instrumentation/afds/inputs/at-armed[1]", 1);
-		setprop("instrumentation/afds/inputs/AP", 1);
+	setprop("instrumentation/afds/inputs/AP", 1);
         setprop("autopilot/internal/airport-height", 0);
         setprop("engines/engine[0]/run",1);
         setprop("engines/engine[1]/run",1);
-		setprop("engines/engine[2]/run",1);
+	setprop("engines/engine[2]/run",1);
     	setprop("sim/flaps/current-setting", 0);
-		setprop("autopilot/settings/target-speed-kt", getprop("sim/presets/airspeed-kt"));
-		MD11.afds.input(1,1);
-		setprop("autopilot/settings/counter-set-altitude-ft", getprop("sim/presets/altitude-ft"));
-		setprop("autopilot/settings/actual-target-altitude-ft", getprop("sim/presets/altitude-ft"));
-		MD11.afds.input(0,2);
-		setprop("controls/flight/rudder-trim", 0);
-		setprop("controls/flight/elevator-trim", 0);
-		setprop("controls/flight/aileron-trim", 0);
-	    setprop("instrumentation/weu/state/takeoff-mode",0);
-		if(var vbaro = getprop("environment/metar/pressure-inhg"))
-		{
-			setprop("instrumentation/altimeter/setting-inhg", vbaro);
-		}
+	setprop("autopilot/settings/target-speed-kt", getprop("sim/presets/airspeed-kt"));
+	MD11.afds.input(1,1);
+	setprop("autopilot/settings/counter-set-altitude-ft", getprop("sim/presets/altitude-ft"));
+	setprop("autopilot/settings/actual-target-altitude-ft", getprop("sim/presets/altitude-ft"));
+	MD11.afds.input(0,2);
+	setprop("controls/flight/rudder-trim", 0);
+	setprop("controls/flight/elevator-trim", 0);
+	setprop("controls/flight/aileron-trim", 0);
+	setprop("instrumentation/weu/state/takeoff-mode",0);
+	if(var vbaro = getprop("environment/metar/pressure-inhg")) {
+		setprop("instrumentation/altimeter/setting-inhg", vbaro);
+	}
     }
 
     # start update_systems loop - but start it once only
@@ -557,60 +560,63 @@ controls.toggleLandingLights = func()
     setprop("controls/lighting/landing-light[2]",!state);
 }
 
-var balance_fuel = func{
-    var capwing = getprop("consumables/fuel/tank[0]/capacity-gal_us");
-# make the fuel quantity balancing
-    var total_fuel = 0;
-    var capcenter = 0;
-    var j = 3;
-    if(vmodel == "-200LR")
-    {
-        j = 6;
-        capcenter = getprop("consumables/fuel/tank[1]/capacity-gal_us");
-    }
-    for(var i = 0; i < j; i += 1)
-    {
-        total_fuel += getprop("consumables/fuel/tank["~i~"]/level-gal_us");
-    }
-    if(j == 6)
-    {
-        if(total_fuel > ((capwing * 2) + capcenter))
-        {
-            var capaux = ((total_fuel -  ((capwing * 2) + capcenter)) / 3);
-            setprop("consumables/fuel/tank[3]/level-gal_us", capaux);
-            setprop("consumables/fuel/tank[4]/level-gal_us", capaux);
-            setprop("consumables/fuel/tank[5]/level-gal_us", capaux);
-            total_fuel -= (capaux * 3);
-        }
-        else
-        {
-            setprop("consumables/fuel/tank[3]/level-gal_us", 0);
-            setprop("consumables/fuel/tank[4]/level-gal_us", 0);
-            setprop("consumables/fuel/tank[5]/level-gal_us", 0);
-        }
-    }
-    if(total_fuel > (capwing * 2))
-    {
-        setprop("consumables/fuel/tank[0]/level-gal_us", capwing);
-        setprop("consumables/fuel/tank[1]/level-gal_us", (total_fuel - (capwing * 2)));
-        setprop("consumables/fuel/tank[2]/level-gal_us", capwing);
-    }
-    else
-    {
-        setprop("consumables/fuel/tank[0]/level-gal_us", (total_fuel / 2));
-        setprop("consumables/fuel/tank[1]/level-gal_us", 0);
-        setprop("consumables/fuel/tank[2]/level-gal_us", (total_fuel / 2));
-    }
-}
+#var balance_fuel = func{
+#
+#    var capwing = getprop("consumables/fuel/tank[0]/capacity-gal_us");
+## make the fuel quantity balancing
+#    var total_fuel = 0;
+#    var capcenter = 0;
+#    var j = 3;
+#    if(vmodel == "-200LR")
+#    {
+#        j = 6;
+#        capcenter = getprop("consumables/fuel/tank[1]/capacity-gal_us");
+#    }
+#    for(var i = 0; i < j; i += 1)
+#    {
+#        total_fuel += getprop("consumables/fuel/tank["~i~"]/level-gal_us");
+#    }
+#    if(j == 6)
+#    {
+#        if(total_fuel > ((capwing * 2) + capcenter))
+#        {
+#            var capaux = ((total_fuel -  ((capwing * 2) + capcenter)) / 3);
+#            setprop("consumables/fuel/tank[3]/level-gal_us", capaux);
+#            setprop("consumables/fuel/tank[4]/level-gal_us", capaux);
+#            setprop("consumables/fuel/tank[5]/level-gal_us", capaux);
+#            total_fuel -= (capaux * 3);
+#        }
+#        else
+#        {
+#            setprop("consumables/fuel/tank[3]/level-gal_us", 0);
+#            setprop("consumables/fuel/tank[4]/level-gal_us", 0);
+#            setprop("consumables/fuel/tank[5]/level-gal_us", 0);
+#        }
+#    }
+#    if(total_fuel > (capwing * 2))
+#    {
+#        setprop("consumables/fuel/tank[0]/level-gal_us", capwing);
+#        setprop("consumables/fuel/tank[1]/level-gal_us", (total_fuel - (capwing * 2)));
+#        setprop("consumables/fuel/tank[2]/level-gal_us", capwing);
+#    }
+#    else
+#    {
+#        setprop("consumables/fuel/tank[0]/level-gal_us", (total_fuel / 2));
+#        setprop("consumables/fuel/tank[1]/level-gal_us", 0);
+#        setprop("consumables/fuel/tank[2]/level-gal_us", (total_fuel / 2));
+#    }
+#}
 
 var Startup = func{
     setprop("sim/model/armrest",1);
+    balance_fuel();
+    setprop("controls/fuel/auto-manage",1);
     setprop("controls/electric/engine[0]/generator",1);
     setprop("controls/electric/engine[1]/generator",1);
     setprop("controls/electric/engine[2]/generator",1);
     setprop("controls/electric/engine[0]/bus-tie",1);
     setprop("controls/electric/engine[1]/bus-tie",1);
-	setprop("controls/electric/engine[2]/bus-tie",1);
+    setprop("controls/electric/engine[2]/bus-tie",1);
     setprop("systems/electrical/outputs/avionics",1);
     setprop("controls/electric/inverter-switch",1);
     setprop("controls/lighting/instrument-norm",0.8);
@@ -623,10 +629,10 @@ var Startup = func{
     setprop("controls/lighting/strobe",1);
     setprop("controls/engines/engine[0]/cutoff",0);
     setprop("controls/engines/engine[1]/cutoff",0);
-	setprop("controls/engines/engine[2]/cutoff",0);
+    setprop("controls/engines/engine[2]/cutoff",0);
     setprop("engines/engine[0]/out-of-fuel",0);
     setprop("engines/engine[1]/out-of-fuel",0);
-	setprop("engines/engine[2]/out-of-fuel",0);
+    setprop("engines/engine[2]/out-of-fuel",0);
     setprop("controls/flight/elevator-trim",0);
     setprop("controls/flight/aileron-trim",0);
     setprop("controls/flight/rudder-trim",0);
@@ -935,89 +941,89 @@ switch_ind = func() {
 			}
 		}
 	}
-# Fuel control panel indication
-# LH boost #1
-	if((getprop("consumables/fuel/tank[0]/level-gal_us") > 0)
-		and	((getprop("controls/fuel/tank/boost-pump-switch")
-				and (l_xfr.getValue() > 80))
-			or ((hot_bat.getValue() > 24) 
-				and (getprop("controls/APU/off-start-run") != 0))))
-	{
-		setprop("controls/fuel/tank[0]/boost-pump[0]", 1);
-	}
-	else
-	{
-		setprop("controls/fuel/tank[0]/boost-pump[0]", 0);
-	}
-	if((getprop("controls/fuel/tank[0]/boost-pump[0]") == 0)
-		and (cpt_flt_inst.getValue() > 24))
-	{
-		setprop("controls/fuel/tank[0]/b-boost-pump[0]", 0);
-	}
-	else
-	{
-		setprop("controls/fuel/tank[0]/b-boost-pump[0]", 1);
-	}
-# LH boost #2
-	if((getprop("consumables/fuel/tank[0]/level-gal_us") > 0)
-			and getprop("controls/fuel/tank/boost-pump-switch[1]")
-			and (l_xfr.getValue() > 80))
-	{
-		setprop("controls/fuel/tank[0]/boost-pump[1]", 1);
-	}
-	else
-	{
-		setprop("controls/fuel/tank[0]/boost-pump[1]", 0);
-	}
-	if((getprop("controls/fuel/tank[0]/boost-pump[1]") == 0)
-		and (cpt_flt_inst.getValue() > 24))
-	{
-		setprop("controls/fuel/tank[0]/b-boost-pump[1]", 0);
-	}
-	else
-	{
-		setprop("controls/fuel/tank[0]/b-boost-pump[1]", 1);
-	}
-# RH boost #1
-	if((getprop("consumables/fuel/tank[2]/level-gal_us") > 0)
-			and getprop("controls/fuel/tank[2]/boost-pump-switch[0]")
-			and (l_xfr.getValue() > 80))
-	{
-		setprop("controls/fuel/tank[2]/boost-pump[0]", 1);
-	}
-	else
-	{
-		setprop("controls/fuel/tank[2]/boost-pump[0]", 0);
-	}
-	if((getprop("controls/fuel/tank[2]/boost-pump[0]") == 0)
-		and (cpt_flt_inst.getValue() > 24))
-	{
-		setprop("controls/fuel/tank[2]/b-boost-pump[0]", 0);
-	}
-	else
-	{
-		setprop("controls/fuel/tank[2]/b-boost-pump[0]", 1);
-	}
-#RH boost #2
-	if((getprop("consumables/fuel/tank[2]/level-gal_us") > 0)
-			and getprop("controls/fuel/tank[2]/boost-pump-switch[1]")
-			and (l_xfr.getValue() > 80))
-	{
-		setprop("controls/fuel/tank[2]/boost-pump[1]", 1);
-	}
-	else
-	{
-		setprop("controls/fuel/tank[2]/boost-pump[1]", 0);
-	}
-	if((getprop("controls/fuel/tank[2]/boost-pump[1]") == 0)
-		and (cpt_flt_inst.getValue() > 24))
-	{
-		setprop("controls/fuel/tank[2]/b-boost-pump[1]", 0);
-	}
-	else
-	{
-		setprop("controls/fuel/tank[2]/b-boost-pump[1]", 1);
-	}
+## Fuel control panel indication
+## LH boost #1
+#	if((getprop("consumables/fuel/tank[0]/level-gal_us") > 0)
+#		and	((getprop("controls/fuel/tank/boost-pump-switch")
+#				and (l_xfr.getValue() > 80))
+#			or ((hot_bat.getValue() > 24) 
+#				and (getprop("controls/APU/off-start-run") != 0))))
+#	{
+#		setprop("controls/fuel/tank[0]/boost-pump[0]", 1);
+#	}
+#	else
+#	{
+#		setprop("controls/fuel/tank[0]/boost-pump[0]", 0);
+#	}
+#	if((getprop("controls/fuel/tank[0]/boost-pump[0]") == 0)
+#		and (cpt_flt_inst.getValue() > 24))
+#	{
+#		setprop("controls/fuel/tank[0]/b-boost-pump[0]", 0);
+#	}
+#	else
+#	{
+#		setprop("controls/fuel/tank[0]/b-boost-pump[0]", 1);
+#	}
+## LH boost #2
+#	if((getprop("consumables/fuel/tank[0]/level-gal_us") > 0)
+#			and getprop("controls/fuel/tank/boost-pump-switch[1]")
+#			and (l_xfr.getValue() > 80))
+#	{
+#		setprop("controls/fuel/tank[0]/boost-pump[1]", 1);
+#	}
+#	else
+#	{
+#		setprop("controls/fuel/tank[0]/boost-pump[1]", 0);
+#	}
+#	if((getprop("controls/fuel/tank[0]/boost-pump[1]") == 0)
+#		and (cpt_flt_inst.getValue() > 24))
+#	{
+#		setprop("controls/fuel/tank[0]/b-boost-pump[1]", 0);
+#	}
+#	else
+#	{
+#		setprop("controls/fuel/tank[0]/b-boost-pump[1]", 1);
+#	}
+## RH boost #1
+#	if((getprop("consumables/fuel/tank[2]/level-gal_us") > 0)
+#			and getprop("controls/fuel/tank[2]/boost-pump-switch[0]")
+#			and (l_xfr.getValue() > 80))
+#	{
+#		setprop("controls/fuel/tank[2]/boost-pump[0]", 1);
+#	}
+#	else
+#	{
+#		setprop("controls/fuel/tank[2]/boost-pump[0]", 0);
+#	}
+#	if((getprop("controls/fuel/tank[2]/boost-pump[0]") == 0)
+#		and (cpt_flt_inst.getValue() > 24))
+#	{
+#		setprop("controls/fuel/tank[2]/b-boost-pump[0]", 0);
+#	}
+#	else
+#	{
+#		setprop("controls/fuel/tank[2]/b-boost-pump[0]", 1);
+#	}
+##RH boost #2
+#	if((getprop("consumables/fuel/tank[2]/level-gal_us") > 0)
+#			and getprop("controls/fuel/tank[2]/boost-pump-switch[1]")
+#			and (l_xfr.getValue() > 80))
+#	{
+#		setprop("controls/fuel/tank[2]/boost-pump[1]", 1);
+#	}
+#	else
+#	{
+#		setprop("controls/fuel/tank[2]/boost-pump[1]", 0);
+#	}
+#	if((getprop("controls/fuel/tank[2]/boost-pump[1]") == 0)
+#		and (cpt_flt_inst.getValue() > 24))
+#	{
+#		setprop("controls/fuel/tank[2]/b-boost-pump[1]", 0);
+#	}
+#	else
+#	{
+#		setprop("controls/fuel/tank[2]/b-boost-pump[1]", 1);
+#	}
 
 #EEC Autostart
 	if((getprop("controls/engines/autostart") == 0)

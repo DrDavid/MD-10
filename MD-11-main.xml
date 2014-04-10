@@ -25,7 +25,7 @@
 			<min-runway-length-ft>4500</min-runway-length-ft>
 		</navdb>
 		
-
+     <fuel-fraction>0.5</fuel-fraction>
 
 	<view n="0">
 	    <name>Captain View</name>
@@ -757,7 +757,7 @@
         <MD11>
             <file>Aircraft/MD-11/Nasal/Air.nas</file>
             <file>Aircraft/MD-11/Nasal/AFDS.nas</file>
-            <file>Aircraft/MD-11/Nasal/Electrical.nas</file>
+            <file>Aircraft/MD-11/Nasal/electrical.nas</file>
             <file>Aircraft/MD-11/Nasal/engine.nas</file>
             <file>Aircraft/MD-11/Nasal/Hydraulics.nas</file>
             <file>Aircraft/MD-11/Nasal/systems.nas</file>
@@ -766,10 +766,11 @@
             <file>Aircraft/MD-11/Nasal/brakesystem.nas</file>
             <file>Aircraft/MD-11/Nasal/ground_steering.nas</file>
             <file>Aircraft/MD-11/Models/cockpit/instruments/ND/ND.nas</file>
-            <file>Aircraft/MD-11/Nasal/SWanimation.nas</file>
+            <!--file>Aircraft/MD-11/Nasal/SWanimation.nas</file-->
             <file>Aircraft/Generic/limits.nas</file>
             <file>Aircraft/MD-11/Nasal/warnsystem.nas</file>
             <file>Aircraft/MD-11/Nasal/doors.nas</file>
+            <file>Aircraft/MD-11/Nasal/fuel_system.nas</file>
         </MD11>
         <dialogs>
             <file>Aircraft/MD-11/Nasal/dialogs.nas</file>

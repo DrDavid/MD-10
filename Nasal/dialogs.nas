@@ -1,3 +1,4 @@
+# Dialog
 var Radio = gui.Dialog.new("sim/gui/dialogs/radios/dialog",
         "Aircraft/MD-11/Systems/tranceivers.xml");
 		
