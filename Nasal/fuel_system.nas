@@ -68,8 +68,8 @@ var fuelsys = {
 
 	m.auto_manage = props.globals.initNode("controls/fuel/auto-manage",0,"BOOL");
 	m.tail_mgm_enable = 0;
-	m.tail_filled = 0;
 	m.ticks = 0;
+	m.tail_filled = 0;
 
 	return m;
     },
@@ -90,6 +90,23 @@ var fuelsys = {
 	# Run the FSC
 	if (me.auto_manage.getBoolValue()) me.fsc();
 
+	# Fuel Jettison
+	if (getprop("controls/fuel/dump-valve")) {
+	    for (var i=0; i<5; i+=1) {
+		if (i == 3) {
+		    me.fill[i].setBoolValue(1);
+		    me.fill_status[i] = 0;
+		} else {
+		    me.fill[i].setBoolValue(0);
+		}
+		if (i < 3 and me.lev[i].getValue() < 11500) {
+		    me.xfer[i].setBoolValue(0);
+		} else {
+		    me.xfer[i].setBoolValue(1);
+		}
+	    }
+	}
+
 	# Cut out pumps on empty tanks:
 	for (var i=0; i<5; i+=1) {
 	    if (me.empty[i].getBoolValue()) {
@@ -108,12 +125,15 @@ var fuelsys = {
 		if (i == 4) me.altpump.setBoolValue(0);
 	    }
 	}
+		###
+
 	else {
 	    me.auto_manage.setBoolValue(1);
 	}	
 		# This is a temporary way to turn on the auto-manage
 		# automatically until the control is ready to go on the OH
 		# panel.
+		###
 
 	# Fuel manifold status:
 	var manifold_p = me.xfer[0].getBoolValue()
@@ -129,13 +149,18 @@ var fuelsys = {
 		      or me.fill[1].getBoolValue()
 		      or me.fill[2].getBoolValue()
 		      or me.fill[3].getBoolValue()
-		      or me.fill[4].getBoolValue()
-		      or me.xfeed[0].getBoolValue()
-		      or me.xfeed[1].getBoolValue()
-		      or me.xfeed[2].getBoolValue();
+		      or me.fill[4].getBoolValue();
+
+	var main_manifold_o = me.fill[0].getBoolValue()
+			  or  me.fill[1].getBoolValue()
+			  or  me.fill[2].getBoolValue()
+			  or  me.xfeed[0].getBoolValue()
+			  or  me.xfeed[1].getBoolValue()
+			  or  me.xfeed[2].getBoolValue();
+
 	# Pump status:
 	for (var i=0; i<5; i+=1) {
-	    if (me.xfer[i].getBoolValue() and manifold_o) select[i] = 1;
+	    if (me.xfer[i].getBoolValue() and main_manifold_o) select[i] = 1;
 	    if (i < 3) {
 		if (me.pump[i].getBoolValue()) select[i] = 1;
 	    }
@@ -236,6 +261,23 @@ var fuelsys = {
 		me.lev[i].setValue(me.lev[i].getValue() + (xfer_rate / sinks));
 	    }
 	}
+
+	# Fuel Jettison
+	var jettrate = rate * me.density.getValue();
+	if (getprop("controls/fuel/dump-valve")) {
+	    for (var i=0; i<3; i+=1) {
+		if (me.xfer[i].getBoolValue())
+		    me.lev[i].setValue(me.lev[i].getValue() - (jettrate * 3));
+	    }
+	    if (me.xfer[3].getBoolValue() and me.lev[3].getValue() > jettrate * 2)
+		me.lev[3].setValue(me.lev[3].getValue() - (jettrate * 2));
+	    if (me.xfer[4].getBoolValue() and me.lev[4].getValue() > jettrate) {
+		me.lev[4].setValue(me.lev[4].getValue() - jettrate);
+	    } else {
+		if (me.xfer[3].getBoolValue() and me.lev[3].getValue() > jettrate)
+		    me.lev[3].setValue(me.lev[3].getValue() - jettrate);
+	    }
+	}
     },
 
     fsc : func {
@@ -299,9 +341,25 @@ var fuelsys = {
 		    fills[2] = 1;
 	    }
 	}
-			    
+
+    
 	if (me.tail_mgm_enable == 1) {
-		if (me.tail_filled == 0 and me.total.getValue() > 51000) {
+	    # No rearward transfer if total fuel < 51000 lbs
+	    if (me.total.getValue() < 51000) me.tail_filled = 1;
+	    # If tail engine shut down, max 5000 lbs in tail tank
+	    if (me.lev[4].getValue() > 5000 and !getprop("engines/engine[1]/run")) {
+		me.tail_filled = 1;
+		xfer_fwd();
+	    }
+	    # Tail tank is full
+	    if (me.lev[4].getValue() / me.density.getValue() >= me.cap[4].getValue() - 2.5)
+		me.tail_filled = 1;
+	    # Max 6.5% total fuel in tail tank
+	    if (me.lev[4].getValue() > me.total.getValue() * 0.065) {
+		me.tail_filled = 1;
+	    }
+	
+		if (me.tail_filled == 0) {
 		# Transfer fuel rearward
 		    fills[4] = 1;
 		    fills[3] = 0;
@@ -319,22 +377,15 @@ var fuelsys = {
 			    fills[2] = 0;
 			}
 		    }
-		    if (me.lev[4].getValue() / me.density.getValue() >= me.cap[4].getValue() - 2.5)
-			me.tail_filled = 1;
 		} else {
 		# Every 30 minutes, transfer fuel fwd for 2.5 minutes
 		    me.ticks+= 1;
 		    if (me.ticks >= 3600) {
 			xfer_fwd();
-			if (me.ticks >= 3900) me.ticks = 0;
+			if (me.ticks >= 3900 and me.lev[4].getValue() < me.total.getValue() * 0.065)
+			    me.ticks = 0;
 		    }
 		    if (me.empty[4].getBoolValue()) me.tail_mgm_enable = 0;
-		}
-
-		if (me.lev[4].getValue() > 5000 and !getprop("engines/engine[1]/run")) {
-		# Max 5000 lbs when engine 2 shut down
-		    me.tail_filled = 1;
-		    xfer_fwd();
 		}
 
 		for (var i=0; i<3; i+=1) {
@@ -389,6 +440,8 @@ var fuelsys = {
 		    if (me.total.getValue() > 51000)
 			me.tail_mgm_enable = 1;
 		}
+		me.tail_filled = 0;
+		me.ticks = 0;
 	    }
 	},0,0);
     },
@@ -416,7 +469,6 @@ var fuelsys = {
 		    if (me.sel[1].getBoolValue()) src = 1;
 		}
 		if (me.sel[4].getBoolValue()) src = 4;
-		if (me.sel[1].getBoolValue()) src = 1;
 		if (me.sel[3].getBoolValue()) src = 3;
 	    }
 	    return src;
@@ -436,7 +488,7 @@ var fuelsys = {
         }
 
 	if (getprop("engines/engine[0]/run")) idle_ff(0,get_src(0));
-	if (getprop("engines/engine[2]/run")) idle_ff(0,get_src(0));
+	if (getprop("engines/engine[2]/run")) idle_ff(2,get_src(2));
 	if (getprop("engines/engine[1]/run")) {
 		var source = get_src(1);
 		if (source == -2) {
@@ -479,10 +531,6 @@ var fuelsys = {
         } else {
                 setprop("controls/APU/off-start-run",0);
         }
-    },
-
-    jettison : func {
-	print("Fuel jettison not working yet.");
     }
 };
 var MD11fuel = fuelsys.new();
@@ -492,10 +540,6 @@ setlistener("/sim/signals/fdm-initialized", func {
 	MD11fuel.idle_fuelcon();
 },0,0);
 
-setlistener("controls/fuel/dump-valve", func (dump) {
-	if (dump.getBoolValue()) MD11fuel.jettison();
-},0,0);
-			    
 var balance_fuel = func {
 	var lev = [ props.globals.getNode("consumables/fuel/tank[0]/level-gal_us",1),
 		    props.globals.getNode("consumables/fuel/tank[1]/level-gal_us",1),
