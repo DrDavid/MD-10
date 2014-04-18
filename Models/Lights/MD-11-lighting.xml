@@ -398,6 +398,15 @@
 	</offsets>
 </model> 
 
+<model>
+<path>Aircraft/MD-11/Models/Lights/pedestal-light.xml</path>
+	<offsets>
+		<x-m>-26.7652</x-m>
+		<y-m>-0.2236</y-m>
+		<z-m>7.8334</z-m>
+	</offsets>
+</model> 
+
 <!-- MCP -->
 
 <model>
@@ -442,6 +451,18 @@
 		<x-m>-27.2623</x-m>
 		<y-m>-0.075</y-m>
 		<z-m>7.2209</z-m>
+	</offsets>
+</model> 
+
+<!--Overhead flood-->
+
+<model>
+<path>Aircraft/MD-11/Models/Lights/oh-light.xml</path>
+	<offsets>
+			<pitch-deg>160</pitch-deg>
+		<x-m>-27.1163</x-m>
+		<y-m>0</y-m>
+		<z-m>7.0356</z-m>
 	</offsets>
 </model> 
 

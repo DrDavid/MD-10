@@ -17,6 +17,36 @@
 <object-name>crank.handle.left</object-name>
 </animation>
 
+	    		  <animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>windshield.png</texture>
+<object-name>Windshield.inner</object-name>
+</animation>
+
+    <animation>
+		<name>Panel lighting</name>
+		<type>material</type>
+		<object-name>dashboard.text</object-name>
+		<object-name>sidepanel.text</object-name>
+		<object-name>dashboard.knob.1</object-name>
+		<object-name>dashboard.knob.2</object-name>
+		<emission>
+			<red>1.5</red>
+			<green>1.27</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/pedestal-panel-norm</factor-prop>
+		</emission>
+	</animation>
+	
+	    <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>dashboard.text</object-name>
+		<object-name>sidepanel.text</object-name>
+		<object-name>dashboard.knob.1</object-name>
+		<object-name>dashboard.knob.2</object-name>
+    </effect>
+
 	
 	    <animation>
         <type>select</type>
@@ -83,8 +113,8 @@
 	
 
 <model>
-	<name>MCP</name>
-	<path>Aircraft/MD-11/Models/cockpit/instruments/MCP/MCP.xml</path>
+	<name>FCP</name>
+	<path>Aircraft/MD-11/Models/cockpit/instruments/FCP/FCP.xml</path>
 			<offsets>
 			<pitch-deg>-10</pitch-deg>
 		</offsets>
@@ -151,12 +181,79 @@
 		</offsets>
 </model>
 
+         <animation>
+		<type>material</type>
+		<object-name>PFD</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/screen-1-norm</factor-prop>
+		</emission>
+	</animation>
+	
+	         <animation>
+		<type>material</type>
+		<object-name>ND.screenL</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/screen-2-norm</factor-prop>
+		</emission>
+	</animation>
+	
+		         <animation>
+		<type>material</type>
+		<object-name>ND.screenR</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/screen-5-norm</factor-prop>
+		</emission>
+	</animation>
+	
+		         <animation>
+		<type>material</type>
+		<object-name>EAD 1</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/screen-3-norm</factor-prop>
+		</emission>
+	</animation>
+	
+		<animation>
+		<type>material</type>
+		<object-name>EAD 2</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/screen-4-norm</factor-prop>
+		</emission>
+	</animation>
+	
+
 <model>
 	<name>EAD 1</name>
 	<path>Aircraft/MD-11/Models/cockpit/instruments/EAD/EAD_1.xml</path>
 			<offsets>
             <x-m>-27.5138</x-m>
             <y-m>-0.15</y-m>
+            <z-m>6.9072</z-m>
+			<pitch-deg>-11.51</pitch-deg>
+		</offsets>
+</model>
+
+<model>
+	<name>EAD 2</name>
+	<path>Aircraft/MD-11/Models/cockpit/instruments/EAD/EAD_2.xml</path>
+			<offsets>
+            <x-m>-27.5138</x-m>
+            <y-m>0.15</y-m>
             <z-m>6.9072</z-m>
 			<pitch-deg>-11.51</pitch-deg>
 		</offsets>
@@ -172,6 +269,17 @@
 			<pitch-deg>-11.51</pitch-deg>
 		</offsets>
 </model>
+
+         <animation>
+		<type>material</type>
+		<object-name>PFD2</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/screen-6-norm</factor-prop>
+		</emission>
+	</animation>
 
 
 	<animation>

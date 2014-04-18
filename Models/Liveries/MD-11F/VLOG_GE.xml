@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>Varig Log / PR-LGE</name>
+				<texture>Liveries/MD-11F/VLOG_OLD_GE.png</texture>
+			</livery>  	  
+		</model>
+	</sim>
+    
+</PropertyList>

@@ -15,15 +15,9 @@
 	<texture alias="../../texture"/> 
 </animation>
 
-<effect>
-	<inherits-from>Effects/lightmap</inherits-from>
-	<parameters>
-		<texture n="1">
-			<image>Aircraft/Instruments-3d/cdu/boeing_lightmap.png</image>
-		</texture>
-		<condition><use>/instrumentation/cdu/serviceable</use></condition>
-		<factor><use>/controls/lighting/panel-norm</use></factor>
-	</parameters>
+    <animation>
+		<name>Panel lighting</name>
+		<type>material</type>
  	<object-name>Btn.A</object-name>
 	<object-name>Btn.B</object-name>
 	<object-name>Btn.C</object-name>
@@ -93,7 +87,13 @@
 	<object-name>Btn.side.r.4</object-name>
 	<object-name>Btn.side.r.5</object-name>
 	<object-name>Btn.side.r.6</object-name>
-</effect>
+		<emission>
+			<red>1.5</red>
+			<green>1.27</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/pedestal-panel-norm</factor-prop>
+		</emission>
+	</animation>
 
 <model>
 	<path>Aircraft/Instruments-3d/cdu/display-text-value.xml</path>

@@ -19,5 +19,25 @@
 			<z>-1</z>
 		</axis>
 	</animation>
+	
+	    <animation>
+		<name>Panel lighting</name>
+		<type>material</type>
+		<object-name>Ring</object-name>
+		<object-name>compass.needle</object-name>
+		<emission>
+			<red>1.5</red>
+			<green>1.27</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/pedestal-panel-norm</factor-prop>
+		</emission>
+	</animation>
+	
+		    		  <animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>Aircraft/MD-11/Models/cockpit/chrome_cockpit.png</texture>
+<object-name>compass.glass</object-name>
+</animation>
 
 </PropertyList>

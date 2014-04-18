@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>Lufthansa Cargo Reg. D-ALCL</name>
+				<texture>Liveries/MD-11F/GECALCL.png</texture>
+			</livery>
+		</model>
+	</sim>
+	
+
+</PropertyList>

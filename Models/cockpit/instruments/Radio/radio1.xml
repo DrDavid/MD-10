@@ -1,8 +1,4 @@
-﻿<!--
-Syd Adams
-777-200 radio
--->
-
+﻿
 <PropertyList>
     <path>radio.ac</path>
     
@@ -12,6 +8,23 @@ Syd Adams
 <texture>chrome_cockpit.png</texture>
 <object-name>cockpit.glass</object-name>
 </animation>
+
+    <animation>
+		<name>Panel lighting</name>
+		<type>material</type>
+		<object-name>Plane</object-name>
+		<emission>
+			<red>1.5</red>
+			<green>1.27</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/pedestal-panel-norm</factor-prop>
+		</emission>
+	</animation>
+	
+	    <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Plane</object-name>
+    </effect>
 
     <animation>
         <name>comm1</name>

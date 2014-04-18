@@ -9,6 +9,28 @@
 <object-name>brake.glass</object-name>
 </animation>
 
+    <animation>
+		<name>Panel lighting</name>
+		<type>material</type>
+		<object-name>brake.text</object-name>
+		<object-name>brake.text.underglass</object-name>
+		<object-name>Abrake.001</object-name>
+		<object-name>needle.1</object-name>
+		<object-name>needle.2</object-name>
+		<emission>
+			<red>1.5</red>
+			<green>1.27</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/pedestal-panel-norm</factor-prop>
+		</emission>
+	</animation>
+	
+		    <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>brake.text</object-name>
+		<object-name>Abrake.001</object-name>
+    </effect>
+
 
     <animation>
         <type>rotate</type>

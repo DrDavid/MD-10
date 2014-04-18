@@ -11,6 +11,11 @@
 <object-name>oh.glass.2</object-name>
 </animation>
 
+    <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>overhead.text.2</object-name>
+    </effect>
+
 			<animation>
 <type>shader</type>
 <shader>chrome</shader>

@@ -1814,8 +1814,8 @@ var AFDS = {
 							if(freq != nil)
 							{
 								setprop("instrumentation/nav/frequencies/standby-mhz", freq);
-								b777.Efis.set_radio_mode(2);
-								b777.Efis.swap_freq();
+								MD11.Efis.set_radio_mode(2);
+								MD11.Efis.swap_freq();
 								me.FMC_destination_ils.setValue(1);
 							}
 						}

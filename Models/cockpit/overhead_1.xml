@@ -13,7 +13,17 @@
 		<object-name>jett.cover</object-name>
 	</animation>
 
+<<<<<<< HEAD
+	    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>overhead.text</object-name>
+    <object-name>light.knobs</object-name>
+    </effect>
+
+    		<animation>
+=======
     	<animation>
+>>>>>>> 1ebc8adf5cec91afb88c668a0f87f680cc12f578
 		<name>Panel lighting</name>
 		<type>material</type>
 		<object-name>overhead.text</object-name>
@@ -71,7 +81,113 @@
 		</action>
 	</animation>
 	
+<<<<<<< HEAD
+				    	<animation>
+		<name>OVHD light knob</name>
+		<type>pick</type>
+		<object-name>dashboard.text.knob</object-name>
+    <object-name>dashboard.text.indicator</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/pedestal-panel-norm</property>
+				<step>0.025</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/pedestal-panel-norm</property>
+				<step>-0.025</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	
+					    	<animation>
+		<name>OVHD light knob</name>
+		<type>pick</type>
+		<object-name>ovhd_flood_knob</object-name>
+    <object-name>ovhd_flood_indicator</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/oh-flood-norm</property>
+				<step>0.025</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/oh-flood-norm</property>
+				<step>-0.025</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	
+						<animation>
+		<name>OVHD panel light rotate</name>
+		<type>rotate</type>
+		<object-name>ovhd_flood_knob</object-name>
+    <object-name>ovhd_flood_indicator</object-name>
+				<property>controls/lighting/oh-flood-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>-329</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-21.7871</x-m>
+			<y-m>-0.1138</y-m>
+			<z-m>-18.0476</z-m>
+		</center>
+	</animation>
+	
+						<animation>
+		<name>OVHD panel light rotate</name>
+		<type>rotate</type>
+		<object-name>dashboard.text.knob</object-name>
+    <object-name>dashboard.text.indicator</object-name>
+				<property>controls/lighting/pedestal-panel-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>-329</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-21.7975</x-m>
+			<y-m>-0.1138</y-m>
+			<z-m>-18.0824</z-m>
+		</center>
+	</animation>
+	
+					<animation>
+=======
 	<animation>
+>>>>>>> 1ebc8adf5cec91afb88c668a0f87f680cc12f578
 		<name>OVHD panel light rotate</name>
 		<type>rotate</type>
 		<object-name>ovhd_pnl_knob</object-name>
@@ -846,6 +962,403 @@ FSC.btn
 
 	<!-- Tail Tank -->
 	
+<<<<<<< HEAD
+<!-- Fuel Tank Controls >
+jettison.btn
+jett.cover
+tank0_armf
+tank0_fill
+tank0_pump
+tank0_low
+tank0_xfeed
+tank0_xfer
+tank0_xlow
+tank3_Lxfer
+tank3_Llow
+tank3_Rxfer
+tank3_Rlow
+tank4_xfer
+tank4_xlow
+tank4_alt
+tank4_low
+FSC.btn
+-->
+	<!-- Left Main Tank -->
+	<animation>
+		<type>pick</type>
+		<object-name>tank0_pump</object-name>
+		<object-name>tank0_low</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[0]/pump-eng</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank0_pump</object-name>
+		<property>controls/fuel/tank[0]/pump-eng</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>tank0_xfer</object-name>
+		<object-name>tank0_xlow</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[0]/pump-xfer</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank0_xfer</object-name>
+		<property>controls/fuel/tank[0]/pump-xfer</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>tank0_armf</object-name>
+		<object-name>tank0_fill</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[0]/fill-valve-arm</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank0_armf</object-name>
+		<property>controls/fuel/tank[0]/fill-valve-arm</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank0_fill</object-name>
+		<property>consumables/fuel/tank[0]/fill-valve</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>tank0_xfeed</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[0]/x-feed</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank0_xfeed</object-name>
+		<property>controls/fuel/tank[0]/x-feed</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+		    
+	<!-- Center Main Tank -->
+	<animation>
+		<type>pick</type>
+		<object-name>tank1_pump</object-name>
+		<object-name>tank1_low</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[1]/pump-eng</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank1_pump</object-name>
+		<property>controls/fuel/tank[1]/pump-eng</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>tank1_xfer</object-name>
+		<object-name>tank1_xlow</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[1]/pump-xfer</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank1_xfer</object-name>
+		<property>controls/fuel/tank[1]/pump-xfer</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>tank1_armf</object-name>
+		<object-name>tank1_fill</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[1]/fill-valve-arm</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank1_armf</object-name>
+		<property>controls/fuel/tank[1]/fill-valve-arm</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank1_fill</object-name>
+		<property>consumables/fuel/tank[1]/fill-valve</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>tank1_xfeed</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[1]/x-feed</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank1_xfeed</object-name>
+		<property>controls/fuel/tank[1]/x-feed</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+		    
+	<!-- Right Main Tank -->
+	<animation>
+		<type>pick</type>
+		<object-name>tank2_pump</object-name>
+		<object-name>tank2_low</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[2]/pump-eng</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank2_pump</object-name>
+		<property>controls/fuel/tank[2]/pump-eng</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>tank2_xfer</object-name>
+		<object-name>tank2_xlow</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[2]/pump-xfer</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank2_xfer</object-name>
+		<property>controls/fuel/tank[2]/pump-xfer</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>tank2_armf</object-name>
+		<object-name>tank2_fill</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[2]/fill-valve-arm</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank2_armf</object-name>
+		<property>controls/fuel/tank[2]/fill-valve-arm</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank2_fill</object-name>
+		<property>consumables/fuel/tank[2]/fill-valve</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>tank2_xfeed</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[2]/x-feed</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank2_xfeed</object-name>
+		<property>controls/fuel/tank[2]/x-feed</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Aux Tanks -->
+	<animation>
+		<type>pick</type>
+		<object-name>tank3_Lxfer</object-name>
+		<object-name>tank3_Llow</object-name>
+		<object-name>tank3_Rxfer</object-name>
+		<object-name>tank3_Rlow</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/fuel/tank[3]/pump-xfer</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank3_Lxfer</object-name>
+		<property>controls/fuel/tank[3]/pump-xfer</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>tank3_Rxfer</object-name>
+		<property>controls/fuel/tank[3]/pump-xfer</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>-1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Tail Tank -->
+	
+=======
+>>>>>>> 1ebc8adf5cec91afb88c668a0f87f680cc12f578
 	<animation>
 		<type>pick</type>
 		<object-name>tank4_alt</object-name>
@@ -924,7 +1437,12 @@ FSC.btn
 	<!-- Fuel Jettison -->
 	<animation>
 		<type>pick</type>
+<<<<<<< HEAD
+		<object-name>jett.cover_1</object-name>
+		<object-name>jett.cover_2</object-name>
+=======
 		<object-name>jett.cover</object-name>
+>>>>>>> 1ebc8adf5cec91afb88c668a0f87f680cc12f578
 		<action>
 		    <button>0</button>
 		    <repeatable>false</repeatable>
@@ -936,7 +1454,12 @@ FSC.btn
 	</animation>
 	<animation>
 		<type>rotate</type>
+<<<<<<< HEAD
+		<object-name>jett.cover_1</object-name>
+		<object-name>jett.cover_2</object-name>
+=======
 		<object-name>jett.cover</object-name>
+>>>>>>> 1ebc8adf5cec91afb88c668a0f87f680cc12f578
 		<property>controls/switches/jettison-cover</property>
 		<factor>130</factor>
 		<axis>
@@ -975,6 +1498,39 @@ FSC.btn
 		    <z>0</z>
 		</axis>
 	</animation>
+<<<<<<< HEAD
+	
+	    <animation>
+        <type>rotate</type>
+        <object-name>apuknob</object-name>
+        <object-name>apuknob.light</object-name>
+        <property>controls/APU/off-start-run</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-45.0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>45.0</dep>
+            </entry>		
+        </interpolation>
+        <center>
+            <x-m>-21.7996</x-m>
+            <y-m>-0.1204</y-m>
+            <z-m>-17.8164</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+=======
 
 		    
 		
@@ -1010,6 +1566,7 @@ FSC.btn
         	    <z>0</z>
         	</axis>
     	</animation>
+>>>>>>> 1ebc8adf5cec91afb88c668a0f87f680cc12f578
     
     	<animation>
         	<type>pick</type>

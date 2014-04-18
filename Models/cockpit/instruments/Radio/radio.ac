@@ -3,7 +3,7 @@ MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  sh
 MATERIAL "glass" rgb 0.8 0.8 0.8  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 50  trans 1
 MATERIAL "DefaultWhite.003" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.0125 0.0125 0.0125  shi 50  trans 0
 MATERIAL "emit.004" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 50  trans 0.2
-MATERIAL "Material.001" rgb 0.8 0.1455 0  amb 1 1 1  emis 0.64 0.64 0.64  spec 0.5 0.5 0.5  shi 50  trans 0
+MATERIAL "Material.001" rgb 0.8 0.1455 0  amb 0.2 0.2 0.2  emis 0.64 0.64 0.64  spec 0.5 0.5 0.5  shi 50  trans 0
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.025 0.025 0.025  shi 50  trans 0
 OBJECT world
 kids 33

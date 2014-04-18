@@ -14,6 +14,11 @@
   </unload>
  </nasal>
  
+  <model>
+ <path>Aircraft/MD-11/Models/Cabin/cargo.xml</path>
+ <name>cargo</name>
+</model>
+ 
 
  <model>
  <path>Aircraft/MD-11/Models/Services/Stairs/stairs.xml</path>
@@ -143,6 +148,43 @@
 		</center>
 	</animation>
 	
+						<animation>
+		<type>rotate</type>
+		<object-name>wing1.grey.part2</object-name>
+    <object-name>wing1.grey.part3</object-name>
+		<object-name>wing.1.part2</object-name>
+    <object-name>wing.1.part3</object-name>
+    <object-name>winglet.left</object-name>
+    <object-name>wing.glass.left</object-name>
+		<object-name>slat.1.part3</object-name>
+    <object-name>slat.1.part2</object-name>
+    <object-name>sp.brake.left.outer</object-name>
+    <object-name>wing.glass.left</object-name>
+    <object-name>flap.1</object-name>
+    <object-name>flap.2</object-name>
+    <object-name>flap.9</object-name>
+    <object-name>flap.9.part2</object-name>
+    <object-name>flap.10</object-name>
+    <object-name>flap.10.part2</object-name>
+    <object-name>wing.antennas.left</object-name>
+    <object-name>AileronL2</object-name>
+    <object-name>redlightsphere</object-name>
+    <object-name>RedLight</object-name>
+    <object-name>Strobelight.1</object-name>
+        <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <factor>-0.008</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>3.7271</x-m>
+			<y-m>-9.4415</y-m>
+			<z-m>5.3725</z-m>
+		</center>
+	</animation>
+	
 										<animation>
 		<type>rotate</type>
     <object-name>wing1.grey.part3</object-name>
@@ -172,6 +214,34 @@
 			<z-m>5.7059</z-m>
 		</center>
 	</animation>
+	
+												<animation>
+		<type>rotate</type>
+    <object-name>wing1.grey.part3</object-name>
+    <object-name>slat.1.part3</object-name>
+    <object-name>winglet.left</object-name>
+    <object-name>wing.glass.left</object-name>
+    <object-name>wing.antennas.left</object-name>
+    <object-name>AileronL2</object-name>
+    <object-name>wing.1.part3</object-name>
+    <object-name>redlightsphere</object-name>
+    <object-name>RedLight</object-name>
+    <object-name>Strobelight.1</object-name>
+        <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <factor>-0.008</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>8.7968</x-m>
+			<y-m>-17.6849</y-m>
+			<z-m>5.7059</z-m>
+		</center>
+	</animation>
+	
+	
 	
 			<animation>
 		<type>rotate</type>
@@ -214,6 +284,44 @@
 		</center>
 	</animation>
 	
+							<animation>
+		<type>rotate</type>
+		<object-name>wing2.grey.part2</object-name>
+    <object-name>wing2.grey.part3</object-name>
+		<object-name>wing.2.part2</object-name>
+    <object-name>wing.2.part3</object-name>
+    <object-name>winglet.right</object-name>
+    <object-name>wing.glass.right</object-name>
+		<object-name>slat.4.part3</object-name>
+    <object-name>slat.4.part2</object-name>
+    <object-name>sp.brake.right.outer</object-name>
+    <object-name>wing.glass.right</object-name>
+    <object-name>flap.7</object-name>
+    <object-name>flap.8</object-name>
+    <object-name>flap.13</object-name>
+    <object-name>flap.13.part2</object-name>
+    <object-name>flap.14</object-name>
+    <object-name>flap.14.part2</object-name>
+    <object-name>wing.antennas.right</object-name>
+    <object-name>AileronR2</object-name>
+    <object-name>greenlightsphere</object-name>
+    <object-name>GreenLight</object-name>
+    <object-name>Strobelight.2</object-name>
+        <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <factor>0.008</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>3.7271</x-m>
+			<y-m>9.4415</y-m>
+			<z-m>5.3725</z-m>
+		</center>
+	</animation>
+	
+	
 										<animation>
 		<type>rotate</type>
     <object-name>wing2.grey.part3</object-name>
@@ -243,6 +351,32 @@
 			<z-m>5.7059</z-m>
 		</center>
 	</animation>	
+	
+													<animation>
+		<type>rotate</type>
+    <object-name>wing2.grey.part3</object-name>
+    <object-name>slat.4.part3</object-name>
+    <object-name>winglet.right</object-name>
+    <object-name>wing.glass.right</object-name>
+    <object-name>wing.antennas.right</object-name>
+    <object-name>AileronR2</object-name>
+    <object-name>wing.2.part3</object-name>
+    <object-name>greenlightsphere</object-name>
+    <object-name>GreenLight</object-name>
+    <object-name>Strobelight.2</object-name>
+        <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <factor>0.008</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>8.7968</x-m>
+			<y-m>17.6849</y-m>
+			<z-m>5.7059</z-m>
+		</center>
+	</animation>
 	
 	
 	
@@ -278,6 +412,7 @@
 		<name>Fan</name>
 		<type>spin</type>
 		<object-name>fan_1</object-name>
+		<object-name>fan_1.center</object-name>
 		<factor>-67</factor>
 		<property>engines/engine[0]/rpm</property>
 	<axis>
@@ -290,10 +425,105 @@
 	</axis>
 	</animation>
 	
+				<animation>
+		<name>Fan</name>
+		<type>spin</type>
+		<object-name>fan_1_fast</object-name>
+		<factor>0.2</factor>
+		<property>engines/engine[0]/rpm</property>
+	<axis>
+	    <x1-m>-4.8064</x1-m>
+	    <y1-m>-8.2552</y1-m>
+	    <z1-m>3.4790</z1-m>
+	    <x2-m>-5.2843</x2-m>
+	    <y2-m>-8.2413</y2-m>
+	    <z2-m>3.4790</z2-m>
+	</axis>
+	</animation>
+	
+	 				<animation>
+		<type>select</type>
+		<object-name>fan_1_fast</object-name>
+		<condition>
+		<greater-than>
+		<property>engines/engine[0]/rpm</property>
+		<value>50</value>
+		</greater-than>
+		</condition>
+	</animation>
+	
+		 				<animation>
+		<type>select</type>
+		<object-name>fan_1</object-name>
+		<condition>
+		<less-than>
+		<property>engines/engine[0]/rpm</property>
+		<value>50</value>
+		</less-than>
+		</condition>
+	</animation>
+	
 		<animation>
 		<name>Fan2</name>
 		<type>spin</type>
 		<object-name>fan_2</object-name>
+		<object-name>fan_2.center</object-name>
+		<factor>67</factor>
+		<property>engines/engine[1]/rpm</property>
+	<axis>
+	    <x1-m>25.7008</x1-m>
+	    <y1-m>0</y1-m>
+	    <z1-m>10.6838</z1-m>
+	    <x2-m>25.2229</x2-m>
+	    <y2-m>0</y2-m>
+	    <z2-m>10.6977</z2-m>
+	</axis>
+	</animation>
+	
+			<animation>
+		<name>Fan2</name>
+		<type>spin</type>
+		<object-name>fan_2_fast</object-name>
+		<factor>0.2</factor>
+		<property>engines/engine[1]/rpm</property>
+	<axis>
+	    <x1-m>25.7008</x1-m>
+	    <y1-m>0</y1-m>
+	    <z1-m>10.6838</z1-m>
+	    <x2-m>25.2229</x2-m>
+	    <y2-m>0</y2-m>
+	    <z2-m>10.6977</z2-m>
+	</axis>
+	</animation>
+	
+	 				<animation>
+		<type>select</type>
+		<object-name>fan_2_fast</object-name>
+		<condition>
+		<greater-than>
+		<property>engines/engine[1]/rpm</property>
+		<value>50</value>
+		</greater-than>
+		</condition>
+	</animation>
+	
+		 				<animation>
+		<type>select</type>
+		<object-name>fan_2</object-name>
+		<condition>
+		<less-than>
+		<property>engines/engine[1]/rpm</property>
+		<value>50</value>
+		</less-than>
+		</condition>
+	</animation>
+	
+	
+			<animation>
+		<name>Fan3</name>
+		<type>spin</type>
+		<object-name>fan_3</object-name>
+		<object-name>fan_3.center</object-name>
 		<factor>67</factor>
 		<property>engines/engine[2]/rpm</property>
 	<axis>
@@ -306,20 +536,42 @@
 	</axis>
 	</animation>
 	
-			<animation>
+					<animation>
 		<name>Fan3</name>
 		<type>spin</type>
-		<object-name>fan_3</object-name>
-		<factor>67</factor>
-		<property>engines/engine[1]/rpm</property>
+		<object-name>fan_3_fast</object-name>
+		<factor>0.2</factor>
+		<property>engines/engine[2]/rpm</property>
 	<axis>
-	    <x1-m>25.7008</x1-m>
-	    <y1-m>0</y1-m>
-	    <z1-m>10.6838</z1-m>
-	    <x2-m>25.2229</x2-m>
-	    <y2-m>0</y2-m>
-	    <z2-m>10.6977</z2-m>
+	    <x1-m>-4.8064</x1-m>
+	    <y1-m>8.2552</y1-m>
+	    <z1-m>3.4790</z1-m>
+	    <x2-m>-5.2843</x2-m>
+	    <y2-m>8.2413</y2-m>
+	    <z2-m>3.4790</z2-m>
 	</axis>
+	</animation>
+	
+	 				<animation>
+		<type>select</type>
+		<object-name>fan_3_fast</object-name>
+		<condition>
+		<greater-than>
+		<property>engines/engine[2]/rpm</property>
+		<value>50</value>
+		</greater-than>
+		</condition>
+	</animation>
+	
+		 				<animation>
+		<type>select</type>
+		<object-name>fan_3</object-name>
+		<condition>
+		<less-than>
+		<property>engines/engine[2]/rpm</property>
+		<value>50</value>
+		</less-than>
+		</condition>
 	</animation>
 	
 			<animation>
@@ -479,7 +731,7 @@
 				<animation>
 		<type>rotate</type>
 		<object-name>elevator.1</object-name>
-		<property>controls/flight/elevator</property>
+		<property>surface-positions/elevator-pos-norm</property>
 		<interpolation>
 			<entry><ind>1.0</ind><dep>25.0</dep></entry>
 			<entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -498,7 +750,7 @@
 					<animation>
 		<type>rotate</type>
 		<object-name>elevator.2</object-name>
-		<property>controls/flight/elevator</property>
+		<property>surface-positions/elevator-pos-norm</property>
 		<interpolation>
 			<entry><ind>1.0</ind><dep>-25.0</dep></entry>
 			<entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -1338,7 +1590,7 @@
 
 
   <effect>
-<inherits-from>Aircraft/MD-11/Models/Effects/bumpspec</inherits-from>
+<inherits-from>Aircraft/MD-11/Models/Effects/bumpspec-f</inherits-from>
 <object-name>fuselage</object-name>
 <object-name>fuselage.cone</object-name>
 <object-name>rudder</object-name>
@@ -1375,6 +1627,7 @@
 <object-name>rdoor.4</object-name>
 <object-name>ldoor.4</object-name>
 <object-name>cargo.door</object-name>
+<object-name>windshield.frames</object-name>
  </effect>
  
    <effect>
@@ -1405,6 +1658,8 @@
 <object-name>slat.4.part1</object-name>
 <object-name>slat.2</object-name>
 <object-name>slat.3</object-name>
+<object-name>slat.2.2</object-name>
+<object-name>slat.3.2</object-name>
 <object-name>AileronL1</object-name>
 <object-name>AileronL2</object-name>
 <object-name>sp.brake.left.outer</object-name>
@@ -1412,11 +1667,13 @@
 <object-name>AileronR1</object-name>
 <object-name>AileronR2</object-name>
 <object-name>sp.brake.right.outer</object-name>
-<object-name>sp.brake..inner</object-name>
+<object-name>sp.brake.left.inner</object-name>
 <object-name>flap.5</object-name>
 <object-name>flap.6</object-name>
 <object-name>flap.7</object-name>
 <object-name>flap.8</object-name>
+<object-name>left.main.door</object-name>
+<object-name>right.main.door</object-name>
  </effect>
 
 
@@ -1554,6 +1811,7 @@
 		<name>Left inner slat translate</name>
 		<type>translate</type>
 		<object-name>slat.2</object-name>
+				<object-name>slat.2.2</object-name>
         <property>surface-positions/slats</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
@@ -1571,6 +1829,7 @@
 		<name>Left inner slat rotate</name>
 		<type>rotate</type>
 		<object-name>slat.2</object-name>
+				<object-name>slat.2.2</object-name>
         <property>surface-positions/slats</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
@@ -1633,6 +1892,7 @@
 		<name>Right inner slat translate</name>
 		<type>translate</type>
 		<object-name>slat.3</object-name>
+		<object-name>slat.3.2</object-name>
         <property>surface-positions/slats</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
@@ -1650,6 +1910,7 @@
 		<name>Right inner slat rotate</name>
 		<type>rotate</type>
 		<object-name>slat.3</object-name>
+		<object-name>slat.3.2</object-name>
         <property>surface-positions/slats</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
@@ -2045,9 +2306,9 @@
 <object-name>cabin_windows.finnair.paint</object-name>
 <object-name>cabin_windows.klm.finnair.paint</object-name>
 <object-name>cabin_windows.paint</object-name>
-<object-name>fan_1</object-name>
-<object-name>fan_2</object-name>
-<object-name>fan_3</object-name>
+<object-name>fan_1.center</object-name>
+<object-name>fan_2.center</object-name>
+<object-name>fan_3.center</object-name>
 <object-name>rdoor.1</object-name>
 <object-name>ldoor.1</object-name>
 <object-name>rdoor.2</object-name>
@@ -2599,6 +2860,7 @@
          <animation>
 	<type>rotate</type>
         <object-name>cargo.door</object-name>
+        <object-name>cargo.door.inside</object-name>
         <property>/sim/model/door-positions/cargoDoor/position-norm</property>
 <factor>-110</factor>
 	<axis>

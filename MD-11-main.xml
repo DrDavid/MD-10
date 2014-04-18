@@ -709,6 +709,14 @@
         </gear>
         <lighting>
         <flood-panel-norm type="double">0.5</flood-panel-norm>
+        <screen-1-norm type="double">0.5</screen-1-norm>
+        <screen-2-norm type="double">0.5</screen-2-norm>
+        <screen-3-norm type="double">0.5</screen-3-norm>
+        <screen-4-norm type="double">0.5</screen-4-norm>
+        <screen-5-norm type="double">0.5</screen-5-norm>
+        <screen-6-norm type="double">0.5</screen-6-norm>
+        <ovhd-panel-norm type="double">0.5</ovhd-panel-norm>
+        <pedestal-panel-norm type="double">0.5</pedestal-panel-norm>
         </lighting>
         <flight>
             <speedbrake-lever type="bool">0</speedbrake-lever>
