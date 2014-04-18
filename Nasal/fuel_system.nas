@@ -31,11 +31,17 @@ var fuelsys = {
 		   m.Auxtank_controls.initNode("pump-xfer",0,"BOOL"),
 		   m.Tailtank_controls.initNode("pump-xfer",0,"BOOL") ];
 
-	m.fill = [ m.Ltank_controls.initNode("fill-valve",0,"BOOL"),
-		   m.Ctank_controls.initNode("fill-valve",0,"BOOL"),
-		   m.Rtank_controls.initNode("fill-valve",0,"BOOL"),
-		   m.Auxtank_controls.initNode("fill-valve",0,"BOOL"),
-		   m.Tailtank_controls.initNode("fill-valve",0,"BOOL") ];
+	m.fill_arm = [ m.Ltank_controls.initNode("fill-valve-arm",0,"BOOL"),
+		       m.Ctank_controls.initNode("fill-valve-arm",0,"BOOL"),
+		       m.Rtank_controls.initNode("fill-valve-arm",0,"BOOL"),
+		       m.Auxtank_controls.initNode("fill-valve-arm",0,"BOOL"),
+		       m.Tailtank_controls.initNode("fill-valve-arm",0,"BOOL") ];
+
+	m.fill = [ m.Ltank.initNode("fill-valve",0,"BOOL"),
+		   m.Ctank.initNode("fill-valve",0,"BOOL"),
+		   m.Rtank.initNode("fill-valve",0,"BOOL"),
+		   m.Auxtank.initNode("fill-valve",0,"BOOL"),
+		   m.Tailtank.initNode("fill-valve",0,"BOOL") ];
 
 	m.fill_status = [ 0, 0, 0, 0, 0 ];
 
@@ -67,6 +73,8 @@ var fuelsys = {
 	m.total = props.globals.getNode("consumables/fuel/total-fuel-lbs",1);
 
 	m.auto_manage = props.globals.initNode("controls/fuel/auto-manage",0,"BOOL");
+	m.jett_sw_cvr = props.globals.initNode("controls/switches/jettison-cover",0,"BOOL");
+
 	m.tail_mgm_enable = 0;
 	m.ticks = 0;
 	m.tail_filled = 0;
@@ -77,9 +85,16 @@ var fuelsys = {
     update : func {
 	var select = [ 0, 0, 0, 0, 0 ];
 	var thru_flow = [ 0, 0, 0 ];
+	var electric = getprop("systems/electrical/AC_TIE_BUS") >= 98;
+
+	me.fill_arm[3].setBoolValue(1);
+	me.fill_arm[4].setBoolValue(1);
 
 	# Fill valve status:
 	for (var i=0; i<5; i+=1) {
+	    if (!me.fill_arm[i].getBoolValue()) {
+		me.fill[i].setBoolValue(0);
+	    }
 	    if (me.fill[i].getBoolValue()) {
 		me.fill_status[i] = 1;
 	    } else {
@@ -88,12 +103,13 @@ var fuelsys = {
 	}
 
 	# Run the FSC
-	if (me.auto_manage.getBoolValue()) me.fsc();
+	if (me.auto_manage.getBoolValue() and electric) me.fsc();
 
 	# Fuel Jettison
-	if (getprop("controls/fuel/dump-valve")) {
+	if (getprop("controls/fuel/dump-valve") and electric) {
 	    for (var i=0; i<5; i+=1) {
 		if (i == 3) {
+		    me.fill_arm[i].setBoolValue(1);
 		    me.fill[i].setBoolValue(1);
 		    me.fill_status[i] = 0;
 		} else {
@@ -127,9 +143,9 @@ var fuelsys = {
 	}
 		###
 
-	else {
-	    me.auto_manage.setBoolValue(1);
-	}	
+#	else {
+#	    me.auto_manage.setBoolValue(1);
+#	}	
 		# This is a temporary way to turn on the auto-manage
 		# automatically until the control is ready to go on the OH
 		# panel.
@@ -144,6 +160,16 @@ var fuelsys = {
 		      or (me.pump[0].getBoolValue() and me.xfeed[0].getValue())
 		      or (me.pump[1].getBoolValue() and me.xfeed[1].getValue())
 		      or (me.pump[2].getBoolValue() and me.xfeed[2].getValue());
+
+	if (!me.auto_manage.getBoolValue()) {
+	    for (var i=0; i<5; i+=1) {
+		if (me.fill_arm[i].getBoolValue() and !me.xfer[i].getBoolValue() and manifold_p) {
+		    me.fill[i].setBoolValue(1);
+		} else {
+		    me.fill[i].setBoolValue(0);
+		}
+	    }
+	}
 
 	var manifold_o = me.fill[0].getBoolValue()
 		      or me.fill[1].getBoolValue()
@@ -257,9 +283,8 @@ var fuelsys = {
 	    }
 	}
 	for (var i=0; i<5; i+=1) {
-	    if (me.fill_status[i] == 1 and (me.lev[i].getValue() / me.density.getValue()) < me.cap[i].getValue() - rate) {
+	    if (me.fill_status[i] == 1 and (me.lev[i].getValue() / me.density.getValue()) < me.cap[i].getValue() - rate)
 		me.lev[i].setValue(me.lev[i].getValue() + (xfer_rate / sinks));
-	    }
 	}
 
 	# Fuel Jettison
@@ -421,6 +446,7 @@ var fuelsys = {
 	}
 
 	for (var i=0; i<5; i+=1) {
+	    me.fill_arm[i].setBoolValue(1);
 	    me.fill[i].setBoolValue(fills[i]);
 	    me.xfer[i].setBoolValue(xfers[i]);
 	}
@@ -442,6 +468,20 @@ var fuelsys = {
 		}
 		me.tail_filled = 0;
 		me.ticks = 0;
+		var back2manual = setlistener("controls/fuel/auto-manage", func (b2m) {
+		    if (b2m.getBoolValue()) {
+			for (var i=0; i<3; i+=1) {
+			    me.pump[i].setBoolValue(1);
+			    me.xfeed[i].setBoolValue(0);
+			}
+			me.xfer[0].setBoolValue(0);
+			me.xfer[2].setBoolValue(0);
+			me.xfer[3].setBoolValue(1);
+			me.xfer[4].setBoolValue(1);
+			me.altpump.setBoolValue(0);
+		    }
+		    removelistener(back2manual);
+		},0,0);
 	    }
 	},0,0);
     },
