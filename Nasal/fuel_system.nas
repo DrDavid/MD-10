@@ -114,6 +114,7 @@ var fuelsys = {
 		    me.fill_status[i] = 0;
 		} else {
 		    me.fill[i].setBoolValue(0);
+		    me.fill_status[i] = 0;
 		}
 		if (i < 3 and me.lev[i].getValue() < 11500) {
 		    me.xfer[i].setBoolValue(0);
@@ -141,15 +142,6 @@ var fuelsys = {
 		if (i == 4) me.altpump.setBoolValue(0);
 	    }
 	}
-		###
-
-#	else {
-#	    me.auto_manage.setBoolValue(1);
-#	}	
-		# This is a temporary way to turn on the auto-manage
-		# automatically until the control is ready to go on the OH
-		# panel.
-		###
 
 	# Fuel manifold status:
 	var manifold_p = me.xfer[0].getBoolValue()
@@ -168,6 +160,8 @@ var fuelsys = {
 		} else {
 		    me.fill[i].setBoolValue(0);
 		}
+		if (i == 3 and getprop("controls/fuel/dump-valve"))
+		    me.fill[i].setBoolValue(1);
 	    }
 	}
 
