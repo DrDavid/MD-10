@@ -13,12 +13,6 @@
 		<object-name>jett.cover</object-name>
 	</animation>
 
-    	<effect>
-        	<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>overhead.text</object-name>
-    		<object-name>light.knobs</object-name>
-    	</effect>
-
     	<animation>
 		<name>Panel lighting</name>
 		<type>material</type>
@@ -75,108 +69,6 @@
 				<min>0</min>
 			</binding>
 		</action>
-	</animation>
-	
-    	<animation>
-		<name>OVHD light knob</name>
-		<type>pick</type>
-		<object-name>dashboard.text.knob</object-name>
-    		<object-name>dashboard.text.indicator</object-name>
-		<action>
-			<button>0</button>
-			<button>3</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>controls/lighting/pedestal-panel-norm</property>
-				<step>0.025</step>
-				<max>1</max>
-			</binding>
-		</action>
-		<action>
-			<button>1</button>
-			<button>4</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>controls/lighting/pedestal-panel-norm</property>
-				<step>-0.025</step>
-				<min>0</min>
-			</binding>
-		</action>
-	</animation>
-	
-    	<animation>
-		<name>OVHD light knob</name>
-		<type>pick</type>
-		<object-name>ovhd_flood_knob</object-name>
-    		<object-name>ovhd_flood_indicator</object-name>
-		<action>
-			<button>0</button>
-			<button>3</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>controls/lighting/oh-flood-norm</property>
-				<step>0.025</step>
-				<max>1</max>
-			</binding>
-		</action>
-		<action>
-			<button>1</button>
-			<button>4</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>controls/lighting/oh-flood-norm</property>
-				<step>-0.025</step>
-				<min>0</min>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<name>OVHD panel light rotate</name>
-		<type>rotate</type>
-		<object-name>ovhd_flood_knob</object-name>
-    		<object-name>ovhd_flood_indicator</object-name>
-		<property>controls/lighting/oh-flood-norm</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>1</ind><dep>-329</dep></entry>
-		</interpolation>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-		<center>
-			<x-m>-21.7871</x-m>
-			<y-m>-0.1138</y-m>
-			<z-m>-18.0476</z-m>
-		</center>
-	</animation>
-	
-	<animation>
-		<name>OVHD panel light rotate</name>
-		<type>rotate</type>
-		<object-name>dashboard.text.knob</object-name>
-    		<object-name>dashboard.text.indicator</object-name>
-		<property>controls/lighting/pedestal-panel-norm</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>1</ind><dep>-329</dep></entry>
-		</interpolation>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-		<center>
-			<x-m>-21.7975</x-m>
-			<y-m>-0.1138</y-m>
-			<z-m>-18.0824</z-m>
-		</center>
 	</animation>
 	
 	<animation>
@@ -560,8 +452,26 @@
 		</axis>
 	</animation>
 
-<!-- Fuel Tank Controls -->
-
+<!-- Fuel Tank Controls >
+jettison.btn
+jett.cover
+tank0_armf
+tank0_fill
+tank0_pump
+tank0_low
+tank0_xfeed
+tank0_xfer
+tank0_xlow
+tank3_Lxfer
+tank3_Llow
+tank3_Rxfer
+tank3_Rlow
+tank4_xfer
+tank4_xlow
+tank4_alt
+tank4_low
+FSC.btn
+-->
 	<!-- Left Main Tank -->
 	<animation>
 		<type>pick</type>
@@ -935,6 +845,7 @@
 	</animation>
 
 	<!-- Tail Tank -->
+	
 	<animation>
 		<type>pick</type>
 		<object-name>tank4_alt</object-name>
@@ -1064,6 +975,10 @@
 		    <z>0</z>
 		</axis>
 	</animation>
+
+		    
+		
+
 	
 	<animation>
         	<type>rotate</type>
@@ -1113,22 +1028,22 @@
         	</action>
     	</animation>
     
-    	<animation>
-        	<type>pick</type>
-        	<object-name>apuknob</object-name>
-        	<action>
-        	    <button>1</button>
-        	    <button>4</button>
-        	    <repeatable>false</repeatable>
-        	    <binding>
-        	        <command>property-adjust</command>
-        	        <property>controls/APU/off-start-run</property>
-        	        <step>-1</step>
-        	        <min>0</min>
-        	        <max>2</max>
-        	    </binding>
-        	</action>
-    	</animation>
+    <animation>
+        <type>pick</type>
+        <object-name>apuknob</object-name>
+        <action>
+            <button>1</button>
+            <button>4</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/APU/off-start-run</property>
+                <step>-1</step>
+                <min>0</min>
+                <max>2</max>
+            </binding>
+        </action>
+    </animation>
     
     <animation>
         <type>rotate</type>
