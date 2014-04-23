@@ -5,23 +5,28 @@
 	<path>overhead_1.ac</path>
 	
 	
-	<animation>
-		<type>shader</type>
-		<shader>chrome</shader>
-		<texture>chrome_cockpit.png</texture>
-		<object-name>oh.glass</object-name>
-		<object-name>jett.cover</object-name>
-	</animation>
+		<animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>chrome_cockpit.png</texture>
+<object-name>oh.glass</object-name>
+</animation>
 
-    	<animation>
+	    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>overhead.text</object-name>
+    <object-name>light.knobs</object-name>
+    </effect>
+
+    		<animation>
 		<name>Panel lighting</name>
 		<type>material</type>
 		<object-name>overhead.text</object-name>
-    		<object-name>ovhd_pnl_indicator</object-name>
-    		<object-name>ovhd_flood_indicator</object-name>
-    		<object-name>dashboard.text.indicator</object-name>
-    		<object-name>dashboard.light.indicator</object-name>
-    		<object-name>light.knobs</object-name>
+    <object-name>ovhd_pnl_indicator</object-name>
+    <object-name>ovhd_flood_indicator</object-name>
+    <object-name>dashboard.text.indicator</object-name>
+    <object-name>dashboard.light.indicator</object-name>
+    <object-name>light.knobs</object-name>
 		<emission>
 			<red>1.5</red>
 			<green>1.27</green>
@@ -30,7 +35,7 @@
 		</emission>
 	</animation>
 	
-	<animation>
+		    		<animation>
 		<name>Panel lighting</name>
 		<type>material</type>
 		<object-name>ovhd_lcd</object-name>
@@ -42,11 +47,11 @@
 		</emission>
 	</animation>
 	
-    	<animation>
+			    	<animation>
 		<name>OVHD light knob</name>
 		<type>pick</type>
 		<object-name>ovhd_pnl_knob</object-name>
-    		<object-name>ovhd_pnl_indicator</object-name>
+    <object-name>ovhd_pnl_indicator</object-name>
 		<action>
 			<button>0</button>
 			<button>3</button>
@@ -71,12 +76,114 @@
 		</action>
 	</animation>
 	
-	<animation>
+				    	<animation>
+		<name>OVHD light knob</name>
+		<type>pick</type>
+		<object-name>dashboard.text.knob</object-name>
+    <object-name>dashboard.text.indicator</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/pedestal-panel-norm</property>
+				<step>0.025</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/pedestal-panel-norm</property>
+				<step>-0.025</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	
+					    	<animation>
+		<name>OVHD light knob</name>
+		<type>pick</type>
+		<object-name>ovhd_flood_knob</object-name>
+    <object-name>ovhd_flood_indicator</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/oh-flood-norm</property>
+				<step>0.025</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/oh-flood-norm</property>
+				<step>-0.025</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	
+						<animation>
+		<name>OVHD panel light rotate</name>
+		<type>rotate</type>
+		<object-name>ovhd_flood_knob</object-name>
+    <object-name>ovhd_flood_indicator</object-name>
+				<property>controls/lighting/oh-flood-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>-329</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-21.7871</x-m>
+			<y-m>-0.1138</y-m>
+			<z-m>-18.0476</z-m>
+		</center>
+	</animation>
+	
+						<animation>
+		<name>OVHD panel light rotate</name>
+		<type>rotate</type>
+		<object-name>dashboard.text.knob</object-name>
+    <object-name>dashboard.text.indicator</object-name>
+				<property>controls/lighting/pedestal-panel-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>-329</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-21.7975</x-m>
+			<y-m>-0.1138</y-m>
+			<z-m>-18.0824</z-m>
+		</center>
+	</animation>
+	
+					<animation>
 		<name>OVHD panel light rotate</name>
 		<type>rotate</type>
 		<object-name>ovhd_pnl_knob</object-name>
-    		<object-name>ovhd_pnl_indicator</object-name>
-		<property>controls/lighting/ovhd-panel-norm</property>
+    <object-name>ovhd_pnl_indicator</object-name>
+				<property>controls/lighting/ovhd-panel-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>-329</dep></entry>
@@ -93,7 +200,7 @@
 		</center>
 	</animation>
 
-	<animation>
+			<animation>
 		<type>select</type>
 		<object-name>ltank.1</object-name>
 		<object-name>ltank.2</object-name>
@@ -121,12 +228,12 @@
 		<object-name>ttank.4</object-name>
 		<object-name>ttank.5</object-name>
 		<condition>
-			<property>systems/electrical/outputs/avionics</property>
+				<property>systems/electrical/outputs/avionics</property>
 		</condition>
 	</animation>
 	
 	
-	<animation>
+		<animation>
 		<type>textranslate</type>
 		<object-name>ltank.1</object-name>
 		<property>consumables/fuel/tank/level-lbs</property>
@@ -191,7 +298,7 @@
 		</axis>
 	</animation>
 	
-	<animation>
+			<animation>
 		<type>textranslate</type>
 		<object-name>ctank.1</object-name>
 		<property>consumables/fuel/tank[1]/level-lbs</property>
@@ -321,7 +428,7 @@
 		</axis>
 	</animation>
 
-	<animation>
+				<animation>
 		<type>textranslate</type>
 		<object-name>atank.1</object-name>
 		<property>consumables/fuel/tank[3]/level-lbs</property>
@@ -451,7 +558,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-
+	
 <!-- Fuel Tank Controls >
 jettison.btn
 jett.cover
@@ -924,7 +1031,8 @@ FSC.btn
 	<!-- Fuel Jettison -->
 	<animation>
 		<type>pick</type>
-		<object-name>jett.cover</object-name>
+		<object-name>jett.cover_1</object-name>
+		<object-name>jett.cover_2</object-name>
 		<action>
 		    <button>0</button>
 		    <repeatable>false</repeatable>
@@ -936,7 +1044,8 @@ FSC.btn
 	</animation>
 	<animation>
 		<type>rotate</type>
-		<object-name>jett.cover</object-name>
+		<object-name>jett.cover_1</object-name>
+		<object-name>jett.cover_2</object-name>
 		<property>controls/switches/jettison-cover</property>
 		<factor>130</factor>
 		<axis>
@@ -975,58 +1084,54 @@ FSC.btn
 		    <z>0</z>
 		</axis>
 	</animation>
-
-		    
-		
-
 	
-	<animation>
-        	<type>rotate</type>
-        	<object-name>apuknob</object-name>
-        	<object-name>apuknob.light</object-name>
-        	<property>controls/APU/off-start-run</property>
-        	<interpolation>
-        	    <entry>
-        	        <ind>0</ind>
-        	        <dep>-45.0</dep>
-        	    </entry>
-        	    <entry>
-        	        <ind>1</ind>
-        	        <dep>0</dep>
-        	    </entry>
-        	    <entry>
-        	        <ind>2</ind>
-        	        <dep>45.0</dep>
-        	    </entry>		
-        	</interpolation>
-        	<center>
-        	    <x-m>-21.7996</x-m>
-        	    <y-m>-0.1204</y-m>
-        	    <z-m>-17.8164</z-m>
-        	</center>
-        	<axis>
-        	    <x>-1</x>
-        	    <y>0</y>
-        	    <z>0</z>
-        	</axis>
-    	</animation>
+	    <animation>
+        <type>rotate</type>
+        <object-name>apuknob</object-name>
+        <object-name>apuknob.light</object-name>
+        <property>controls/APU/off-start-run</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-45.0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>45.0</dep>
+            </entry>		
+        </interpolation>
+        <center>
+            <x-m>-21.7996</x-m>
+            <y-m>-0.1204</y-m>
+            <z-m>-17.8164</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
     
-    	<animation>
-        	<type>pick</type>
-        	<object-name>apuknob</object-name>
-        	<action>
-        	    <button>0</button>
-        	    <button>3</button>
-        	    <repeatable>false</repeatable>
-        	    <binding>
-        	        <command>property-adjust</command>
-        	        <property>controls/APU/off-start-run</property>
-        	        <step>1</step>
-        	        <min>0</min>
-        	        <max>2</max>
-        	    </binding>
-        	</action>
-    	</animation>
+    <animation>
+        <type>pick</type>
+        <object-name>apuknob</object-name>
+        <action>
+            <button>0</button>
+            <button>3</button>
+           <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/APU/off-start-run</property>
+                <step>1</step>
+                <min>0</min>
+                <max>2</max>
+            </binding>
+        </action>
+    </animation>
     
     <animation>
         <type>pick</type>
@@ -1045,7 +1150,7 @@ FSC.btn
         </action>
     </animation>
     
-    <animation>
+        <animation>
         <type>rotate</type>
         <object-name>nosmoking.lever</object-name>
         <property>controls/cabin/NoSmoking-knob</property>
@@ -1062,7 +1167,7 @@ FSC.btn
         </axis>
     </animation>
     
-    <animation>
+        <animation>
         <type>rotate</type>
         <object-name>seatbelts.lever</object-name>
         <property>controls/cabin/SeatBelt-knob</property>
@@ -1079,7 +1184,7 @@ FSC.btn
         </axis>
     </animation>
     
-    <animation>
+        <animation>
         <type>pick</type>
         <object-name>nosmoking.lever</object-name>
         <action>
@@ -1111,7 +1216,7 @@ FSC.btn
             </binding>
         </action>
     </animation>
-    <animation>
+     <animation>
         <type>pick</type>
         <object-name>nosmoking.lever</object-name>
         <action>
@@ -1144,7 +1249,7 @@ FSC.btn
         </action>
     </animation>
     
-    <animation>
+        <animation>
         <type>pick</type>
         <object-name>seatbelts.lever</object-name>
         <action>
@@ -1176,7 +1281,7 @@ FSC.btn
             </binding>
         </action>
     </animation>
-    <animation>
+     <animation>
         <type>pick</type>
         <object-name>seatbelts.lever</object-name>
         <action>
@@ -1200,7 +1305,7 @@ FSC.btn
             <repeatable>false</repeatable>
             <binding>
                 <command>property-adjust</command>
-        	<object-name>seatbelts.lever</object-name>
+        <object-name>seatbelts.lever</object-name>
                 <step>-1</step>
                 <min>-1</min>
                 <max>1</max>
@@ -1209,11 +1314,11 @@ FSC.btn
         </action>
     </animation>
     
-	<animation>
+    		    	<animation>
 		<name>Dashboard light knob</name>
 		<type>pick</type>
 		<object-name>dashboard.light</object-name>
-    		<object-name>dashboard.light.indicator</object-name>
+    <object-name>dashboard.light.indicator</object-name>
 		<action>
 			<button>0</button>
 			<button>3</button>
@@ -1238,12 +1343,12 @@ FSC.btn
 		</action>
 	</animation>
 	
-	<animation>
+					<animation>
 		<name>Dashboard light rotate</name>
 		<type>rotate</type>
 		<object-name>dashboard.light</object-name>
-		<object-name>dashboard.light.indicator</object-name>
-		<property>controls/lighting/dashboard-panel-norm</property>
+    <object-name>dashboard.light.indicator</object-name>
+    <property>controls/lighting/dashboard-panel-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1.0</ind><dep>-280</dep></entry>
@@ -1260,18 +1365,18 @@ FSC.btn
 		</center>
 	</animation>
 
-	<effect>
+			<effect>
 		<inherits-from>Aircraft/MD-11/Models/Effects/engine</inherits-from>
-		<object-name>nosmoking.lever</object-name>
-	        <object-name>L-Lnd.toggle</object-name>
-	        <object-name>C-Lnd.toggle</object-name>
-	        <object-name>R-Lnd.toggle</object-name>
-    		<object-name>thunderstorm</object-name>
-    		<object-name>seatbelts.lever</object-name>
-        	<object-name>emer_light_switch</object-name>
+    <object-name>nosmoking.lever</object-name>
+        <object-name>L-Lnd.toggle</object-name>
+        <object-name>C-Lnd.toggle</object-name>
+        <object-name>R-Lnd.toggle</object-name>
+    <object-name>thunderstorm</object-name>
+    <object-name>seatbelts.lever</object-name>
+        <object-name>emer_light_switch</object-name>
 	</effect>
 	
-    <animation>
+	    <animation>
         <type>pick</type>
         <object-name>BATT.btn</object-name>
         <action>
@@ -1288,7 +1393,7 @@ FSC.btn
         </action>
     </animation>
     
-    <animation>
+        <animation>
         <type>pick</type>
         <object-name>BCN.btn</object-name>
         <action>
@@ -1305,32 +1410,32 @@ FSC.btn
         </action>
     </animation>
     
- 	<animation>
-   		<type>textranslate</type>
-   		<object-name>BCN.btn</object-name>
-        	<property>controls/lighting/beacon</property>
-        	<condition>
-        	    <equals>
-        		<property>systems/electrical/outputs/avionics</property>
-        		<value>1</value>
-        	    </equals>
-        	</condition>
-        	<interpolation>
-        	    <entry>
-        	        <ind>0</ind>
-        	        <dep>0.0625</dep>
-        	    </entry>
-        	    <entry>
-        	        <ind>1</ind>
-        	        <dep>0</dep>
-        	    </entry>
-        	</interpolation>
-   		<axis>
-		    <x>0</x>
-		    <y>1</y>
-		    <z>0</z>
-		</axis>
-	</animation>
+ <animation>
+   <type>textranslate</type>
+   <object-name>BCN.btn</object-name>
+        <property>controls/lighting/beacon</property>
+        <condition>
+        <equals>
+        <property>systems/electrical/outputs/avionics</property>
+        <value>1</value>
+        </equals>
+        </condition>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0.0625</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
 
     <animation>
         <type>pick</type>
@@ -1393,7 +1498,7 @@ FSC.btn
         </action>
     </animation>
     
- <animation>
+     <animation>
    <type>textranslate</type>
    <object-name>LOGO.btn</object-name>
       <property>controls/lighting/logo-lights</property>
@@ -1420,7 +1525,7 @@ FSC.btn
    </axis>
  </animation>
  
-    <animation>
+         <animation>
         <type>pick</type>
         <object-name>turnoff.left</object-name>
         <object-name>turnoff.right</object-name>
@@ -1438,7 +1543,7 @@ FSC.btn
         </action>
     </animation>
     
- <animation>
+     <animation>
    <type>textranslate</type>
         <object-name>turnoff.left</object-name>
         <object-name>turnoff.right</object-name>
@@ -1467,7 +1572,7 @@ FSC.btn
  </animation>
 
     
-    <animation>
+        <animation>
         <type>pick</type>
         <object-name>STRB.toggle</object-name>
         <action>
@@ -1484,7 +1589,7 @@ FSC.btn
         </action>
     </animation>
     
- <animation>
+         <animation>
    <type>textranslate</type>
       <object-name>STRB.toggle</object-name>
         <property>controls/lighting/strobe</property>
@@ -1531,24 +1636,24 @@ FSC.btn
 		</action>
 	</animation>
 	
-	<animation>
+		<animation>
 		<type>textranslate</type>
 		<object-name>EXT_P.btn</object-name>
 		<property>controls/electric/b_ext_power_p</property>
-	        <interpolation>
-        	    <entry>
-        	        <ind>1</ind>
-        	        <dep>0.1875</dep>
-        	    </entry>
-        	    <entry>
-        	        <ind>2</ind>
-        	        <dep>0.125</dep>
-        	    </entry>
-        	    <entry>
-        	        <ind>0</ind>
-        	        <dep>0</dep>
-        	    </entry>
-	        </interpolation>
+        <interpolation>
+            <entry>
+                <ind>1</ind>
+                <dep>0.1875</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>0.125</dep>
+            </entry>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
 		<axis>
 			<x>0</x>
 			<y>1</y>
@@ -1556,7 +1661,7 @@ FSC.btn
 		</axis>
 	</animation>
 	
-    <animation>
+	    <animation>
         <type>pick</type>
         <object-name>L-Lnd.toggle</object-name>
         <object-name>C-Lnd.toggle</object-name>
@@ -1590,7 +1695,7 @@ FSC.btn
         </action>
     </animation>
     
-    <animation>
+        <animation>
         <type>rotate</type>
         <object-name>L-Lnd.toggle</object-name>
         <object-name>C-Lnd.toggle</object-name>
@@ -1609,7 +1714,7 @@ FSC.btn
         </axis>
     </animation>
     
-    <animation>
+        <animation>
         <type>pick</type>
         <object-name>APU.btn</object-name>
         <action>
