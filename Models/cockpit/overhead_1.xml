@@ -5,15 +5,13 @@
 	<path>overhead_1.ac</path>
 	
 	
-	<animation>
-		<type>shader</type>
-		<shader>chrome</shader>
-		<texture>chrome_cockpit.png</texture>
-		<object-name>oh.glass</object-name>
-		<object-name>jett.cover</object-name>
-	</animation>
+		<animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>chrome_cockpit.png</texture>
+<object-name>oh.glass</object-name>
+</animation>
 
-<<<<<<< HEAD
 	    <effect>
         <inherits-from>Effects/model-transparent</inherits-from>
 		<object-name>overhead.text</object-name>
@@ -21,17 +19,14 @@
     </effect>
 
     		<animation>
-=======
-    	<animation>
->>>>>>> 1ebc8adf5cec91afb88c668a0f87f680cc12f578
 		<name>Panel lighting</name>
 		<type>material</type>
 		<object-name>overhead.text</object-name>
-    		<object-name>ovhd_pnl_indicator</object-name>
-    		<object-name>ovhd_flood_indicator</object-name>
-    		<object-name>dashboard.text.indicator</object-name>
-    		<object-name>dashboard.light.indicator</object-name>
-    		<object-name>light.knobs</object-name>
+    <object-name>ovhd_pnl_indicator</object-name>
+    <object-name>ovhd_flood_indicator</object-name>
+    <object-name>dashboard.text.indicator</object-name>
+    <object-name>dashboard.light.indicator</object-name>
+    <object-name>light.knobs</object-name>
 		<emission>
 			<red>1.5</red>
 			<green>1.27</green>
@@ -40,7 +35,7 @@
 		</emission>
 	</animation>
 	
-	<animation>
+		    		<animation>
 		<name>Panel lighting</name>
 		<type>material</type>
 		<object-name>ovhd_lcd</object-name>
@@ -52,11 +47,11 @@
 		</emission>
 	</animation>
 	
-    	<animation>
+			    	<animation>
 		<name>OVHD light knob</name>
 		<type>pick</type>
 		<object-name>ovhd_pnl_knob</object-name>
-    		<object-name>ovhd_pnl_indicator</object-name>
+    <object-name>ovhd_pnl_indicator</object-name>
 		<action>
 			<button>0</button>
 			<button>3</button>
@@ -81,7 +76,6 @@
 		</action>
 	</animation>
 	
-<<<<<<< HEAD
 				    	<animation>
 		<name>OVHD light knob</name>
 		<type>pick</type>
@@ -185,14 +179,11 @@
 	</animation>
 	
 					<animation>
-=======
-	<animation>
->>>>>>> 1ebc8adf5cec91afb88c668a0f87f680cc12f578
 		<name>OVHD panel light rotate</name>
 		<type>rotate</type>
 		<object-name>ovhd_pnl_knob</object-name>
-    		<object-name>ovhd_pnl_indicator</object-name>
-		<property>controls/lighting/ovhd-panel-norm</property>
+    <object-name>ovhd_pnl_indicator</object-name>
+				<property>controls/lighting/ovhd-panel-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>-329</dep></entry>
@@ -209,7 +200,7 @@
 		</center>
 	</animation>
 
-	<animation>
+			<animation>
 		<type>select</type>
 		<object-name>ltank.1</object-name>
 		<object-name>ltank.2</object-name>
@@ -237,12 +228,12 @@
 		<object-name>ttank.4</object-name>
 		<object-name>ttank.5</object-name>
 		<condition>
-			<property>systems/electrical/outputs/avionics</property>
+				<property>systems/electrical/outputs/avionics</property>
 		</condition>
 	</animation>
 	
 	
-	<animation>
+		<animation>
 		<type>textranslate</type>
 		<object-name>ltank.1</object-name>
 		<property>consumables/fuel/tank/level-lbs</property>
@@ -307,7 +298,7 @@
 		</axis>
 	</animation>
 	
-	<animation>
+			<animation>
 		<type>textranslate</type>
 		<object-name>ctank.1</object-name>
 		<property>consumables/fuel/tank[1]/level-lbs</property>
@@ -437,7 +428,7 @@
 		</axis>
 	</animation>
 
-	<animation>
+				<animation>
 		<type>textranslate</type>
 		<object-name>atank.1</object-name>
 		<property>consumables/fuel/tank[3]/level-lbs</property>
@@ -567,7 +558,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-
+	
 <!-- Fuel Tank Controls >
 jettison.btn
 jett.cover
@@ -962,403 +953,6 @@ FSC.btn
 
 	<!-- Tail Tank -->
 	
-<<<<<<< HEAD
-<!-- Fuel Tank Controls >
-jettison.btn
-jett.cover
-tank0_armf
-tank0_fill
-tank0_pump
-tank0_low
-tank0_xfeed
-tank0_xfer
-tank0_xlow
-tank3_Lxfer
-tank3_Llow
-tank3_Rxfer
-tank3_Rlow
-tank4_xfer
-tank4_xlow
-tank4_alt
-tank4_low
-FSC.btn
--->
-	<!-- Left Main Tank -->
-	<animation>
-		<type>pick</type>
-		<object-name>tank0_pump</object-name>
-		<object-name>tank0_low</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[0]/pump-eng</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank0_pump</object-name>
-		<property>controls/fuel/tank[0]/pump-eng</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>tank0_xfer</object-name>
-		<object-name>tank0_xlow</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[0]/pump-xfer</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank0_xfer</object-name>
-		<property>controls/fuel/tank[0]/pump-xfer</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>tank0_armf</object-name>
-		<object-name>tank0_fill</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[0]/fill-valve-arm</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank0_armf</object-name>
-		<property>controls/fuel/tank[0]/fill-valve-arm</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank0_fill</object-name>
-		<property>consumables/fuel/tank[0]/fill-valve</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>tank0_xfeed</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[0]/x-feed</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank0_xfeed</object-name>
-		<property>controls/fuel/tank[0]/x-feed</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-		    
-	<!-- Center Main Tank -->
-	<animation>
-		<type>pick</type>
-		<object-name>tank1_pump</object-name>
-		<object-name>tank1_low</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[1]/pump-eng</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank1_pump</object-name>
-		<property>controls/fuel/tank[1]/pump-eng</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>tank1_xfer</object-name>
-		<object-name>tank1_xlow</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[1]/pump-xfer</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank1_xfer</object-name>
-		<property>controls/fuel/tank[1]/pump-xfer</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>tank1_armf</object-name>
-		<object-name>tank1_fill</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[1]/fill-valve-arm</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank1_armf</object-name>
-		<property>controls/fuel/tank[1]/fill-valve-arm</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank1_fill</object-name>
-		<property>consumables/fuel/tank[1]/fill-valve</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>tank1_xfeed</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[1]/x-feed</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank1_xfeed</object-name>
-		<property>controls/fuel/tank[1]/x-feed</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-		    
-	<!-- Right Main Tank -->
-	<animation>
-		<type>pick</type>
-		<object-name>tank2_pump</object-name>
-		<object-name>tank2_low</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[2]/pump-eng</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank2_pump</object-name>
-		<property>controls/fuel/tank[2]/pump-eng</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>tank2_xfer</object-name>
-		<object-name>tank2_xlow</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[2]/pump-xfer</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank2_xfer</object-name>
-		<property>controls/fuel/tank[2]/pump-xfer</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>tank2_armf</object-name>
-		<object-name>tank2_fill</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[2]/fill-valve-arm</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank2_armf</object-name>
-		<property>controls/fuel/tank[2]/fill-valve-arm</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank2_fill</object-name>
-		<property>consumables/fuel/tank[2]/fill-valve</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>tank2_xfeed</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[2]/x-feed</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank2_xfeed</object-name>
-		<property>controls/fuel/tank[2]/x-feed</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-
-	<!-- Aux Tanks -->
-	<animation>
-		<type>pick</type>
-		<object-name>tank3_Lxfer</object-name>
-		<object-name>tank3_Llow</object-name>
-		<object-name>tank3_Rxfer</object-name>
-		<object-name>tank3_Rlow</object-name>
-		<action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-		    <binding>
-			<command>property-toggle</command>
-			<property>controls/fuel/tank[3]/pump-xfer</property>
-		    </binding>
-		</action>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank3_Lxfer</object-name>
-		<property>controls/fuel/tank[3]/pump-xfer</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name>tank3_Rxfer</object-name>
-		<property>controls/fuel/tank[3]/pump-xfer</property>
-		<factor>0.0625</factor>
-		<axis>
-		    <x>-1</x>
-		    <y>0</y>
-		    <z>0</z>
-		</axis>
-	</animation>
-
-	<!-- Tail Tank -->
-	
-=======
->>>>>>> 1ebc8adf5cec91afb88c668a0f87f680cc12f578
 	<animation>
 		<type>pick</type>
 		<object-name>tank4_alt</object-name>
@@ -1437,12 +1031,8 @@ FSC.btn
 	<!-- Fuel Jettison -->
 	<animation>
 		<type>pick</type>
-<<<<<<< HEAD
 		<object-name>jett.cover_1</object-name>
 		<object-name>jett.cover_2</object-name>
-=======
-		<object-name>jett.cover</object-name>
->>>>>>> 1ebc8adf5cec91afb88c668a0f87f680cc12f578
 		<action>
 		    <button>0</button>
 		    <repeatable>false</repeatable>
@@ -1454,12 +1044,8 @@ FSC.btn
 	</animation>
 	<animation>
 		<type>rotate</type>
-<<<<<<< HEAD
 		<object-name>jett.cover_1</object-name>
 		<object-name>jett.cover_2</object-name>
-=======
-		<object-name>jett.cover</object-name>
->>>>>>> 1ebc8adf5cec91afb88c668a0f87f680cc12f578
 		<property>controls/switches/jettison-cover</property>
 		<factor>130</factor>
 		<axis>
@@ -1498,7 +1084,6 @@ FSC.btn
 		    <z>0</z>
 		</axis>
 	</animation>
-<<<<<<< HEAD
 	
 	    <animation>
         <type>rotate</type>
@@ -1530,60 +1115,23 @@ FSC.btn
             <z>0</z>
         </axis>
     </animation>
-=======
-
-		    
-		
-
-	
-	<animation>
-        	<type>rotate</type>
-        	<object-name>apuknob</object-name>
-        	<object-name>apuknob.light</object-name>
-        	<property>controls/APU/off-start-run</property>
-        	<interpolation>
-        	    <entry>
-        	        <ind>0</ind>
-        	        <dep>-45.0</dep>
-        	    </entry>
-        	    <entry>
-        	        <ind>1</ind>
-        	        <dep>0</dep>
-        	    </entry>
-        	    <entry>
-        	        <ind>2</ind>
-        	        <dep>45.0</dep>
-        	    </entry>		
-        	</interpolation>
-        	<center>
-        	    <x-m>-21.7996</x-m>
-        	    <y-m>-0.1204</y-m>
-        	    <z-m>-17.8164</z-m>
-        	</center>
-        	<axis>
-        	    <x>-1</x>
-        	    <y>0</y>
-        	    <z>0</z>
-        	</axis>
-    	</animation>
->>>>>>> 1ebc8adf5cec91afb88c668a0f87f680cc12f578
     
-    	<animation>
-        	<type>pick</type>
-        	<object-name>apuknob</object-name>
-        	<action>
-        	    <button>0</button>
-        	    <button>3</button>
-        	    <repeatable>false</repeatable>
-        	    <binding>
-        	        <command>property-adjust</command>
-        	        <property>controls/APU/off-start-run</property>
-        	        <step>1</step>
-        	        <min>0</min>
-        	        <max>2</max>
-        	    </binding>
-        	</action>
-    	</animation>
+    <animation>
+        <type>pick</type>
+        <object-name>apuknob</object-name>
+        <action>
+            <button>0</button>
+            <button>3</button>
+           <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/APU/off-start-run</property>
+                <step>1</step>
+                <min>0</min>
+                <max>2</max>
+            </binding>
+        </action>
+    </animation>
     
     <animation>
         <type>pick</type>
@@ -1602,7 +1150,7 @@ FSC.btn
         </action>
     </animation>
     
-    <animation>
+        <animation>
         <type>rotate</type>
         <object-name>nosmoking.lever</object-name>
         <property>controls/cabin/NoSmoking-knob</property>
@@ -1619,7 +1167,7 @@ FSC.btn
         </axis>
     </animation>
     
-    <animation>
+        <animation>
         <type>rotate</type>
         <object-name>seatbelts.lever</object-name>
         <property>controls/cabin/SeatBelt-knob</property>
@@ -1636,7 +1184,7 @@ FSC.btn
         </axis>
     </animation>
     
-    <animation>
+        <animation>
         <type>pick</type>
         <object-name>nosmoking.lever</object-name>
         <action>
@@ -1668,7 +1216,7 @@ FSC.btn
             </binding>
         </action>
     </animation>
-    <animation>
+     <animation>
         <type>pick</type>
         <object-name>nosmoking.lever</object-name>
         <action>
@@ -1701,7 +1249,7 @@ FSC.btn
         </action>
     </animation>
     
-    <animation>
+        <animation>
         <type>pick</type>
         <object-name>seatbelts.lever</object-name>
         <action>
@@ -1733,7 +1281,7 @@ FSC.btn
             </binding>
         </action>
     </animation>
-    <animation>
+     <animation>
         <type>pick</type>
         <object-name>seatbelts.lever</object-name>
         <action>
@@ -1757,7 +1305,7 @@ FSC.btn
             <repeatable>false</repeatable>
             <binding>
                 <command>property-adjust</command>
-        	<object-name>seatbelts.lever</object-name>
+        <object-name>seatbelts.lever</object-name>
                 <step>-1</step>
                 <min>-1</min>
                 <max>1</max>
@@ -1766,11 +1314,11 @@ FSC.btn
         </action>
     </animation>
     
-	<animation>
+    		    	<animation>
 		<name>Dashboard light knob</name>
 		<type>pick</type>
 		<object-name>dashboard.light</object-name>
-    		<object-name>dashboard.light.indicator</object-name>
+    <object-name>dashboard.light.indicator</object-name>
 		<action>
 			<button>0</button>
 			<button>3</button>
@@ -1795,12 +1343,12 @@ FSC.btn
 		</action>
 	</animation>
 	
-	<animation>
+					<animation>
 		<name>Dashboard light rotate</name>
 		<type>rotate</type>
 		<object-name>dashboard.light</object-name>
-		<object-name>dashboard.light.indicator</object-name>
-		<property>controls/lighting/dashboard-panel-norm</property>
+    <object-name>dashboard.light.indicator</object-name>
+    <property>controls/lighting/dashboard-panel-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1.0</ind><dep>-280</dep></entry>
@@ -1817,18 +1365,18 @@ FSC.btn
 		</center>
 	</animation>
 
-	<effect>
+			<effect>
 		<inherits-from>Aircraft/MD-11/Models/Effects/engine</inherits-from>
-		<object-name>nosmoking.lever</object-name>
-	        <object-name>L-Lnd.toggle</object-name>
-	        <object-name>C-Lnd.toggle</object-name>
-	        <object-name>R-Lnd.toggle</object-name>
-    		<object-name>thunderstorm</object-name>
-    		<object-name>seatbelts.lever</object-name>
-        	<object-name>emer_light_switch</object-name>
+    <object-name>nosmoking.lever</object-name>
+        <object-name>L-Lnd.toggle</object-name>
+        <object-name>C-Lnd.toggle</object-name>
+        <object-name>R-Lnd.toggle</object-name>
+    <object-name>thunderstorm</object-name>
+    <object-name>seatbelts.lever</object-name>
+        <object-name>emer_light_switch</object-name>
 	</effect>
 	
-    <animation>
+	    <animation>
         <type>pick</type>
         <object-name>BATT.btn</object-name>
         <action>
@@ -1845,7 +1393,7 @@ FSC.btn
         </action>
     </animation>
     
-    <animation>
+        <animation>
         <type>pick</type>
         <object-name>BCN.btn</object-name>
         <action>
@@ -1862,32 +1410,32 @@ FSC.btn
         </action>
     </animation>
     
- 	<animation>
-   		<type>textranslate</type>
-   		<object-name>BCN.btn</object-name>
-        	<property>controls/lighting/beacon</property>
-        	<condition>
-        	    <equals>
-        		<property>systems/electrical/outputs/avionics</property>
-        		<value>1</value>
-        	    </equals>
-        	</condition>
-        	<interpolation>
-        	    <entry>
-        	        <ind>0</ind>
-        	        <dep>0.0625</dep>
-        	    </entry>
-        	    <entry>
-        	        <ind>1</ind>
-        	        <dep>0</dep>
-        	    </entry>
-        	</interpolation>
-   		<axis>
-		    <x>0</x>
-		    <y>1</y>
-		    <z>0</z>
-		</axis>
-	</animation>
+ <animation>
+   <type>textranslate</type>
+   <object-name>BCN.btn</object-name>
+        <property>controls/lighting/beacon</property>
+        <condition>
+        <equals>
+        <property>systems/electrical/outputs/avionics</property>
+        <value>1</value>
+        </equals>
+        </condition>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0.0625</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
 
     <animation>
         <type>pick</type>
@@ -1950,7 +1498,7 @@ FSC.btn
         </action>
     </animation>
     
- <animation>
+     <animation>
    <type>textranslate</type>
    <object-name>LOGO.btn</object-name>
       <property>controls/lighting/logo-lights</property>
@@ -1977,7 +1525,7 @@ FSC.btn
    </axis>
  </animation>
  
-    <animation>
+         <animation>
         <type>pick</type>
         <object-name>turnoff.left</object-name>
         <object-name>turnoff.right</object-name>
@@ -1995,7 +1543,7 @@ FSC.btn
         </action>
     </animation>
     
- <animation>
+     <animation>
    <type>textranslate</type>
         <object-name>turnoff.left</object-name>
         <object-name>turnoff.right</object-name>
@@ -2024,7 +1572,7 @@ FSC.btn
  </animation>
 
     
-    <animation>
+        <animation>
         <type>pick</type>
         <object-name>STRB.toggle</object-name>
         <action>
@@ -2041,7 +1589,7 @@ FSC.btn
         </action>
     </animation>
     
- <animation>
+         <animation>
    <type>textranslate</type>
       <object-name>STRB.toggle</object-name>
         <property>controls/lighting/strobe</property>
@@ -2088,24 +1636,24 @@ FSC.btn
 		</action>
 	</animation>
 	
-	<animation>
+		<animation>
 		<type>textranslate</type>
 		<object-name>EXT_P.btn</object-name>
 		<property>controls/electric/b_ext_power_p</property>
-	        <interpolation>
-        	    <entry>
-        	        <ind>1</ind>
-        	        <dep>0.1875</dep>
-        	    </entry>
-        	    <entry>
-        	        <ind>2</ind>
-        	        <dep>0.125</dep>
-        	    </entry>
-        	    <entry>
-        	        <ind>0</ind>
-        	        <dep>0</dep>
-        	    </entry>
-	        </interpolation>
+        <interpolation>
+            <entry>
+                <ind>1</ind>
+                <dep>0.1875</dep>
+            </entry>
+            <entry>
+                <ind>2</ind>
+                <dep>0.125</dep>
+            </entry>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
 		<axis>
 			<x>0</x>
 			<y>1</y>
@@ -2113,7 +1661,7 @@ FSC.btn
 		</axis>
 	</animation>
 	
-    <animation>
+	    <animation>
         <type>pick</type>
         <object-name>L-Lnd.toggle</object-name>
         <object-name>C-Lnd.toggle</object-name>
@@ -2147,7 +1695,7 @@ FSC.btn
         </action>
     </animation>
     
-    <animation>
+        <animation>
         <type>rotate</type>
         <object-name>L-Lnd.toggle</object-name>
         <object-name>C-Lnd.toggle</object-name>
@@ -2166,7 +1714,7 @@ FSC.btn
         </axis>
     </animation>
     
-    <animation>
+        <animation>
         <type>pick</type>
         <object-name>APU.btn</object-name>
         <action>
