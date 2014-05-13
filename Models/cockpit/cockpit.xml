@@ -609,40 +609,40 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>instrumentation/afds/inputs/AP-disengage</property>
+				<property>controls/switches/ap-yoke-button</property>
 			</binding>
-						<mod-up>
-				<binding>
-					<command>property-assign</command>
-				<property>instrumentation/afds/inputs/AP-disengage</property>
-					<value type="bool">false</value>
-				</binding>
+			<mod-up>
+			    <binding>
+				<command>property-assign</command>
+				<property>controls/switches/ap-yoke-button</property>
+				<value type="bool">false</value>
+			    </binding>
 			</mod-up>
-			<binding>
+			<!--binding>
 				<command>property-assign</command>
 				<property>instrumentation/afds/inputs/AP</property>
 				<value>0</value>
-			</binding>
+			</binding-->
 			<binding>
 				<command>nasal</command>
-				<script>controls.click(1);</script>
+				<script>MD11.afds.APyokebtn(); controls.click(1);</script>
 			</binding>
 		</action>
 	</animation>
 	
-		<animation>
+	<animation>
 		<type>translate</type>
 		<object-name>yoke.autodsg</object-name>
-		<property>instrumentation/afds/inputs/AP-disengage</property>
+		<property>controls/switches/ap-yoke-button</property>
 		<factor>0.002</factor>
-	<axis>
-	    <x1-m>-27.2002</x1-m>
-	    <y1-m>-0.6221</y1-m>
-	    <z1-m>6.9687</z1-m>
-	    <x2-m>-27.2135</x2-m>
-	    <y2-m>-0.6199</y2-m>
-	    <z2-m>6.9713</z2-m>
-	</axis>
+		<axis>
+		    <x1-m>-27.2002</x1-m>
+		    <y1-m>-0.6221</y1-m>
+		    <z1-m>6.9687</z1-m>
+		    <x2-m>-27.2135</x2-m>
+		    <y2-m>-0.6199</y2-m>
+		    <z2-m>6.9713</z2-m>
+		</axis>
 	</animation>
 	
 	
@@ -710,40 +710,40 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>instrumentation/afds/inputs/AP-disengage</property>
+				<property>controls/switches/ap-yoke-button</property>
 			</binding>
-						<mod-up>
-				<binding>
-					<command>property-assign</command>
-				<property>instrumentation/afds/inputs/AP-disengage</property>
-					<value type="bool">false</value>
-				</binding>
+			<mod-up>
+			    <binding>
+				<command>property-assign</command>
+				<property>controls/switches/ap-yoke-button</property>
+				<value type="bool">false</value>
+			    </binding>
 			</mod-up>
-			<binding>
+			<!--binding>
 				<command>property-assign</command>
 				<property>instrumentation/afds/inputs/AP</property>
 				<value>0</value>
-			</binding>
+			</binding-->
 			<binding>
 				<command>nasal</command>
-				<script>controls.click(1);</script>
+				<script>MD11.afds.APyokebtn(); controls.click(1);</script>
 			</binding>
 		</action>
 	</animation>
 	
-		<animation>
+	<animation>
 		<type>translate</type>
 		<object-name>yoke.autodsg.right</object-name>
-		<property>instrumentation/afds/inputs/AP-disengage</property>
+		<property>controls/switches/ap-yoke-button</property>
 		<factor>0.002</factor>
-	<axis>
-	    <x1-m>-27.2002</x1-m>
-	    <y1-m>0.6221</y1-m>
-	    <z1-m>6.9687</z1-m>
-	    <x2-m>-27.2135</x2-m>
-	    <y2-m>0.6199</y2-m>
-	    <z2-m>6.9713</z2-m>
-	</axis>
+		<axis>
+		    <x1-m>-27.2002</x1-m>
+		    <y1-m>0.6221</y1-m>
+		    <z1-m>6.9687</z1-m>
+		    <x2-m>-27.2135</x2-m>
+		    <y2-m>0.6199</y2-m>
+		    <z2-m>6.9713</z2-m>
+		</axis>
 	</animation>
 	
 	        <animation>
