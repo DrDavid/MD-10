@@ -199,6 +199,9 @@
                 <path>Aircraft/MD-11/Systems/MD11-autothrottle.xml</path>
             </autopilot>
             <autopilot>
+                <path>Aircraft/Generic/generic-autopilot-helper.xml</path>
+            </autopilot>
+            <autopilot>
                 <name>Autobrake system</name>
                 <path>Aircraft/MD-11/Systems/MD11-autobrake.xml</path>
             </autopilot>
