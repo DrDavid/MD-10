@@ -20,7 +20,7 @@
 <PropertyList>
 
 	<!-- Logic -->
-	<logic>
+	<!--logic>
 		<name>Autoland on logic</name>
 		<input>
 			<and>
@@ -35,7 +35,7 @@
 			</and>
 		</input>
 		<output>autopilot/autoland/engaged</output>
-	</logic>
+	</logic-->
 	<logic>
 		<name>Align phase logic</name>
 		<input>
@@ -93,17 +93,17 @@
 	</logic>
 
 	<!-- PHASE 1 : Align -->
-	<pid-controller>
+	<pi-simple-controller>
 		<name>Wing leveler</name>
 		<debug type="bool">false</debug>
 		<enable>
-			<condition>
-				<or>
-					<property>autopilot/autoland/align-phase</property>
-					<property>autopilot/autoland/flare-phase</property>
-					<property>autopilot/autoland/rollout-phase</property>
-				</or>
-			</condition>
+		    <condition>
+			<or>
+			    <property>autopilot/autoland/align-phase</property>
+			    <property>autopilot/autoland/flare-phase</property>
+			    <property>autopilot/autoland/rollout-phase</property>
+			</or>
+		    </condition>
 		</enable>
 		<input>
 			<property>instrumentation/attitude-indicator[0]/indicated-roll-deg</property>
@@ -111,18 +111,22 @@
 		<reference>
 			<value>0</value>
 		</reference>
-		<output>fcs/autoland/aileron-cmd-norm</output>
+		<output>autopilot/internal/target-roll-deg</output>
 		<config>
-			<Kp>0.5</Kp>
+			<!--Kp>0.5</Kp>
 			<beta>1</beta>
 			<alpha>0.1</alpha>
 			<gamma>0</gamma>
 			<Ti>10</Ti>
 			<Td>0.00001</Td>
 			<u_min>-1</u_min>
-			<u_max>1</u_max>
+			<u_max>1</u_max-->
+			<Kp>-2</Kp>
+			<Ki>0.0</Ki>
+			<u_min>-20</u_min>
+			<u_max>20</u_max>
 		</config>
-	</pid-controller>
+	</pi-simple-controller>
 	<pi-simple-controller>
 		<name>ILS rudder controller</name>
 		<debug type="bool">false</debug>
@@ -136,13 +140,13 @@
 			</condition>
 		</enable>
 		<input>
-			<property>autopilot/internal[0]/nav-heading-error-deg</property>
+			<property>autopilot/internal/nav1-heading-error-deg</property>
 			<scale>0.5</scale>
 		</input>
 		<reference>
 			<value>0</value>
 		</reference>
-		<output>fcs/autoland/rudder-cmd-norm</output>
+		<output>controls/flight/rudder</output>
 		<config>
 			<Kp>-0.6</Kp>
 			<Ki>0</Ki>
@@ -166,8 +170,7 @@
 			<value>1.5</value>
 		</input>
 		<output>
-			<property>autopilot/internal[0]/target-pitch-deg</property>
-			<property>autopilot/internal[1]/target-pitch-deg</property>
+			<property>autopilot/internal/target-pitch-deg</property>
 		</output>
 	</filter>
 
@@ -187,8 +190,7 @@
 			<value>-1</value>
 		</input>
 		<output>
-			<property>autopilot/internal[0]/target-pitch-deg</property>
-			<property>autopilot/internal[1]/target-pitch-deg</property>
+			<property>autopilot/internal/target-pitch-deg</property>
 		</output>
 	</filter>
 

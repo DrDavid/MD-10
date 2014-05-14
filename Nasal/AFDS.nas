@@ -39,7 +39,7 @@ var AFDS = {
         m.AP_passive = props.globals.initNode("autopilot/locks/passive-mode",1,"BOOL");
         m.AP_pitch_engaged = props.globals.initNode("autopilot/locks/pitch-engaged",1,"BOOL");
         m.AP_roll_engaged = props.globals.initNode("autopilot/locks/roll-engaged",1,"BOOL");
-	m.autoland = props.globals.initNode("autopilot/locks/autoland",0,"BOOL");
+	m.autoland = props.globals.initNode("autopilot/autoland/engaged",0,"BOOL");
 
         m.FD = m.AFDS_inputs.initNode("FD",0,"BOOL");
         m.at1 = m.AFDS_inputs.initNode("at-armed[0]",0,"BOOL");
@@ -88,6 +88,9 @@ var AFDS = {
         m.APl = setlistener(m.AP, func m.setAP(),0,0);
         m.Lbank = setlistener(m.bank_switch, func m.setbank(),0,0);
         m.LTMode = setlistener(m.autothrottle_mode, func m.updateATMode(),0,0);
+	m.a_land = setlistener(m.autoland, func {
+	    if (m.autoland.getBoolValue()) m.autolandlisteners();
+	},0,0);
         m.APdisl = setlistener(m.AP_disengaged, func {
 	    if (m.AP_disengaged.getBoolValue()) {
 		m.AP.setBoolValue(0);
@@ -124,6 +127,24 @@ var AFDS = {
 	    me.at1.setBoolValue(0);
 	    me.at2.setBoolValue(0);
 	}
+    },
+
+####    Autoland Listeners    ####
+###################
+    autolandlisteners : func {
+	var at_cutout = setlistener("gear/gear[1]/wow", func(td_main) {
+	    if (td_main.getBoolValue()) {
+		me.at1.setBoolValue(0);
+		me.at2.setBoolValue(0);
+		removelistener(at_cutout);
+	    }
+	},0,0);
+	var ap_cutout = setlistener("gear/gear/wow", func(td_nose) {
+	    if (td_nose.getBoolValue()) {
+		me.AP.setBoolValue(0);
+		removelistener(ap_cutout);
+	    }
+	},0,0);
     },
 
 ####    Inputs    ####
@@ -270,16 +291,19 @@ var AFDS = {
         if(hdgoffset < -180) hdgoffset +=360;
         if(hdgoffset > 180) hdgoffset +=-360;
         setprop("autopilot/internal/fdm-heading-bug-error-deg",hdgoffset);
-        if(getprop("position/altitude-agl-ft")<100){
+
+	var radaralt = getprop("position/altitude-agl-ft");
+        if(radaralt < 200 and me.vertical_mode.getValue() == 6 and me.AP.getBoolValue()) {
+	    me.autoland.setBoolValue(1);
+	} else {
+	    me.autoland.setBoolValue(0);
+	}
+        if (radaralt < 100) {
 	    me.at1.setBoolValue(0);
-#	    if (me.vertical_mode.getValue() != 6) {
+	    if (!me.autoland.getBoolValue()) {
 		me.AP.setBoolValue(0);
-		me.autoland.setBoolValue(0);
-#	    } elsif (me.AP.getBoolValue()) {
-#		me.autoland.setBoolValue(1);
-#	    }
-#       } else {
-#	    me.autoland.setBoolValue(0);
+		me.at2.setBoolValue(0);
+	    }
 	}
 
         if(me.step==0){ ### glideslope armed ?###
@@ -389,10 +413,12 @@ var AFDS = {
                 me.at1.setBoolValue(0);
                 me.at2.setBoolValue(0);
             }
-	    if (me.at2.getBoolValue() and getprop("position/altitude-agl-ft") > 100)
+	    if (me.at2.getBoolValue() and radaralt > 100)
 		me.at1.setBoolValue(1);
 #	    if (me.at1.getBoolValue() or (me.at2.getBoolValue() and getprop("engines/engine/rpm") > 60))
 	    if (me.at1.getBoolValue()) {
+		me.autothrottle_mode.setValue(5);
+	    } elsif (me.at2.getBoolValue() and me.autoland.getBoolValue()) {
 		me.autothrottle_mode.setValue(5);
 	    } else {
 		me.autothrottle_mode.setValue(0);

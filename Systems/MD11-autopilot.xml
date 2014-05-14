@@ -244,8 +244,17 @@
     <name>LOC1</name>
     <debug>false</debug>
     <enable>
-      <prop>instrumentation/afds/ap-modes/roll-mode</prop>
-      <value>LOC</value>
+      <condition>
+	<and>
+	    <equals>
+		<property>instrumentation/afds/ap-modes/roll-mode</property>
+      		<value>LOC</value>
+	    </equals>
+	    <not>
+		<property>autopilot/autoland/engaged</property>
+	    </not>
+	</and>
+      </condition>
     </enable>
     <input>
       <prop>/autopilot/internal/nav1-heading-error-deg</prop>
@@ -609,8 +618,20 @@
     <name>Glideslope Hold</name>
     <debug>false</debug>
     <enable>
-      <prop>instrumentation/afds/ap-modes/pitch-mode</prop>
-      <value>G/S</value>
+      <condition>
+	<and>
+	    <equals>
+		<property>instrumentation/afds/ap-modes/pitch-mode</property>
+		<value>G/S</value>
+	    </equals>
+	    <not>
+		<property>autopilot/autoland/flare-phase</property>
+	    </not>
+	    <not>
+		<property>autopilot/autoland/rollout-phase</property>
+	    </not>
+	</and>
+      </condition>
     </enable>
     <input>
       <prop>/velocities/vertical-speed-fps</prop>
