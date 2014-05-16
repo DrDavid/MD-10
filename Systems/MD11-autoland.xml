@@ -42,7 +42,8 @@
 			<and>
 				<property>autopilot/autoland/engaged</property>
 				<less-than>
-					<property>instrumentation/radar-altimeter[0]/radar-altitude-ft</property>
+					<!--property>instrumentation/radar-altimeter[0]/radar-altitude-ft</property-->
+					<property>position/altitude-agl-ft</property>
 					<value>200</value>
 				</less-than>
 				<not>
@@ -61,7 +62,8 @@
 			<and>
 				<property>autopilot/autoland/engaged</property>
 				<less-than>
-					<property>instrumentation/radar-altimeter[0]/radar-altitude-ft</property>
+					<!--property>instrumentation/radar-altimeter[0]/radar-altitude-ft</property-->
+					<property>position/altitude-agl-ft</property>
 					<value>50</value>
 				</less-than>
 				<not>
@@ -93,7 +95,26 @@
 	</logic>
 
 	<!-- PHASE 1 : Align -->
-	<pi-simple-controller>
+	<filter>
+		<name>Wing Leveler</name>
+		<type>gain</type>
+		<debug type="bool">false</debug>
+		<gain>1</gain>
+		<enable>
+			<or>
+			    <property>autopilot/autoland/align-phase</property>
+			    <property>autopilot/autoland/flare-phase</property>
+			    <property>autopilot/autoland/rollout-phase</property>
+			</or>
+		</enable>
+		<input>
+			<value>0</value>
+		</input>
+		<output>
+			<property>autopilot/internal/target-roll-deg</property>
+		</output>
+	</filter>
+	<!--pid-controller>
 		<name>Wing leveler</name>
 		<debug type="bool">false</debug>
 		<enable>
@@ -113,20 +134,16 @@
 		</reference>
 		<output>autopilot/internal/target-roll-deg</output>
 		<config>
-			<!--Kp>0.5</Kp>
+			<Kp>0.5</Kp>
 			<beta>1</beta>
 			<alpha>0.1</alpha>
 			<gamma>0</gamma>
 			<Ti>10</Ti>
 			<Td>0.00001</Td>
 			<u_min>-1</u_min>
-			<u_max>1</u_max-->
-			<Kp>-2</Kp>
-			<Ki>0.0</Ki>
-			<u_min>-20</u_min>
-			<u_max>20</u_max>
+			<u_max>1</u_max>
 		</config>
-	</pi-simple-controller>
+	</pid-controller-->
 	<pi-simple-controller>
 		<name>ILS rudder controller</name>
 		<debug type="bool">false</debug>
@@ -167,7 +184,7 @@
 			</condition>
 		</enable>
 		<input>
-			<value>1.5</value>
+			<value>2.5</value>
 		</input>
 		<output>
 			<property>autopilot/internal/target-pitch-deg</property>

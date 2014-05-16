@@ -643,9 +643,9 @@
       <prop>/autopilot/internal/target-pitch-deg</prop>
     </output>
     <config>
-      <Ts>0.05</Ts> 
-      <Kp>0.15</Kp>
-      <beta>1.0</beta>
+      <!--Ts>0.05</Ts--> 
+      <Kp>0.50</Kp>
+      <beta>0.1</beta>
       <alpha>0.1</alpha>
       <gamma>0.0</gamma>
       <Ti>10.0</Ti>

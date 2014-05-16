@@ -294,6 +294,7 @@ var AFDS = {
 
 	var radaralt = getprop("position/altitude-agl-ft");
         if(radaralt < 200 and me.vertical_mode.getValue() == 6 and me.AP.getBoolValue()) {
+	    me.at1.setBoolValue(0);
 	    me.autoland.setBoolValue(1);
 	} else {
 	    me.autoland.setBoolValue(0);
@@ -302,7 +303,7 @@ var AFDS = {
 	    me.at1.setBoolValue(0);
 	    if (!me.autoland.getBoolValue()) {
 		me.AP.setBoolValue(0);
-		me.at2.setBoolValue(0);
+#		me.at2.setBoolValue(0);
 	    }
 	}
 
@@ -413,13 +414,24 @@ var AFDS = {
                 me.at1.setBoolValue(0);
                 me.at2.setBoolValue(0);
             }
-	    if (me.at2.getBoolValue() and radaralt > 100)
+	    if (me.at2.getBoolValue() and radaralt > 100 and !me.autoland.getBoolValue())
 		me.at1.setBoolValue(1);
 #	    if (me.at1.getBoolValue() or (me.at2.getBoolValue() and getprop("engines/engine/rpm") > 60))
 	    if (me.at1.getBoolValue()) {
 		me.autothrottle_mode.setValue(5);
 	    } elsif (me.at2.getBoolValue() and me.autoland.getBoolValue()) {
-		me.autothrottle_mode.setValue(5);
+		me.ias_mach_selected.setBoolValue(0);
+		if (radaralt < 200 and me.ias_setting.getValue() > 130)
+		    me.ias_setting.setValue(130);
+		if (radaralt > 80) {
+		    me.autothrottle_mode.setValue(5);
+		} else {
+		    me.at2.setBoolValue(0);
+		    me.autothrottle_mode.setValue(0);
+		    setprop("controls/engines/engine[0]/throttle",0);
+		    setprop("controls/engines/engine[1]/throttle",0);
+		    setprop("controls/engines/engine[2]/throttle",0);
+		}
 	    } else {
 		me.autothrottle_mode.setValue(0);
 	    }
