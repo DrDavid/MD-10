@@ -462,8 +462,9 @@ var fuelsys = {
 		}
 		me.tail_filled = 0;
 		me.ticks = 0;
-		var back2manual = setlistener("controls/fuel/auto-manage", func (b2m) {
-		    if (b2m.getBoolValue()) {
+	    } else {
+#		var back2manual = setlistener("controls/fuel/auto-manage", func (b2m) {
+#		    if (!b2m.getBoolValue()) {
 			for (var i=0; i<3; i+=1) {
 			    me.pump[i].setBoolValue(1);
 			    me.xfeed[i].setBoolValue(0);
@@ -473,9 +474,9 @@ var fuelsys = {
 			me.xfer[3].setBoolValue(1);
 			me.xfer[4].setBoolValue(1);
 			me.altpump.setBoolValue(0);
-		    }
-		    removelistener(back2manual);
-		},0,0);
+#		    }
+#		    removelistener(back2manual);
+#		},0,0);
 	    }
 	},0,0);
     },

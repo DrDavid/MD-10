@@ -611,6 +611,9 @@ var Startup = func{
     setprop("sim/model/armrest",1);
     balance_fuel();
     setprop("controls/fuel/auto-manage",1);
+    setprop("consumables/fuel/tank[0]/selected",1);
+    setprop("consumables/fuel/tank[1]/selected",1);
+    setprop("consumables/fuel/tank[2]/selected",1);
     setprop("controls/electric/engine[0]/generator",1);
     setprop("controls/electric/engine[1]/generator",1);
     setprop("controls/electric/engine[2]/generator",1);
@@ -646,13 +649,11 @@ var Startup = func{
 	setprop("controls/hydraulics/system[1]/C1ADP-switch", 1);
 	setprop("controls/hydraulics/system[1]/C2ADP-switch", 1);
 	setprop("controls/hydraulics/system[2]/RACMP-switch", 1);
-	setprop("instrumentation/afds/inputs/at-armed", 1);
-	setprop("instrumentation/afds/inputs/at-armed[1]", 1);
-	setprop("instrumentation/afds/inputs/at-armed[2]", 1);
+#	setprop("instrumentation/afds/inputs/at-armed", 1);
+#	setprop("instrumentation/afds/inputs/at-armed[1]", 1);
 }
 
 var Shutdown = func{
-    setprop("controls/gear/brake-parking",1);
     setprop("controls/electric/APU-generator",0);
     setprop("systems/electrical/outputs/avionics",0);
     setprop("controls/electric/battery-switch",0);

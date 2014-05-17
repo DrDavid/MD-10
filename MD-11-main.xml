@@ -199,6 +199,12 @@
                 <path>Aircraft/MD-11/Systems/MD11-autothrottle.xml</path>
             </autopilot>
             <autopilot>
+                <path>Aircraft/Generic/generic-autopilot-helper.xml</path>
+            </autopilot>
+            <autopilot>
+                <path>Aircraft/MD-11/Systems/MD11-autoland.xml</path>
+            </autopilot>
+            <autopilot>
                 <name>Autobrake system</name>
                 <path>Aircraft/MD-11/Systems/MD11-autobrake.xml</path>
             </autopilot>
@@ -559,7 +565,7 @@
                    255 <!-- aircraft type T1, fast turbofan -->
                 </category-1>
                 <category-4>                    <!-- ALTITUDE_CALLOUTS -->
-                    11 <!-- enable all altitude callouts -->
+                    13 <!-- enable all altitude callouts -->
                 </category-4>
                 <category-8>                    <!-- RADIO_ALTITUDE_INPUT_SELECT -->
                      3 <!-- use precise (but YASim-specific) gear altitude -->
@@ -699,7 +705,7 @@
         </gps>
     </instrumentation>    
     
-         <controls n="0">
+    <controls n="0">
         <gear>
             <brake-parking type="bool">1</brake-parking>
             <tiller-cmd-norm type="double">0</tiller-cmd-norm>
@@ -721,11 +727,16 @@
         <flight>
             <speedbrake-lever type="bool">0</speedbrake-lever>
         </flight>
-		<cabin>
-			<NoSmoking-knob type="int" >1 </NoSmoking-knob>
-			<SeatBelt-knob type="int" >1 </SeatBelt-knob>
-        <cabinwindows type="int">0</cabinwindows>
-		</cabin>
+	<cabin>
+		<NoSmoking-knob type="int" >1 </NoSmoking-knob>
+		<SeatBelt-knob type="int" >1 </SeatBelt-knob>
+        	<cabinwindows type="int">0</cabinwindows>
+	</cabin>
+	<switches>
+		<ap-yoke-button type="bool">0</ap-yoke-button>
+		<hdg-knob type="int">0</hdg-knob>
+		<alt-knob type="int">0</alt-knob>
+	</switches>
     </controls>
 
     <autopilot n="0">

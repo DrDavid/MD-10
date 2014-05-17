@@ -535,7 +535,7 @@
 		<type>select</type>
 		<object-name>FPA.ledminus</object-name>
 		<condition>
-			<property>instrumentation/afds/settings/fpa-display</property>
+			<!--property>instrumentation/afds/settings/fpa-display</property-->
 			<and>
 				<property>instrumentation/afds/inputs/vs-fpa-selected</property>
 			<less-than>
@@ -596,7 +596,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>ALT.led1</object-name>
-		<property>autopilot/settings/counter-set-altitude-ft</property>
+		<property>autopilot/settings/alt-display-ft</property>
 		<factor>0.00001</factor>
 		<step>10000</step>
 		<axis>
@@ -609,7 +609,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>ALT.led2</object-name>
-		<property>autopilot/settings/counter-set-altitude-ft</property>
+		<property>autopilot/settings/alt-display-ft</property>
 		<factor>0.0001</factor>
 		<step>1000</step>
 		<axis>
@@ -622,7 +622,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>ALT.led3</object-name>
-		<property>autopilot/settings/counter-set-altitude-ft</property>
+		<property>autopilot/settings/alt-display-ft</property>
 		<factor>0.001</factor>
 		<step>100</step>
 		<axis>
@@ -635,7 +635,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>ALT.led4</object-name>
-		<property>autopilot/settings/counter-set-altitude-ft</property>
+		<property>autopilot/settings/alt-display-ft</property>
 		<factor>0.01</factor>
 		<step>10</step>
 		<axis>
@@ -648,7 +648,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>ALT.led5</object-name>
-		<property>autopilot/settings/counter-set-altitude-ft</property>
+		<property>autopilot/settings/alt-display-ft</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -659,6 +659,31 @@
 	</animation>
 
 
+<!-- Knob push and pull -->
+	<animation>
+		<type>translate</type>
+		<object-name>ALT.knob</object-name>
+		<property>controls/switches/alt-knob</property>
+		<factor>0.003</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>HDG.knob</object-name>
+		<object-name>HDG.sel</object-name>
+		<property>controls/switches/hdg-knob</property>
+		<factor>0.003</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
 
 <!--
 
@@ -688,7 +713,7 @@
 		</action>
 	</animation>
 
-	<animation>
+	<!--animation>
 		<type>pick</type>
 		<object-name>TRK.toggle</object-name>
 		<action>
@@ -706,7 +731,7 @@
 				</script>
 			</binding>
 		</action>
-	</animation>
+	</animation-->
 
 	<animation>
 		<type>pick</type>
@@ -733,6 +758,10 @@
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
+				<command>nasal</command>
+				<script>MD11.afds.APpwrbtn(); controls.click(3);</script>
+			</binding>
+			<!--binding>
 				<command>property-toggle</command>
 				<property>instrumentation/afds/inputs/AP</property>
 			</binding>
@@ -743,7 +772,7 @@
         <binding>
        <command>nasal</command>
       <script>MD11.afds.input(2,5);</script>
-      </binding>
+      </binding-->
 		</action>
 	</animation>
 
@@ -772,7 +801,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>controls.click(4);MD11.afds.input(3,1);</script>
+				<script>controls.click(4);MD11.afds.input(3,0);</script>
 			</binding>
 		</action>
 	</animation>
@@ -782,7 +811,7 @@
 		<type>pick</type>
 	   <object-name>Pitch_Wheel.knob</object-name>
 		<action>
-			<button>3</button> <!--  scroll up -->
+			<button>4</button> <!--  scroll up -->
 			<repeatable>false</repeatable>
 			<binding>
 				<condition>
@@ -814,7 +843,6 @@
 				<command>nasal</command>
 				<script>
 					controls.click(5);
-					MD11.afds.input(1,255);
 				</script>
 			</binding>
 		</action>
@@ -824,7 +852,7 @@
 		<type>pick</type>
 	   <object-name>Pitch_Wheel.knob</object-name>
 	   <action>
-			<button>4</button> <!--  scroll down -->
+			<button>3</button> <!--  scroll down -->
 			<repeatable>false</repeatable>
 			<binding>
 			<condition>
@@ -856,19 +884,18 @@
 				<command>nasal</command>
 				<script>
 					controls.click(5);
-					MD11.afds.input(1,255);
 				</script>
 			</binding>
 		</action>
 	</animation>
 
 
-
-   <animation>
+ <!--  manual intervention -->
+   <!--animation>
 		<type>pick</type>
 		<object-name>SpdKnob</object-name>
 		<action>
-			<button>0</button> <!--  manual intervention -->
+			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
 				<condition>
@@ -887,7 +914,7 @@
 				</script>
 			</binding>
 		</action>
-	</animation>
+	</animation-->
 
    <animation>
 		<type>pick</type>
@@ -903,7 +930,7 @@
 				<condition>
 					<and>
 						<property>systems/electrical/outputs/avionics</property>
-						<not-equals>
+						<!--not-equals>
 							<property>instrumentation/afds/ap-modes/pitch-mode</property>
 							<value>VNAV ALT</value>
 						</not-equals>
@@ -923,7 +950,7 @@
 								</equals>
 								<property>instrumentation/afds/settings/manual-intervention</property>
 							</and>
-						</or>
+						</or-->
 						<not>
 							<property>instrumentation/afds/inputs/ias-mach-selected</property>
 						</not>
@@ -939,7 +966,7 @@
 				<condition>
 					<and>
 						<property>systems/electrical/outputs/avionics</property>
-						<not-equals>
+						<!--not-equals>
 							<property>instrumentation/afds/ap-modes/pitch-mode</property>
 							<value>VNAV ALT</value>
 						</not-equals>
@@ -959,7 +986,7 @@
 								</equals>
 								<property>instrumentation/afds/settings/manual-intervention</property>
 							</and>
-						</or>
+						</or-->
 						<property>instrumentation/afds/inputs/ias-mach-selected</property>
 					</and>
 				</condition>
@@ -990,7 +1017,7 @@
 				<condition>
 					<and>
 						<property>systems/electrical/outputs/avionics</property>
-						<not-equals>
+						<!--not-equals>
 							<property>instrumentation/afds/ap-modes/pitch-mode</property>
 							<value>VNAV ALT</value>
 						</not-equals>
@@ -1010,7 +1037,7 @@
 								</equals>
 								<property>instrumentation/afds/settings/manual-intervention</property>
 							</and>
-						</or>
+						</or-->
 						<not>
 							<property>instrumentation/afds/inputs/ias-mach-selected</property>
 						</not>
@@ -1026,7 +1053,7 @@
 				<condition>
 					<and>
 						<property>systems/electrical/outputs/avionics</property>
-						<not-equals>
+						<!--not-equals>
 							<property>instrumentation/afds/ap-modes/pitch-mode</property>
 							<value>VNAV ALT</value>
 						</not-equals>
@@ -1046,7 +1073,7 @@
 								</equals>
 								<property>instrumentation/afds/settings/manual-intervention</property>
 							</and>
-						</or>
+						</or-->
 						<property>instrumentation/afds/inputs/ias-mach-selected</property>
 					</and>
 				</condition>
@@ -1087,14 +1114,46 @@
 				<script>controls.click(5);</script>
 			</binding>
 		</action>
-        <action>
-            <button>0</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(4);MD11.afds.input(0,2);</script>
-            </binding>
-        </action>
+        	<action>
+        	    	<button>0</button>
+        	    	<repeatable>false</repeatable>
+        	    	<binding>
+        	        	<command>nasal</command>
+        	        	<script>controls.click(4);MD11.afds.input(0,2);</script>
+        	    	</binding>
+			<binding>
+                                <command>property-assign</command>
+                                <property>controls/switches/hdg-knob</property>
+				<value type="int">-1</value>
+                        </binding>
+                        <mod-up>
+                            <binding>
+                                <command>property-assign</command>
+                                <property>controls/switches/hdg-knob</property>
+                                <value type="int">0</value>
+                            </binding>
+                        </mod-up>
+        	</action>
+        	<action>
+        	    	<button>1</button>
+        	    	<repeatable>false</repeatable>
+        	    	<binding>
+        	        	<command>nasal</command>
+        	        	<script>controls.click(4);MD11.afds.input(0,1);</script>
+        	    	</binding>
+			<binding>
+                                <command>property-assign</command>
+                                <property>controls/switches/hdg-knob</property>
+				<value type="int">1</value>
+                        </binding>
+                        <mod-up>
+                            <binding>
+                                <command>property-assign</command>
+                                <property>controls/switches/hdg-knob</property>
+                                <value type="int">0</value>
+                            </binding>
+                        </mod-up>
+        	</action>
 	</animation>
 
 	<animation>
@@ -1172,12 +1231,12 @@
 		</action>
 	</animation>
 
-	<animation>
+	<!--animation>
 		<type>pick</type>
 		<object-name>BLimit.knob</object-name>
 		<object-name>BLimit.knob.indicator</object-name>
 		<action>
-			<button>4</button> <!--  scroll down -->
+			<button>4</button>
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
@@ -1199,7 +1258,7 @@
 		<object-name>BLimit.knob</object-name>
 		<object-name>BLimit.knob.indicator</object-name>
 		<action>
-			<button>3</button> <!--  scroll up -->
+			<button>3</button>
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
@@ -1214,7 +1273,7 @@
 				<script>controls.click(2);</script>
 			</binding>
 		</action>
-	</animation>
+	</animation-->
 
     <animation>
         <type>pick</type>
@@ -1246,7 +1305,7 @@
 					</and>
 				</condition>
 				<command>property-adjust</command>
-				<property>autopilot/settings/counter-set-altitude-ft</property>
+				<property>autopilot/settings/alt-display-ft</property>
 				<step>-100</step>
 				<min>0</min>
 				<max>50000</max>
@@ -1259,7 +1318,7 @@
 					</and>
 				</condition>
 				<command>property-adjust</command>
-				<property>autopilot/settings/counter-set-altitude-ft</property>
+				<property>autopilot/settings/alt-display-ft</property>
 				<step>-1000</step>
 				<min>0</min>
 				<max>50000</max>
@@ -1269,26 +1328,50 @@
 				<script>controls.click(5);</script>
 			</binding>
 		</action>
-		        <action>
-            <button>0</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(3);MD11.afds.input(1,1);</script>
-            </binding>
-        </action>
-        <action>
-            <button>1</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(4);MD11.afds.input(1,2);</script>
-            </binding>
-        </action>
+		<action>
+            		<button>0</button>
+            		<repeatable>false</repeatable>
+            		<binding>
+                		<command>nasal</command>
+                		<script>controls.click(3);MD11.afds.input(1,1);</script>
+            		</binding>
+			<binding>
+                                <command>property-assign</command>
+                                <property>controls/switches/alt-knob</property>
+				<value type="int">-1</value>
+                        </binding>
+                        <mod-up>
+                            <binding>
+                                <command>property-assign</command>
+                                <property>controls/switches/alt-knob</property>
+                                <value type="int">0</value>
+                            </binding>
+                        </mod-up>
+        	</action>
+        	<action>
+            		<button>1</button>
+            		<repeatable>false</repeatable>
+            		<binding>
+                		<command>nasal</command>
+                		<script>controls.click(4);MD11.afds.input(1,2);</script>
+            		</binding>
+			<binding>
+                                <command>property-assign</command>
+                                <property>controls/switches/alt-knob</property>
+				<value type="int">1</value>
+                        </binding>
+                        <mod-up>
+                            <binding>
+                                <command>property-assign</command>
+                                <property>controls/switches/alt-knob</property>
+                                <value type="int">0</value>
+                            </binding>
+                        </mod-up>
+        	</action>
 	</animation>
 
 
-   <animation>
+   	<animation>
 		<type>pick</type>
 		<object-name>ALT.knob</object-name>
 		<action>
@@ -1304,7 +1387,7 @@
 					</and>
 				</condition>
 				<command>property-adjust</command>
-				<property>autopilot/settings/counter-set-altitude-ft</property>
+				<property>autopilot/settings/alt-display-ft</property>
 				<step>100</step>
 				<min>0</min>
 				<max>50000</max>
@@ -1317,7 +1400,7 @@
 					</and>
 				</condition>
 				<command>property-adjust</command>
-				<property>autopilot/settings/counter-set-altitude-ft</property>
+				<property>autopilot/settings/alt-display-ft</property>
 				<step>1000</step>
 				<min>0</min>
 				<max>50000</max>
