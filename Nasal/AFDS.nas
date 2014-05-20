@@ -200,11 +200,11 @@ var AFDS = {
 	    if (btn==8) {
 		if (me.vertical_mode.getValue() == 2) {
 		    btn = 2;
-		    if (me.flch_mode.getBoolValue()) {
-			me.flch_mode.setBoolValue(0);
-		    } else {
-			me.flch_mode.setBoolValue(1);
-		    }
+#		    if (me.flch_mode.getBoolValue()) {
+#			me.flch_mode.setBoolValue(0);
+#		    } else {
+#			me.flch_mode.setBoolValue(1);
+#		    }
 		}else {
 		    me.alt_setting.setValue(me.alt_display.getValue());
 #		    btn = 1;
