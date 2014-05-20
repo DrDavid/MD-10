@@ -481,6 +481,10 @@
             <property>instrumentation/afds/ap-modes/pitch-mode</property>
             <value>CLB THRUST</value>
           </equals>
+          <equals>
+            <property>instrumentation/afds/ap-modes/pitch-mode</property>
+            <value>PROF TO</value>
+          </equals>
         </or>
       </condition>
     </enable>
