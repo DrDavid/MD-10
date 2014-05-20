@@ -74,16 +74,10 @@
     <debug>false</debug>
     <enable>
       <condition>
-        <or>
           <equals>
             <property>instrumentation/afds/ap-modes/roll-mode</property>
-            <value>HDG SEL</value>
+            <value>HEADING</value>
           </equals>
-          <equals>
-            <property>instrumentation/afds/ap-modes/roll-mode</property>
-            <value>HDG HOLD</value>
-          </equals>
-        </or>
       </condition>
     </enable>
     <input>
@@ -136,7 +130,7 @@
                 <type>noise-spike</type>
                 <enable>
                         <property>instrumentation/afds/ap-modes/roll-mode</property>
-                        <value>LNAV</value>
+                        <value>NAV1</value>
                 </enable>
                 <max-rate-of-change>0.2</max-rate-of-change>
                 <initialize-to>output</initialize-to>
@@ -151,7 +145,7 @@
                 <debug>false</debug>
                 <enable>
                         <property>instrumentation/afds/ap-modes/roll-mode</property>
-                        <value>LNAV</value>
+                        <value>NAV1</value>
                 </enable>
                 <type>gain</type>
                 <input>
@@ -174,7 +168,7 @@
                 <debug>false</debug>
                 <enable>
                         <property>instrumentation/afds/ap-modes/roll-mode</property>
-                        <value>LNAV</value>
+                        <value>NAV1</value>
                 </enable>
                 <type>gain</type>
                 <input>
@@ -197,7 +191,7 @@
     <debug>false</debug>
     <enable>
       <prop>instrumentation/afds/ap-modes/roll-mode</prop>
-      <value>LNAV</value>
+      <value>NAV1</value>
     </enable>
     <input>
       <!--prop>/autopilot/internal/waypoint-bearing-error-deg</prop-->
@@ -481,11 +475,11 @@
         <or>
           <equals>
             <property>instrumentation/afds/ap-modes/pitch-mode</property>
-            <value>ALT</value>
+            <value>HOLD</value>
           </equals>
           <equals>
             <property>instrumentation/afds/ap-modes/pitch-mode</property>
-            <value>FLCH SPD</value>
+            <value>CLB THRUST</value>
           </equals>
         </or>
       </condition>
@@ -520,11 +514,15 @@
         <or>
           <equals>
             <property>instrumentation/afds/ap-modes/pitch-mode</property>
-            <value>ALT</value>
+            <value>HOLD</value>
           </equals>
           <equals>
             <property>instrumentation/afds/ap-modes/pitch-mode</property>
-            <value>FLCH SPD</value>
+            <value>CLB THRUST</value>
+          </equals>
+          <equals>
+            <property>instrumentation/afds/ap-modes/pitch-mode</property>
+            <value>PROF TO</value>
           </equals>
         </or>
       </condition>
@@ -559,7 +557,7 @@
     <debug>false</debug>
     <enable>
       <prop>instrumentation/afds/ap-modes/pitch-mode</prop>
-      <value>VNAV ALT</value>
+      <value>PROF</value>
     </enable>
     <input>
       <prop>instrumentation/altimeter/indicated-altitude-ft</prop>
@@ -587,7 +585,7 @@
     <debug>false</debug>
     <enable>
       <prop>instrumentation/afds/ap-modes/pitch-mode</prop>
-      <value>VNAV ALT</value>
+      <value>PROF</value>
     </enable>
     <input>
       <prop>/velocities/vertical-speed-fps</prop>

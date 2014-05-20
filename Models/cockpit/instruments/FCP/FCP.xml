@@ -843,6 +843,8 @@
 				<command>nasal</command>
 				<script>
 					controls.click(5);
+					if (getprop("instrumentation/afds/ap-modes/pitch-mode") != "V/S" and getprop("instrumentation/afds/ap-modes/pitch-mode") != "FPA")
+					    MD11.afds.input(1,2);
 				</script>
 			</binding>
 		</action>
@@ -884,6 +886,8 @@
 				<command>nasal</command>
 				<script>
 					controls.click(5);
+					if (getprop("instrumentation/afds/ap-modes/pitch-mode") != "V/S" and getprop("instrumentation/afds/ap-modes/pitch-mode") != "FPA")
+					    MD11.afds.input(1,2);
 				</script>
 			</binding>
 		</action>
@@ -1353,7 +1357,7 @@
             		<repeatable>false</repeatable>
             		<binding>
                 		<command>nasal</command>
-                		<script>controls.click(4);MD11.afds.input(1,2);</script>
+                		<script>controls.click(4);MD11.afds.input(1,8);</script>
             		</binding>
 			<binding>
                                 <command>property-assign</command>
