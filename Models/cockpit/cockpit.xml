@@ -397,6 +397,7 @@
 			<effect>
 		<inherits-from>Aircraft/MD-11/Models/Effects/engine</inherits-from>
     <object-name>gearlever.glass</object-name>
+    <object-name>cockpit_chrome</object-name>
 	</effect>
 
 	

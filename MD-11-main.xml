@@ -790,6 +790,7 @@
             <file>Aircraft/MD-11/Nasal/warnsystem.nas</file>
             <file>Aircraft/MD-11/Nasal/doors.nas</file>
             <file>Aircraft/MD-11/Nasal/fuel_system.nas</file>
+            <file>Aircraft/MD-11/Nasal/SWanimation.nas</file>
         </MD11>
         <dialogs>
             <file>Aircraft/MD-11/Nasal/dialogs.nas</file>

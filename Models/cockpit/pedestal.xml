@@ -12,6 +12,11 @@
 <object-name>dial-a-flap.glass</object-name>
 </animation>
 
+			<effect>
+		<inherits-from>Aircraft/MD-11/Models/Effects/engine</inherits-from>
+    <object-name>aileron.trim</object-name>
+	</effect>
+
     <animation>
 		<name>Panel lighting</name>
 		<type>material</type>
