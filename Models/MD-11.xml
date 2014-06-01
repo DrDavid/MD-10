@@ -3028,5 +3028,53 @@
      </binding>
    </action>
  </animation>
+ 
+ <animation>
+	<type>rotate</type>
+	<object-name>wiper.right</object-name>
+	<property>controls/electric/wiperr/position-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>68</dep>
+		</entry>
+	</interpolation>
+		<axis>
+			<x1-m>-28.0978</x1-m>
+			<y1-m>0.2828</y1-m>
+			<z1-m>6.9284</z1-m>
+			<x2-m>-28.1134</x2-m>
+			<y2-m>0.2905</y2-m>
+			<z2-m>6.938</z2-m>
+		</axis>
+</animation>
+
+ <animation>
+	<type>rotate</type>
+	<object-name>wiper.left</object-name>
+	<property>controls/electric/wiperl/position-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-68</dep>
+		</entry>
+	</interpolation>
+		<axis>
+			<x1-m>-28.0978</x1-m>
+			<y1-m>-0.2828</y1-m>
+			<z1-m>6.9284</z1-m>
+			<x2-m>-28.1134</x2-m>
+			<y2-m>-0.2905</y2-m>
+			<z2-m>6.938</z2-m>
+		</axis>
+</animation>
 
 </PropertyList>

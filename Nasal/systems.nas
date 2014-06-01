@@ -28,7 +28,7 @@ var EFIS = {
         m.alt_meters = m.efis.initNode("inputs/alt-meters",0,"BOOL");
         m.fpv = m.efis.initNode("inputs/fpv",0,"BOOL");
         m.nd_centered = m.efis.initNode("inputs/nd-centered",0,"BOOL");
-		
+
         m.mins_mode = m.efis.initNode("inputs/minimums-mode",0,"BOOL");
         m.mins_mode_txt = m.efis.initNode("minimums-mode-text","RADIO","STRING");
         m.minimums = m.efis.initNode("minimums",250,"INT");
@@ -46,7 +46,7 @@ var EFIS = {
         m.rh_vor_adf = m.efis.initNode("inputs/rh-vor-adf",0,"INT");
         m.lh_vor_adf = m.efis.initNode("inputs/lh-vor-adf",0,"INT");
 		m.nd_plan_wpt = m.efis.initNode("inputs/plan-wpt-index", 0, "INT");
-		
+
         m.radio = m.efis.getNode("radio-mode",1);
         m.radio.setIntValue(0);
         m.radio_selected = m.efis.getNode("radio-selected",1);
@@ -55,7 +55,7 @@ var EFIS = {
         m.radio_standby.setDoubleValue(getprop("instrumentation/comm/frequencies/standby-mhz"));
 
 		m.wptIndexL = setlistener("instrumentation/efis/inputs/plan-wpt-index", func m.update_nd_plan_center());
-		
+
         m.kpaL = setlistener("instrumentation/altimeter/setting-inhg", func m.calc_kpa());
 
         m.eicas_msg_alert   = m.eicas.initNode("msg/alert"," ","STRING");
@@ -203,7 +203,7 @@ var EFIS = {
             if(num>3)num=3;
             me.mfd_mode_num.setValue(num);
             me.mfd_display_mode.setValue(me.mfd_mode_list[num]);
-			
+
 			# for all modes except plan, acft is up. For PLAN,
 			# north is up.
             var isPLAN = (num == 3);
@@ -269,7 +269,7 @@ var EFIS = {
             setprop("instrumentation/nd/y-center", 0.15);
         }
     },
-	
+
     update_nd_plan_center : func {
         # find wpt lat, lon
 		var index = me.nd_plan_wpt.getValue();

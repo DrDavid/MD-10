@@ -73,9 +73,9 @@
 		<property>autopilot/settings/heading-bug-deg</property>
 		<factor>100</factor>
 		<center>
-            <x-m>-25.7073</x-m>
-            <y-m>-0.0485</y-m>
-            <z-m>11.7671</z-m>
+            <x-m>-25.7155</x-m>
+            <y-m>-0.0486</y-m>
+            <z-m>11.7668</z-m>
  		</center>
 		<axis>
 			<x>-1</x>

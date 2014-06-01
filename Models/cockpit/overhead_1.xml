@@ -1730,5 +1730,57 @@ FSC.btn
             </binding>
         </action>
     </animation>
+    
+    	<animation>
+	<type>knob</type>
+	<object-name>wiper.knob1</object-name>
+	<property>/controls/electric/wiperl/switch</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>-90</dep></entry>
+			<entry><ind>2</ind><dep>-135</dep></entry>
+		</interpolation>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>/controls/electric/wiperl/switch</property>
+			<factor>1</factor>
+			<min>0</min>
+			<max>2</max>
+		</binding>
+	</action>
+	<center>
+		<x-m>-21.7969</x-m><y-m>-0.2244</y-m><z-m>-18.0506</z-m>
+	</center>
+	<axis>
+		<x>1</x>
+	</axis>
+</animation>
+
+	<animation>
+	<type>knob</type>
+	<object-name>wiper.knob2</object-name>
+	<property>/controls/electric/wiperr/switch</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>-90</dep></entry>
+			<entry><ind>2</ind><dep>-135</dep></entry>
+		</interpolation>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>/controls/electric/wiperr/switch</property>
+			<factor>1</factor>
+			<min>0</min>
+			<max>2</max>
+		</binding>
+	</action>
+	<center>
+		<x-m>-21.7969</x-m><y-m>0.2244</y-m><z-m>-18.0506</z-m>
+	</center>
+	<axis>
+		<x>1</x>
+	</axis>
+</animation>
 	
 </PropertyList>
