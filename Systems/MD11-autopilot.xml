@@ -499,7 +499,7 @@
       <prop>/autopilot/internal/target-climb-rate-fps</prop>
     </output>
     <config>
-      <Kp>0.15</Kp>
+      <Kp>0.1</Kp>
       <Ki>0.0</Ki>
       <u_min>
         <value>-16.67</value>

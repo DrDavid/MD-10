@@ -1073,5 +1073,24 @@
             <blue>0</blue>
         </specular>
     </animation>
+    
+    <instruments>
+
+
+    <instrument include="Msg.xml">
+        <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/efis</property>
+                <value>15</value>
+            </greater-than>
+        </condition>
+        <name>messages</name>
+        <x>75.0</x>
+        <y>142.0</y>
+        <w>180</w>
+        <h>222</h>
+    </instrument>
+
+</instruments>
  
 </PropertyList>

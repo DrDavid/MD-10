@@ -821,6 +821,68 @@
   <z>1.0</z>
  </axis>
 </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>master_warning_light_on</object-name>
+        <condition>
+            <or>
+                <property>instrumentation/mk-viii/outputs/discretes/gpws-warning</property>
+                <property>instrumentation/mk-viii/outputs/discretes/gpws-alert</property>
+                <property>instrumentation/weu/light/master-warning</property>
+            </or>
+        </condition>
+    </animation>
+    
+        <animation>
+        <type>select</type>
+        <object-name>master_caution_light_on</object-name>
+        <condition>
+            <property>instrumentation/weu/light/master-caution</property>
+        </condition>
+    </animation>
+    
+        <animation>
+        <type>select</type>
+        <object-name>master_warning_light_off</object-name>
+        <condition>
+            <and>
+                <not><property>instrumentation/mk-viii/outputs/discretes/gpws-warning</property></not>
+                <not><property>instrumentation/mk-viii/outputs/discretes/gpws-alert</property></not>
+                <not><property>instrumentation/weu/light/master-warning</property></not>
+            </and>
+        </condition>
+    </animation>
+    
+        <animation>
+        <type>select</type>
+        <object-name>master_caution_light_off</object-name>
+        <condition>
+        <not>
+            <property>instrumentation/weu/light/master-caution</property>
+            </not>
+        </condition>
+    </animation>
+    
+        <animation>
+        <type>pick</type>
+        <object-name>flt_dr</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>instrumentation/afds/inputs/FD</property>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>
+                    controls.click(1);
+                    MD11.afds.input(3,2);
+                </script>
+            </binding>
+        </action>
+    </animation>
  
 
 </PropertyList>
