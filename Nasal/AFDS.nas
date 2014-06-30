@@ -41,6 +41,7 @@ var AFDS = {
         m.AP_roll_engaged = props.globals.initNode("autopilot/locks/roll-engaged",1,"BOOL");
 	m.autoland = props.globals.initNode("autopilot/autoland/engaged",0,"BOOL");
 
+	m.reset = m.AFDS_inputs.initNode("reset",0,"BOOL");
         m.FD = m.AFDS_inputs.initNode("FD",0,"BOOL");
         m.at1 = m.AFDS_inputs.initNode("at-armed[0]",0,"BOOL");
         m.at2 = m.AFDS_inputs.initNode("at-armed[1]",0,"BOOL");
@@ -99,6 +100,9 @@ var AFDS = {
 	    }
 	    m.setAP();
 	},0,0);
+	m.Lreset = setlistener(m.reset, func m.afds_reset(),0,0);
+	m.e_time = 0;
+	m.status_light = m.AFDS_inputs.initNode("status-light",0,"BOOL");
 
         return m;
     },
@@ -256,7 +260,16 @@ var AFDS = {
 	if (me.AP_disengaged.getBoolValue()) idx = 0;
         me.AP_speed_mode.setValue(me.spd_list[idx]);
     },
-#################
+###################
+    afds_reset : func {
+        if (me.reset.getBoolValue()) {
+            settimer( func {
+                me.reset.setBoolValue(0);
+                update_afds();
+            },5);
+        }
+    },
+###################
 
     ap_update : func{
         var VS =getprop("velocities/vertical-speed-fps");
@@ -433,9 +446,11 @@ var AFDS = {
 		me.autothrottle_mode.setValue(0);
 	    }
         }elsif(me.step==5){
-	    if (getprop("/autopilot/route-manager/active") and getprop("/autopilot/route-manager/route/num") >= 2) {
-		max_wpt=getprop("/autopilot/route-manager/route/num");
-		atm_wpt=getprop("/autopilot/route-manager/current-wp");
+	    max_wpt=getprop("/autopilot/route-manager/route/num");
+	    atm_wpt=getprop("/autopilot/route-manager/current-wp");
+	    var goahead = max_wpt >= 2 and atm_wpt >= 0 and atm_wpt < max_wpt and getprop("/autopilot/route-manager/active");
+#	    if (getprop("/autopilot/route-manager/active") and getprop("/autopilot/route-manager/route/num") >= 2) {
+	    if (goahead) {
 
 	    	if(atm_wpt < (max_wpt - 1)) {
 		    me.remaining_distance.setValue(getprop("/autopilot/route-manager/wp/remaining-distance-nm") + getprop("autopilot/route-manager/wp/dist"));
@@ -528,7 +543,17 @@ var AFDS = {
 
         me.step+=1;
         if(me.step>6)me.step =0;
-     	},
+
+# Debugging status 'light'
+        if (!me.status_light.getBoolValue() and (getprop("sim/time/elapsed-sec") - me.e_time > 2)) {
+            me.status_light.setBoolValue(1);
+            settimer( func {
+                me.status_light.setBoolValue(0);
+                me.e_time = getprop("sim/time/elapsed-sec");
+            },0.2);
+        }
+
+    },
 };
 #####################
 
@@ -545,7 +570,9 @@ var max_wpt=1;
 var atm_wpt=1;
 
 var update_afds = func {
-    afds.ap_update();
-
-settimer(update_afds, 0);
+    if (!getprop("instrumentation/afds/inputs/reset")) {
+        afds.ap_update();
+        settimer(update_afds, 0);
+    }
 }
+
