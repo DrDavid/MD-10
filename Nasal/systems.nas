@@ -505,42 +505,42 @@ setlistener("instrumentation/tcas/outputs/traffic-alert", func(traffic_alert){
     if (alert) setprop("instrumentation/efis/inputs/tfc",1);
 },0,0);
 
-setlistener("controls/flight/speedbrake", func(spd_brake){
-    var brake = spd_brake.getValue();
-    # do not update lever when in AUTO position
-    if ((brake==0) and (getprop("controls/flight/speedbrake-lever")==2))
-    {
-        setprop("controls/flight/speedbrake-lever",0);
-    }
-    elsif ((brake==1)
-           and ((getprop("controls/flight/speedbrake-lever")==0)
-           or (getprop("controls/flight/speedbrake-lever")==1)))
-    {
-        setprop("controls/flight/speedbrake-lever",2);
-    }
-},0,0);
+#setlistener("controls/flight/speedbrake", func(spd_brake){
+#    var brake = spd_brake.getValue();
+#    # do not update lever when in AUTO position
+#    if ((brake==0) and (getprop("controls/flight/speedbrake-lever")==2))
+#    {
+#        setprop("controls/flight/speedbrake-lever",0);
+#    }
+#    elsif ((brake==1)
+#           and ((getprop("controls/flight/speedbrake-lever")==0)
+#           or (getprop("controls/flight/speedbrake-lever")==1)))
+#    {
+#        setprop("controls/flight/speedbrake-lever",2);
+#    }
+#},0,0);
+#
+#setlistener("controls/flight/speedbrake-lever", func(spd_lever){
+#    var lever = spd_lever.getValue();
+#    controls.click(7);
+#    # do not set speedbrake property unless changed (avoid revursive updates)
+#    if ((lever==0)and(getprop("controls/flight/speedbrake")!=0))
+#    {
+#        setprop("controls/flight/speedbrake",0);
+#    }
+#    elsif ((lever==2)and(getprop("controls/flight/speedbrake")!=1))
+#    {
+#        setprop("controls/flight/speedbrake",1);
+#    }
+#},0,0);
 
-setlistener("controls/flight/speedbrake-lever", func(spd_lever){
-    var lever = spd_lever.getValue();
-    controls.click(7);
-    # do not set speedbrake property unless changed (avoid revursive updates)
-    if ((lever==0)and(getprop("controls/flight/speedbrake")!=0))
-    {
-        setprop("controls/flight/speedbrake",0);
-    }
-    elsif ((lever==2)and(getprop("controls/flight/speedbrake")!=1))
-    {
-        setprop("controls/flight/speedbrake",1);
-    }
-},0,0);
-
-controls.toggleAutoSpoilers = func() {
-    # 0=spoilers retracted, 1=auto, 2=extended
-    if (getprop("controls/flight/speedbrake-lever")!=1)
-        setprop("controls/flight/speedbrake-lever",1);
-    else
-        setprop("controls/flight/speedbrake-lever",2*getprop("controls/flight/speedbrake"));
-}
+#controls.toggleAutoSpoilers = func() {
+#    # 0=spoilers retracted, 1=auto, 2=extended
+#    if (getprop("controls/flight/speedbrake-lever")!=1)
+#        setprop("controls/flight/speedbrake-lever",1);
+#    else
+#        setprop("controls/flight/speedbrake-lever",2*getprop("controls/flight/speedbrake"));
+#}
 
 setlistener("controls/flight/flaps", func { controls.click(6) } );
 setlistener("controls/gear/gear-down", func { controls.click(8) } );

@@ -191,8 +191,6 @@ var advisory_messages = func {
 		append(msgs_advisory,">X FEED CONFIG");
 	if (!getprop("controls/flight/yaw-damper"))
 		append(msgs_advisory,">YAW DAMPER LWR, UPR");
-	if (getprop("/autopilot/autobrake/step") == 0)
-		append(msgs_advisory,"AUTOBRAKES");
 }
 
 var memo_messages = func {
@@ -202,12 +200,10 @@ var memo_messages = func {
 		append(msgs_memo,"APU RUNNING");
 	if (parkbrake)
 		append(msgs_memo,"PARK BRAKE SET");
-	if (getprop("/autopilot/autobrake/step") == -2)
+	if (getprop("/autopilot/autobrake/step") == -1)
 		append(msgs_memo,"AUTOBRAKES RTO");
-	if (getprop("/autopilot/autobrake/step") > 0 and getprop("/autopilot/autobrake/step") < 5)
+	if (getprop("/autopilot/autobrake/step") > 0 and getprop("/autopilot/autobrake/step") < 4)
 		append(msgs_memo,"AUTOBRAKES "~getprop("/autopilot/autobrake/step"));
-	if (getprop("/autopilot/autobrake/step") == 5)
-		append(msgs_memo,"AUTOBRAKES MAX");
 	if (getprop("/controls/switches/seatbelt-sign") and getprop("/controls/switches/smoking-sign"))
 		append(msgs_memo,"PASS SIGNS ON");
 	else {

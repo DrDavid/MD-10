@@ -154,8 +154,9 @@
                 <float n="2" alias="/gear/gear[2]/compression-m"/>
                 <float n="3" alias="/gear/gear[3]/compression-m"/>
                 <float n="4" alias="/gear/gear[4]/compression-m"/>
-                <float n="5" alias="/surface-positions/speedbrake-norm"/>
-                <float n="6" alias="/surface-positions/reverser-norm"/>
+                <float n="5" alias="/gear/gear[5]/compression-m"/>
+                <float n="6" alias="/surface-positions/speedbrake-pos-norm"/>
+                <float n="7" alias="/surface-positions/reverser-norm"/>
                 <string  alias="/sim/multiplay/callsign"/>
             </generic>
         </multiplay>
@@ -204,15 +205,15 @@
             <autopilot>
                 <path>Aircraft/MD-11/Systems/MD11-autoland.xml</path>
             </autopilot>
-            <autopilot>
+            <!--autopilot>
                 <name>Autobrake system</name>
                 <path>Aircraft/MD-11/Systems/MD11-autobrake.xml</path>
-            </autopilot>
+            </autopilot-->
 
             <!--  slow running property-rules (running at frame rate) -->
-            <property-rule n="100">
+            <!--property-rule n="100">
                 <path>Aircraft/MD-11/Systems/MD11-spoiler-fcs.xml</path>
-            </property-rule>
+            </property-rule-->
             <property-rule n="101">
                 <path>Aircraft/MD-11/Systems/MD11-PFD.xml</path>
             </property-rule>
@@ -443,10 +444,14 @@
             <key n="61">
                 <name>=</name>
                 <desc>toggle auto spoilers</desc>
-                <binding>
+                <!--binding>
                     <command>nasal</command>
                     <script>controls.toggleAutoSpoilers();</script>
-                </binding>
+                </binding-->
+		<binding>
+		    <command>property-toggle</command>
+		    <property>controls/flight/autospeedbrakes-armed</property>
+		</binding>
             </key>
              <key n="108">
                 <name>l</name>
@@ -490,6 +495,19 @@
 				<script>walk.walk_about(-0.15)</script>
 			</binding>
 		</key>
+	    <key n="2">
+		<name>Ctrl-B</name>
+		<desc>Toggle Speedbrakes</desc>
+		<binding>
+                    <command>property-cycle</command>
+                    <property>controls/flight/speedbrake-lever</property>
+                    <value type="int">0</value>
+                    <value type="int">1</value>
+                    <value type="int">2</value>
+                    <value type="int">3</value>
+                </binding>
+	    </key>
+		
         </keyboard>
     </input>
     
@@ -724,9 +742,9 @@
         <ovhd-panel-norm type="double">0.5</ovhd-panel-norm>
         <pedestal-panel-norm type="double">0.5</pedestal-panel-norm>
         </lighting>
-        <flight>
+        <!--flight>
             <speedbrake-lever type="bool">0</speedbrake-lever>
-        </flight>
+        </flight-->
 	<cabin>
 		<NoSmoking-knob type="int" >1 </NoSmoking-knob>
 		<SeatBelt-knob type="int" >1 </SeatBelt-knob>
@@ -740,14 +758,14 @@
     </controls>
 
     <autopilot n="0">
-        <autobrake>
-            <step type="int">-1</step> <!-- OFF on selection -->
+        <!--autobrake>
+            <step type="int">-1</step>
             <config>
                  <idle-throttle type="double">0.10</idle-throttle>
-                 <!-- 25% input cancel AB operation -->
                  <pilot-input type="double">0.25</pilot-input>
             </config>
-        </autobrake>
+        </autobrake-->
+                 <!-- 25% input cancel AB operation -->
         <locks>
             <pitch-engaged type="bool">1</pitch-engaged>
             <roll-engaged type="bool">1</roll-engaged>
@@ -785,13 +803,14 @@
             <file>Aircraft/MD-11/Nasal/brakesystem.nas</file>
             <file>Aircraft/MD-11/Nasal/ground_steering.nas</file>
             <file>Aircraft/MD-11/Models/cockpit/instruments/ND/ND.nas</file>
-            <!--file>Aircraft/MD-11/Nasal/SWanimation.nas</file-->
             <file>Aircraft/Generic/limits.nas</file>
             <file>Aircraft/MD-11/Nasal/warnsystem.nas</file>
             <file>Aircraft/MD-11/Nasal/doors.nas</file>
             <file>Aircraft/MD-11/Nasal/fuel_system.nas</file>
             <file>Aircraft/MD-11/Nasal/SWanimation.nas</file>
             <file>Aircraft/MD-11/Nasal/wipers.nas</file>
+	    <file>Aircraft/MD-11/Nasal/speedbrakes.nas</file>
+	    <file>Aircraft/MD-11/Nasal/autobrakes.nas</file>
         </MD11>
         <dialogs>
             <file>Aircraft/MD-11/Nasal/dialogs.nas</file>

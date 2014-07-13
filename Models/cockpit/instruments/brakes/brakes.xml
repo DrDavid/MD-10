@@ -75,7 +75,7 @@
         <type>rotate</type>
         <object-name>needle.1</object-name>
         <object-name>needle.3</object-name>
-        <property>autopilot/autobrake/right-brake-output</property>
+        <property>controls/gear/brake-right</property>
 <factor>180</factor>
         <center>
             <x-m>0.00</x-m>
@@ -92,7 +92,7 @@
             <animation>
         <type>rotate</type>
         <object-name>needle.2</object-name>
-        <property>autopilot/autobrake/left-brake-output</property>
+        <property>controls/gear/brake-left</property>
 <factor>180</factor>
         <center>
             <x-m>0.00</x-m>
