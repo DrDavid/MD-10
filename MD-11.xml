@@ -47,7 +47,7 @@
       <control-output control="SLAT" prop="/surface-positions/slats"/>
       <control-speed control="FLAP0" transition-time="78"/>
       <control-input axis="/controls/flight/speedbrake" control="SPOILER"/>
-      <control-output control="SPOILER" prop="/surface-positions/speedbrake-norm"/>
+      <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm"/>
       <control-speed control="SPOILER" transition-time="2"/>
       <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
       <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
@@ -118,14 +118,14 @@
     </gear>
     <!-- Left main gears -->
     <gear x="-3.1584" y="-5.3128" z="0.65" compression="0.7" spring="0.6" damp="1.0">
-    <control-input axis="/autopilot/autobrake/left-brake-output" control="BRAKE"/>
+    <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 	<control-output control="EXTEND" prop="/gear/gear[1]/position-norm" />
 	<control-speed control="EXTEND" transition-time="19" />
     </gear>
     <gear x="-4.7637" y="-5.3128" z="0.65" compression="0.7" spring="0.6" damp="1.0">
-    <control-input axis="/autopilot/autobrake/left-brake-output" control="BRAKE"/>
+    <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 	<control-output control="EXTEND" prop="/gear/gear[2]/position-norm" />
@@ -133,14 +133,14 @@
     </gear>
     <!-- Right main gears -->
     <gear x="-3.1584" y="5.3128" z="0.65" compression="0.7" spring="0.6" damp="1.0">
-    <control-input axis="/autopilot/autobrake/left-brake-output" control="BRAKE"/>
+    <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 	<control-output control="EXTEND" prop="/gear/gear[3]/position-norm" />
 	<control-speed control="EXTEND" transition-time="19" />
     </gear>
     <gear x="-4.7637" y="5.3128" z="0.65" compression="0.7" spring="0.6" damp="1.0">
-    <control-input axis="/autopilot/autobrake/left-brake-output" control="BRAKE"/>
+    <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 	<control-output control="EXTEND" prop="/gear/gear[4]/position-norm" />
@@ -148,7 +148,7 @@
     </gear>
     <!-- Center gear -->
     <gear x="-4.7637" y="0" z="0.5586" compression="0.7" spring="0.6" damp="1.0">
-    <control-input axis="/autopilot/autobrake/left-brake-output" control="BRAKE"/>
+    <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 	<control-output control="EXTEND" prop="/gear/gear[5]/position-norm" />

@@ -1853,19 +1853,19 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>sp.brake.left.outer</object-name>
-		<property>surface-positions/speedbrake-norm</property>
+		<property>surface-positions/speedbrake-pos-norm</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
                 <dep>0</dep>
             </entry>
             <entry>
-                <ind>0.6</ind>
-                <dep>0</dep>
+                <ind>0.333</ind>
+                <dep>20</dep>
             </entry>
             <entry>
-                <ind>0.8</ind>
-                <dep>30</dep>
+                <ind>0.667</ind>
+                <dep>40</dep>
             </entry>
             <entry>
                 <ind>1.0</ind>
@@ -1885,19 +1885,19 @@
 		<animation>
 		<type>rotate</type>
 		<object-name>sp.brake.left.inner</object-name>
-		<property>surface-positions/speedbrake-norm</property>
+		<property>surface-positions/speedbrake-pos-norm</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
                 <dep>0</dep>
             </entry>
             <entry>
-                <ind>0.6</ind>
-                <dep>0</dep>
+                <ind>0.333</ind>
+                <dep>20</dep>
             </entry>
             <entry>
-                <ind>0.8</ind>
-                <dep>30</dep>
+                <ind>0.667</ind>
+                <dep>40</dep>
             </entry>
             <entry>
                 <ind>1.0</ind>
@@ -1917,19 +1917,19 @@
 			<animation>
 		<type>rotate</type>
 		<object-name>sp.brake.right.outer</object-name>
-		<property>controls/flight/speedbrake-angle</property>
+		<property>surface-positions/speedbrake-pos-norm</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
                 <dep>0</dep>
             </entry>
             <entry>
-                <ind>0.6</ind>
-                <dep>0</dep>
+                <ind>0.333</ind>
+                <dep>-20</dep>
             </entry>
             <entry>
-                <ind>0.8</ind>
-                <dep>-30</dep>
+                <ind>0.667</ind>
+                <dep>-40</dep>
             </entry>
             <entry>
                 <ind>1.0</ind>
@@ -1949,19 +1949,19 @@
 			<animation>
 		<type>rotate</type>
 		<object-name>sp.brake.right.inner</object-name>
-		<property>controls/flight/speedbrake-angle</property>
+		<property>surface-positions/speedbrake-pos-norm</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
                 <dep>0</dep>
             </entry>
             <entry>
-                <ind>0.6</ind>
-                <dep>0</dep>
+                <ind>0.333</ind>
+                <dep>-20</dep>
             </entry>
             <entry>
-                <ind>0.8</ind>
-                <dep>-30</dep>
+                <ind>0.667</ind>
+                <dep>-40</dep>
             </entry>
             <entry>
                 <ind>1.0</ind>
