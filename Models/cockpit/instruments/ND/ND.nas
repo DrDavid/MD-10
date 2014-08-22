@@ -34,6 +34,8 @@ var nd_display = {};
 	'toggle_display_mode': 	{path: '/mfd/display-mode', value:'MAP', type:'STRING'},
 	'toggle_display_type': 	{path: '/mfd/display-type', value:'LCD', type:'STRING'},
 	'toggle_true_north': 	{path: '/mfd/true-north', value:0, type:'BOOL'},
+	'toggle_track_heading': {path: '/mfd/trk-selected', value:0, type:'BOOL'},
+	'toggle_rangearc':     {path: '/mfd/rangearc', value:1, type:'BOOL'},
 	# add new switches here
       };
 
