@@ -254,7 +254,7 @@ var fuelsys = {
     },
 
     transfers : func {
-	var rate = 0.5;  # in gallons / half-second
+	var rate = 0.5 * getprop("sim/speed-up");  # in gallons / half-second
 	var sources = 0;
 	var sinks = 0;
 	for (var i=0; i<5; i+=1) {

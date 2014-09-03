@@ -7486,7 +7486,7 @@ refs 4
 159 0.360143 0.158208
 kids 0
 OBJECT poly
-name "Cube.007"
+name "VOR.R"
 loc -25.7229004 11.7995005 -0.1835375
 numvert 32
 0.0010128 -0.0028934 -0.0055803
@@ -8100,7 +8100,7 @@ refs 3
 24 0.502444 0.222812
 kids 0
 OBJECT poly
-name "Cube.009"
+name "APP.R"
 loc -25.7229004 11.7854996 -0.1835375
 numvert 32
 0.0010128 -0.0028944 -0.0055803
@@ -8736,7 +8736,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.011"
+name "MAP.R"
 loc -25.7229004 11.7995005 -0.1638676
 numvert 32
 0.0010128 -0.0028934 -0.0055803
@@ -9054,7 +9054,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.012"
+name "RNG_decr.R"
 loc -25.7229004 11.7507000 -0.1746475
 numvert 32
 0.0010128 -0.0028944 -0.0055802
@@ -9372,7 +9372,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.013"
+name "RNG_incr.R"
 loc -25.7229004 11.7648001 -0.1746475
 numvert 32
 0.0010128 -0.0028934 -0.0055802
@@ -9690,7 +9690,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.014"
+name "VOR1.R"
 loc -25.7229004 11.7648001 -0.1585506
 numvert 32
 0.0010128 -0.0028934 -0.0055804
@@ -10008,7 +10008,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.015"
+name "ADF1.R"
 loc -25.7229004 11.7507000 -0.1585506
 numvert 32
 0.0010128 -0.0028944 -0.0055804
@@ -10326,7 +10326,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.016"
+name "ADF2.R"
 loc -25.7229004 11.7507000 -0.1908925
 numvert 32
 0.0010128 -0.0028944 -0.0055804
@@ -10644,7 +10644,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.017"
+name "VOR2.R"
 loc -25.7229004 11.7648001 -0.1908925
 numvert 32
 0.0010128 -0.0028934 -0.0055804
@@ -10962,7 +10962,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.018"
+name "STA.2"
 loc -25.7229004 11.7648001 -0.1375395
 numvert 32
 0.0010128 -0.0028934 -0.0055804
@@ -11280,7 +11280,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.019"
+name "data.2"
 loc -25.7229004 11.7927999 -0.1375395
 numvert 32
 0.0010128 -0.0028934 -0.0055804
@@ -11598,7 +11598,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.020"
+name "RDR.wpt.2"
 loc -25.7229004 11.7786999 -0.1375395
 numvert 32
 0.0010128 -0.0028944 -0.0055804
@@ -11916,7 +11916,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.021"
+name "arpt.2"
 loc -25.7229004 11.7507000 -0.1375395
 numvert 32
 0.0010128 -0.0028944 -0.0055804
@@ -12234,7 +12234,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.022"
+name "traffic.2"
 loc -25.7229004 11.8066998 -0.1375395
 numvert 32
 0.0010128 -0.0028925 -0.0055804
@@ -13257,7 +13257,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.091"
+name "STA.1"
 loc -25.7229004 11.7648001 0.2001720
 numvert 32
 0.0010128 -0.0028934 -0.0055804
@@ -13491,7 +13491,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.092"
+name "VOR2.L"
 loc -25.7229004 11.7648001 0.1468190
 numvert 32
 0.0010128 -0.0028934 -0.0055804
@@ -13725,7 +13725,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.093"
+name "ADF2.L"
 loc -25.7229004 11.7507000 0.1468190
 numvert 32
 0.0010128 -0.0028944 -0.0055804
@@ -13959,7 +13959,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.094"
+name "ADF1.L"
 loc -25.7229004 11.7507000 0.1791610
 numvert 32
 0.0010128 -0.0028944 -0.0055804
@@ -14193,7 +14193,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.095"
+name "VOR1.L"
 loc -25.7229004 11.7648001 0.1791610
 numvert 32
 0.0010128 -0.0028934 -0.0055804
@@ -14427,7 +14427,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.096"
+name "RNG_incr.L"
 loc -25.7229004 11.7648001 0.1630640
 numvert 32
 0.0010128 -0.0028934 -0.0055802
@@ -14661,7 +14661,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.097"
+name "RNG_decr.L"
 loc -25.7229004 11.7507000 0.1630640
 numvert 32
 0.0010128 -0.0028944 -0.0055802
@@ -14895,7 +14895,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.098"
+name "MAP.L"
 loc -25.7229004 11.7995005 0.1738440
 numvert 32
 0.0010128 -0.0028934 -0.0055803
@@ -15363,7 +15363,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.100"
+name "APP.L"
 loc -25.7229004 11.7854996 0.1541740
 numvert 32
 0.0010128 -0.0028944 -0.0055803
@@ -20999,7 +20999,7 @@ refs 3
 14 0 0
 kids 0
 OBJECT poly
-name "Cylinder.008"
+name "In-HPa.R"
 loc -25.7231998 11.8111000 -0.2248879
 numvert 48
 0.0011139 0.0000000 0.0035322
@@ -21445,7 +21445,7 @@ refs 4
 28 0 0
 kids 0
 OBJECT poly
-name "Cylinder.014"
+name "Tru-Mag.R"
 loc -25.7231998 11.8111000 -0.1737855
 numvert 48
 0.0011139 0.0000000 0.0035322
@@ -22041,7 +22041,7 @@ refs 4
 21 0 0
 kids 0
 OBJECT poly
-name "Cylinder.016"
+name "In-HPa.L"
 loc -25.7231998 11.8111000 0.2254987
 numvert 48
 0.0011139 0.0000000 0.0035322
@@ -26379,7 +26379,7 @@ refs 4
 21 0 0
 kids 0
 OBJECT poly
-name "Cylinder.021"
+name "BaroSet2.R"
 loc -25.7175007 11.7911997 -0.2247992
 numvert 64
 -0.0049057 0.0000000 -0.0039729
@@ -26869,7 +26869,7 @@ refs 4
 61 0 0
 kids 0
 OBJECT poly
-name "Cylinder.022"
+name "BaroSet.R"
 loc -25.7101002 11.7911997 -0.2247992
 numvert 368
 -0.0029640 0.0000000 -0.0029640
@@ -30417,7 +30417,7 @@ refs 4
 28 0 0
 kids 0
 OBJECT poly
-name "Cylinder.109"
+name "Tru-Mag.L"
 loc -25.7231998 11.8111000 0.1639260
 numvert 48
 0.0011139 0.0000000 0.0035322
@@ -30863,7 +30863,7 @@ refs 4
 28 0 0
 kids 0
 OBJECT poly
-name "Cylinder.110"
+name "BaroSet.L"
 loc -25.7101002 11.7911997 0.2257110
 numvert 368
 -0.0029640 0.0000000 -0.0029640
@@ -33965,7 +33965,7 @@ refs 3
 215 0 0
 kids 0
 OBJECT poly
-name "Cylinder.111"
+name "BaroSet2.L"
 loc -25.7175007 11.7911997 0.2257110
 numvert 64
 -0.0049057 0.0000000 -0.0039729
@@ -49078,7 +49078,7 @@ refs 4
 28 0 0
 kids 0
 OBJECT poly
-name "vor.1"
+name "VOR.L"
 loc -25.7229004 11.7995005 0.1541740
 numvert 32
 0.0010128 -0.0028934 -0.0055803
