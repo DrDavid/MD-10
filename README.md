@@ -1,7 +1,6 @@
-DC-10-30-MD-10
+MD-10
 ==============
-DC-10-30
-Skye Boat Boeing/McDonnell-Douglas DC-10-30/MD-10
+Boeing/McDonnell-Douglas MD-10
 
 FDM and Model: Ryan Miller
 
@@ -17,7 +16,7 @@ We are in the process of upgrading the instrumentation of the flightdeck as well
 
 Generally, we're following the historical upgrades that Boeing/McDonnell-Douglas made to create the MD-10 out of the DC-10-30. From Wikipedia:
 
-	The MD-10 is retrofit cockpit upgrade to the DC-10 and a re-designation to MD-10. The upgrade included an Advanced Common Flightdeck (ACF) used on the MD-11 and was launched in 1996. The new cockpit eliminated the need for the flight engineer position and allowed common type rating with the MD-11. This allows companies such as FedEx Express, which operate both the MD-10 and MD-11, to have a common pilot pool for both aircraft. The MD-10 conversion now falls under the Boeing Converted Freighter program where Boeing's international affiliate companies perform the conversions.
+	"The MD-10 is retrofit cockpit upgrade to the DC-10 and a re-designation to MD-10. The upgrade included an Advanced Common Flightdeck (ACF) used on the MD-11 and was launched in 1996. The new cockpit eliminated the need for the flight engineer position and allowed common type rating with the MD-11. This allows companies such as FedEx Express, which operate both the MD-10 and MD-11, to have a common pilot pool for both aircraft. The MD-10 conversion now falls under the Boeing Converted Freighter program where Boeing's international affiliate companies perform the conversions."
 
 Therefore, the MD-10 is included in the name of the project.
 
