@@ -4,7 +4,7 @@ Boeing/McDonnell-Douglas MD-10
 
 FDM and Model: Ryan Miller
 
-Thanks to Hooray, Philosopher, 5H1N0B1, Syd Adams, Jabberwocky (Peter Brendt), and others for their major contributions!
+Thanks to Jabberwocky (Peter Brendt), Cain, Hooray, Philosopher, 5H1N0B1, Syd Adams, and others for their major contributions!
 
 David Waggoner (DrDavid/Skyboat) and Peter Brendt (Jabberwocky/Jwocky) are collaborating on the project.
 
