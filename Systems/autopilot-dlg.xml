@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<name>autopilot</name>
+	<layout>vbox</layout>
+
+	<group>
+		<layout>hbox</layout>
+
+		<empty>
+			<stretch>1</stretch>
+		</empty>
+
+		<text>
+			<label>Autopilot Settings</label>
+		</text>
+
+		<empty>
+			<stretch>1</stretch>
+		</empty>
+
+		<button>
+			<pref-width>16</pref-width>
+			<pref-height>16</pref-height>
+			<legend></legend>
+			<keynum>27</keynum>
+			<border>2</border>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+	</group>
+
+	<hrule />
+	
+	<group>
+		<layout>vbox</layout>
+		
+		<group>
+			<layout>table</layout>
+			
+			<checkbox>
+				<row>0</row>
+				<col>0</col>
+				<halign>center</halign>
+				<label>A/T 1</label>
+				<property>controls/autoflight/autothrottle-engage[0]</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live type="bool">true</live>
+			</checkbox>
+			<checkbox>
+				<row>0</row>
+				<col>1</col>
+				<halign>center</halign>
+				<label>CWS override</label>
+				<property>controls/autoflight/control-wheel-steering-override</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live type="bool">true</live>
+			</checkbox>
+			<checkbox>
+				<row>0</row>
+				<col>2</col>
+				<halign>center</halign>
+				<label>A/T 2</label>
+				<property>controls/autoflight/autothrottle-engage[1]</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live type="bool">true</live>
+			</checkbox>
+			<text>
+				<row>1</row>
+				<col>0</col>
+				<label>A/P 1</label>
+			</text>
+			<text>
+				<row>1</row>
+				<col>2</col>
+				<label>A/P 2</label>
+			</text>
+			<slider>
+				<row>2</row>
+				<col>0</col>
+				<pref-height>50</pref-height>
+				<vertical type="bool">true</vertical>
+				<property>controls/autoflight/autopilot[0]/engage-mode</property>
+				<min>0</min>
+				<max>2</max>
+				<step>1</step>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live type="bool">true</live>
+			</slider>
+			<group>
+				<row>2</row>
+				<col>1</col>
+				<layout>table</layout>
+				
+				<text>
+					<row>0</row>
+					<col>0</col>
+					<label>CMD</label>
+				</text>
+				<text>
+					<row>1</row>
+					<col>0</col>
+					<label>CWS</label>
+				</text>
+				<text>
+					<row>2</row>
+					<col>0</col>
+					<label>OFF</label>
+				</text>
+			</group>
+			<slider>
+				<row>2</row>
+				<col>2</col>
+				<pref-height>50</pref-height>
+				<vertical type="bool">true</vertical>
+				<property>controls/autoflight/autopilot[1]/engage-mode</property>
+				<min>0</min>
+				<max>2</max>
+				<step>1</step>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live type="bool">true</live>
+			</slider>
+		</group>
+		<group>
+			<layout>hbox</layout>
+			
+			<checkbox>
+				<halign>center</halign>
+				<label>F/D</label>
+				<property>controls/autoflight/flight-director-engage</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live type="bool">true</live>
+			</checkbox>
+			<checkbox>
+				<halign>center</halign>
+				<label>Announce setting changes</label>
+				<property>controls/autoflight/enable-mode-annunciators</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live type="bool">true</live>
+			</checkbox>
+		</group>
+	</group>
+	
+	<group>
+		<layout>hbox</layout>
+
+		<hrule />
+		<text>
+			<label>Speed modes</label>
+		</text>
+		<hrule />
+	</group>
+	
+	<text>
+		<label>IAS select:</label>
+	</text>
+	
+	<group>
+		<layout>hbox</layout>
+		<button>
+			<halign>right</halign>
+			<legend>&lt;&lt;</legend>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/speed-select</property>
+				<min>0</min>
+				<max>340</max>
+				<step>-10</step>
+			</binding>
+		</button>
+		<button>
+			<halign>right</halign>
+			<legend>&lt;</legend>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/speed-select</property>
+				<min>0</min>
+				<max>340</max>
+				<step>-1</step>
+			</binding>
+		</button>
+		<input>
+			<property>controls/autoflight/speed-select</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live type="bool">true</live>
+		</input>
+		<button>
+			<halign>left</halign>
+			<legend>&gt;</legend>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/speed-select</property>
+				<min>0</min>
+				<max>340</max>
+				<step>1</step>
+			</binding>
+		</button>
+		<button>
+			<halign>left</halign>
+			<legend>&gt;&gt;</legend>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/speed-select</property>
+				<min>0</min>
+				<max>340</max>
+				<step>10</step>
+			</binding>
+		</button>
+	</group>
+	
+	<group>
+		<layout>hbox</layout>
+		
+		<button>
+			<legend>IAS</legend>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/autoflight/speed-mode</property>
+				<value>0</value>
+			</binding>
+		</button>
+		<button>
+			<legend>EPR</legend>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/autoflight/speed-mode</property>
+				<value>1</value>
+			</binding>
+		</button>
+	</group>
+	
+	<group>
+		<layout>hbox</layout>
+
+		<hrule />
+		<text>
+			<label>Lateral modes</label>
+		</text>
+		<hrule />
+	</group>
+	
+	<text>
+		<label>Magnetic heading select:</label>
+	</text>
+	
+	<group>
+		<layout>hbox</layout>
+		<button>
+			<halign>right</halign>
+			<legend>&lt;</legend>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/heading-select</property>
+				<step>-1</step>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<condition>
+					<less-than-equals>
+						<property>controls/autoflight/heading-select</property>
+						<value>0</value>
+					</less-than-equals>
+				</condition>
+				<property>controls/autoflight/heading-select</property>
+				<value>360</value>
+			</binding>
+		</button>
+		<input>
+			<property>controls/autoflight/heading-select</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live type="bool">true</live>
+		</input>
+		<button>
+			<halign>left</halign>
+			<legend>&gt;</legend>
+			<binding>
+				<command>property-assign</command>
+				<condition>
+					<greater-than-equals>
+						<property>controls/autoflight/heading-select</property>
+						<value>360</value>
+					</greater-than-equals>
+				</condition>
+				<property>controls/autoflight/heading-select</property>
+				<value>0</value>
+			</binding>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/heading-select</property>
+				<step>1</step>
+			</binding>
+		</button>
+	</group>
+	
+	<text>
+		<label>Maximum bank angle</label>
+	</text>
+	
+	<slider>
+		<pref-width>280</pref-width>
+		<property>controls/autoflight/bank-angle</property>
+		<min>5</min>
+		<max>25</max>
+		<step>5</step>
+		<binding>
+			<command>dialog-apply</command>
+		</binding>
+		<live type="bool">true</live>
+	</slider>
+	
+	<group>
+		<layout>table</layout>
+	
+		<text>
+			<row>0</row>
+			<col>0</col>
+			<label>5</label>
+		</text>
+		<text>
+			<row>0</row>
+			<col>1</col>
+			<label>10</label>
+		</text>
+		<text>
+			<row>0</row>
+			<col>2</col>
+			<label>15</label>
+		</text>
+		<text>
+			<row>0</row>
+			<col>3</col>
+			<label>20</label>
+		</text>
+		<text>
+			<row>0</row>
+			<col>4</col>
+			<label>25</label>
+		</text>
+	</group>
+	
+	<group>
+		<layout>hbox</layout>
+		
+		<button>
+			<legend>HDG</legend>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/autoflight/lateral-mode</property>
+				<value>1</value>
+				<value>0</value>
+			</binding>
+		</button>
+		<button>
+			<legend>INS*</legend>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/autoflight/lateral-mode</property>
+				<value>2</value>
+				<value>0</value>
+			</binding>
+		</button>
+		<button>
+			<legend>LOC</legend>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/autoflight/lateral-mode</property>
+				<value>3</value>
+				<value>0</value>
+			</binding>
+		</button>
+		<checkbox>
+			<halign>center</halign>
+			<label>B/C</label>
+			<property>controls/autoflight/nav-backcourse</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live type="bool">true</live>
+		</checkbox>
+		<button>
+			<legend>ILS</legend>
+			<binding>
+				<command>property-cycle</command>
+				<property>controls/autoflight/lateral-mode</property>
+				<value>4</value>
+				<value>0</value>
+			</binding>
+		</button>
+	</group>
+	
+	<text>
+		<label>* Not a real INS system, uses Route Manager</label>
+	</text>
+	
+	<group>
+		<layout>hbox</layout>
+
+		<hrule />
+		<text>
+			<label>Vertical modes</label>
+		</text>
+		<hrule />
+	</group>
+	
+	<text>
+		<label>Altitude preselect:</label>
+	</text>
+	
+	<group>
+		<layout>hbox</layout>
+		<button>
+			<halign>right</halign>
+			<legend>&lt;&lt;</legend>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/altitude-select</property>
+				<min>0</min>
+				<max>99999</max>
+				<step>-1000</step>
+			</binding>
+		</button>
+		<button>
+			<halign>right</halign>
+			<legend>&lt;</legend>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/altitude-select</property>
+				<min>0</min>
+				<max>99999</max>
+				<step>-100</step>
+			</binding>
+		</button>
+		<input>
+			<property>controls/autoflight/altitude-select</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live type="bool">true</live>
+		</input>
+		<button>
+			<halign>left</halign>
+			<legend>&gt;</legend>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/altitude-select</property>
+				<min>0</min>
+				<max>99999</max>
+				<step>100</step>
+			</binding>
+		</button>
+		<button>
+			<halign>left</halign>
+			<legend>&gt;&gt;</legend>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/altitude-select</property>
+				<min>0</min>
+				<max>99999</max>
+				<step>1000</step>
+			</binding>
+		</button>
+	</group>
+	
+	<text>
+		<label>Vertical speed select:</label>
+	</text>
+	
+	<group>
+		<layout>hbox</layout>
+		<button>
+			<halign>right</halign>
+			<legend>&lt;</legend>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/vertical-speed-select</property>
+				<min>-5000</min>
+				<max>5000</max>
+				<step>-100</step>
+			</binding>
+		</button>
+		<input>
+			<property>controls/autoflight/vertical-speed-select</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live type="bool">true</live>
+		</input>
+		<button>
+			<halign>left</halign>
+			<legend>&gt;</legend>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/autoflight/vertical-speed-select</property>
+				<min>-5000</min>
+				<max>5000</max>
+				<step>100</step>
+			</binding>
+		</button>
+	</group>
+	
+	<group>
+		<layout>hbox</layout>
+		
+		<button>
+			<legend>ALT</legend>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/autoflight/vertical-mode</property>
+				<value>0</value>
+			</binding>
+		</button>
+		<button>
+			<legend>V/S</legend>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/autoflight/vertical-mode</property>
+				<value>1</value>
+			</binding>
+		</button>
+		<button>
+			<legend>IAS</legend>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/autoflight/vertical-mode</property>
+				<value>2</value>
+			</binding>
+		</button>
+		<button>
+			<legend>MACH</legend>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/autoflight/vertical-mode</property>
+				<value>3</value>
+			</binding>
+		</button>
+		<button>
+			<legend>LAND</legend>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/autoflight/vertical-mode</property>
+				<value>4</value>
+			</binding>
+		</button>
+	</group>
+	
+	<hrule />
+
+	<button>
+		<legend>Close</legend>
+		<default type="bool">true</default>
+		<pref-width>180</pref-width>
+		<key>Esc</key>
+		<binding>
+			<command>dialog-close</command>
+		</binding>
+	</button>
+
+</PropertyList>

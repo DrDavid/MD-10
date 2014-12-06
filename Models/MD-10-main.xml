@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Main model, all variants -->
+
+<PropertyList>
+
+	<nasal>
+		<load>
+			var model = cmdarg();
+
+			# MP props
+			var vals = model.getNode("sim/multiplay/generic");
+			var props_file = io.read_properties("Aircraft/MD-10/Systems/MD-10-multiplayer.xml");
+			foreach (var ref; props_file.getChildren("reference"))
+			{
+				var val = vals.getChild(ref.getNode("type").getValue(), ref.getNode("index").getValue(), 1);
+				var newprop = model.getNode(ref.getNode("property").getValue(), 1);
+				newprop.alias(val);
+			}
+
+			# Livery over MP
+			var model_path = model.getNode("sim/model/path").getValue();
+			var livery_path = "";
+			for (var i = size(model_path) - 5; i >= 0; i -= 1)
+			{
+				var char = substr(model_path, i, 1);
+				if (char == "/") break;
+				livery_path = char ~ livery_path;
+			}
+			livery_path = "Aircraft/MD-10/Models/Liveries/" ~ livery_path;
+			var livery_update = aircraft.livery_update.new(livery_path);
+
+			# Animated jetway support over MP
+			model.getNode("door[0]/position-x-m", 1).setDoubleValue(-22.647);
+			model.getNode("door[0]/position-y-m", 1).setDoubleValue(-2.312);
+			model.getNode("door[0]/position-z-m", 1).setDoubleValue(4.746);
+			model.getNode("door[0]/jetway-hood-deg", 1).setDoubleValue(2);
+			model.getNode("door[1]/position-x-m", 1).setDoubleValue(-13.006);
+			model.getNode("door[1]/position-y-m", 1).setDoubleValue(-2.944);
+			model.getNode("door[1]/position-z-m", 1).setDoubleValue(4.746);
+			model.getNode("door[1]/jetway-hood-deg", 1).setDoubleValue(1);
+		</load>
+		<unload>
+			livery_update.stop();
+		</unload>
+	</nasal>
+
+	<model>
+		<name>Wings</name>
+		<path>Aircraft/MD-10/Models/MD-10-wings.xml</path>
+	</model>
+
+	<model>
+		<name>Hstab</name>
+		<path>Aircraft/MD-10/Models/MD-10-hstab.xml</path>
+	</model>
+
+	<model>
+		<name>Vstab</name>
+		<path>Aircraft/MD-10/Models/MD-10-vstab.xml</path>
+	</model>
+
+	<model>
+		<name>Landing gear</name>
+		<path>Aircraft/MD-10/Models/MD-10-gear.xml</path>
+	</model>
+
+	<model>
+		<name>Flight deck</name>
+		<path>Aircraft/MD-10/Models/Flightdeck/MD-10-flightdeck.xml</path>
+		<offsets>
+			<x-m>-23</x-m>
+			<y-m>0</y-m>
+			<z-m>4.74</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Engine 1</name>
+		<path>Aircraft/MD-10/Models/MD-10-engine.xml</path>
+		<overlay>
+			<params>
+				<on-fire>engines/engine[0]/on-fire</on-fire>
+				<n1>engines/engine[0]/rpm</n1>
+				<reverser-pos-norm>engines/engine[0]/reverser-pos-norm</reverser-pos-norm>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-4.921</x-m>
+			<y-m>-8.138</y-m>
+			<z-m>2.536</z-m>
+			<heading-deg>1</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Engine 3</name>
+		<path>Aircraft/MD-10/Models/MD-10-engine.xml</path>
+		<overlay>
+			<params>
+				<on-fire>engines/engine[2]/on-fire</on-fire>
+				<n1>engines/engine[2]/rpm</n1>
+				<reverser-pos-norm>engines/engine[2]/reverser-pos-norm</reverser-pos-norm>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-4.921</x-m>
+			<y-m>8.138</y-m>
+			<z-m>2.536</z-m>
+			<heading-deg>-1</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Pushback</name>
+		<path>Models/Airport/Pushback/Goldhofert.xml</path>
+		<offsets>
+			<x-m>-18.805</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.45</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Left navigation light</name>
+		<path>Aircraft/MD-10/Models/Lights/rednav.xml</path>
+		<offsets>
+			<x-m>11.937</x-m>
+			<y-m>-25.148</y-m>
+			<z-m>5.549</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Right navigation light</name>
+		<path>Aircraft/MD-10/Models/Lights/greennav.xml</path>
+		<offsets>
+			<x-m>11.937</x-m>
+			<y-m>25.148</y-m>
+			<z-m>5.549</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Left front strobe light</name>
+		<path>Aircraft/MD-10/Models/Lights/strobe.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/strobe[0]</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>11.937</x-m>
+			<y-m>-25.148</y-m>
+			<z-m>5.549</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Left rear strobe light</name>
+		<path>Aircraft/MD-10/Models/Lights/strobe.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/strobe[1]</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>14.454</x-m>
+			<y-m>-25.079</y-m>
+			<z-m>5.456</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Right front strobe light</name>
+		<path>Aircraft/MD-10/Models/Lights/strobe.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/strobe[0]</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>11.937</x-m>
+			<y-m>25.148</y-m>
+			<z-m>5.549</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Right rear strobe light</name>
+		<path>Aircraft/MD-10/Models/Lights/strobe.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/strobe[1]</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>14.454</x-m>
+			<y-m>25.079</y-m>
+			<z-m>5.456</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Port landing light</name>
+		<path>Aircraft/MD-10/Models/Lights/landing-wing.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/landing-light-port</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-6.02</x-m>
+			<y-m>-3.16</y-m>
+			<z-m>4.43</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Port landing light (inside)</name>
+		<path>Aircraft/MD-10/Models/Lights/landing-wing-inside.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/landing-light-port</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-8.735</x-m>
+			<y-m>-12.389</y-m>
+			<z-m>4.2</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Left nose landing light</name>
+		<path>Aircraft/MD-10/Models/Lights/landing-nose-fuselage.xml</path>
+		<offsets>
+			<x-m>-21.9</x-m>
+			<y-m>-2.15</y-m>
+			<z-m>3.8</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Nose gear landing light</name>
+		<path>Aircraft/MD-10/Models/Lights/landing-nose-gear.xml</path>
+		<offsets>
+			<x-m>-19</x-m>
+			<y-m>0</y-m>
+			<z-m>1.894</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Left rear landing light</name>
+		<path>Aircraft/MD-10/Models/Lights/landing-rear-fuselage.xml</path>
+		<offsets>
+			<x-m>-21.9</x-m>
+			<y-m>-2.15</y-m>
+			<z-m>3.8</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Rear gear landing light</name>
+		<path>Aircraft/MD-10/Models/Lights/landing-rear-gear.xml</path>
+		<offsets>
+			<x-m>-19</x-m>
+			<y-m>0</y-m>
+			<z-m>1.894</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Right nose landing light</name>
+		<path>Aircraft/MD-10/Models/Lights/landing-nose-fuselage.xml</path>
+		<offsets>
+			<x-m>-21.9</x-m>
+			<y-m>2.15</y-m>
+			<z-m>3.8</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Starboard landing light</name>
+		<path>Aircraft/MD-10/Models/Lights/landing-wing.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/landing-light-stbd</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-6.02</x-m>
+			<y-m>3.16</y-m>
+			<z-m>4.43</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Starboard landing light (inside)</name>
+		<path>Aircraft/MD-10/Models/Lights/landing-wing-inside.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/landing-light-stbd</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-8.735</x-m>
+			<y-m>12.389</y-m>
+			<z-m>4.2</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Top beacon light</name>
+		<path>Aircraft/MD-10/Models/Lights/beacon.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/beacon[0]</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-4.5</x-m>
+			<y-m>0</y-m>
+			<z-m>8.24</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Bottom beacon light</name>
+		<path>Aircraft/MD-10/Models/Lights/beacon.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/beacon[1]</source>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>8</x-m>
+			<y-m>0</y-m>
+			<z-m>2.15</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Formation light</name>
+		<path>Aircraft/MD-10/Models/Refuel-Lights/FormationLight.xml</path>
+		<overlay>
+			<params>
+				<source>systems/electrical/outputs/formationlight</source>
+			</params>
+		</overlay>
+			<x-m>17.371</x-m>
+			<y-m>0</y-m>
+			<z-m>3.189</z-m>
+		<!-- <offsets>
+			<x-m>8</x-m>
+			<y-m>0</y-m>
+			<z-m>2.15</z-m>
+		</offsets> -->
+	</model>
+
+	<model>
+		<name>Nose gear tire smoke</name>
+		<path>Aircraft/Generic/Effects/tyre-smoke-nose.xml</path>
+		<offsets>
+			<x-m>-18.8</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.451</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Nose gear tire spray</name>
+		<path>Aircraft/Generic/Effects/rain-nose.xml</path>
+		<offsets>
+			<x-m>-18.8</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.451</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Port gear tire smoke</name>
+		<path>Aircraft/MD-10/Models/Effects/tyre-smoke.xml</path>
+		<overlay>
+			<params>
+				<tyre-smoke>gear/gear[2]/tyre-smoke</tyre-smoke>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>3.455</x-m>
+			<y-m>-5.25</y-m>
+			<z-m>-0.615</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Port gear tire spray</name>
+		<path>Aircraft/MD-10/Models/Effects/rain.xml</path>
+		<overlay>
+			<params>
+				<spray>gear/gear[2]/spray</spray>
+				<sprayspeed-ms>gear/gear[2]/sprayspeed-ms</sprayspeed-ms>
+				<spray-density>gear/gear[2]/spray-density</spray-density>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>3.455</x-m>
+			<y-m>-5.25</y-m>
+			<z-m>-0.615</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Starboard gear tire smoke</name>
+		<path>Aircraft/MD-10/Models/Effects/tyre-smoke.xml</path>
+		<overlay>
+			<params>
+				<tyre-smoke>gear/gear[4]/tyre-smoke</tyre-smoke>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>3.455</x-m>
+			<y-m>-5.25</y-m>
+			<z-m>-0.615</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Starboard gear tire spray</name>
+		<path>Aircraft/MD-10/Models/Effects/rain.xml</path>
+		<overlay>
+			<params>
+				<spray>gear/gear[4]/spray</spray>
+				<sprayspeed-ms>gear/gear[4]/sprayspeed-ms</sprayspeed-ms>
+				<spray-density>gear/gear[4]/spray-density</spray-density>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>3.455</x-m>
+			<y-m>-5.25</y-m>
+			<z-m>-0.615</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Center gear tire smoke</name>
+		<path>Aircraft/MD-10/Models/Effects/tyre-smoke.xml</path>
+		<overlay>
+			<params>
+				<tyre-smoke>gear/gear[5]/tyre-smoke</tyre-smoke>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>3.455</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.615</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Center gear tire spray</name>
+		<path>Aircraft/MD-10/Models/Effects/rain.xml</path>
+		<overlay>
+			<params>
+				<spray>gear/gear[5]/spray</spray>
+				<sprayspeed-ms>gear/gear[5]/sprayspeed-ms</sprayspeed-ms>
+				<spray-density>gear/gear[5]/spray-density</spray-density>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>3.455</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.615</z-m>
+		</offsets>
+	</model>
+
+</PropertyList>

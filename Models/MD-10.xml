@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Main model, PAX version -->
+
+<PropertyList>
+
+	<model>
+		<name>Fuselage</name>
+		<path>Aircraft/MD-10/Models/MD-10-fuselage.xml</path>
+	</model>
+
+	<foo include="MD-10-main.xml" omit-node="y" />
+
+</PropertyList>

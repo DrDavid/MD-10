@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Main model, KC-10 tanker -->
+
+<PropertyList>
+
+	<model>
+		<name>Fuselage</name>
+		<path>Aircraft/MD-10/Models/KC-10-fuselage.xml</path>
+	</model>
+
+	<model>
+		<name>Boom</name>
+		<path>Aircraft/MD-10/Models/KC-10-boom.xml</path>
+	</model>
+
+	<foo include="MD-10-main.xml" omit-node="y" />
+
+</PropertyList>

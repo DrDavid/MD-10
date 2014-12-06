@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Landing gear model -->
+
+<PropertyList>
+
+	<path>MD-10-gear.ac</path>
+
+	<!-- Formula for rotation of a compression scissor:
+	     acos((d - c) / 2l) * R2D - a
+	     Where
+	      d = distance between the scissor axises
+	      c = gear compression
+	      l = length of one scissor arm
+	      a = initial angle of one scissor arm -->
+	<!-- NOTE: SimGear trigonometric calculations are done in radians, hence the * R2D -->
+
+	<animation>
+		<name>Nose gear steering</name>
+		<type>rotate</type>
+		<object-name>GearNWheels</object-name>
+		<object-name>GearNStrutLo</object-name>
+		<property>gear/gear[0]/steering-norm</property>
+		<factor>68</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+		<center>
+			<x-m>-18.8</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Nose gear wheels</name>
+		<type>spin</type>
+		<object-name>GearNWheels</object-name>
+		<property>gear/gear[0]/rollspeed-ms</property>
+		<factor>20.275</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-18.8</x-m>
+			<y-m>0</y-m>
+			<z-m>0.02</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Nose gear lower strut</name>
+		<type>translate</type>
+		<object-name>GearNCompressLo</object-name>
+		<object-name>GearNStrutLo</object-name>
+		<object-name>GearNStrutLoLink</object-name>
+		<object-name>Nose gear wheels</object-name>
+		<property>gear/gear[0]/compression-m</property>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Nose gear upper strut</name>
+		<object-name>GearNCompressHi</object-name>
+		<object-name>GearNScissorHi</object-name>
+		<object-name>GearNScissorLo</object-name>
+		<object-name>GearNStrutHi</object-name>
+		<object-name>NGLandingLts</object-name>
+	</animation>
+	<animation>
+		<name>Nose gear lower compression scissor</name>
+		<type>rotate</type>
+		<object-name>GearNCompressLo</object-name>
+		<expression>
+			<difference>
+				<rad2deg>
+					<acos>
+						<div>
+							<difference>
+								<value>0.546</value>
+								<property>gear/gear[0]/compression-m</property>
+							</difference>
+							<value>0.584</value>
+						</div>
+					</acos>
+				</rad2deg>
+				<value>20</value>
+			</difference>
+		</expression>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-18.694</x-m>
+			<y-m>0</y-m>
+			<z-m>0.711</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Nose gear upper compression scissor</name>
+		<type>rotate</type>
+		<object-name>GearNCompressHi</object-name>
+		<expression>
+			<difference>
+				<rad2deg>
+					<acos>
+						<div>
+							<difference>
+								<value>0.546</value>
+								<property>gear/gear[0]/compression-m</property>
+							</difference>
+							<value>0.584</value>
+						</div>
+					</acos>
+				</rad2deg>
+				<value>20</value>
+			</difference>
+		</expression>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-18.694</x-m>
+			<y-m>0</y-m>
+			<z-m>1.257</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Nose gear lower retraction scissor</name>
+		<object-name>GearNScissorLo</object-name>
+	</animation>
+	<animation>
+		<name>Nose gear upper retraction scissor</name>
+		<object-name>GearNScissorHi</object-name>
+	</animation>
+	<animation>
+		<name>Nose gear retraction</name>
+		<type>rotate</type>
+		<object-name>Nose gear lower strut</object-name>
+		<object-name>Nose gear upper strut</object-name>
+		<property>gear/gear[0]/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>100</dep></entry>
+			<entry><ind>0.1</ind><dep>100</dep></entry>
+			<entry><ind>0.9</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-18.8</x-m>
+			<y-m>0</y-m>
+			<z-m>2.6</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Left main gear front wheels</name>
+		<type>spin</type>
+		<object-name>GearL1Wheels</object-name>
+		<property>gear/gear[1]/rollspeed-ms</property>
+		<factor>15.038</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>1.855</x-m>
+			<y-m>0</y-m>
+			<z-m>0.02</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Left main gear rear wheels</name>
+		<type>spin</type>
+		<object-name>GearL2Wheels</object-name>
+		<property>gear/gear[2]/rollspeed-ms</property>
+		<factor>15.038</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>3.455</x-m>
+			<y-m>0</y-m>
+			<z-m>0.02</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Left main gear lower strut</name>
+		<type>translate</type>
+		<object-name>GearLStrutLo</object-name>
+		<object-name>Left main gear front wheels</object-name>
+		<object-name>Left main gear rear wheels</object-name>
+		<expression>
+			<max>
+				<property>gear/gear[1]/compression-m</property>
+				<property>gear/gear[2]/compression-m</property>
+			</max>
+		</expression>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Left main gear upper strut</name>
+		<object-name>GearLScissorHi</object-name>
+		<object-name>GearLScissorLo</object-name>
+		<object-name>GearLStrutHi</object-name>
+	</animation>
+	<animation>
+		<name>Left main gear lower retraction scissor</name>
+		<type>rotate</type>
+		<object-name>GearLScissorLo</object-name>
+		<object-name>GearLScissorHi</object-name>
+		<property>gear/gear[2]/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>45</dep></entry>
+			<entry><ind>0.2</ind><dep>45</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-5.249</y-m>
+			<z-m>1.561</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Left main gear upper retraction scissor</name>
+		<type>rotate</type>
+		<object-name>GearLScissorHi</object-name>
+		<property>gear/gear[2]/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-180</dep></entry>
+			<entry><ind>0.2</ind><dep>-180</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-4.454</y-m>
+			<z-m>2.356</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Left main gear retraction</name>
+		<type>rotate</type>
+		<object-name>Left main gear lower strut</object-name>
+		<object-name>Left main gear upper strut</object-name>
+		<property>gear/gear[2]/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>84</dep></entry>
+			<entry><ind>0.2</ind><dep>84</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-5.25</y-m>
+			<z-m>3.5</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Right main gear front wheels</name>
+		<type>spin</type>
+		<object-name>GearR1Wheels</object-name>
+		<property>gear/gear[3]/rollspeed-ms</property>
+		<factor>15.038</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>1.855</x-m>
+			<y-m>0</y-m>
+			<z-m>0.02</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right main gear rear wheels</name>
+		<type>spin</type>
+		<object-name>GearR2Wheels</object-name>
+		<property>gear/gear[4]/rollspeed-ms</property>
+		<factor>15.038</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>3.455</x-m>
+			<y-m>0</y-m>
+			<z-m>0.02</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right main gear lower strut</name>
+		<type>translate</type>
+		<object-name>GearRStrutLo</object-name>
+		<object-name>Right main gear front wheels</object-name>
+		<object-name>Right main gear rear wheels</object-name>
+		<expression>
+			<max>
+				<property>gear/gear[3]/compression-m</property>
+				<property>gear/gear[4]/compression-m</property>
+			</max>
+		</expression>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right main gear upper strut</name>
+		<object-name>GearRScissorHi</object-name>
+		<object-name>GearRScissorLo</object-name>
+		<object-name>GearRStrutHi</object-name>
+	</animation>
+	<animation>
+		<name>Right main gear lower retraction scissor</name>
+		<type>rotate</type>
+		<object-name>GearRScissorLo</object-name>
+		<object-name>GearRScissorHi</object-name>
+		<property>gear/gear[4]/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-45</dep></entry>
+			<entry><ind>0.2</ind><dep>-45</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>5.249</y-m>
+			<z-m>1.561</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right main gear upper retraction scissor</name>
+		<type>rotate</type>
+		<object-name>GearRScissorHi</object-name>
+		<property>gear/gear[4]/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>180</dep></entry>
+			<entry><ind>0.2</ind><dep>180</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>4.454</y-m>
+			<z-m>2.356</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right main gear retraction</name>
+		<type>rotate</type>
+		<object-name>Right main gear lower strut</object-name>
+		<object-name>Right main gear upper strut</object-name>
+		<property>gear/gear[4]/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-84</dep></entry>
+			<entry><ind>0.2</ind><dep>-84</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>5.25</y-m>
+			<z-m>3.5</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Right main gear front wheels</name>
+		<type>spin</type>
+		<object-name>GearR1Wheels</object-name>
+		<property>gear/gear[3]/rollspeed-ms</property>
+		<factor>15.038</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>1.855</x-m>
+			<y-m>0</y-m>
+			<z-m>0.02</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Center main gear wheels</name>
+		<type>spin</type>
+		<object-name>GearCWheels</object-name>
+		<property>gear/gear[5]/rollspeed-ms</property>
+		<factor>18.798</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>3.56</x-m>
+			<y-m>0</y-m>
+			<z-m>0.22</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Center main gear lower strut</name>
+		<type>translate</type>
+		<object-name>GearCCompressLo</object-name>
+		<object-name>GearCCompressHi</object-name>
+		<object-name>GearCStrutLo</object-name>
+		<object-name>Center main gear wheels</object-name>
+		<property>gear/gear[5]/compression-m</property>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Center main gear upper strut</name>
+		<object-name>GearCScissorLo</object-name>
+		<object-name>GearCScissorHi</object-name>
+		<object-name>GearCStrutHi</object-name>
+	</animation>
+	<animation>
+		<name>Center main gear lower retraction scissor</name>
+		<object-name>GearCScissorLo</object-name>
+	</animation>
+	<animation>
+		<name>Center main gear upper retraction scissor</name>
+		<object-name>GearCScissorHi</object-name>
+	</animation>
+	<animation>
+		<name>Center main gear retraction</name>
+		<type>rotate</type>
+		<object-name>Center main gear lower strut</object-name>
+		<object-name>Center main gear upper strut</object-name>
+		<property>gear/gear[5]/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>100</dep></entry>
+			<entry><ind>0.1</ind><dep>100</dep></entry>
+			<entry><ind>0.9</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>0</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>3.56</x-m>
+			<y-m>0</y-m>
+			<z-m>2.363</z-m>
+		</center>
+	</animation>
+
+</PropertyList>
