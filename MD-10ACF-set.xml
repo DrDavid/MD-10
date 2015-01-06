@@ -9,7 +9,7 @@
 		<description>McDonnell Douglas MD-10ACF</description>
 		<flight-model>yasim</flight-model>
 		<aero>MD-10ACF</aero>
-		
+
 		<status>pre-beta</status>
 
 		<rating>
@@ -37,7 +37,7 @@
 		<menubar>
 			<default>
 				<menu n="100">
-					<label>McDonnell Douglas MD-10ACF</label>
+					<label>MD-10ACF</label>
 				</menu>
 			</default>
 		</menubar>

@@ -8,6 +8,8 @@
 
 	<sim>
 		<author>Ryan Miller (3d and FDM), David Waggoner (Refits and Upgrades), Peter Brendt (Jabberwocky), 5H1N0B1 and Philosopher (Canvas MFD)</author>
+		
+		<aircraft-version>V01.01.00</aircraft-version>
 
 		<model>
 			<!--<door>
@@ -334,7 +336,7 @@
 		<gear>
 			<brake-parking type="bool">true</brake-parking>
 			<center-gear-down type="bool">true</center-gear-down>
-			<enable-tiller type="bool" archive="y">true</enable-tiller>
+			<enable-tiller type="bool" archive="y">false</enable-tiller>
 			<isolate-center-gear type="bool">false</isolate-center-gear>
 			<steering-deg type="double">0</steering-deg>
 			<tiller-steer-deg type="double">0</tiller-steer-deg>
