@@ -8418,7 +8418,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.010"
+name "PLAN.R"
 loc -25.7229004 11.7854996 -0.1638676
 numvert 32
 0.0010128 -0.0028944 -0.0055803
@@ -15129,7 +15129,7 @@ refs 4
 6 0 0
 kids 0
 OBJECT poly
-name "Cube.099"
+name "PLAN.L"
 loc -25.7229004 11.7854996 0.1738440
 numvert 32
 0.0010128 -0.0028944 -0.0055803

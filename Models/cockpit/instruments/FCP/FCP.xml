@@ -1772,6 +1772,33 @@
 
     <animation>
 	<type>pick</type>
+	<object-name>PLAN.L</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+		<command>property-assign</command>
+		<property>instrumentation/efis/inputs/nd-centered</property>
+		<value>1</value>
+	    </binding>
+	    <binding>
+		<command>nasal</command>
+		<script>setprop("instrumentation/efis/inputs/plan-wpt-index",getprop("autopilot/route-manager/current-wp"));</script>
+	    </binding>
+	    <binding>
+		<command>property-assign</command>
+		<property>instrumentation/efis/mfd/display-mode</property>
+		<value>PLAN</value>
+	    </binding>
+	    <binding>
+		<command>nasal</command>
+		<script>controls.click(3);</script>
+	    </binding>
+	</action>
+    </animation>
+
+    <animation>
+	<type>pick</type>
 	<object-name>VOR1.L</object-name>
 	<action>
 	    <button>0</button>
@@ -2102,6 +2129,33 @@
                 <command>nasal</command>
                 <script>controls.click(3);</script>
             </binding>
+	</action>
+    </animation>
+
+    <animation>
+	<type>pick</type>
+	<object-name>PLAN.R</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+		<command>property-assign</command>
+		<property>instrumentation/efis[1]/inputs/nd-centered</property>
+		<value>1</value>
+	    </binding>
+	    <binding>
+		<command>nasal</command>
+		<script>setprop("instrumentation/efis[1]/inputs/plan-wpt-index",getprop("autopilot/route-manager/current-wp"));</script>
+	    </binding>
+	    <binding>
+		<command>property-assign</command>
+		<property>instrumentation/efis[1]/mfd/display-mode</property>
+		<value>PLAN</value>
+	    </binding>
+	    <binding>
+		<command>nasal</command>
+		<script>controls.click(3);</script>
+	    </binding>
 	</action>
     </animation>
 
