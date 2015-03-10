@@ -124,7 +124,7 @@
     <gain>1.0</gain>
   </filter-->
 
-	<filter>
+	<!--filter>
                 <name>LNAV course error filter</name>
                 <debug>false</debug>
                 <type>noise-spike</type>
@@ -184,7 +184,7 @@
                         <max>180</max>
                 </period>
                 <gain>1.0</gain>
-        </filter>
+        </filter-->
 
   <pi-simple-controller>
     <name>LNAV1</name>
@@ -195,7 +195,7 @@
     </enable>
     <input>
       <!--prop>/autopilot/internal/waypoint-bearing-error-deg</prop-->
-      <prop>/autopilot/internal/course-error-deg</prop>
+      <prop>/autopilot/internal/course-error</prop>
     </input>
     <reference>
       <value>0</value>
