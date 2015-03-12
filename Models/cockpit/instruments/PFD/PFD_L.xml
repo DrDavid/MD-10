@@ -740,7 +740,57 @@ Syd Adams
         <factor>0.000142</factor>
     </animation>
 
-    
+<!-- Alt Ind -->
+    <animation>
+	<type>textranslate</type>
+	<object-name>Alttext10000</object-name>
+	<property>instrumentation/altimeter/indicated-altitude-ft</property>
+	<factor>0.00001</factor>
+	<step>10000</step>
+	<axis>
+	    <x>0</x>
+	    <y>1</y>
+	    <z>0</z>
+	</axis>
+    </animation>
+    <animation>
+	<type>textranslate</type>
+	<object-name>Alttext1000</object-name>
+	<property>instrumentation/altimeter/indicated-altitude-ft</property>
+	<factor>0.0001</factor>
+	<step>1000</step>
+	<axis>
+	    <x>0</x>
+	    <y>1</y>
+	    <z>0</z>
+	</axis>
+    </animation>
+    <animation>
+	<type>textranslate</type>
+	<object-name>Alttext100</object-name>
+	<property>instrumentation/altimeter/indicated-altitude-ft</property>
+	<factor>0.001</factor>
+	<step>100</step>
+	<axis>
+	    <x>0</x>
+	    <y>1</y>
+	    <z>0</z>
+	</axis>
+    </animation>
+    <animation>
+	<type>textranslate</type>
+	<object-name>Alttext10</object-name>
+	<property>instrumentation/altimeter/indicated-altitude-ft</property>
+	<factor>0.01</factor>
+	<step>10</step>
+	<axis>
+	    <x>0</x>
+	    <y>1</y>
+	    <z>0</z>
+	</axis>
+    </animation>
+   
+ 
         <animation>
         <type>select</type>
         <object-name>ROLL-HEADING</object-name>
@@ -1226,60 +1276,6 @@ Syd Adams
         <property>instrumentation/afds/inputs/reference-deg</property>
 		<factor>0.1</factor>
 		<step>1</step>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>textranslate</type>
-		<object-name>Alttext10</object-name>
-		<property>instrumentation/altimeter/indicator-altitude-ft</property>
-		<factor>0.01</factor>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>textranslate</type>
-		<object-name>Alttext100</object-name>
-		<property>instrumentation/altimeter/indicator-altitude-ft</property>
-		<factor>0.001</factor>
-		<step>100</step>
-		<scroll>20</scroll>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>textranslate</type>
-		<object-name>Alttext1000</object-name>
-		<property>instrumentation/altimeter/indicator-altitude-ft</property>
-		<factor>0.0001</factor>
-		<step>1000</step>
-		<scroll>20</scroll>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>textranslate</type>
-		<object-name>Alttext10000</object-name>
-		<property>instrumentation/altimeter/indicator-altitude-ft</property>
-		<factor>0.00001</factor>
-		<step>10000</step>
-		<scroll>20</scroll>
 		<axis>
 			<x>0</x>
 			<y>1</y>
