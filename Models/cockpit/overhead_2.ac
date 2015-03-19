@@ -131173,7 +131173,7 @@ refs 4
 31 0.001735 0.029280
 kids 0
 OBJECT poly
-name "EXT_P.btn.030"
+name "APU_onoff.btn"
 loc -16.8042412 -22.3520451 -0.1812888
 texture "buttons.png"
 texrep 1 1
@@ -131443,7 +131443,7 @@ refs 4
 31 0.001735 0.029280
 kids 0
 OBJECT poly
-name "EXT_P.btn.031"
+name "APU_gen.btn"
 loc -16.8042412 -22.3520451 -0.2612124
 texture "buttons.png"
 texrep 1 1

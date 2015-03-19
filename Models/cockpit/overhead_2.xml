@@ -39,5 +39,44 @@
 		<inherits-from>Aircraft/MD-11/Models/Effects/engine</inherits-from>
     <object-name>oh_2_buttons</object-name>
 	</effect>
-	
+
+    <animation>
+	<type>pick</type>
+	<object-name>APU_onoff.btn</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+		<command>nasal</command>
+		<script>
+		controls.click(4);
+		if (getprop("controls/APU/off-start-run") == 0) {
+		    setprop("controls/APU/off-start-run",1);
+		    settimer(func setprop("controls/APU/off-start-run",2),0.2);
+		} else {
+		    setprop("controls/APU/off-start-run",0);
+		    setprop("controls/APU/apu-gen-switch",0);
+		}
+		</script>
+	    </binding>
+	</action>
+    </animation>
+
+    <animation>
+	<type>pick</type>
+	<object-name>APU_gen.btn</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+                <property>controls/APU/apu-gen-switch</property>
+	    </binding>
+	    <binding>
+		<command>nasal</command>
+		<script>controls.click(4);</script>
+	    </binding>
+	</action>
+    </animation>
+
 </PropertyList>

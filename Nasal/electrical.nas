@@ -281,7 +281,7 @@ var init_switches = func{
     setprop("controls/electric/engine/bus-tie",1);
     setprop("controls/electric/engine[1]/bus-tie",1);
     setprop("controls/electric/engine[2]/bus-tie",1);
-    setprop("controls/APU/apu-gen-switch",1);
+    setprop("controls/APU/apu-gen-switch",0);
     setprop("controls/electric/engine/gen-bu-switch",1);
     setprop("controls/electric/engine[1]/gen-bu-switch",1);
     setprop("controls/electric/engine[2]/gen-bu-switch",1);
