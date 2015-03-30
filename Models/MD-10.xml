@@ -7,7 +7,10 @@
 
 	<nasal>
 		<load>
-			var livery_update = aircraft.livery_update.new("Aircraft/MD-10/Models/Liveries/MD-10ACF");
+			var rplayer = cmdarg();
+			# Set up property aliases for animations.
+			rplayer.getNode("sim/aero", 1).alias(rplayer.getNode("sim/multiplay/generic/string[1]"));
+			var livery_update = aircraft.livery_update.new("Aircraft/MD-10/Models/Liveries/"~getprop("sim/aero"));
 		</load>
  
 		<unload>
