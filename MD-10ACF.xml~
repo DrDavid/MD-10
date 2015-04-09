@@ -126,21 +126,21 @@
 	Fan tip diameter: 94 in; Length, flange to flange: 132.7 in; Takeoff thrust: 52,000-62,000 lb; Flat rated temperature: 86 or 92° F; Bypass ratio: 4.8-5.0; Overall pressure ratio: 27.5-32.3; Fan pressure ratio: 1.65-1.80
 	Source: http://www.pw.utc.com/Content/PW400094_Engine/pdf/B-1-4-1_fact-sheet-commercial_pw4000_94.pdf -->
 	
-    <jet x="5.18" y="8.138" z="2.536" mass="9047.0" thrust="94000.0" afterburner="0" rotate="0.0" n1-idle="36.3" n1-max="121.0" n2-idle="58.3" n2-max="113.3" tsfc="0.150" egt="1250.0" epr="2.8" exhaust-speed="1910.5" spool-time="2.0">
+    <jet x="5.18" y="8.138" z="2.536" mass="9047.0" thrust="62000.0" afterburner="0" rotate="0.0" n1-idle="36.3" n1-max="121.0" n2-idle="58.3" n2-max="113.3" tsfc="0.394" egt="1050.0" epr="2.2" exhaust-speed="1710.5" spool-time="3.0">
 	<control-input axis="/controls/engines/engine[0]/throttle-lever" control="THROTTLE" />
 	<control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST" />
 	<control-output control="REVERSE_THRUST" prop="/engines/engine[0]/reverser-pos-norm" />
 	<control-speed control="REVERSE_THRUST" transition-time="1.0" />
 	<actionpt x="2.461" y="8.138" z="2.536" />
     </jet>
-    <jet x="-18.73" y="0.0" z="9.508" mass="9047.0" thrust="94000.0" afterburner="0" rotate="0.0" n1-idle="36.3" n1-max="121.0" n2-idle="58.3" n2-max="113.3" tsfc="0.150" egt="1250.0" epr="2.8" exhaust-speed="1910.5" spool-time="2.0">
+    <jet x="-18.73" y="0.0" z="9.508" mass="9047.0" thrust="62000.0" afterburner="0" rotate="0.0" n1-idle="36.3" n1-max="121.0" n2-idle="58.3" n2-max="113.3" tsfc="0.394" egt="1050.0" epr="2.2" exhaust-speed="1710.5" spool-time="3.0">
 	<control-input axis="/controls/engines/engine[1]/throttle-lever" control="THROTTLE" />
 	<control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST" />
 	<control-output control="REVERSE_THRUST" prop="/engines/engine[1]/reverser-pos-norm" />
 	<control-speed control="REVERSE_THRUST" transition-time="1.0" />
 	<actionpt x="-24.871" y="0.0" z="9.293" />
     </jet>
-    <jet x="5.18" y="-8.138" z="2.536" mass="9047.0" thrust="94000.0" afterburner="0" rotate="0.0" n1-idle="36.3" n1-max="121.0" n2-idle="58.3" n2-max="113.3" tsfc="0.150" egt="1250.0" epr="2.8" exhaust-speed="1910.5" spool-time="2.0">
+    <jet x="5.18" y="-8.138" z="2.536" mass="9047.0" thrust="62000.0" afterburner="0" rotate="0.0" n1-idle="36.3" n1-max="121.0" n2-idle="58.3" n2-max="113.3" tsfc="0.394" egt="1050.0" epr="2.2" exhaust-speed="1710.5" spool-time="3.0">
 	<control-input axis="/controls/engines/engine[2]/throttle-lever" control="THROTTLE" />
 	<control-input axis="/controls/engines/engine[2]/reverser" control="REVERSE_THRUST" />
 	<control-output control="REVERSE_THRUST" prop="/engines/engine[2]/reverser-pos-norm" />
