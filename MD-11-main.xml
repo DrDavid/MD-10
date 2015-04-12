@@ -69,20 +69,12 @@
 	</view>
 	<chase-distance-m type="double">-100</chase-distance-m>
 
-
 	<weight n="0">
 	    <name>Crew</name>
 	    <weight-lb>250</weight-lb>
 	    <max-lb>600</max-lb>
 	    <min-lb>120</min-lb>
 	</weight>
-	<weight n="1">
-	    <weight-lb>100000</weight-lb>
-	    <max-lb>142700</max-lb>
-	    <min-lb>0</min-lb>
-	</weight>
-	
-
 
         <menubar n="0">
             <default n="0">
