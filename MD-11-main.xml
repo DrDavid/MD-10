@@ -13,43 +13,58 @@
             <cockpit type="int">3</cockpit>
             <model type="int">5</model>
         </rating>
-    <shutterspeed type="double">0.18</shutterspeed>
-		<instrument-options>
-			<canvas-popup-enable type="bool">true</canvas-popup-enable>
-		</instrument-options>
+	<shutterspeed type="double">0.18</shutterspeed>
+	<instrument-options>
+	    <canvas-popup-enable type="bool">true</canvas-popup-enable>
+	</instrument-options>
 		
-				<navdb>
-			<!-- exclude any airports with runways shorter than this from
-			searches, NavDisplay, etc. Note this is a lower-limit - real (safe)
-			value is much higher depending on load, fuel, OAT -->
-			<min-runway-length-ft>4500</min-runway-length-ft>
-		</navdb>
+	<navdb>
+	<!-- exclude any airports with runways shorter than this from
+	searches, NavDisplay, etc. Note this is a lower-limit - real (safe)
+	value is much higher depending on load, fuel, OAT -->
+	    <min-runway-length-ft>4500</min-runway-length-ft>
+	</navdb>
 		
-     <fuel-fraction>0.5</fuel-fraction>
+	<fuel-fraction>0.5</fuel-fraction>
 
 	<view n="0">
 	    <name>Captain View</name>
 	    <internal type="bool" archive="y">true</internal>
 	    <config>
-	    	         <limits>
-        <enabled archive="y" type="bool">false</enabled>
-     </limits>
+		<limits>
+		    <enabled archive="y" type="bool">false</enabled>
+		</limits>
 		<x-offset-m archive="y">-0.5238</x-offset-m>
 		<y-offset-m archive="y">7.2709</y-offset-m>
 		<z-offset-m archive="y">-26.8</z-offset-m>
-    <default-field-of-view-deg type="double">80</default-field-of-view-deg>
+		<default-field-of-view-deg type="double">80</default-field-of-view-deg>
 	    </config>
 	</view>
 	<view n="100">
 	    <name>First Officer View</name>
 	    <type>lookfrom</type>
+	    <enabled type="bool">true</enabled>
 	    <internal type="bool" archive="y">true</internal>
 	    <config>
 		<from-model type="bool">true</from-model>
 		<x-offset-m archive="y">0.5238</x-offset-m>
 		<y-offset-m archive="y">7.2709</y-offset-m>
-		<z-offset-m archive="y">-26.5961</z-offset-m>
-      <default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
+		<z-offset-m archive="y">-26.8</z-offset-m>
+		<default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
+	    </config>
+	</view>
+	<view n="101">
+	    <name>Overhead Panel</name>
+	    <type>lookfrom</type>
+	    <enabled type="bool">true</enabled>
+	    <internal type="bool" archive="y">true</internal>
+	    <config>
+		<from-model type="bool">true</from-model>
+		<x-offset-m archive="y">0.0</x-offset-m>
+		<y-offset-m archive="y">7.2709</y-offset-m>
+		<z-offset-m archive="y">-26.4</z-offset-m>
+		<pitch-offset-deg archive="y">30.0</pitch-offset-deg>
+		<default-field-of-view-deg type="double">65.5</default-field-of-view-deg>
 	    </config>
 	</view>
 	<chase-distance-m type="double">-100</chase-distance-m>
@@ -81,13 +96,13 @@
                         </binding>
                     </item>
                     <item >
-						<label>Handy Viewer</label>
-						<name>handyviewer</name>
-						<binding>
-							<command>dialog-show</command>
-							<dialog-name>handyviewer</dialog-name>
-						</binding>
-					</item>
+			<label>Handy Viewer</label>
+			<name>handyviewer</name>
+			<binding>
+			    <command>dialog-show</command>
+			    <dialog-name>handyviewer</dialog-name>
+			</binding>
+		    </item>
 		    <item>
 			<label>Doors</label>
 			<binding>
@@ -189,7 +204,7 @@
 	    <setting>1.00</setting>	<!-- 50 -->
 	</flaps>
         
-                <systems>
+	<systems>
             <path>Aircraft/MD-11/Systems/systems.xml</path>
 
             <!--  fast running autopilot rules (running at FDM frequency / 120Hz) -->
@@ -219,7 +234,7 @@
             </property-rule>
         </systems>
         
-          <instrumentation>
+        <instrumentation>
             <path>Aircraft/MD-11/Systems/instrumentation.xml</path>
         </instrumentation>
 
@@ -239,7 +254,7 @@
             <cabinalert type="bool">0</cabinalert>
         </sound>	
 	
-	        <hud>
+	<hud>
             <enable3d>false</enable3d>
         </hud>
         
@@ -296,7 +311,7 @@
         </gear>
     </gear>
     
-        <consumables n="0">
+    <consumables n="0">
         <fuel>
             <tank n="0"><name>LH Main</name></tank>
             <tank n="1"><name>Center</name></tank>
@@ -776,7 +791,6 @@
 		</settings>
     </autopilot>
 
-
     <systems>
 	<autobrakes>
 	    <serviceable type="bool">true</serviceable>
@@ -786,9 +800,6 @@
 	    <deceleration-fps_sec type="double">0.0</deceleration-fps_sec>
 	</autobrakes>
     </systems>
-    
-
-
 
     <nasal n="0">
         <MD11>
@@ -821,7 +832,7 @@
         <walk><file>Aircraft/MD-11/Nasal/walk.nas</file></walk>
     </nasal>
     
-        <limits n="0">
+    <limits n="0">
         <max-flap-extension-speed>
             <flaps>0.44</flaps>
             <speed>220</speed>
@@ -843,6 +854,5 @@
         <max-positive-g>2.5</max-positive-g>
         <max-negative-g>-1.76</max-negative-g>
     </limits>
-    
 
 </PropertyList>

@@ -79,8 +79,8 @@
 
     <button>
             <pref-width>70</pref-width>
-		<desc>Radio-CDU view</desc>
-      	<legend>Radio-CDU</legend>
+		<desc>OH View</desc>
+      	<legend>OH Panel</legend>
       	<equal>true</equal>
 	  	<repeatable type="bool">false</repeatable>
 	  	<binding>
@@ -94,8 +94,8 @@
 
     <button>
             <pref-width>70</pref-width>
-		<desc>OH View</desc>
-      	<legend>OH Panel</legend>
+		<desc>Radio-CDU view</desc>
+      	<legend>Radio-CDU</legend>
       	<equal>true</equal>
 	  	<repeatable type="bool">false</repeatable>
 	  	<binding>
