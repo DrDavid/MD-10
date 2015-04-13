@@ -1,23 +1,29 @@
-﻿<PropertyList>
+<PropertyList>
 
 <path>boeing.ac</path>
 
-       <animation>
+<animation>
   <type>scale</type>
   <x-offset>0.80</x-offset>
   <y-offset>0.80</y-offset>
   <z-offset>0.80</z-offset>
- </animation>
-
+</animation>
 
 <animation> 
 	<type>material</type> 
 	<texture alias="../../texture"/> 
 </animation>
 
-    <animation>
-		<name>Panel lighting</name>
-		<type>material</type>
+<effect>
+	<inherits-from>Effects/lightmap</inherits-from>
+	<parameters>
+		<texture n="1">
+			<image>Aircraft/Instruments-3d/cdu/boeing_lightmap.png</image>
+		</texture>
+		<condition><use>/instrumentation/cdu/serviceable</use></condition>
+		<factor><use>/controls/lighting/panel-norm</use></factor>
+	</parameters>
+	<object-name>CDU</object-name>
  	<object-name>Btn.A</object-name>
 	<object-name>Btn.B</object-name>
 	<object-name>Btn.C</object-name>
@@ -87,13 +93,7 @@
 	<object-name>Btn.side.r.4</object-name>
 	<object-name>Btn.side.r.5</object-name>
 	<object-name>Btn.side.r.6</object-name>
-		<emission>
-			<red>1.5</red>
-			<green>1.27</green>
-			<blue>1</blue>
-			<factor-prop>controls/lighting/pedestal-panel-norm</factor-prop>
-		</emission>
-	</animation>
+</effect>
 
 <model>
 	<path>Aircraft/Instruments-3d/cdu/display-text-value.xml</path>
@@ -983,6 +983,19 @@
 
 <animation>
 	<type>pick</type>
+	<object-name>Btn.side.r.3</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>  
+		<binding>
+			<command>nasal</command>
+			<script>cdu.key('LSK3R');</script>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>pick</type>
 	<object-name>Btn.side.l.4</object-name>
 	<action>
 		<button>0</button>
@@ -996,6 +1009,19 @@
 
 <animation>
 	<type>pick</type>
+	<object-name>Btn.side.r.4</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>  
+		<binding>
+			<command>nasal</command>
+			<script>cdu.key('LSK4R');</script>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>pick</type>
 	<object-name>Btn.side.l.5</object-name>
 	<action>
 		<button>0</button>
@@ -1003,6 +1029,19 @@
 		<binding>
 			<command>nasal</command>
 			<script>cdu.key('LSK5L');</script>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Btn.side.r.5</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>  
+		<binding>
+			<command>nasal</command>
+			<script>cdu.key('LSK5R');</script>
 		</binding>
 	</action>
 </animation>
@@ -1025,11 +1064,24 @@
 	<action>
 		<button>0</button>
 		<repeatable>false</repeatable>  
-				<binding>
+		<binding>
 			<command>nasal</command>
 			<script>cdu.key('LSK6R');</script>
 		</binding>
 
+	</action>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Btn.exec</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>nasal</command>
+			<script>cdu.key('exec');</script>
+		</binding>
 	</action>
 </animation>
 
@@ -1134,6 +1186,16 @@
 			<property>/instrumentation/cdu/display</property>
 			<value>RTE1_1</value>
 		</binding>
+		 <binding>
+                        <condition>
+                            <equals>
+                                <property>/instrumentation/cdu/display</property>
+                                <value>RTE1_LEGS</value>
+                            </equals>
+                        </condition>
+                        <command>nasal</command>
+                        <script>cdu.pgupdn(-1);</script>
+                </binding>
 	</action>
 </animation>
 
@@ -1154,6 +1216,16 @@
 			<property>/instrumentation/cdu/display</property>
 			<value>RTE1_2</value>
 		</binding>
+		<binding>
+                        <condition>
+                            <equals>
+                                <property>/instrumentation/cdu/display</property>
+                                <value>RTE1_LEGS</value>
+                            </equals>
+                        </condition>
+                        <command>nasal</command>
+                        <script>cdu.pgupdn(1);</script>
+                </binding>
 	</action>
 </animation>
 

@@ -819,7 +819,8 @@
             <file>Aircraft/MD-11/Nasal/dialogs.nas</file>
         </dialogs>
         <cdu>
-            <file>Aircraft/MD-11/Models/cockpit/instruments/cdu/boeing.nas</file>
+            <!--file>Aircraft/MD-11/Models/cockpit/instruments/cdu/boeing.nas</file-->
+            <file>Aircraft/MD-11/Nasal/boeing_cdu.nas</file>
         </cdu>
         <walk><file>Aircraft/MD-11/Nasal/walk.nas</file></walk>
     </nasal>
