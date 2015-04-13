@@ -316,7 +316,6 @@ var Engine = {
                 me.starterSwitch.setValue(0);
                 me.running.setBoolValue(1);
                 setprop("controls/lighting/cabin-lights",1);
-                setprop("controls/lighting/strobe",1);
             }
             if(tmprpm > 0)
             {

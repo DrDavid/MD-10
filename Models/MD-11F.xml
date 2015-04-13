@@ -2470,9 +2470,9 @@
     <animation>
 	<type>rotate</type>
 	<object-name>ldglight.right.glass</object-name>
-  <object-name>ldglight.right</object-name>
-    <property>controls/lighting/landing-light</property>
-<factor>90</factor>
+	<object-name>ldglight.right</object-name>
+	<property>controls/lighting/landing-light[2]</property>
+	<factor>90</factor>
 	<axis>
 	    <x>0</x>
 	    <y>0</y>
@@ -2485,12 +2485,12 @@
 	</center>
     </animation>
     
-        <animation>
+    <animation>
 	<type>rotate</type>
 	<object-name>ldglight.left.glass</object-name>
-  <object-name>ldglight.left</object-name>
-    <property>controls/lighting/landing-light</property>
-<factor>-90</factor>
+	<object-name>ldglight.left</object-name>
+	<property>controls/lighting/landing-light</property>
+	<factor>-90</factor>
 	<axis>
 	    <x>0</x>
 	    <y>0</y>

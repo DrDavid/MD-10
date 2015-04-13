@@ -234,6 +234,61 @@
 </model> 
 
 
+<model>
+	<name>landing_left</name>
+	<path>Aircraft/MD-11/Models/Lights/taxi-nose.xml</path>
+	<offsets>
+	    <x-m>-33.0504</x-m>
+	    <y-m>-2.3523</y-m>
+	    <z-m>0</z-m>
+	</offsets>
+</model> 
+<model>
+	<name>landing_left</name>
+	<path>Aircraft/MD-11/Models/Lights/transparentlight.xml</path>
+	<offsets>
+	    <heading-deg>5</heading-deg>
+	    <pitch-deg>-15</pitch-deg>
+	    <x-m>-23.0504</x-m>
+	    <y-m>-2.3523</y-m>
+	    <z-m>5.0012</z-m>
+	</offsets>
+</model>
+<animation>
+	<type>select</type>
+	<object-name>landing_left</object-name>
+	<condition>
+		<property>controls/lighting/landing-light</property>
+	</condition>
+</animation>
+
+<model>
+	<name>landing_right</name>
+	<path>Aircraft/MD-11/Models/Lights/taxi-nose.xml</path>
+	<offsets>
+	    <x-m>-33.0504</x-m>
+	    <y-m>2.3523</y-m>
+	    <z-m>0</z-m>
+	</offsets>
+</model> 
+<model>
+	<name>landing_right</name>
+	<path>Aircraft/MD-11/Models/Lights/transparentlight.xml</path>
+	<offsets>
+	    <heading-deg>-5</heading-deg>
+	    <pitch-deg>-15</pitch-deg>
+	    <x-m>-23.0504</x-m>
+	    <y-m>2.3523</y-m>
+	    <z-m>5.0012</z-m>
+	</offsets>
+</model>
+<animation>
+	<type>select</type>
+	<object-name>landing_right</object-name>
+	<condition>
+		<property>controls/lighting/landing-light[2]</property>
+	</condition>
+</animation>
 
 <model>
 <name>turnoff_right</name>
@@ -299,19 +354,23 @@
 
 <animation>
 	<type>select</type>
-<object-name>landing.nose.1</object-name>
-<object-name>landing.nose.2</object-name>
+	<object-name>landing.nose.1</object-name>
+	<object-name>landing.nose.2</object-name>
 	<condition>
-	<and>
-			<equals>
-			<property>controls/lighting/landing-light[1]</property>
-			<value>1</value>
-			</equals>
-        <equals>
-        <property>systems/electrical/outputs/avionics</property>
-        <value>1</value>
-        </equals>
-      </and>
+	  <and>
+	    <equals>
+		<property>controls/lighting/landing-light[1]</property>
+		<value>1</value>
+	    </equals>
+	    <equals>
+		<property>systems/electrical/outputs/avionics</property>
+		<value>1</value>
+	    </equals>
+	    <equals>
+		<property>gear/gear[0]/position-norm</property>
+		<value>1</value>
+	    </equals>
+	  </and>
 	</condition>
 </animation>
 
