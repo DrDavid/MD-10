@@ -65,6 +65,8 @@ var AFDS = {
         m.alt_setting = m.AP_settings.initNode("altitude-setting-ft",10000,"DOUBLE");
         m.FMS_alt = m.AP_settings.initNode("target-altitude-ft",10000,"DOUBLE");
         m.auto_brake_setting = m.AP_settings.initNode("autobrake",0.000,"DOUBLE");
+	m.FLthousand = m.AP_settings.initNode("counter-set-altitude-FL",10,"INT");
+	m.FLhundred = m.AP_settings.initNode("counter-set-altitude-100",0,"INT");
 
         m.trk_setting = m.AFDS_settings.initNode("trk",0,"INT");
         m.vs_display = m.AFDS_settings.initNode("vs-display",0);
@@ -302,6 +304,8 @@ var AFDS = {
         me.vs_display.setValue(tmp);
         tmp = abs(me.fpa_setting.getValue());
         me.fpa_display.setValue(tmp);
+	me.FLthousand.setValue(int(me.alt_setting.getValue() / 1000));
+	me.FLhundred.setValue(int(me.alt_setting.getValue() - (me.FLthousand.getValue() * 1000)));
         msg="";
         var hdgoffset = me.hdg_setting.getValue()-getprop("orientation/heading-magnetic-deg");
         if(hdgoffset < -180) hdgoffset +=360;

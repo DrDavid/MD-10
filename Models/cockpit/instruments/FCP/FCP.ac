@@ -16771,7 +16771,7 @@ refs 4
 21 0 0
 kids 0
 OBJECT poly
-name "Cylinder.002"
+name "MINS2.L"
 loc -25.7175007 11.7568464 0.2257110
 numvert 64
 -0.0049057 0.0000000 -0.0039729
@@ -17261,7 +17261,7 @@ refs 4
 61 0 0
 kids 0
 OBJECT poly
-name "Cylinder.003"
+name "MINS.L"
 loc -25.7101002 11.7568464 0.2257110
 numvert 368
 -0.0029640 0.0000000 -0.0029640
@@ -22487,7 +22487,7 @@ refs 4
 28 0 0
 kids 0
 OBJECT poly
-name "Cylinder.017"
+name "MINS.R"
 loc -25.7101002 11.7568464 -0.2247992
 numvert 368
 -0.0029640 0.0000000 -0.0029640
@@ -25589,7 +25589,7 @@ refs 3
 215 0 0
 kids 0
 OBJECT poly
-name "Cylinder.018"
+name "MINS2.R"
 loc -25.7175007 11.7568464 -0.2247992
 numvert 64
 -0.0049057 0.0000000 -0.0039729

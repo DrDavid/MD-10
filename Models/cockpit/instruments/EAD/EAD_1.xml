@@ -66,7 +66,7 @@
   	  <animation>
     <type>rotate</type>
 		<object-name>n1.1</object-name>
-    <property>engines/engine[0]/n1</property>
+    <property>engines/engine[0]/rpm</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
 <entry><ind>110</ind><dep>180</dep></entry>
@@ -106,7 +106,7 @@
       	  <animation>
     <type>rotate</type>
 		<object-name>n2.1</object-name>
-    <property>engines/engine[0]/n2</property>
+    <property>engines/engine[0]/n2rpm</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
 <entry><ind>110</ind><dep>180</dep></entry>
@@ -186,7 +186,7 @@
   	  <animation>
     <type>rotate</type>
 		<object-name>n1.2</object-name>
-    <property>engines/engine[1]/n1</property>
+    <property>engines/engine[1]/rpm</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
 <entry><ind>110</ind><dep>180</dep></entry>
@@ -226,7 +226,7 @@
       	  <animation>
     <type>rotate</type>
 		<object-name>n2.2</object-name>
-    <property>engines/engine[1]/n2</property>
+    <property>engines/engine[1]/n2rpm</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
 <entry><ind>110</ind><dep>180</dep></entry>
@@ -306,7 +306,7 @@
   	  <animation>
     <type>rotate</type>
 		<object-name>n1.3</object-name>
-    <property>engines/engine[2]/n1</property>
+    <property>engines/engine[2]/rpm</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
 <entry><ind>110</ind><dep>180</dep></entry>
@@ -346,7 +346,7 @@
       	  <animation>
     <type>rotate</type>
 		<object-name>n2.3</object-name>
-    <property>engines/engine[2]/n2</property>
+    <property>engines/engine[2]/n2rpm</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
 <entry><ind>110</ind><dep>180</dep></entry>
@@ -514,7 +514,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
     <format type="string">%2.1f</format>
-    <property>engines/engine[0]/n2</property>
+    <property>engines/engine[0]/n2rpm</property>
 		<font>helvetica_bold.txf</font>
 		<character-size>0.007</character-size>
 		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -531,7 +531,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
     <format type="string">%2.1f</format>
-    <property>engines/engine[1]/n2</property>
+    <property>engines/engine[1]/n2rpm</property>
 		<font>helvetica_bold.txf</font>
 		<character-size>0.007</character-size>
 		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -548,7 +548,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
     <format type="string">%2.1f</format>
-    <property>engines/engine[2]/n2</property>
+    <property>engines/engine[2]/n2rpm</property>
 		<font>helvetica_bold.txf</font>
 		<character-size>0.007</character-size>
 		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -616,7 +616,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
     <format type="string">%2.1f</format>
-    <property>engines/engine[0]/n1</property>
+    <property>engines/engine[0]/rpm</property>
 		<font>helvetica_bold.txf</font>
 		<character-size>0.007</character-size>
 		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -633,7 +633,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
     <format type="string">%2.1f</format>
-    <property>engines/engine[1]/n1</property>
+    <property>engines/engine[1]/rpm</property>
 		<font>helvetica_bold.txf</font>
 		<character-size>0.007</character-size>
 		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -650,7 +650,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
     <format type="string">%2.1f</format>
-    <property>engines/engine[2]/n1</property>
+    <property>engines/engine[2]/rpm</property>
 		<font>helvetica_bold.txf</font>
 		<character-size>0.007</character-size>
 		<character-aspect-ratio type="double">1.2</character-aspect-ratio>

@@ -2395,4 +2395,56 @@
 	</action>
     </animation>
 
+    <animation>
+	<type>pick</type>
+	<object-name>MINS2.L</object-name>
+	<object-name>MINS2.R</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+		<command>property-toggle</command>
+		<property>instrumentation/efis/inputs/minimums-mode</property>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>MD11.Efis.ctl_func("mins",0);</script>
+            </binding>
+	</action>
+    </animation>
+    <animation>
+	<type>pick</type>
+	<object-name>MINS.L</object-name>
+	<object-name>MINS.R</object-name>
+	<action>
+	    <button>3</button>
+	    <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>MD11.Efis.ctl_func("dh",10);</script>
+            </binding>
+	</action>
+	<action>
+	    <button>4</button>
+	    <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>MD11.Efis.ctl_func("dh",-10);</script>
+            </binding>
+	</action>
+	<action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+		<command>property-assign</command>
+		<property>instrumentation/efis/minimums</property>
+		<value>250</value>
+	    </binding>
+	    <binding>
+		<command>nasal</command>
+                <script>MD11.Efis.ctl_func("dh",0);</script>
+	    </binding>
+	</action>	
+    </animation>
+
 </PropertyList>
