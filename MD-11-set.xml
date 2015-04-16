@@ -54,7 +54,7 @@
         <cdu n="0">
             <ident n="0">
                 <model>MD-11</model>
-                <engines>CF6</engines>
+                <engines>CF6-80C2</engines>
             </ident>
         </cdu>
     </instrumentation>

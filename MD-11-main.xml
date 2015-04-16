@@ -252,6 +252,7 @@
         
         <virtual-cockpit>true</virtual-cockpit>
         <allow-toggle-cockpit>true</allow-toggle-cockpit>
+       	<flight-recorder include="Systems/flight-recorder.xml"/>
         
     </sim>
     
@@ -345,7 +346,7 @@
                 <desc>Radio Stack</desc>
                 <binding>
                     <command>nasal</command>
-                    <script>dialogs.Radio.open()</script>
+                    <script>dialogs.Radio.toggle()</script>
                 </binding>
             </key>
             <key n="1">
@@ -360,8 +361,8 @@
                 <name>Ctrl-G</name>
                 <desc>APP mode arm</desc>
                 <binding>
-					<command>nasal</command>
-					<script>MD11.afds.input(3,1);</script>
+		    <command>nasal</command>
+		    <script>MD11.afds.input(3,1);</script>
                 </binding>
             </key>
             <key n="8">

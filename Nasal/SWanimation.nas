@@ -137,8 +137,8 @@ setlistener("controls/fuel/xfeedaft-switch", func {
 		if(getprop("controls/fuel/xfeedaft-switch")) XFDAFTST.open();
 		else XFDAFTST.close();
 });
-setlistener("controls/fuel/jitteson-arm-switch", func {
-		if(getprop("controls/fuel/jitteson-arm-switch")) JTSNARMST.open();
+setlistener("controls/fuel/jetteson-arm-switch", func {
+		if(getprop("controls/fuel/jetteson-arm-switch")) JTSNARMST.open();
 		else JTSNARMST.close();
 });
 setlistener("controls/fuel/tank[0]/nozzle-switch", func {

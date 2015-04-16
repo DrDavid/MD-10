@@ -24,17 +24,17 @@
             <count type="int">2</count>
         </signals>
         <signals include="Aircraft/Generic/flightrecorder/components/gear-retractable.xml">
-            <count type="int">3</count>
+            <count type="int">6</count>
         </signals>
         <signals include="Aircraft/Generic/flightrecorder/components/tanks.xml">
-            <count type="int">3</count>
+            <count type="int">5</count>
         </signals>
 
         <signals>  <!-- now the custom properties -->
 
             <signals>
                 <!--  engine related signals -->
-                <count type="int">2</count>
+                <count type="int">3</count>
                 <signal>
                     <type>bool</type><property type="string">controls/engines/engine[%i]/cutoff</property>
                 </signal>
@@ -187,10 +187,6 @@
             </signal>
             <signal>
                 <type>float</type>
-                <property type="string">surface-positions/speedbrake-pos-norm</property>
-            </signal>
-            <signal>
-                <type>float</type>
                 <property type="string">surface-positions/reverser-norm[0]</property>
             </signal>
             <signal>
@@ -200,6 +196,10 @@
             <signal>
                 <type>float</type>
                 <property type="string">surface-positions/reverser-norm[2]</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">surface-positions/slats</property>
             </signal>
 
         </signals>
