@@ -15,14 +15,14 @@ Syd Adams
             <and>
 		<greater-than>
 		    <property>instrumentation/nav/signal-quality-norm</property>
-		    <value>0.99</value>
+		    <value>0.79</value>
 		</greater-than>
 		<less-than>
-		    <property>instrumentation/nav/heading-needle-deflection-ptr</property>
+		    <property>instrumentation/nav/heading-needle-deflection-norm</property>
 		    <value>0.92</value>
 		</less-than>
 		<greater-than>
-		    <property>instrumentation/nav/heading-needle-deflection-ptr</property>
+		    <property>instrumentation/nav/heading-needle-deflection-norm</property>
 		    <value>-0.92</value>
 		</greater-than>
 	    </and>
@@ -36,14 +36,14 @@ Syd Adams
             <or>
 		<less-than>
 		    <property>instrumentation/nav/signal-quality-norm</property>
-		    <value>0.99</value>
+		    <value>0.79</value>
 		</less-than>
 		<greater-than>
-		    <property>instrumentation/nav/heading-needle-deflection-ptr</property>
+		    <property>instrumentation/nav/heading-needle-deflection-norm</property>
 		    <value>0.92</value>
 		</greater-than>
 		<less-than>
-		    <property>instrumentation/nav/heading-needle-deflection-ptr</property>
+		    <property>instrumentation/nav/heading-needle-deflection-norm</property>
 		    <value>-0.92</value>
 		</less-than>
 	    </or>
@@ -160,6 +160,18 @@ Syd Adams
             <x>0</x>
             <y>0</y>
             <z>1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>locpointer</object-name>
+        <property>instrumentation/nav/heading-needle-deflection-norm</property>
+        <factor>0.04</factor>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
         </axis>
     </animation>
 
