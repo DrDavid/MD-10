@@ -45,6 +45,31 @@
 <z-m>5.6946</z-m>  
 </offsets>
 </model>
+
+    <model>
+	<path>Aircraft/MD-11/Models/Effects/contrail-eng1.xml</path>
+	<offsets>
+	    <x-m> 0.0</x-m>
+	    <y-m>-8.4553</y-m>
+	    <z-m> 3.3932</z-m>
+	</offsets>
+    </model>
+    <model>
+	<path>Aircraft/MD-11/Models/Effects/contrail-eng2.xml</path>
+	<offsets>
+	    <x-m> 22.0</x-m>
+	    <y-m> 0.0</y-m>
+	    <z-m>10.3619</z-m>
+	</offsets>
+    </model>
+    <model>
+	<path>Aircraft/MD-11/Models/Effects/contrail-eng3.xml</path>
+	<offsets>
+	    <x-m> 0.0</x-m>
+	    <y-m> 8.4553</y-m>
+	    <z-m> 3.3932</z-m>
+	</offsets>
+    </model>
  
 	
 	 <model>
