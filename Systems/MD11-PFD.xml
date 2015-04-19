@@ -79,7 +79,7 @@
       </input>
       <reference>
           <property>velocities/airspeed-kt</property>
-          <offset>70</offset>
+          <offset>55</offset>
       </reference>
       <output>instrumentation/pfd/stallspeed-diff</output>
       <min>-205</min>

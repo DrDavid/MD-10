@@ -9555,7 +9555,7 @@ refs 4
 kids 0
 OBJECT poly
 name "StallSpeedInd"
-loc 0.0008747 0.0272388 0.0687552
+loc 0.0008847 0.0272388 0.0687552
 texture "pfd3d.png"
 texrep 1 1
 numvert 4
