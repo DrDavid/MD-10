@@ -1109,6 +1109,33 @@ switch_ind = func() {
 	}
 }
 
+var apu_plight = props.globals.initNode("controls/switches/apu-pwr-indicator",0,"BOOL");
+var apu_light = props.globals.initNode("controls/switches/apu-indicator",0,"BOOL");
+setlistener("controls/APU/apu_status", func (status) {
+	var blinker = func {
+	    if (status.getValue() == 2) {
+		apu_light.setBoolValue(1);
+		apu_plight.setBoolValue(1);
+		settimer(func {
+		if (status.getValue() == 2) {
+		    apu_light.setBoolValue(0);
+		    apu_plight.setBoolValue(0);
+		    settimer(blinker,0.6);
+		}
+		},0.6);
+	    }
+	}
+	if (status.getValue() <= 1) {
+	    apu_light.setBoolValue(0);
+	    apu_plight.setBoolValue(0);
+	}
+	if (status.getValue() == 2) blinker();
+	if (status.getValue() == 3) {
+	    apu_light.setBoolValue(1);
+	    apu_plight.setBoolValue(0);
+	}
+},0,0);
+
 var update_systems = func {
     Efis.calc_kpa();
     Efis.update_temp();

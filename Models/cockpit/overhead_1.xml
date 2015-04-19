@@ -2,57 +2,56 @@
 
 <PropertyList>
 
-	<path>overhead_1.ac</path>
+    <path>overhead_1.ac</path>
 	
-	
-		<animation>
-<type>shader</type>
-<shader>chrome</shader>
-<texture>chrome_cockpit.png</texture>
-<object-name>oh.glass</object-name>
-</animation>
+    <animation>
+	<type>shader</type>
+	<shader>chrome</shader>
+	<texture>chrome_cockpit.png</texture>
+	<object-name>oh.glass</object-name>
+    </animation>
 
-	    <effect>
-        <inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>overhead.text</object-name>
-    <object-name>light.knobs</object-name>
+    <effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<object-name>overhead.text</object-name>
+	<object-name>light.knobs</object-name>
     </effect>
 
-    		<animation>
-		<name>Panel lighting</name>
-		<type>material</type>
-		<object-name>overhead.text</object-name>
-    <object-name>ovhd_pnl_indicator</object-name>
-    <object-name>ovhd_flood_indicator</object-name>
-    <object-name>dashboard.text.indicator</object-name>
-    <object-name>dashboard.light.indicator</object-name>
-    <object-name>light.knobs</object-name>
-		<emission>
-			<red>1.5</red>
-			<green>1.27</green>
-			<blue>1</blue>
-			<factor-prop>controls/lighting/ovhd-panel-norm</factor-prop>
-		</emission>
-	</animation>
+    <animation>
+	<name>Panel lighting</name>
+	<type>material</type>
+	<object-name>overhead.text</object-name>
+	<object-name>ovhd_pnl_indicator</object-name>
+	<object-name>ovhd_flood_indicator</object-name>
+	<object-name>dashboard.text.indicator</object-name>
+	<object-name>dashboard.light.indicator</object-name>
+	<object-name>light.knobs</object-name>
+	<emission>
+	    <red>1.5</red>
+	    <green>1.27</green>
+	    <blue>1</blue>
+	    <factor-prop>controls/lighting/ovhd-panel-norm</factor-prop>
+	</emission>
+    </animation>
+
+    <animation>
+	<name>Panel lighting</name>
+	<type>material</type>
+	<object-name>ovhd_lcd</object-name>
+	<emission>
+	    <red>1.39</red>
+	    <green>0</green>
+	    <blue>0</blue>
+	    <factor-prop>controls/lighting/ovhd-panel-norm</factor-prop>
+	</emission>
+    </animation>
 	
-		    		<animation>
-		<name>Panel lighting</name>
-		<type>material</type>
-		<object-name>ovhd_lcd</object-name>
-		<emission>
-			<red>1.39</red>
-			<green>0</green>
-			<blue>0</blue>
-			<factor-prop>controls/lighting/ovhd-panel-norm</factor-prop>
-		</emission>
-	</animation>
-	
-			    	<animation>
-		<name>OVHD light knob</name>
-		<type>pick</type>
-		<object-name>ovhd_pnl_knob</object-name>
-    <object-name>ovhd_pnl_indicator</object-name>
-		<action>
+    <animation>
+	<name>OVHD light knob</name>
+	<type>pick</type>
+	<object-name>ovhd_pnl_knob</object-name>
+	<object-name>ovhd_pnl_indicator</object-name>
+	<action>
 			<button>0</button>
 			<button>3</button>
 			<repeatable type="bool">true</repeatable>
@@ -62,8 +61,8 @@
 				<step>0.025</step>
 				<max>1</max>
 			</binding>
-		</action>
-		<action>
+	</action>
+	<action>
 			<button>1</button>
 			<button>4</button>
 			<repeatable type="bool">true</repeatable>
@@ -73,10 +72,10 @@
 				<step>-0.025</step>
 				<min>0</min>
 			</binding>
-		</action>
-	</animation>
-	
-				    	<animation>
+	</action>
+    </animation>
+
+    <animation>
 		<name>OVHD light knob</name>
 		<type>pick</type>
 		<object-name>dashboard.text.knob</object-name>
@@ -1342,11 +1341,11 @@ FSC.btn
    <object-name>BCN.btn</object-name>
         <property>controls/lighting/beacon</property>
         <condition>
-        <equals>
-        <property>systems/electrical/outputs/avionics</property>
-        <value>1</value>
-        </equals>
-        </condition>
+	    <equals>
+		<property>systems/electrical/outputs/avionics</property>
+		<value>1</value>
+	    </equals>
+	</condition>
         <interpolation>
             <entry>
                 <ind>0</ind>
@@ -1588,7 +1587,7 @@ FSC.btn
 		</axis>
 	</animation>
 	
-	    <animation>
+    <animation>
         <type>pick</type>
         <object-name>L-Lnd.toggle</object-name>
         <object-name>C-Lnd.toggle</object-name>
@@ -1622,7 +1621,7 @@ FSC.btn
         </action>
     </animation>
     
-        <animation>
+    <animation>
         <type>rotate</type>
         <object-name>L-Lnd.toggle</object-name>
         <object-name>C-Lnd.toggle</object-name>
@@ -1643,7 +1642,8 @@ FSC.btn
     
     <animation>
         <type>pick</type>
-        <object-name>APU.btn</object-name>
+        <object-name>APUavail.btn</object-name>
+        <object-name>APUon.btn</object-name>
         <action>
             <button>0</button>
             <repeatable>false</repeatable>
@@ -1665,8 +1665,42 @@ FSC.btn
             </binding>
         </action>
     </animation>
+    <animation>
+	<type>textranslate</type>
+	<object-name>APUavail.btn</object-name>
+        <condition>
+	    <equals>
+		<property>systems/electrical/outputs/avionics</property>
+		<value>1</value>
+	    </equals>
+	</condition>
+        <property>controls/switches/apu-pwr-indicator</property>
+	<factor>0.1875</factor>
+	<axis>
+	    <x>0</x>
+	    <y>1</y>
+	    <z>0</z>
+	</axis>
+    </animation>
+    <animation>
+	<type>textranslate</type>
+	<object-name>APUon.btn</object-name>
+        <condition>
+	    <equals>
+		<property>systems/electrical/outputs/avionics</property>
+		<value>1</value>
+	    </equals>
+	</condition>
+        <property>systems/electrical/APB</property>
+	<factor>0.125</factor>
+	<axis>
+	    <x>0</x>
+	    <y>1</y>
+	    <z>0</z>
+	</axis>
+    </animation>
     
-    	<animation>
+    <animation>
 	<type>knob</type>
 	<object-name>wiper.knob1</object-name>
 	<property>/controls/electric/wiperl/switch</property>
@@ -1690,17 +1724,17 @@ FSC.btn
 	<axis>
 		<x>1</x>
 	</axis>
-</animation>
+    </animation>
 
-	<animation>
+    <animation>
 	<type>knob</type>
 	<object-name>wiper.knob2</object-name>
 	<property>/controls/electric/wiperr/switch</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>1</ind><dep>-90</dep></entry>
-			<entry><ind>2</ind><dep>-135</dep></entry>
-		</interpolation>
+	<interpolation>
+		<entry><ind>0</ind><dep>0</dep></entry>
+		<entry><ind>1</ind><dep>-90</dep></entry>
+		<entry><ind>2</ind><dep>-135</dep></entry>
+	</interpolation>
 	<action>
 		<binding>
 			<command>property-adjust</command>
@@ -1716,6 +1750,6 @@ FSC.btn
 	<axis>
 		<x>1</x>
 	</axis>
-</animation>
+    </animation>
 	
 </PropertyList>
