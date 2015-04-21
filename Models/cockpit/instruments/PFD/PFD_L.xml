@@ -339,7 +339,7 @@ Syd Adams
             <y>0</y>
             <z>1</z>
         </axis>
-        <factor>0.0010</factor>
+        <factor>0.00065</factor>
     </animation>
     <animation>
         <type>select</type>
