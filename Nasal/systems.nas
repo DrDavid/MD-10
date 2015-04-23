@@ -1132,7 +1132,12 @@ setlistener("controls/APU/apu_status", func (status) {
 	if (status.getValue() == 2) blinker();
 	if (status.getValue() == 3) {
 	    apu_light.setBoolValue(1);
-	    apu_plight.setBoolValue(0);
+	    settimer(func {
+	    if (getprop("systems/electrical/APB"))
+		apu_plight.setBoolValue(0);
+	    else
+		apu_plight.setBoolValue(1);
+	    },1);
 	}
 },0,0);
 
