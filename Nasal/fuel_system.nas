@@ -373,8 +373,8 @@ var fuelsys = {
 	    # Tail tank is full
 	    if (me.lev[4].getValue() / me.density.getValue() >= me.cap[4].getValue() - 2.5)
 		me.tail_filled = 1;
-	    # Max 6.5% total fuel in tail tank
-	    if (me.lev[4].getValue() > me.total.getValue() * 0.065) {
+	    # Max 9.5% total fuel in tail tank
+	    if (me.lev[4].getValue() > me.total.getValue() * 0.095) {
 		me.tail_filled = 1;
 	    }
 	
@@ -401,7 +401,7 @@ var fuelsys = {
 		    me.ticks+= 1;
 		    if (me.ticks >= 3600) {
 			xfer_fwd();
-			if (me.ticks >= 3900 and me.lev[4].getValue() < me.total.getValue() * 0.065)
+			if (me.ticks >= 3900 and me.lev[4].getValue() < me.total.getValue() * 0.095)
 			    me.ticks = 0;
 		    }
 		    if (me.empty[4].getBoolValue()) me.tail_mgm_enable = 0;
