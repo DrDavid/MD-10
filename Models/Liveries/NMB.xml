@@ -4,8 +4,8 @@
 	<sim>
 		<model>
 			<livery>
-				<name>Korean Air</name>
-				<texture>Liveries/KAL.png</texture>
+				<name>Air Namibia</name>
+				<texture>Liveries/NMB.png</texture>
 							<property>sim/multiplay/generic/int[8]</property>
 			</livery>  	  
 		</model>
