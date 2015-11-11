@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+  <sim><model>
+    <livery>
+      <name>Air New Zealand</name>
+      <texture>Liveries/MD-10ACF/ANZ.png</texture>
+      <registration>ZK-NZP</registration>
+    <has-center-gear type="bool">true</has-center-gear></livery>
+  </model></sim>
+
+</PropertyList>

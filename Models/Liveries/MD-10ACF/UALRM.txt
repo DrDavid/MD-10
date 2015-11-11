@@ -1,0 +1,41 @@
+United Airlines DC-10-30 "Rainbow" livery by E-Savageair
+
+Background:
+
+    In 1974, United Airlines saw it was time for a new brand image, so they hired world-renowned graphic designer Saul Bass.
+An Academy Award winning filmmaker, known for his movie title sequences and film posters, he was also known for his corporate 
+logo designs.  He became the go-to guy for airline logos; he created Continental Airline's "meatball" logo in the late 60's 
+and later in the 70's, changed the cheatline and stylized the "F" for Frontier Airlines (those liveries are available at 
+www.flightgear.org/liveries.)  For United, Bass would stylized the "U" which became known as the "tulip" and was said to 
+represent flight, the United States flag as well as the airline.  He then used orange, red and blue for the cheatline on 
+the windows.  Bass used those band of colors because together they symbolized the motion of flight and created a 
+modernized "United" lettering style. (Later on to enlarge the letters and logo, the cheatline was lowered just below 
+the windows.)  The new "Rainbow" livery would debut for United in 1974. 
+
+    The "Rainbow" continued flying till January 11, 1993 when the CKS Group debuted the business-oriented "Battleship"
+livery; a grey and dark-blue fuselage with blue stripes on the tail.  However the Rainbow cheatline would remain as a 
+part of the new livery, being slightly smaller and just under the doors; the "tulip" also was slightly smaller and 
+highlighted with a white border on the tail.  Then in 2004 the Pentagram Group introduced the "Rising Blue" livery that seems to 
+harken back the original "Rainbow" livery, using a blue-tone cheatline on the windows and an over-cropped "tulip" 
+on the tail.The "Rising Blue" scheme however would have a short life. In 2011 United and Continental Airlines 
+would merge and United would incorporate Continental's "Globe" design (that would replace Saul Bass's "Meatball"
+logo design) that would replace the Tulip. 
+
+    Such a livery would have some impact. The 1974 design would become to be one of the world's most recognized 
+company images. Some design agencies actually mourned the lost of the "U".  Maybe someday it will come back as a
+special retro.
+
+To "Catch the Rainbow":
+
+Unzip your file to:
+FlightGear/data/aircraft/DC-10-30/models/liveries
+Run FlightGear, and if you have your United livery, 
+then you can -
+
+"Fly the Frendly Skies".
+(Cue in "Rhapsody in Blue")
+
+Thank you for downloading ;-)
+ESA
+
+
