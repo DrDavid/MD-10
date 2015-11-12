@@ -722,8 +722,8 @@
 			</key>
 
 			<!-- Automatic braking system -->
-			<key n="9">
-				<name>Tab</name>
+			<key n="61">
+				<name>=</name>
 				<desc>Cycle automatic braking system setting</desc>
 				<binding>
 					<command>property-cycle</command>
