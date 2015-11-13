@@ -5,9 +5,9 @@
 	<sim>
 		<model>
 			<livery>
-				<name>Skyboat 2</name>
-				<texture>Liveries/MD-10P/skyboat2.png</texture>
-				<registration>N220AU</registration>
+				<name>RNLAF (T-235)</name>
+				<texture>Liveries/KC-10/T-235.png</texture>
+				<registration>T-235</registration>
 				<has-center-gear type="bool">true</has-center-gear>
 			</livery>
 		</model>
