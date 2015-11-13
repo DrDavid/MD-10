@@ -32,6 +32,8 @@ Having said this, the changes we are making to the DC-10-30/MD-10 are "cosmetic,
 
 Thanks to Phil Efstahiou for the great "Orbis Flying Eye Hospital" livery!
 
+Thanks to Israel Hernandez (IAHM-COL) for the wonderful DC-10 35th Anniversary livery!
+
 Contributions and pull requests are welcome.
 
 GPU License:  See license.txt
