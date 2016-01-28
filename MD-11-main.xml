@@ -5,11 +5,11 @@
 <PropertyList>
 
     <sim>
-	<author>Juuso Tapaninen</author>
-	<status>alpha</status>
+	<author>Joshua Davidson (it0uchpods, 411)</author>
+	<status>beta</status>
         <rating>
             <FDM type="int">4</FDM>
-            <systems type="int">3</systems>
+            <systems type="int">4</systems>
             <cockpit type="int">3</cockpit>
             <model type="int">5</model>
         </rating>
@@ -81,7 +81,7 @@
                 <menu n="100">
                     <enabled type="bool">true</enabled>
                     <item>
-                        <label>Autostart</label>
+                        <label>QuickStartup</label>
                         <binding>
                             <command>nasal</command>
                             <script>controls.autostart();</script>
@@ -813,8 +813,8 @@
             <file>Aircraft/MD-11/Nasal/fuel_system.nas</file>
             <file>Aircraft/MD-11/Nasal/SWanimation.nas</file>
             <file>Aircraft/MD-11/Nasal/wipers.nas</file>
-	    <file>Aircraft/MD-11/Nasal/speedbrakes.nas</file>
-	    <file>Aircraft/MD-11/Nasal/autobrakes.nas</file>
+			<file>Aircraft/MD-11/Nasal/speedbrakes.nas</file>
+			<file>Aircraft/MD-11/Nasal/autobrakes.nas</file>
         </MD11>
         <dialogs>
             <file>Aircraft/MD-11/Nasal/dialogs.nas</file>
