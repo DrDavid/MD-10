@@ -836,7 +836,7 @@
   </filter>
 
   <pid-controller>
-    <name>Elevator Control</name>
+    <name>elevator-trim Control</name>
     <debug>false</debug>
     <enable>
       <prop>autopilot/locks/pitch-engaged</prop>
@@ -850,8 +850,8 @@
       <prop>/autopilot/internal/target-pitch-deg</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-filter</prop>
-      <!--prop>/controls/flight/elevator</prop-->
+      <prop>/controls/flight/elevator-trim-trim-filter</prop>
+      <!--prop>/controls/flight/elevator-trim</prop-->
     </output>
     <config>
       <Kp>-0.015</Kp>
@@ -870,7 +870,7 @@
   </pid-controller>
 
     <filter>
-        <name>Elevator control filter</name>
+        <name>elevator-trim control filter</name>
         <debug>false</debug>
         <feedback-if-disabled>true</feedback-if-disabled>
         <initialize-to>output</initialize-to>
@@ -885,9 +885,9 @@
             </condition>
         </enable>
         <input>
-            <property>/controls/flight/elevator-filter</property>
+            <property>/controls/flight/elevator-trim-filter</property>
         </input>
-        <output>/controls/flight/elevator</output>
+        <output>/controls/flight/elevator-trim</output>
         <type>noise-spike</type>
         <max-rate-of-change>0.2</max-rate-of-change>
     </filter>
