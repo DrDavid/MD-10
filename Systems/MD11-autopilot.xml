@@ -836,7 +836,7 @@
   </filter>
 
   <pid-controller>
-    <name>elevator-trim Control</name>
+    <name>Elevator Control</name>
     <debug>false</debug>
     <enable>
       <prop>autopilot/locks/pitch-engaged</prop>
@@ -850,7 +850,7 @@
       <prop>/autopilot/internal/target-pitch-deg</prop>
     </reference>
     <output>
-      <prop>/controls/flight/elevator-trim-trim-filter</prop>
+      <prop>/controls/flight/elevator-trim-filter</prop>
       <!--prop>/controls/flight/elevator-trim</prop-->
     </output>
     <config>
@@ -870,7 +870,7 @@
   </pid-controller>
 
     <filter>
-        <name>elevator-trim control filter</name>
+        <name>Elevator control filter</name>
         <debug>false</debug>
         <feedback-if-disabled>true</feedback-if-disabled>
         <initialize-to>output</initialize-to>
