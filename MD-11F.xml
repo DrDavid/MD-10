@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 
 
 
@@ -79,28 +79,25 @@
 
     <!-- Engines -->
     <!-- Fuselage objects for nacelles -->
-    <fuselage ax="6.022" ay="8.138" az="2.536" bx="1.341" by="8.138" bz="2.536" width="2.742" taper="0.94" midpoint="0.0" />
-    <fuselage ax="6.022" ay="-8.138" az="2.536" bx="1.341" by="-8.138" bz="2.536" width="2.742" taper="0.94" midpoint="0.0" />
-    <fuselage ax="-22.427" ay="0.0" az="9.654" bx="-32.764" by="0.0" bz="9.293" width="2.84" taper="0.94" midpoint="0.0" />
+    <fuselage ax="7.142" ay="8.138" az="2.536" bx="2.461" by="8.138" bz="2.536" width="2.742" taper="0.94" midpoint="0.0" />
+    <fuselage ax="7.142" ay="-8.138" az="2.536" bx="2.461" by="-8.138" bz="2.536" width="2.742" taper="0.94" midpoint="0.0" />
+    <fuselage ax="-14.534" ay="0.0" az="9.654" bx="-24.871" by="0.0" bz="9.293" width="2.84" taper="0.94" midpoint="0.0" />
     <!-- Actual engines -->
-    
-    <jet x="3.541" y="8.138" z="3.541" mass="9047.0" thrust="80700.0" afterburner="0" rotate="0.0" n1-idle="33.0" n1-max="110.0" n2-idle="53.0" n2-max="103.0" tsfc="0.04" egt="700.0" epr="2.0" exhaust-speed="1105.0" spool-time="3.0">
+    <jet x="-2.125" y="8.138" z="3.541" mass="9047.0" thrust="61500.0" afterburner="0" rotate="0.0" n1-idle="33.0" n1-max="110.0" n2-idle="53.0" n2-max="103.0" tsfc="0.394" egt="700.0" epr="2.0" exhaust-speed="1555.0" spool-time="3.0">
 	<control-input axis="/controls/engines/engine[0]/throttle-act" control="THROTTLE" />
 	<control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST" />
 	<control-output control="REVERSE_THRUST" prop="/engines/engine[0]/reverser-pos-norm" />
 	<control-speed control="REVERSE_THRUST" transition-time="1.0" />
 	<actionpt x="2.461" y="8.138" z="2.536" />
     </jet>
-    
-    <jet x="-30.564" y="0.0" z="10.5002" mass="9047.0" thrust="80700.0" afterburner="0" rotate="0.0" n1-idle="33.0" n1-max="110.0" n2-idle="53.0" n2-max="103.0" tsfc="0.04" egt="700.0" epr="2.0" exhaust-speed="1105.0" spool-time="3.0">
+    <jet x="28.0873" y="0.0" z="10.5002" mass="9047.0" thrust="61500.0" afterburner="0" rotate="0.0" n1-idle="33.0" n1-max="110.0" n2-idle="53.0" n2-max="103.0" tsfc="0.394" egt="700.0" epr="2.0" exhaust-speed="1555.0" spool-time="3.0">
 	<control-input axis="/controls/engines/engine[1]/throttle-act" control="THROTTLE" />
 	<control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST" />
 	<control-output control="REVERSE_THRUST" prop="/engines/engine[1]/reverser-pos-norm" />
 	<control-speed control="REVERSE_THRUST" transition-time="1.0" />
 	<actionpt x="-24.871" y="0.0" z="9.293" />
     </jet>
-    
-    <jet x="3.541" y="-8.138" z="3.541" mass="9047.0" thrust="80700.0" afterburner="0" rotate="0.0" n1-idle="33.0" n1-max="110.0" n2-idle="53.0" n2-max="103.0" tsfc="0.04" egt="700.0" epr="2.0" exhaust-speed="1105.0" spool-time="3.0">
+    <jet x="-2.125" y="-8.138" z="3.541" mass="9047.0" thrust="61500.0" afterburner="0" rotate="0.0" n1-idle="33.0" n1-max="110.0" n2-idle="53.0" n2-max="103.0" tsfc="0.394" egt="700.0" epr="2.0" exhaust-speed="1555.0" spool-time="3.0">
 	<control-input axis="/controls/engines/engine[2]/throttle-act" control="THROTTLE" />
 	<control-input axis="/controls/engines/engine[2]/reverser" control="REVERSE_THRUST" />
 	<control-output control="REVERSE_THRUST" prop="/engines/engine[2]/reverser-pos-norm" />
@@ -108,60 +105,56 @@
 	<actionpt x="2.461" y="-8.138" z="2.536" />
     </jet>
 
-    <!-- Pushback -->
-    <thruster x="20.6395" y="0.00" z="0.7" vx="1" vy="0" vz="0" thrust="12000">
-	<control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
-    </thruster>
-
-<!-- Nosegear -->
-<gear x="20.6395" y="0.0" z="0.7" compression="0.4" spring="0.8" damp="4.0">
+ <!-- Nosegear -->
+    <gear x="20.6395" y="0.0" z="0.7" compression="0.4" spring="0.8" damp="4.0">
     <!-- up to 70 degrees max steering angle with tiller, input is limited to 7 degrees with rudder (see Nasal/ground_steering.nas) -->
     <control-input control="STEER" axis="/controls/gear/nosegear-steering-cmd-norm" src0="-1.0" dst0="-1.2217304764" src1="1.0" dst1="1.2217304764" />
     <control-output control="STEER" prop="/controls/gear/nosegear-steering-angle-rad" />
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
     <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
     <control-speed control="EXTEND" transition-time="15"/>
-</gear>
-<!-- Left main gears -->
-<gear x="-3.1584" y="-5.3128" z="0.65" compression="0.7" spring="0.6" damp="1.0">
+    </gear>
+    <!-- Left main gears -->
+    <gear x="-3.1584" y="-5.3128" z="0.65" compression="0.7" spring="0.6" damp="1.0">
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-output control="EXTEND" prop="/gear/gear[1]/position-norm" />
-    <control-speed control="EXTEND" transition-time="19" />
-</gear>
-<gear x="-4.7637" y="-5.3128" z="0.65" compression="0.7" spring="0.6" damp="1.0">
+	<control-output control="EXTEND" prop="/gear/gear[1]/position-norm" />
+	<control-speed control="EXTEND" transition-time="19" />
+    </gear>
+    <gear x="-4.7637" y="-5.3128" z="0.65" compression="0.7" spring="0.6" damp="1.0">
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-output control="EXTEND" prop="/gear/gear[2]/position-norm" />
-    <control-speed control="EXTEND" transition-time="19" />
-</gear>
-<!-- Right main gears -->
-<gear x="-3.1584" y="5.3128" z="0.65" compression="0.7" spring="0.6" damp="1.0">
+	<control-output control="EXTEND" prop="/gear/gear[2]/position-norm" />
+	<control-speed control="EXTEND" transition-time="19" />
+    </gear>
+    <!-- Right main gears -->
+    <gear x="-3.1584" y="5.3128" z="0.65" compression="0.7" spring="0.6" damp="1.0">
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-output control="EXTEND" prop="/gear/gear[3]/position-norm" />
-    <control-speed control="EXTEND" transition-time="19" />
-</gear>
-<gear x="-4.7637" y="5.3128" z="0.65" compression="0.7" spring="0.6" damp="1.0">
+	<control-output control="EXTEND" prop="/gear/gear[3]/position-norm" />
+	<control-speed control="EXTEND" transition-time="19" />
+    </gear>
+    <gear x="-4.7637" y="5.3128" z="0.65" compression="0.7" spring="0.6" damp="1.0">
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-output control="EXTEND" prop="/gear/gear[4]/position-norm" />
-    <control-speed control="EXTEND" transition-time="19" />
-</gear>
-<!-- Center gear -->
-<gear x="-4.7637" y="0" z="0.5586" compression="0.7" spring="0.6" damp="1.0">
+	<control-output control="EXTEND" prop="/gear/gear[4]/position-norm" />
+	<control-speed control="EXTEND" transition-time="19" />
+    </gear>
+    <!-- Center gear -->
+    <gear x="-4.7637" y="0" z="0.5586" compression="0.7" spring="0.6" damp="1.0">
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
     <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-    <control-output control="EXTEND" prop="/gear/gear[5]/position-norm" />
-    <control-speed control="EXTEND" transition-time="15" />
-</gear>
+	<control-output control="EXTEND" prop="/gear/gear[5]/position-norm" />
+	<control-speed control="EXTEND" transition-time="15" />
+    </gear>
 
-    <!-- Fuel and payload -->
+
+<!-- Fuel and payload -->
     <!-- Left wing tanks-->
     <tank x="-3.0" y="7.5" z="3.5" jet="true" capacity="52602" />
     <!-- Center tank -->

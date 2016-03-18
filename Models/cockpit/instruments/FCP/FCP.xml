@@ -759,20 +759,9 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>MD11.afds.APpwrbtn(); controls.click(3);</script>
+				<script>MD11.afds.APpwrbtn();</script>
+				<!--script>MD11.afds.APpwrbtn(); controls.click(3);</script-->
 			</binding>
-			<!--binding>
-				<command>property-toggle</command>
-				<property>instrumentation/afds/inputs/AP</property>
-			</binding>
-        <binding>
-				<command>property-toggle</command>
-				<property>instrumentation/afds/inputs/FD</property>
-			</binding>
-        <binding>
-       <command>nasal</command>
-      <script>MD11.afds.input(2,5);</script>
-      </binding-->
 		</action>
 	</animation>
 

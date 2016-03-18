@@ -116,16 +116,9 @@ var AFDS = {
 ####    Autoflight Button    ####
 ###################
     APpwrbtn : func {
-	if (!me.at2.getBoolValue()) {
-	    me.at2.setBoolValue(1);
-	    if (getprop("position/altitude-agl-ft") > 100)
-		me.at1.setBoolValue(1);
-	} elsif (getprop("position/altitude-agl-ft") > 100 and !me.AP.getBoolValue()) {
-	    me.AP.setBoolValue(1);
-	} elsif (me.at1.getBoolValue() or me.at2.getBoolValue()) {
-	    me.at1.setBoolValue(0);
-	    me.at2.setBoolValue(0);
-	}
+		    me.AP.setBoolValue(1);
+			me.at1.setBoolValue(1);
+			me.at2.setBoolValue(1);
     },
 
 ####    Yoke AP Disconnect Button    ####
