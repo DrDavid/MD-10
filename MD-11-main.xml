@@ -182,7 +182,7 @@
             <path>sim/view[100]/enabled</path>
             <path>sim/view[101]/enabled</path>
             <path>sim/yokes-visible</path>
-            <path>controls/gear/tiller-enabled</path>
+            <!--path>controls/gear/tiller-enabled</path-->
             <path>sim/weight[0]/weight-lb</path>
             <path>sim/weight[1]/weight-lb</path>
         </aircraft-data>

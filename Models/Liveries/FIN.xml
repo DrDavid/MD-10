@@ -5,7 +5,7 @@
 	<model> 
 		<livery> 
 			<name type="string">Finnair</name> 
-			<texture>md11.png</texture>
+			<texture>Liveries/FIN.png</texture>
 		</livery> 
 	</model> 
 </sim> 
