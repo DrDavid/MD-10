@@ -21,7 +21,7 @@
 		<type>rotate</type>
 		<object-name>GearNWheels</object-name>
 		<object-name>GearNStrutLo</object-name>
-		<property>gear/gear[0]/steering-norm</property>
+		<property>controls/gear/nosegear-steering-cmd-norm</property>
 		<factor>68</factor>
 		<axis>
 			<x>0</x>
