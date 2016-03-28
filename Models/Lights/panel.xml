@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>panel.ac</path>
+
+	<params>
+		<source>systems/electrical/outputs/panel-lights</source>
+	</params>
+
+	<animation>
+		<type>select</type>
+		<condition>
+			<and>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property alias="../../../../../params/source" />
+					<value>5</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<type>light</type>
+		<light-type>point</light-type>
+		<object-name>Cone</object-name>
+		<nopreview />
+		<position>
+			<x>0</x>
+			<y>0</y>
+			<z>0</z>
+		</position>
+		<ambient>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1.0</a>
+		</ambient>
+		<diffuse>
+			<r>0.7</r>
+			<g>0.7</g>
+			<b>0.6</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>0.9529</r>
+			<g>0.851</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>0.0</c>
+			<l>8.0</l>
+			<q>20.0</q>
+		</attenuation>
+		<exponent>2.0</exponent>
+		<near-m>0.0001</near-m>
+		<far-m>2</far-m>
+		<cutoff>5</cutoff>
+	</animation>
+	
+</PropertyList>

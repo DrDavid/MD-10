@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10-30 -->
+<!-- General Electric CF6-50 jet engine model -->
+
+<PropertyList>
+
+	<path>GE-CF6-50.ac</path>
+
+	<params>
+		<on-fire>engines/engine[0]/on-fire</on-fire>
+		<n1>engines/engine[0]/n1</n1>
+	</params>
+
+	<model>
+		<name>Fire</name>
+		<path>Aircraft/MD-10-30/Models/Effects/enginefire.xml</path>
+		<condition>
+			<property alias="../../../params/on-fire" />
+		</condition>
+	</model>
+
+	<animation>
+		<name>Fan</name>
+		<type>spin</type>
+		<object-name>Cone</object-name>
+		<object-name>Blades</object-name>
+		<factor>-67</factor>
+		<property alias="../../params/n1" />
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>

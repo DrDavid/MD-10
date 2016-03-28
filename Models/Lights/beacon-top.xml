@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>rednav.ac</path>
+
+	<animation>
+		<name>On/off</name>
+		<type>select</type>
+		<condition>
+			<greater-than>
+				<property>systems/electrical/outputs/beacon[0]</property>
+				<value>5</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<name>Billboard</name>
+		<type>billboard</type>
+	</animation>
+
+</PropertyList>

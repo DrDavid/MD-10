@@ -1,2 +1,2 @@
-# MD-11
-FGAircraft | MD-11 by jormapaappa1235, being worked on by Joshua Davidson (it0uchpods/411)
+# MD-10-30
+FGAircraft | MD-10-30 by Joshua Davidson (it0uchpods/411), based on jormapaappa1235's MD-11.
