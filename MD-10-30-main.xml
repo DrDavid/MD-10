@@ -601,7 +601,7 @@
                 </category-13>
             </configuration-module>
             <voice>
-                <file-prefix type="string">Sounds/mk-viii/</file-prefix>
+                <file-prefix type="string">Aircraft/MD-10-30/Sounds/mk-viii/</file-prefix>
             </voice>
             <inputs>                            <!-- Module I/O -->
                 <arinc429>
