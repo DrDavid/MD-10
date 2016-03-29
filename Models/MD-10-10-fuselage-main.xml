@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10-30 -->
+<!-- McDonnell Douglas MD-10-10 -->
 <!-- Fuselage model, all versions -->
 
 <PropertyList>
@@ -758,7 +758,7 @@
 
 	<effect>
 		<name>Fuselage reflect</name>
-		<inherits-from>Aircraft/MD-10-30/Models/Effects/DC10reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10-10/Models/Effects/DC10reflect</inherits-from>
 		<object-name>Fuselage</object-name>
 	</effect>
 	<!-- Rembrandt !! -->

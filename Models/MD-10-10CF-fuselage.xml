@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10-30 -->
+<!-- McDonnell Douglas MD-10-10 -->
 <!-- Fuselage model, convertible freighter version -->
 
 <PropertyList>
 
-	<path>MD-10-30CF-fuselage.ac</path>
+	<path>MD-10-10CF-fuselage.ac</path>
 
 	<animation>
 		<name>PAX windows</name>
@@ -158,6 +158,6 @@
 		</center>
 	</animation>
 
-	<foo include="MD-10-30-fuselage-main.xml" omit-node="y" />
+	<foo include="MD-10-10-fuselage-main.xml" omit-node="y" />
 
 </PropertyList>

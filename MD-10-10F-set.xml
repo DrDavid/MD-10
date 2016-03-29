@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 
 
-<PropertyList include="MD-10-30-main.xml">
+<PropertyList include="MD-10-10-main.xml">
 
     <sim>
-	<description>Boeing/McDonnell Douglas MD-10-30F</description>
+	<description>Boeing/McDonnell Douglas MD-10-10F</description>
 	<flight-model>yasim</flight-model>
-	<aero>MD-10-30F</aero>
+	<aero>MD-10-10F</aero>
 	<startup>
-	    <splash-texture>Aircraft/MD-10-30/splash.png</splash-texture>
+	    <splash-texture>Aircraft/MD-10-10/splash.png</splash-texture>
         </startup>
 
 	<menubar>
 	    <default>
 		<menu n="100">
-		    <label>McDonnell Douglas MD-10-30</label>
+		    <label>McDonnell Douglas MD-10-10</label>
 		</menu>
 	    </default>
 	</menubar>
 		
 	<model n="0">
-	    <path>Aircraft/MD-10-30/Models/MD-10-30F.xml</path>
+	    <path>Aircraft/MD-10-10/Models/MD-10-10F.xml</path>
 	    <armrest type="double">0</armrest>
 	    <door>
 		<position-x-m type="float">-22.647</position-x-m>
@@ -52,7 +52,7 @@
     <instrumentation n="0">
         <cdu n="0">
             <ident n="0">
-                <model>MD-10-30F</model>
+                <model>MD-10-10F</model>
                 <engines>CF6-80C2</engines>
             </ident>
         </cdu>
@@ -71,7 +71,7 @@
     
     <nasal n="0">
         <MD11>
-            <file>Aircraft/MD-10-30/Nasal/liveriesF.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/liveriesF.nas</file>
         </MD11>
     </nasal>
 

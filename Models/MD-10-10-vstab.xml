@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10-30 -->
+<!-- McDonnell Douglas MD-10-10 -->
 <!-- Vertical stabilizer model -->
 
 <PropertyList>
 
-	<path>MD-10-30-vstab.ac</path>
+	<path>MD-10-10-vstab.ac</path>
 
 	<model>
 		<name>Engine</name>
-		<path>Aircraft/MD-10-30/Models/GE-CF6-50.xml</path>
+		<path>Aircraft/MD-10-10/Models/GE-CF6-50.xml</path>
 		<overlay>
 			<params>
 				<on-fire>engines/engine[1]/on-fire</on-fire>
@@ -26,7 +26,7 @@
 
 	<model>
 		<name>Contrail</name>
-		<path>Aircraft/MD-10-30/Models/Effects/contrail.xml</path>
+		<path>Aircraft/MD-10-10/Models/Effects/contrail.xml</path>
 		<overlay>
 			<params>
 				<n1>engines/engine[1]/rpm</n1>
@@ -83,12 +83,12 @@
 
 	<effect>
 		<name>Tail reflect</name>
-		<inherits-from>Aircraft/MD-10-30/Models/Effects/DC10reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10-10/Models/Effects/DC10reflect</inherits-from>
 		<object-name>Vstab</object-name>
 	</effect>
 	<effect>
 		<name>Intake reflect</name>
-		<inherits-from>Aircraft/MD-10-30/Models/Effects/DC10chrome_reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10-10/Models/Effects/DC10chrome_reflect</inherits-from>
 		<object-name>EngineIntake</object-name>
 	</effect>
 

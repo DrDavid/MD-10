@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10-30 -->
+<!-- McDonnell Douglas MD-10-10 -->
 <!-- Landing gear model -->
 
 <PropertyList>
 
-	<path>MD-10-30-gear.ac</path>
+	<path>MD-10-10-gear.ac</path>
 
 	<!-- Formula for rotation of a compression scissor:
 	     acos((d - c) / 2l) * R2D - a

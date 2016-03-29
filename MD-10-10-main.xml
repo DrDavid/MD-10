@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10-30 -->
+<!-- McDonnell Douglas MD-10-10 -->
 
 <PropertyList>
 
@@ -197,42 +197,42 @@
 	</flaps>
         
 	<systems>
-            <path>Aircraft/MD-10-30/Systems/systems.xml</path>
+            <path>Aircraft/MD-10-10/Systems/systems.xml</path>
 
             <!--  fast running autopilot rules (running at FDM frequency / 120Hz) -->
             <autopilot>
-                <path>Aircraft/MD-10-30/Systems/MD11-autopilot.xml</path>
+                <path>Aircraft/MD-10-10/Systems/MD11-autopilot.xml</path>
             </autopilot>
             <autopilot>
-                <path>Aircraft/MD-10-30/Systems/MD11-autothrottle.xml</path>
+                <path>Aircraft/MD-10-10/Systems/MD11-autothrottle.xml</path>
             </autopilot>
             <autopilot>
                 <path>Aircraft/Generic/generic-autopilot-helper.xml</path>
             </autopilot>
             <autopilot>
-                <path>Aircraft/MD-10-30/Systems/MD11-autoland.xml</path>
+                <path>Aircraft/MD-10-10/Systems/MD11-autoland.xml</path>
             </autopilot>
             <!--autopilot>
                 <name>Autobrake system</name>
-                <path>Aircraft/MD-10-30/Systems/MD11-autobrake.xml</path>
+                <path>Aircraft/MD-10-10/Systems/MD11-autobrake.xml</path>
             </autopilot-->
 
             <!--  slow running property-rules (running at frame rate) -->
             <!--property-rule n="100">
-                <path>Aircraft/MD-10-30/Systems/MD11-spoiler-fcs.xml</path>
+                <path>Aircraft/MD-10-10/Systems/MD11-spoiler-fcs.xml</path>
             </property-rule-->
             <property-rule n="101">
-                <path>Aircraft/MD-10-30/Systems/MD11-PFD.xml</path>
+                <path>Aircraft/MD-10-10/Systems/MD11-PFD.xml</path>
             </property-rule>
         </systems>
         
         <instrumentation>
-            <path>Aircraft/MD-10-30/Systems/instrumentation.xml</path>
+            <path>Aircraft/MD-10-10/Systems/instrumentation.xml</path>
         </instrumentation>
 
 	
         <sound>
-	    <path>Aircraft/MD-10-30/Sounds/MD-10-30-external-sound.xml</path>
+	    <path>Aircraft/MD-10-10/Sounds/MD-10-10-external-sound.xml</path>
             <stall type="bool">0</stall>
             <click1 type="bool">0</click1>
             <click2 type="bool">0</click2>
@@ -601,7 +601,7 @@
                 </category-13>
             </configuration-module>
             <voice>
-                <file-prefix type="string">Aircraft/MD-10-30/Sounds/mk-viii/</file-prefix>
+                <file-prefix type="string">Aircraft/MD-10-10/Sounds/mk-viii/</file-prefix>
             </voice>
             <inputs>                            <!-- Module I/O -->
                 <arinc429>
@@ -796,34 +796,34 @@
 
     <nasal n="0">
         <MD11>
-            <file>Aircraft/MD-10-30/Nasal/Air.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/AFDS.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/electrical.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/engine.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/Hydraulics.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/systems.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/tyresmoke.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/gpws.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/brakesystem.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/ground_steering.nas</file>
-            <file>Aircraft/MD-10-30/Models/cockpit/instruments/ND/ND.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/Air.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/AFDS.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/electrical.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/engine.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/Hydraulics.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/systems.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/tyresmoke.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/gpws.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/brakesystem.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/ground_steering.nas</file>
+            <file>Aircraft/MD-10-10/Models/cockpit/instruments/ND/ND.nas</file>
             <file>Aircraft/Generic/limits.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/warnsystem.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/doors.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/fuel_system.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/SWanimation.nas</file>
-            <file>Aircraft/MD-10-30/Nasal/wipers.nas</file>
-			<file>Aircraft/MD-10-30/Nasal/speedbrakes.nas</file>
-			<file>Aircraft/MD-10-30/Nasal/autobrakes.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/warnsystem.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/doors.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/fuel_system.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/SWanimation.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/wipers.nas</file>
+			<file>Aircraft/MD-10-10/Nasal/speedbrakes.nas</file>
+			<file>Aircraft/MD-10-10/Nasal/autobrakes.nas</file>
         </MD11>
         <dialogs>
-            <file>Aircraft/MD-10-30/Nasal/dialogs.nas</file>
+            <file>Aircraft/MD-10-10/Nasal/dialogs.nas</file>
         </dialogs>
         <cdu>
-            <!--file>Aircraft/MD-10-30/Models/cockpit/instruments/cdu/boeing.nas</file-->
-            <file>Aircraft/MD-10-30/Nasal/boeing_cdu.nas</file>
+            <!--file>Aircraft/MD-10-10/Models/cockpit/instruments/cdu/boeing.nas</file-->
+            <file>Aircraft/MD-10-10/Nasal/boeing_cdu.nas</file>
         </cdu>
-        <walk><file>Aircraft/MD-10-30/Nasal/walk.nas</file></walk>
+        <walk><file>Aircraft/MD-10-10/Nasal/walk.nas</file></walk>
     </nasal>
     
     <limits n="0">

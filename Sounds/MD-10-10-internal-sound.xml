@@ -9,7 +9,7 @@
 	<!-- Engine 1 sound -->
 	<engine>
 		<name>Engine 1 sound 1 internal</name>
-		<path>Aircraft/MD-10-30/Sounds/737NG-jet.wav</path>
+		<path>Aircraft/MD-10-10/Sounds/737NG-jet.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -33,7 +33,7 @@
 	</engine>
 	<engine>
 		<name>Engine 1 sound 2 internal</name>
-		<path>Aircraft/MD-10-30/Sounds/737NG-jet2.wav</path>
+		<path>Aircraft/MD-10-10/Sounds/737NG-jet2.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -53,7 +53,7 @@
 	<!-- Engine 2 sound -->
 	<engine>
 		<name>Engine 2 sound 1 internal</name>
-		<path>Aircraft/MD-10-30/Sounds/737NG-jet.wav</path>
+		<path>Aircraft/MD-10-10/Sounds/737NG-jet.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -77,7 +77,7 @@
 	</engine>
 	<engine>
 		<name>Engine 2 sound 2 internal</name>
-		<path>Aircraft/MD-10-30/Sounds/737NG-jet2.wav</path>
+		<path>Aircraft/MD-10-10/Sounds/737NG-jet2.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -97,7 +97,7 @@
 	<!-- Engine 3 sound -->
 	<engine>
 		<name>Engine 3 sound 1 internal</name>
-		<path>Aircraft/MD-10-30/Sounds/737NG-jet.wav</path>
+		<path>Aircraft/MD-10-10/Sounds/737NG-jet.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -121,7 +121,7 @@
 	</engine>
 	<engine>
 		<name>Engine 3 sound 2 internal</name>
-		<path>Aircraft/MD-10-30/Sounds/737NG-jet2.wav</path>
+		<path>Aircraft/MD-10-10/Sounds/737NG-jet2.wav</path>
 		<mode>looped</mode>
 		<condition>
 			<and>
@@ -142,7 +142,7 @@
 	    <rain>
       <name>rain</name>
       <mode>looped</mode>
-      <path>Aircraft/MD-10-30/Sounds/rain.wav</path>
+      <path>Aircraft/MD-10-10/Sounds/rain.wav</path>
       <condition>
         <greater-than>
           <property>/environment/metar/rain-norm</property>
@@ -166,7 +166,7 @@
             <switch>
             <name>switch1</name>
             <mode>once</mode>
-            <path>Aircraft/MD-10-30/Sounds/click1.wav</path>
+            <path>Aircraft/MD-10-10/Sounds/click1.wav</path>
             <condition>
                 <property>sim/sound/click1</property>
             </condition>
@@ -184,7 +184,7 @@
         <switch>
             <name>switch2</name>
             <mode>once</mode>
-            <path>Aircraft/MD-10-30/Sounds/click2.wav</path>
+            <path>Aircraft/MD-10-10/Sounds/click2.wav</path>
             <condition>
                 <property>sim/sound/click2</property>
             </condition>
@@ -202,7 +202,7 @@
         <switch>
             <name>click3</name>
             <mode>once</mode>
-            <path>Aircraft/MD-10-30/Sounds/click3.wav</path>
+            <path>Aircraft/MD-10-10/Sounds/click3.wav</path>
             <condition>
                 <property>sim/sound/click3</property>
             </condition>
@@ -220,7 +220,7 @@
         <switch>
             <name>click4</name>
             <mode>once</mode>
-            <path>Aircraft/MD-10-30/Sounds/click4.wav</path>
+            <path>Aircraft/MD-10-10/Sounds/click4.wav</path>
             <condition>
                 <property>sim/sound/click4</property>
             </condition>
@@ -238,7 +238,7 @@
         <switch>
             <name>click5</name>
             <mode>once</mode>
-            <path>Aircraft/MD-10-30/Sounds/click5.wav</path>
+            <path>Aircraft/MD-10-10/Sounds/click5.wav</path>
             <condition>
                 <property>sim/sound/click5</property>
             </condition>
@@ -256,7 +256,7 @@
         <switch>
             <name>click6</name>
             <mode>once</mode>
-            <path>Aircraft/MD-10-30/Sounds/click6.wav</path>
+            <path>Aircraft/MD-10-10/Sounds/click6.wav</path>
             <condition>
                 <property>sim/sound/click6</property>
             </condition>
@@ -274,7 +274,7 @@
         <switch>
             <name>click7</name>
             <mode>once</mode>
-            <path>Aircraft/MD-10-30/Sounds/click7.wav</path>
+            <path>Aircraft/MD-10-10/Sounds/click7.wav</path>
             <condition>
                 <property>sim/sound/click7</property>
             </condition>
@@ -292,7 +292,7 @@
         <switch>
             <name>click8</name>
             <mode>once</mode>
-            <path>Aircraft/MD-10-30/Sounds/click8.wav</path>
+            <path>Aircraft/MD-10-10/Sounds/click8.wav</path>
             <condition>
                 <property>sim/sound/click8</property>
             </condition>
