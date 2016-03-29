@@ -185,13 +185,6 @@
 	<control-output control="EXTEND" prop="/gear/gear[4]/position-norm" />
 	<control-speed control="EXTEND" transition-time="10.0" />
     </gear>
-    <!-- Center gear -->
-    <gear x="-3.56" y="0.0" z="-0.288" compression="0.4" spring="0.7" damp="1.0">
-	<control-input axis="/controls/gear/brake-parking" control="BRAKE" />
-	<control-input axis="/controls/gear/center-gear-down" control="EXTEND" />
-	<control-output control="EXTEND" prop="/gear/gear[5]/position-norm" />
-	<control-speed control="EXTEND" transition-time="10" />
-    </gear>
 
     <!-- Fuel and payload -->
     <!-- TODO: Change fuel capacities for the DC_10-30ER --> <!-- Fuel capacity increased by 10,000 lbs and ballast adjusted. David Waggoner, 20Jan14 -->
