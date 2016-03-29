@@ -38,6 +38,10 @@ Engaging Heading Hold (Assuming NAV is active):
 
 	1) Press the Heading knob.
 
+Engaging Heading Select (Assuming Heading Hold/NAV is active):
+
+	1) Middle Click the headinb knob.
+
 
 Engaging Vertical Speed Hold (Assuming Flight Level Change is active):
 
@@ -48,7 +52,7 @@ Engaging Vertical Speed Hold (Assuming Flight Level Change is active):
 
 Engaging Altitude Hold/Flight Level Change (Assuming Vertical Speed Hold is active):
 
-	1) Press the Altitude Knob)
+	1) Middle Click the Altitude Knob
 
 
 Engaging NAV (LNAV, Assuming Heading Hold is active):
