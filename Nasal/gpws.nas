@@ -9,8 +9,7 @@
 # Configuration settings
 ##########################################################################
 # Minimum landing flap position
-# 777 requires at least flap position 25 (=83%) for landing
-var gpws_min_landing_flaps = 0.83;
+var gpws_min_landing_flaps = 0.68;
 
 ##############################################
 # GPWS specific class
