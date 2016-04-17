@@ -7,48 +7,6 @@
 
 	<path>MD-10-10CF-fuselage.ac</path>
 
-	<animation>
-		<name>PAX windows</name>
-		<type>select</type>
-		<object-name>Windows</object-name>
-		<condition>
-			<equals>
-				<property>sim/model/configuration</property>
-				<value>pax</value>
-			</equals>
-		</condition>
-	</animation>
-	<animation>
-		<name>Cargo no windows</name>
-		<type>select</type>
-		<object-name>NoWindows</object-name>
-		<object-name>MC_NoWindows</object-name>
-		<condition>
-			<equals>
-				<property>sim/model/configuration</property>
-				<value>cargo</value>
-			</equals>
-		</condition>
-	</animation>
-	
-	<!-- Lighting -->
-	<animation>
-		<name>Cabin lights</name>
-		<type>material</type>
-		<object-name>Windows</object-name>
-		<condition>
-			<greater-than>
-				<property>systems/electrical/outputs/cabin-lights</property>
-				<value>15</value>
-			</greater-than>
-		</condition>
-		<emission>
-			<red>0.5</red>
-			<green>0.4941</green>
-			<blue>0.3275</blue>
-		</emission>
-	</animation>
-
 	<!-- Cargo doors -->
 	<animation>
 		<name>Forward cargo door pick</name>
@@ -132,7 +90,7 @@
 				<script>
 					if (getprop("sim/model/configuration") == "cargo")
 					{
-						DC10.doors.cargo_main.toggle();
+						MD11.doors.cargo_main.toggle();
 					}
 				</script>
 			</binding>
