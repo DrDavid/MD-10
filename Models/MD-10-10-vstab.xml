@@ -83,12 +83,12 @@
 
 	<effect>
 		<name>Tail reflect</name>
-		<inherits-from>Aircraft/MD-10-10/Models/Effects/DC10reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10-10/Models/Effects/MD11reflect</inherits-from>
 		<object-name>Vstab</object-name>
 	</effect>
 	<effect>
 		<name>Intake reflect</name>
-		<inherits-from>Aircraft/MD-10-10/Models/Effects/DC10chrome_reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10-10/Models/Effects/MD11chrome_reflect</inherits-from>
 		<object-name>EngineIntake</object-name>
 	</effect>
 

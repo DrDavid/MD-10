@@ -19,7 +19,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					DC10.doors.cargo_fwd.toggle();
+					MD11.doors.cargo_fwd.toggle();
 				</script>
 			</binding>
 		</action>
@@ -54,7 +54,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					DC10.doors.cargo_aft.toggle();
+					MD11.doors.cargo_aft.toggle();
 				</script>
 			</binding>
 		</action>
