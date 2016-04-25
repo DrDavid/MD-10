@@ -1,4 +1,4 @@
-MD-10-10 Autoflight 2:
+MD-11/MD-10-10F Autoflight 2:
 
 The autoflight system and this document are subject to change without notice. Please review after each update to the aircraft. -it0uchpods
 
@@ -20,7 +20,7 @@ Disengaging Autoflight:
 
 	NOTICE: A key for Autoflight disengage will be added very soon.
 	
-	NOTICE 2: Autothrust is still connected after performing this action, the throttle will be retarded automatically at 30feet.
+	NOTICE 2: Autothrust is still connected after performing this action, the autothrust will be disconnected at 100ft. 
 
 	1) Press the small Autoflight disengage on the left (captain) or right (first officer) side of the yoke.
 
