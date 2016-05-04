@@ -190,8 +190,8 @@
         
 	<flaps>
 	    <setting>0.00</setting>	<!-- 0 -->
-	    <setting>0.44</setting>	<!-- 22 -->
-	    <setting>0.56</setting>	<!-- 28-->
+	    <setting>0.31</setting>	<!-- 15 -->
+	    <setting>0.58</setting>	<!-- 28-->
 	    <setting>0.70</setting>	<!-- 35 -->
 	    <setting>1.00</setting>	<!-- 50 -->
 	</flaps>
@@ -310,7 +310,7 @@
             <tank n="1"><name>Center</name></tank>
             <tank n="2"><name>RH Main</name></tank>
             <tank n="3"><name>AUX</name></tank>
-            <tank n="4"><name>Tail</name></tank>
+            <tank n="4"><name>AUX2</name></tank>
         </fuel>
     </consumables>
     

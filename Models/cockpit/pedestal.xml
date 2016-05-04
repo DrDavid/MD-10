@@ -49,6 +49,17 @@
 </model>
 
 <model>
+	<name>stby-alt</name>
+	<path>Aircraft/MD-10-10/Models/cockpit/instruments/stby-alt/stby-alt.xml</path>
+			<offsets>
+      <x-m>-27.473</x-m>
+      <y-m>-0.047</y-m>
+      <z-m>6.7501</z-m>
+			<pitch-deg>-20.12</pitch-deg>
+		</offsets>
+</model>
+
+<model>
 	<name>brakes</name>
 	<path>Aircraft/MD-10-10/Models/cockpit/instruments/brakes/brakes.xml</path>
 			<offsets>
@@ -781,6 +792,28 @@
         </action>
     </animation>
   
+ 	<animation>
+		<type>select</type>
+        <object-name>spdbrklever</object-name>
+		<condition>
+			<equals>
+    	    	<property>controls/flight/autospeedbrakes-armed</property>
+				<value>false</value>
+			</equals>
+		</condition>
+	</animation>
+	
+ 	<animation>
+		<type>select</type>
+        <object-name>spdbrklever2</object-name>
+		<condition>
+			<equals>
+    	    	<property>controls/flight/autospeedbrakes-armed</property>
+				<value>true</value>
+			</equals>
+		</condition>
+	</animation>
+  
       <animation>
         <type>rotate</type>
         <object-name>spdbrklever</object-name>
@@ -803,12 +836,36 @@
             <z>0</z>
         </axis>
     </animation>
+	
+      <animation>
+        <type>rotate</type>
+        <object-name>spdbrklever2</object-name>
+        <object-name>spdbrklever2.circle</object-name>
+        <property>controls/flight/speedbrake-lever</property>
+        <interpolation>
+            <entry><ind>0</ind><dep>-10</dep></entry>
+            <entry><ind>1</ind><dep>10</dep></entry>
+            <entry><ind>2</ind><dep>25</dep></entry>
+            <entry><ind>3</ind><dep>35</dep></entry>
+        </interpolation>
+		<center>
+			<x-m>-27.1287</x-m>
+			<y-m>0.1535</y-m>
+			<z-m>6.6702</z-m>
+		</center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
     
         <animation>
         <type>pick</type>
         <object-name>spdbrklever</object-name>
+        <object-name>spdbrklever2</object-name>
         <action>
-            <button>0</button>
+            <button>4</button>
             <binding>
                 <command>property-adjust</command>
                 <property>controls/flight/speedbrake-lever</property>
@@ -822,14 +879,28 @@
     <animation>
         <type>pick</type>
         <object-name>spdbrklever</object-name>
+        <object-name>spdbrklever2</object-name>
         <action>
-            <button>1</button>
+            <button>3</button>
             <binding>
                 <command>property-adjust</command>
                 <property>controls/flight/speedbrake-lever</property>
                 <step>-1</step>
                 <min>0</min>
                 <max>2</max>
+            </binding>
+        </action>
+    </animation>
+	
+    <animation>
+        <type>pick</type>
+        <object-name>spdbrklever</object-name>
+        <object-name>spdbrklever2</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/flight/autospeedbrakes-armed</property>
             </binding>
         </action>
     </animation>

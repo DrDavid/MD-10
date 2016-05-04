@@ -1084,11 +1084,11 @@ FSC.btn
 		</axis>
 	</animation>
 	
-    <!--animation>
+    <animation>
         <type>rotate</type>
-        <object-name>apuknob</object-name>
-        <object-name>apuknob.light</object-name>
-        <property>controls/APU/off-start-run</property>
+        <object-name>emgpwrknob</object-name>
+        <object-name>emgpwr.light</object-name>
+        <property>controls/switches/emgpwr</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
@@ -1117,14 +1117,14 @@ FSC.btn
     
     <animation>
         <type>pick</type>
-        <object-name>apuknob</object-name>
+        <object-name>emgpwrknob</object-name>
         <action>
             <button>0</button>
             <button>3</button>
            <repeatable>false</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>controls/APU/off-start-run</property>
+                <property>controls/switches/emgpwr</property>
                 <step>1</step>
                 <min>0</min>
                 <max>2</max>
@@ -1136,13 +1136,13 @@ FSC.btn
             <repeatable>false</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>controls/APU/off-start-run</property>
+                <property>controls/switches/emgpwr</property>
                 <step>-1</step>
                 <min>0</min>
                 <max>2</max>
             </binding>
         </action>
-    </animation-->
+    </animation>
     
     <animation>
         <type>rotate</type>
@@ -1590,29 +1590,12 @@ FSC.btn
     <animation>
         <type>pick</type>
         <object-name>L-Lnd.toggle</object-name>
-        <object-name>C-Lnd.toggle</object-name>
-        <object-name>R-Lnd.toggle</object-name>
         <action>
             <button>0</button>
             <repeatable>false</repeatable>
             <binding>
                 <command>property-toggle</command>
-                <property>controls/lighting/landing-lights</property>
-            </binding>
-            <binding>
-                <command>property-assign</command>
                 <property>controls/lighting/landing-light</property>
-                <property>controls/lighting/landing-lights</property>
-            </binding>
-            <binding>
-                <command>property-assign</command>
-                <property>controls/lighting/landing-light[1]</property>
-                <property>controls/lighting/landing-lights</property>
-            </binding>
-            <binding>
-                <command>property-assign</command>
-                <property>controls/lighting/landing-light[2]</property>
-                <property>controls/lighting/landing-lights</property>
             </binding>
             <binding>
                 <command>nasal</command>
@@ -1620,12 +1603,78 @@ FSC.btn
             </binding>
         </action>
     </animation>
-    
-    <animation>
+	
+	<animation>
         <type>rotate</type>
         <object-name>L-Lnd.toggle</object-name>
-        <object-name>C-Lnd.toggle</object-name>
+        <property>controls/lighting/landing-light</property>
+        <factor>30</factor>
+        <center>
+            <x-m>-21.7985</x-m>
+            <y-m>0</y-m>
+            <z-m>-18.0824</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+	
+    <animation>
+        <type>pick</type>
         <object-name>R-Lnd.toggle</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/landing-light[2]</property>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>controls.click(1);</script>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>rotate</type>
+        <object-name>R-Lnd.toggle</object-name>
+        <property>controls/lighting/landing-light[2]</property>
+        <factor>30</factor>
+        <center>
+            <x-m>-21.7985</x-m>
+            <y-m>0</y-m>
+            <z-m>-18.0824</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+	
+    <animation>
+        <type>pick</type>
+        <object-name>C-Lnd.toggle</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/lighting/landing-light[1]</property>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>controls.click(1);</script>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>rotate</type>
+        <object-name>C-Lnd.toggle</object-name>
         <property>controls/lighting/landing-light[1]</property>
         <factor>30</factor>
         <center>

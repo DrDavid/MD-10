@@ -329,37 +329,7 @@ Syd Adams
             <entry><ind>-80</ind><dep>-0.0510</dep></entry>
         </interpolation>
     </animation>
-
-    <animation>
-        <object-name>StallSpeedInd</object-name>
-        <property>instrumentation/pfd/stallspeed-diff</property>
-        <type>translate</type>
-        <axis>
-            <x>0</x>
-            <y>0</y>
-            <z>1</z>
-        </axis>
-        <factor>0.00065</factor>
-    </animation>
-    <animation>
-        <type>select</type>
-        <object-name>StallSpeedInd</object-name>
-        <condition>
-	    <property>instrumentation/weu/state/stall-warning</property>
-        </condition>
-    </animation>
-
-    <animation>
-        <object-name>OverSpeedInd</object-name>
-        <property>instrumentation/pfd/overspeed-diff</property>
-        <type>textranslate</type>
-        <axis>
-            <x>0</x>
-            <y>1</y>
-        </axis>
-        <factor>0.00197</factor>
-    </animation>
-
+	
     <animation>
         <type>translate</type>
         <object-name>locpointer</object-name>
@@ -426,7 +396,6 @@ Syd Adams
             <z>0</z>
         </axis>
     </animation>
-
 
     <animation>
         <type>rotate</type>

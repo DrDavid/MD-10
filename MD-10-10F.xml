@@ -17,7 +17,7 @@
 	<control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.6" />
 	<control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.6" />
 	<control-setting axis="/controls/engines/engine[2]/throttle-lever" value="0.6" />
-	<control-setting axis="/controls/flight/flaps" value="1.0" />
+	<control-setting axis="/controls/flight/flaps" value="0.7" />
 	<control-setting axis="/controls/flight/slats" value="1.0" />
 	<control-setting axis="/controls/gear/gear-down" value="1.0" />
 	<solve-weight idx="0" weight="1200.0" />
@@ -187,27 +187,26 @@
     </gear>
 
     <!-- Fuel and payload -->
-    <!-- TODO: Change fuel capacities for the DC_10-30ER --> <!-- Fuel capacity increased by 10,000 lbs and ballast adjusted. David Waggoner, 20Jan14 -->
-    <!-- Left wing tanks (inner, outer) -->
-    <tank x="-3.1" y="7.5" z="4.0" jet="true" capacity="16998" />
-    <tank x="-8.2" y="16.3" z="4.8" jet="true" capacity="16998" />
-    <!-- Right wing tanks (inner, outer) -->
-    <tank x="-3.1" y="-7.5" z="4.0" jet="true" capacity="16998" />
-    <tank x="-8.2" y="-16.3" z="4.8" jet="true" capacity="16998" />
-    <!-- Center tanks (main, auxilary) -->
-    <tank x="15.0" y="0.0" z="3.5" jet="true" capacity="64654" />
-    <tank x="0.0" y="0.0" z="3.5" jet="true" capacity="85944" />
-
+    <!-- Left wing tanks-->
+    <tank x="-3.0" y="7.5" z="3.5" jet="true" capacity="40602" />
+    <!-- Center tank -->
+    <tank x="-1.08" y="0.0" z="3.0503" jet="true" capacity="64038" />
+    <!-- Right wing tanks -->
+    <tank x="-3.0" y="-7.5" z="3.5" jet="true" capacity="40602" />
+    
+    
+    <tank x="-1.08" y="0.0" z="3.0503" jet="true" capacity="98108" />
+    <tank x="-27.341" y="0" z="14.7597" jet="true" capacity="13400" />
     <!-- Ballast to adjust center of gravity -->
     <!-- Redistribute the mass toward the nose -->
-    <ballast x="25.0" y="0.0" z="4.75" mass="35000.0" />
+    <ballast x="25.0" y="0.0" z="4.0" mass="30000.0" />
     <!-- Weight of the main landing gear assemblies (approx.) -->
     <ballast x="-2.0" y="0.0" z="3.0" mass="10000.0" />
 
-    <!-- Payload information from http://www.acp-logistics.com/DC_10-charter-mcdonnell-douglas.html -->
+    <!-- Payload information from http://www.acp-logistics.com/DC-10-charter-mcdonnell-douglas.html -->
     <!-- Crew -->
-    <weight x="25.0" y="0.0" z="5.0" mass-prop="/sim/weight[0]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="1200.0" />
+    <weight x="25.0" y="0.0" z="5.0" mass-prop="/sim/weight[0]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="600.0" />
     <!-- PAX/Cargo -->
-    <weight x="3.0" y="0.0" z="5.0" mass-prop="/sim/weight[1]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="150700.0" />
+    <weight x="3.0" y="0.0" z="5.0" mass-prop="/sim/weight[1]/weight-lb" size="0.0" solve-weight="0.0" idx="0" weight="142700.0" />
 
 </airplane>
