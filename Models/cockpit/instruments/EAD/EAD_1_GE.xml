@@ -1,11 +1,10 @@
 ﻿
 <PropertyList>
 
- <path>EAD_1.ac</path>
+ <path>EAD_1_GE.ac</path>
 
 			<animation>
 		<type>select</type>
-		<object-name>epr.1</object-name>
 		<object-name>n1.1</object-name>
 		<object-name>egt.1</object-name>
 		<object-name>n2.1</object-name>
@@ -25,11 +24,11 @@
 
 	  <animation>
     <type>rotate</type>
-		<object-name>epr.1</object-name>
-    <property>engines/engine[0]/epr</property>
+		<object-name>n1.1</object-name>
+    <property>engines/engine[0]/rpm</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
-<entry><ind>2</ind><dep>180</dep></entry>
+<entry><ind>110</ind><dep>180</dep></entry>
 </interpolation>
     <center>
       <x-m></x-m>
@@ -48,33 +47,13 @@
 		<object-name>throttle.position.1</object-name>
         <property>controls/engines/engine/throttle-lever</property>
 <interpolation>
-<entry><ind>0</ind><dep>0</dep></entry>
+<entry><ind>0</ind><dep>55</dep></entry>
 <entry><ind>1</ind><dep>180</dep></entry>
 </interpolation>
     <center>
       <x-m></x-m>
       <y-m>-0.0493</y-m>
       <z-m>0.0642</z-m>
-    </center>
-    <axis>
-      <x>-1 </x> 
-      <y> 0 </y> 
-      <z> 0 </z> 
-    </axis>
-  </animation>
-  
-  	  <animation>
-    <type>rotate</type>
-		<object-name>n1.1</object-name>
-    <property>engines/engine[0]/rpm</property>
-<interpolation>
-<entry><ind>1</ind><dep>0</dep></entry>
-<entry><ind>110</ind><dep>180</dep></entry>
-</interpolation>
-    <center>
-      <x-m></x-m>
-      <y-m>-0.0493</y-m>
-      <z-m>0.0395</z-m>
     </center>
     <axis>
       <x>-1 </x> 
@@ -94,7 +73,7 @@
     <center>
       <x-m></x-m>
       <y-m>-0.0493</y-m>
-      <z-m>0.0161</z-m>
+      <z-m>0.0268</z-m>
     </center>
     <axis>
       <x>-1 </x> 
@@ -125,7 +104,6 @@
   
   			<animation>
 		<type>select</type>
-		<object-name>epr.2</object-name>
 		<object-name>n1.2</object-name>
 		<object-name>egt.2</object-name>
 		<object-name>n2.2</object-name>
@@ -145,11 +123,11 @@
 
 	  <animation>
     <type>rotate</type>
-		<object-name>epr.2</object-name>
-    <property>engines/engine[1]/epr</property>
+		<object-name>n1.2</object-name>
+    <property>engines/engine[0]/rpm</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
-<entry><ind>2</ind><dep>180</dep></entry>
+<entry><ind>110</ind><dep>180</dep></entry>
 </interpolation>
     <center>
       <x-m></x-m>
@@ -168,33 +146,13 @@
 		<object-name>throttle.position.2</object-name>
         <property>controls/engines/engine[1]/throttle-lever</property>
 <interpolation>
-<entry><ind>0</ind><dep>0</dep></entry>
+<entry><ind>0</ind><dep>55</dep></entry>
 <entry><ind>1</ind><dep>180</dep></entry>
 </interpolation>
     <center>
       <x-m></x-m>
       <y-m>0.0019</y-m>
       <z-m>0.0642</z-m>
-    </center>
-    <axis>
-      <x>-1 </x> 
-      <y> 0 </y> 
-      <z> 0 </z> 
-    </axis>
-  </animation>
-  
-  	  <animation>
-    <type>rotate</type>
-		<object-name>n1.2</object-name>
-    <property>engines/engine[1]/rpm</property>
-<interpolation>
-<entry><ind>1</ind><dep>0</dep></entry>
-<entry><ind>110</ind><dep>180</dep></entry>
-</interpolation>
-    <center>
-      <x-m></x-m>
-      <y-m>0.0019</y-m>
-      <z-m>0.0395</z-m>
     </center>
     <axis>
       <x>-1 </x> 
@@ -214,7 +172,7 @@
     <center>
       <x-m></x-m>
       <y-m>0.0019</y-m>
-      <z-m>0.0161</z-m>
+      <z-m>0.0268</z-m>
     </center>
     <axis>
       <x>-1 </x> 
@@ -245,7 +203,6 @@
   
   			<animation>
 		<type>select</type>
-		<object-name>epr.3</object-name>
 		<object-name>n1.3</object-name>
 		<object-name>egt.3</object-name>
 		<object-name>n2.3</object-name>
@@ -265,11 +222,11 @@
 
 	  <animation>
     <type>rotate</type>
-		<object-name>epr.3</object-name>
-    <property>engines/engine[2]/epr</property>
+		<object-name>n1.3</object-name>
+    <property>engines/engine[0]/rpm</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
-<entry><ind>2</ind><dep>180</dep></entry>
+<entry><ind>110</ind><dep>180</dep></entry>
 </interpolation>
     <center>
       <x-m>0</x-m>
@@ -288,33 +245,13 @@
 		<object-name>throttle.position.3</object-name>
         <property>controls/engines/engine[2]/throttle-lever</property>
 <interpolation>
-<entry><ind>0</ind><dep>0</dep></entry>
+<entry><ind>0</ind><dep>55</dep></entry>
 <entry><ind>1</ind><dep>180</dep></entry>
 </interpolation>
     <center>
       <x-m>0</x-m>
       <y-m>0.0539</y-m>
       <z-m>0.0642</z-m>
-    </center>
-    <axis>
-      <x>-1 </x> 
-      <y> 0 </y> 
-      <z> 0 </z> 
-    </axis>
-  </animation>
-  
-  	  <animation>
-    <type>rotate</type>
-		<object-name>n1.3</object-name>
-    <property>engines/engine[2]/rpm</property>
-<interpolation>
-<entry><ind>1</ind><dep>0</dep></entry>
-<entry><ind>110</ind><dep>180</dep></entry>
-</interpolation>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0.0539</y-m>
-      <z-m>0.0395</z-m>
     </center>
     <axis>
       <x>-1 </x> 
@@ -334,7 +271,7 @@
     <center>
       <x-m>0</x-m>
       <y-m>0.0539</y-m>
-      <z-m>0.0161</z-m>
+      <z-m>0.0268</z-m>
     </center>
     <axis>
       <x>-1 </x> 
@@ -364,28 +301,11 @@
   </animation>
   
          	<text>
-		<name>EPR</name>
-		<offsets>
-			<x-m>0.0013</x-m>
-			<y-m>-0.0731</y-m>
-			<z-m>0.0642</z-m>
-		</offsets>
-		<alignment>right-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">EPR</format>
-		<property>autopilot/serviceable</property>
-		<font>helvetica_bold.txf</font>
-		<character-size>0.005</character-size>
-		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
-	</text>
-	
-	         	<text>
 		<name>N1</name>
 		<offsets>
 			<x-m>0.0013</x-m>
 			<y-m>-0.0731</y-m>
-			<z-m>0.0395</z-m>
+			<z-m>0.0642</z-m>
 		</offsets>
 		<alignment>right-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -397,12 +317,12 @@
 		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
 	</text>
 	
-		         	<text>
+	<text>
 		<name>EGT</name>
 		<offsets>
 			<x-m>0.0013</x-m>
 			<y-m>-0.0731</y-m>
-			<z-m>0.0161</z-m>
+			<z-m>0.0281</z-m>
 		</offsets>
 		<alignment>right-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -559,7 +479,7 @@
 		<offsets>
 			<x-m>0.0013</x-m>
 			<y-m>-0.037</y-m>
-			<z-m>0.0096</z-m>
+			<z-m>0.0206</z-m>
 		</offsets>
 		<alignment>right-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -576,7 +496,7 @@
 		<offsets>
 			<x-m>0.0013</x-m>
 			<y-m>0.0145</y-m>
-			<z-m>0.0096</z-m>
+			<z-m>0.0206</z-m>
 		</offsets>
 		<alignment>right-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -593,7 +513,7 @@
 		<offsets>
 			<x-m>0.0013</x-m>
 			<y-m>0.0664</y-m>
-			<z-m>0.0096</z-m>
+			<z-m>0.0206</z-m>
 		</offsets>
 		<alignment>right-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -605,17 +525,17 @@
 		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
 	</text>
 	
-	<text>
+		<text>
 			<name>N1_1</name>
 		<offsets>
-			<x-m>0.0013</x-m>
+				<x-m>0.0013</x-m>
 			<y-m>-0.037</y-m>
-			<z-m>0.0326</z-m>
+			<z-m>0.0584</z-m>
 		</offsets>
 		<alignment>right-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-    <format type="string">%2.1f</format>
+    <format type="string">%2.2f</format>
     <property>engines/engine[0]/rpm</property>
 		<font>helvetica_bold.txf</font>
 		<character-size>0.007</character-size>
@@ -627,13 +547,13 @@
 		<offsets>
 			<x-m>0.0013</x-m>
 			<y-m>0.0145</y-m>
-			<z-m>0.0326</z-m>
+			<z-m>0.0584</z-m>
 		</offsets>
 		<alignment>right-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-    <format type="string">%2.1f</format>
-    <property>engines/engine[1]/rpm</property>
+    <format type="string">%2.2f</format>
+    <property>engines/engine[0]/rpm</property>
 		<font>helvetica_bold.txf</font>
 		<character-size>0.007</character-size>
 		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -642,66 +562,15 @@
 		           	<text>
 		<name>N1_3</name>
 		<offsets>
-				<x-m>0.0013</x-m>
+			<x-m>0.0013</x-m>
 			<y-m>0.0664</y-m>
-			<z-m>0.0326</z-m>
+			<z-m>0.0584</z-m>
 		</offsets>
 		<alignment>right-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-    <format type="string">%2.1f</format>
+    <format type="string">%2.2f</format>
     <property>engines/engine[2]/rpm</property>
-		<font>helvetica_bold.txf</font>
-		<character-size>0.007</character-size>
-		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
-	</text>
-	
-		<text>
-			<name>EPR_1</name>
-		<offsets>
-				<x-m>0.0013</x-m>
-			<y-m>-0.037</y-m>
-			<z-m>0.0584</z-m>
-		</offsets>
-		<alignment>right-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">number-value</type>
-    <format type="string">%2.2f</format>
-    <property>engines/engine[0]/epr</property>
-		<font>helvetica_bold.txf</font>
-		<character-size>0.007</character-size>
-		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
-	</text>
-	
-	           	<text>
-		<name>EPR_2</name>
-		<offsets>
-			<x-m>0.0013</x-m>
-			<y-m>0.0145</y-m>
-			<z-m>0.0584</z-m>
-		</offsets>
-		<alignment>right-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">number-value</type>
-    <format type="string">%2.2f</format>
-    <property>engines/engine[1]/epr</property>
-		<font>helvetica_bold.txf</font>
-		<character-size>0.007</character-size>
-		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
-	</text>
-	
-		           	<text>
-		<name>EPR_3</name>
-		<offsets>
-			<x-m>0.0013</x-m>
-			<y-m>0.0664</y-m>
-			<z-m>0.0584</z-m>
-		</offsets>
-		<alignment>right-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">number-value</type>
-    <format type="string">%2.2f</format>
-    <property>engines/engine[2]/epr</property>
 		<font>helvetica_bold.txf</font>
 		<character-size>0.007</character-size>
 		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1127,6 +996,7 @@
 		<object-name>Fuel off 2</object-name>
 		<object-name>Fuel off 3</object-name>
 		<object-name>No smoking</object-name>
+		<object-name>Seatbelts</object-name>
         <emission>
             <red>0.51</red>
             <green>1.53</green>

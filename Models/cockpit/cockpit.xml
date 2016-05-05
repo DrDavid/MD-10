@@ -239,7 +239,7 @@
 
 <model>
 	<name>EAD 1</name>
-	<path>Aircraft/MD-10-10/Models/cockpit/instruments/EAD/EAD_1.xml</path>
+	<path>Aircraft/MD-10-10/Models/cockpit/instruments/EAD/EAD_1_GE.xml</path>
 			<offsets>
             <x-m>-27.5138</x-m>
             <y-m>-0.15</y-m>
