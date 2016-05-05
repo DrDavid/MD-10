@@ -42,6 +42,12 @@ This file selects the instrumentation modules that should be available.
         <number>0</number>
         <static-pressure>/systems/static/pressure-inhg</static-pressure>
     </inst-vertical-speed-indicator>
+	
+	<vertical-speed-indicator>
+		<name>vertical-speed-indicator</name>
+		<number>0</number>
+		<static-pressure>/systems/static/pressure-inhg</static-pressure>
+	</vertical-speed-indicator>
 
     <clock>
         <name>clock</name>

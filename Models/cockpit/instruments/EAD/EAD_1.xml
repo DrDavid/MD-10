@@ -89,7 +89,7 @@
     <property>engines/engine[0]/egt</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
-<entry><ind>950</ind><dep>180</dep></entry>
+<entry><ind>1450</ind><dep>180</dep></entry>
 </interpolation>
     <center>
       <x-m></x-m>
@@ -209,7 +209,7 @@
     <property>engines/engine[1]/egt</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
-<entry><ind>950</ind><dep>180</dep></entry>
+<entry><ind>1450</ind><dep>180</dep></entry>
 </interpolation>
     <center>
       <x-m></x-m>
@@ -329,7 +329,7 @@
     <property>engines/engine[2]/egt</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
-<entry><ind>950</ind><dep>180</dep></entry>
+<entry><ind>1450</ind><dep>180</dep></entry>
 </interpolation>
     <center>
       <x-m>0</x-m>
