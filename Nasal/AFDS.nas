@@ -609,6 +609,8 @@ var afds = AFDS.new();
 setlistener("/sim/signals/fdm-initialized", func {
     settimer(update_afds, 6);
 	setprop("controls/switches/apoffsound", 1);
+	afds.input(1,8);
+	afds.input(0,1);
     print("AUTOFLIGHT ... FINE!");
 });
 

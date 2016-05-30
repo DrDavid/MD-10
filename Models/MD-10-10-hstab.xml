@@ -12,7 +12,7 @@
 		<type>rotate</type>
 		<object-name>ElevatorL</object-name>
 		<property>controls/flight/elevator</property>
-		<factor>40</factor>
+		<factor>15</factor>
 		<axis>
 			<x1-m>25.969</x1-m>
 			<y1-m>-10.736</y1-m>
@@ -27,7 +27,7 @@
 		<type>rotate</type>
 		<object-name>ElevatorR</object-name>
 		<property>controls/flight/elevator</property>
-		<factor>40</factor>
+		<factor>15</factor>
 		<axis>
 			<x1-m>21.62</x1-m>
 			<y1-m>1.358</y1-m>

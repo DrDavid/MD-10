@@ -674,7 +674,7 @@
     </input>
     <reference>
       <prop>/autopilot/settings/vertical-speed-fpm</prop>
-      <scale>0.01666666</scale>
+      <scale>0.01888888</scale>
     </reference>
     <output>
       <prop>/autopilot/internal/target-pitch-deg</prop>
@@ -682,7 +682,7 @@
     </output>
     <config>
       <!--Ts>0.05</Ts--> 
-      <Kp>0.01</Kp>
+      <Kp>0.08</Kp>
       <beta>1.0</beta>
       <alpha>0.1</alpha>
       <gamma>0.0</gamma>

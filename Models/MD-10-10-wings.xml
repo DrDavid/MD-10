@@ -13,7 +13,7 @@
 		<type>rotate</type>
 		<object-name>AileronL1</object-name>
 		<property>surface-positions/left-aileron-inner-pos-norm</property>
-		<factor>30</factor>
+		<factor>10</factor>
 		<axis>
 			<x1-m>4.965</x1-m>
 			<y1-m>-9.203</y1-m>
@@ -28,7 +28,7 @@
 		<type>rotate</type>
 		<object-name>AileronL2</object-name>
 		<property>surface-positions/left-aileron-outer-pos-norm</property>
-		<factor>30</factor>
+		<factor>5</factor>
 		<axis>
 			<x1-m>12.131</x1-m>
 			<y1-m>-22.327</y1-m>
@@ -44,7 +44,7 @@
 		<type>rotate</type>
 		<object-name>AileronR1</object-name>
 		<property>surface-positions/right-aileron-inner-pos-norm</property>
-		<factor>30</factor>
+		<factor>10</factor>
 		<axis>
 			<x1-m>4.723</x1-m>
 			<y1-m>7.269</y1-m>
@@ -59,7 +59,7 @@
 		<type>rotate</type>
 		<object-name>AileronR2</object-name>
 		<property>surface-positions/right-aileron-outer-pos-norm</property>
-		<factor>30</factor>
+		<factor>5</factor>
 		<axis>
 			<x1-m>9.529</x1-m>
 			<y1-m>17.776</y1-m>
@@ -325,7 +325,7 @@
 	</animation>
 
 	<!-- Spoilers -->
-	<animation>
+	<!--animation>
 		<name>Left inner spoiler</name>
 		<type>rotate</type>
 		<object-name>SpoilerL1</object-name>
@@ -339,7 +339,7 @@
 			<y2-m>-7.011</y2-m>
 			<z2-m>3.995</z2-m>
 		</axis>
-	</animation>
+	</animation-->
 	<animation>
 		<name>Left outer spoilers</name>
 		<type>rotate</type>
@@ -347,7 +347,7 @@
 		<object-name>SpoilerL3</object-name>
 		<object-name>SpoilerL4</object-name>
 		<object-name>SpoilerL5</object-name>
-		<property>surface-positions/left-spoiler-outer-pos-norm</property>
+		<property>surface-positions/speedbrake-pos-norm</property>
 		<factor>45</factor>
 		<axis>
 			<x1-m>5.109</x1-m>
@@ -358,7 +358,7 @@
 			<z2-m>4.876</z2-m>
 		</axis>
 	</animation>
-	<animation>
+	<!--animation>
 		<name>Right inner spoiler</name>
 		<type>rotate</type>
 		<object-name>SpoilerR1</object-name>
@@ -372,7 +372,7 @@
 			<y2-m>4.024</y2-m>
 			<z2-m>3.598</z2-m>
 		</axis>
-	</animation>
+	</animation-->
 	<animation>
 		<name>Right outer spoilers</name>
 		<type>rotate</type>
@@ -380,7 +380,7 @@
 		<object-name>SpoilerR3</object-name>
 		<object-name>SpoilerR4</object-name>
 		<object-name>SpoilerR5</object-name>
-		<property>surface-positions/right-spoiler-outer-pos-norm</property>
+		<property>surface-positions/speedbrake-pos-norm</property>
 		<factor>45</factor>
 		<axis>
 			<x1-m>8.644</x1-m>
