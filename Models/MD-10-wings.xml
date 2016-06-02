@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Wings model -->
+
+<PropertyList>
+
+	<path>MD-10-wings.ac</path>
+
+	<!-- Ailerons -->
+	<animation>
+		<name>Left inner aileron</name>
+		<type>rotate</type>
+		<object-name>AileronL1</object-name>
+		<property>surface-positions/left-aileron-inner-pos-norm</property>
+		<factor>30</factor>
+		<axis>
+			<x1-m>4.965</x1-m>
+			<y1-m>-9.203</y1-m>
+			<z1-m>4.111</z1-m>
+			<x2-m>4.723</x2-m>
+			<y2-m>-7.269</y2-m>
+			<z2-m>3.85</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Left outer aileron</name>
+		<type>rotate</type>
+		<object-name>AileronL2</object-name>
+		<property>surface-positions/left-aileron-outer-pos-norm</property>
+		<factor>30</factor>
+		<axis>
+			<x1-m>12.131</x1-m>
+			<y1-m>-22.327</y1-m>
+			<z1-m>5.223</z1-m>
+			<x2-m>9.529</x2-m>
+			<y2-m>-17.776</y2-m>
+			<z2-m>4.856</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Right inner aileron</name>
+		<type>rotate</type>
+		<object-name>AileronR1</object-name>
+		<property>surface-positions/right-aileron-inner-pos-norm</property>
+		<factor>30</factor>
+		<axis>
+			<x1-m>4.723</x1-m>
+			<y1-m>7.269</y1-m>
+			<z1-m>3.85</z1-m>
+			<x2-m>4.965</x2-m>
+			<y2-m>9.203</y2-m>
+			<z2-m>4.111</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right outer aileron</name>
+		<type>rotate</type>
+		<object-name>AileronR2</object-name>
+		<property>surface-positions/right-aileron-outer-pos-norm</property>
+		<factor>30</factor>
+		<axis>
+			<x1-m>9.529</x1-m>
+			<y1-m>17.776</y1-m>
+			<z1-m>4.856</z1-m>
+			<x2-m>12.131</x2-m>
+			<y2-m>22.327</y2-m>
+			<z2-m>5.223</z2-m>
+		</axis>
+	</animation>
+
+	<!-- Flaps -->
+	<animation>
+		<name>Left inner flap rotate</name>
+		<type>rotate</type>
+		<object-name>FlapL1</object-name>
+		<property>surface-positions/flap-inner-pos-norm</property>
+		<factor>50</factor>
+		<axis>
+			<x1-m>4.711</x1-m>
+			<y1-m>-7.269</y1-m>
+			<z1-m>3.852</z1-m>
+			<x2-m>4.114</x2-m>
+			<y2-m>-3.015</y2-m>
+			<z2-m>3.099</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Left inner flap translate</name>
+		<type>translate</type>
+		<object-name>FlapL1</object-name>
+		<property>surface-positions/flap-inner-pos-norm</property>
+		<factor>0.3</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Left outer flap rotate</name>
+		<type>rotate</type>
+		<object-name>FlapL2</object-name>
+		<property>surface-positions/flap-outer-pos-norm</property>
+		<factor>50</factor>
+		<axis>
+			<x1-m>9.763</x1-m>
+			<y1-m>-17.508</y1-m>
+			<z1-m>4.817</z1-m>
+			<x2-m>5.672</x2-m>
+			<y2-m>-10.05</y2-m>
+			<z2-m>4.168</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Left outer flap translate</name>
+		<type>translate</type>
+		<object-name>FlapL2</object-name>
+		<property>surface-positions/flap-outer-pos-norm</property>
+		<factor>0.3</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Right inner flap rotate</name>
+		<type>rotate</type>
+		<object-name>FlapR1</object-name>
+		<property>surface-positions/flap-inner-pos-norm</property>
+		<factor>50</factor>
+		<axis>
+			<x1-m>4.114</x1-m>
+			<y1-m>3.015</y1-m>
+			<z1-m>3.099</z1-m>
+			<x2-m>4.711</x2-m>
+			<y2-m>7.269</y2-m>
+			<z2-m>3.852</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right inner flap translate</name>
+		<type>translate</type>
+		<object-name>FlapR1</object-name>
+		<property>surface-positions/flap-inner-pos-norm</property>
+		<factor>0.3</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right outer flap rotate</name>
+		<type>rotate</type>
+		<object-name>FlapR2</object-name>
+		<property>surface-positions/flap-outer-pos-norm</property>
+		<factor>50</factor>
+		<axis>
+			<x1-m>5.672</x1-m>
+			<y1-m>10.05</y1-m>
+			<z1-m>4.168</z1-m>
+			<x2-m>9.763</x2-m>
+			<y2-m>17.508</y2-m>
+			<z2-m>4.817</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right outer flap translate</name>
+		<type>translate</type>
+		<object-name>FlapR2</object-name>
+		<property>surface-positions/flap-outer-pos-norm</property>
+		<factor>0.3</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Slats -->
+	<animation>
+		<name>Left inner slat translate</name>
+		<type>translate</type>
+		<object-name>SlatL1</object-name>
+		<property>surface-positions/slat-inner-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.3</ind><dep>-0.7</dep></entry>
+			<entry><ind>1</ind><dep>-0.7</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Left inner slat rotate</name>
+		<type>rotate</type>
+		<object-name>SlatL1</object-name>
+		<property>surface-positions/slat-inner-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.3</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>45</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>-4.297</x1-m>
+			<y1-m>-3.313</y1-m>
+			<z1-m>4.523</z1-m>
+			<x2-m>-0.943</x2-m>
+			<y2-m>-7.621</y2-m>
+			<z2-m>4.596</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Left outer slat translate</name>
+		<type>translate</type>
+		<object-name>SlatL2</object-name>
+		<property>surface-positions/slat-outer-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.3</ind><dep>-0.5</dep></entry>
+			<entry><ind>1</ind><dep>-0.5</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Left outer slat rotate</name>
+		<type>rotate</type>
+		<object-name>SlatL2</object-name>
+		<property>surface-positions/slat-outer-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.3</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>45</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>-0.099</x1-m>
+			<y1-m>-8.798</y1-m>
+			<z1-m>4.662</z1-m>
+			<x2-m>10.513</x2-m>
+			<y2-m>-22.808</y2-m>
+			<z2-m>5.456</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Right inner slat translate</name>
+		<type>translate</type>
+		<object-name>SlatR1</object-name>
+		<property>surface-positions/slat-inner-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.3</ind><dep>-0.7</dep></entry>
+			<entry><ind>1</ind><dep>-0.7</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right inner slat rotate</name>
+		<type>rotate</type>
+		<object-name>SlatR1</object-name>
+		<property>surface-positions/slat-inner-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.3</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>45</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>-0.943</x1-m>
+			<y1-m>7.621</y1-m>
+			<z1-m>4.596</z1-m>
+			<x2-m>-4.297</x2-m>
+			<y2-m>3.313</y2-m>
+			<z2-m>4.523</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right outer slat translate</name>
+		<type>translate</type>
+		<object-name>SlatR2</object-name>
+		<property>surface-positions/slat-outer-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.3</ind><dep>-0.5</dep></entry>
+			<entry><ind>1</ind><dep>-0.5</dep></entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right outer slat rotate</name>
+		<type>rotate</type>
+		<object-name>SlatR2</object-name>
+		<property>surface-positions/slat-outer-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.3</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>45</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>10.513</x1-m>
+			<y1-m>22.808</y1-m>
+			<z1-m>5.456</z1-m>
+			<x2-m>-0.099</x2-m>
+			<y2-m>8.798</y2-m>
+			<z2-m>4.662</z2-m>
+		</axis>
+	</animation>
+
+	<!-- Spoilers -->
+	<animation>
+		<name>Left inner spoiler</name>
+		<type>rotate</type>
+		<object-name>SpoilerL1</object-name>
+		<property>surface-positions/spoiler-inner-pos-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x1-m>3.721</x1-m>
+			<y1-m>-4.024</y1-m>
+			<z1-m>3.598</z1-m>
+			<x2-m>4.093</x2-m>
+			<y2-m>-7.011</y2-m>
+			<z2-m>3.995</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Left outer spoilers</name>
+		<type>rotate</type>
+		<object-name>SpoilerL2</object-name>
+		<object-name>SpoilerL3</object-name>
+		<object-name>SpoilerL4</object-name>
+		<object-name>SpoilerL5</object-name>
+		<property>surface-positions/left-spoiler-outer-pos-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x1-m>5.109</x1-m>
+			<y1-m>-10.288</y1-m>
+			<z1-m>4.335</z1-m>
+			<x2-m>8.644</x2-m>
+			<y2-m>-16.798</y2-m>
+			<z2-m>4.876</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right inner spoiler</name>
+		<type>rotate</type>
+		<object-name>SpoilerR1</object-name>
+		<property>surface-positions/spoiler-inner-pos-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x1-m>4.093</x1-m>
+			<y1-m>7.011</y1-m>
+			<z1-m>3.995</z1-m>
+			<x2-m>3.721</x2-m>
+			<y2-m>4.024</y2-m>
+			<z2-m>3.598</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right outer spoilers</name>
+		<type>rotate</type>
+		<object-name>SpoilerR2</object-name>
+		<object-name>SpoilerR3</object-name>
+		<object-name>SpoilerR4</object-name>
+		<object-name>SpoilerR5</object-name>
+		<property>surface-positions/right-spoiler-outer-pos-norm</property>
+		<factor>45</factor>
+		<axis>
+			<x1-m>8.644</x1-m>
+			<y1-m>16.798</y1-m>
+			<z1-m>4.876</z1-m>
+			<x2-m>5.109</x2-m>
+			<y2-m>10.288</y2-m>
+			<z2-m>4.335</z2-m>
+		</axis>
+	</animation>
+
+</PropertyList>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Fuselage model, tanker version -->
+
+<PropertyList>
+
+	<path>KC-10-fuselage.ac</path>
+
+	<foo include="MD-10-fuselage-main.xml" omit-node="y" />
+
+</PropertyList>

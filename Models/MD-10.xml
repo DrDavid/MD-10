@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Main model, PAX version -->
+
+<PropertyList>
+
+	<nasal>
+		<load>
+			var rplayer = cmdarg();
+			# Set up property aliases for animations.
+			# rplayer.getNode("sim/aero", 1).alias(rplayer.getNode("sim/multiplay/generic/string[1]"));
+			var livery_update = aircraft.livery_update.new("Aircraft/MD-10/Models/Liveries/");
+		</load>
+ 
+		<unload>
+			livery_update.stop();
+		</unload>
+	</nasal>
+
+	<model>
+		<name>Fuselage</name>
+		<path>Aircraft/MD-10/Models/MD-10-fuselage.xml</path>
+	</model>
+
+	<foo include="MD-10-main.xml" omit-node="y" />
+
+</PropertyList>

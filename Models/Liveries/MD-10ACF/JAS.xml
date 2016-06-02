@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name>Japan Air System</name>
+				<texture>Liveries/MD-10ACF/JAS.png</texture>
+				<registration>JA8551</registration>
+				<has-center-gear type="bool">true</has-center-gear>
+			</livery>
+		</model>
+	</sim>
+
+</PropertyList>

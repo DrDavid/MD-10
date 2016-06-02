@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name>FedEx Express</name>
+				<texture>Liveries/MD-10F/FDX.png</texture>
+				<registration>N366FE</registration>
+				<configuration type="string">cargo</configuration>
+				<enable-configuration-switch type="bool">false</enable-configuration-switch>
+				<has-center-gear type="bool">false</has-center-gear>
+			</livery>
+		</model>
+	</sim>
+
+</PropertyList>

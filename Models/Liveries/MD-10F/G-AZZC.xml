@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+		<livery>
+			<name type="string">Laker Airways (Skytrain)</name>
+			<texture>Liveries/MD-10F/G-AZZC.png</texture>
+			<registration>G-AZZC</registration>
+			<has-center-gear type="bool">true</has-center-gear>
+		</livery>
+		<wings>
+			<name type="string">Default</name>
+			<texture>md10-wings.png</texture>
+		</wings>
+		<!-- #139def
+		<wings>
+			<name type="string">Default</name>
+			<texture>O_NOME_DO_AVIAOwings.png</texture>
+		</wings>        
+		<logolight>
+			<name type="string">Default</name>
+			<texture>O_NOME_DO_AVIAOnight.png</texture>
+		</logolight> -->
+    </model>
+  </sim>
+</PropertyList>

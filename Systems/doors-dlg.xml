@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0"?>
 <PropertyList>
 
 <name>doors</name>
     <layout>vbox</layout>
     <padding>20</padding>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<name>doors-dlg</name>
+	<layout>vbox</layout>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 
 	<group>
 		<layout>hbox</layout>
@@ -64,10 +73,40 @@
 			<button>
 				<row>0</row>
 				<col>1</col>
+<<<<<<< HEAD
 				<legend>Open/Close</legend>
 				<binding>
 					<command>nasal</command>
        <script>MD11.leftDoor1.toggle();</script>
+=======
+				<legend>Open</legend>
+				<color>
+					<red>0</red>
+					<green>1</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_l1.open();
+					</script>
+				</binding>
+			</button>
+			<button>
+				<row>0</row>
+				<col>2</col>
+				<legend>Close</legend>
+				<color>
+					<red>1</red>
+					<green>0</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_l1.close();
+					</script>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 				</binding>
 			</button>
 
@@ -79,10 +118,40 @@
 			<button>
 				<row>1</row>
 				<col>1</col>
+<<<<<<< HEAD
 				<legend>Open/Close</legend>
 				<binding>
 					<command>nasal</command>
        <script>MD11.leftDoor2.toggle();</script>
+=======
+				<legend>Open</legend>
+				<color>
+					<red>0</red>
+					<green>1</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_l2.open();
+					</script>
+				</binding>
+			</button>
+			<button>
+				<row>1</row>
+				<col>2</col>
+				<legend>Close</legend>
+				<color>
+					<red>1</red>
+					<green>0</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_l2.close();
+					</script>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 				</binding>
 			</button>
 
@@ -94,10 +163,40 @@
 			<button>
 				<row>2</row>
 				<col>1</col>
+<<<<<<< HEAD
 				<legend>Open/Close</legend>
 				<binding>
 					<command>nasal</command>
        <script>MD11.leftDoor3.toggle();</script>
+=======
+				<legend>Open</legend>
+				<color>
+					<red>0</red>
+					<green>1</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_l3.open();
+					</script>
+				</binding>
+			</button>
+			<button>
+				<row>2</row>
+				<col>2</col>
+				<legend>Close</legend>
+				<color>
+					<red>1</red>
+					<green>0</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_l3.close();
+					</script>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 				</binding>
 			</button>
 
@@ -109,10 +208,40 @@
 			<button>
 				<row>3</row>
 				<col>1</col>
+<<<<<<< HEAD
 				<legend>Open/Close</legend>
 				<binding>
 					<command>nasal</command>
        <script>MD11.leftDoor4.toggle();</script>
+=======
+				<legend>Open</legend>
+				<color>
+					<red>0</red>
+					<green>1</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_l4.open();
+					</script>
+				</binding>
+			</button>
+			<button>
+				<row>3</row>
+				<col>2</col>
+				<legend>Close</legend>
+				<color>
+					<red>1</red>
+					<green>0</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_l4.close();
+					</script>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 				</binding>
 			</button>
 		</group>
@@ -130,10 +259,40 @@
 			<button>
 				<row>0</row>
 				<col>1</col>
+<<<<<<< HEAD
 				<legend>Open/Close</legend>
 				<binding>
 					<command>nasal</command>
        <script>MD11.rightDoor1.toggle();</script>
+=======
+				<legend>Open</legend>
+				<color>
+					<red>0</red>
+					<green>1</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_r1.open();
+					</script>
+				</binding>
+			</button>
+			<button>
+				<row>0</row>
+				<col>2</col>
+				<legend>Close</legend>
+				<color>
+					<red>1</red>
+					<green>0</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_r1.close();
+					</script>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 				</binding>
 			</button>
 
@@ -145,10 +304,40 @@
 			<button>
 				<row>1</row>
 				<col>1</col>
+<<<<<<< HEAD
 				<legend>Open/Close</legend>
 				<binding>
 					<command>nasal</command>
        <script>MD11.rightDoor2.toggle();</script>
+=======
+				<legend>Open</legend>
+				<color>
+					<red>0</red>
+					<green>1</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_r2.open();
+					</script>
+				</binding>
+			</button>
+			<button>
+				<row>1</row>
+				<col>2</col>
+				<legend>Close</legend>
+				<color>
+					<red>1</red>
+					<green>0</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_r2.close();
+					</script>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 				</binding>
 			</button>
 
@@ -160,6 +349,7 @@
 			<button>
 				<row>2</row>
 				<col>1</col>
+<<<<<<< HEAD
 				<legend>Open/Close</legend>
 				<binding>
 					<command>nasal</command>
@@ -234,6 +424,82 @@
        <script>MD11.nose_cone.toggle();</script>
 				</binding>
 			</button>
+=======
+				<legend>Open</legend>
+				<color>
+					<red>0</red>
+					<green>1</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_r3.open();
+					</script>
+				</binding>
+			</button>
+			<button>
+				<row>2</row>
+				<col>2</col>
+				<legend>Close</legend>
+				<color>
+					<red>1</red>
+					<green>0</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_r3.close();
+					</script>
+				</binding>
+			</button>
+
+			<text>
+				<row>3</row>
+				<col>0</col>
+				<label>Right door 4</label>
+			</text>
+			<button>
+				<row>3</row>
+				<col>1</col>
+				<legend>Open</legend>
+				<color>
+					<red>0</red>
+					<green>1</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_r4.open();
+					</script>
+				</binding>
+			</button>
+			<button>
+				<row>3</row>
+				<col>2</col>
+				<legend>Close</legend>
+				<color>
+					<red>1</red>
+					<green>0</green>
+					<blue>0</blue>
+				</color>
+				<binding>
+					<command>nasal</command>
+					<script>
+						MD10.doors.pax_r4.close();
+					</script>
+				</binding>
+			</button>
+		</group>
+	</group>
+
+	<hrule />
+
+	<group>
+		<layout>table</layout>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 
 		<text>
 			<row>0</row>
@@ -243,6 +509,7 @@
 				<or>
 					<equals>
 						<property>sim/aircraft</property>
+<<<<<<< HEAD
 						<value>DC-10-30</value>
 					</equals>
 					<equals>
@@ -252,6 +519,17 @@
 					<equals>
 						<property>sim/aircraft</property>
 						<value>DC-10-30CF</value>
+=======
+						<value>MD-10P</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-10ACF</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-10F</value>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 					</equals>
 				</or>
 			</visible>
@@ -264,6 +542,7 @@
 				<or>
 					<equals>
 						<property>sim/aircraft</property>
+<<<<<<< HEAD
 						<value>DC-10-30</value>
 					</equals>
 					<equals>
@@ -273,6 +552,17 @@
 					<equals>
 						<property>sim/aircraft</property>
 						<value>DC-10-30CF</value>
+=======
+						<value>MD-10P</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-10ACF</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-10F</value>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 					</equals>
 				</or>
 			</visible>
@@ -284,7 +574,11 @@
 			<binding>
 				<command>nasal</command>
 				<script>
+<<<<<<< HEAD
 					DC10.doors.cargo_fwd.open();
+=======
+					MD10.doors.cargo_fwd.open();
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 				</script>
 			</binding>
 		</button>
@@ -296,6 +590,7 @@
 				<or>
 					<equals>
 						<property>sim/aircraft</property>
+<<<<<<< HEAD
 						<value>DC-10-30</value>
 					</equals>
 					<equals>
@@ -305,6 +600,17 @@
 					<equals>
 						<property>sim/aircraft</property>
 						<value>DC-10-30CF</value>
+=======
+						<value>MD-10P</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-10ACF</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-10F</value>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 					</equals>
 				</or>
 			</visible>
@@ -316,7 +622,11 @@
 			<binding>
 				<command>nasal</command>
 				<script>
+<<<<<<< HEAD
 					DC10.doors.cargo_fwd.close();
+=======
+					MD10.doors.cargo_fwd.close();
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 				</script>
 			</binding>
 		</button>
@@ -329,6 +639,7 @@
 				<or>
 					<equals>
 						<property>sim/aircraft</property>
+<<<<<<< HEAD
 						<value>DC-10-30</value>
 					</equals>
 					<equals>
@@ -338,6 +649,17 @@
 					<equals>
 						<property>sim/aircraft</property>
 						<value>DC-10-30CF</value>
+=======
+						<value>MD-10P</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-10ACF</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-10F</value>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 					</equals>
 				</or>
 			</visible>
@@ -350,6 +672,7 @@
 				<or>
 					<equals>
 						<property>sim/aircraft</property>
+<<<<<<< HEAD
 						<value>DC-10-30</value>
 					</equals>
 					<equals>
@@ -359,6 +682,17 @@
 					<equals>
 						<property>sim/aircraft</property>
 						<value>DC-10-30CF</value>
+=======
+						<value>MD-10P</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-10ACF</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-10F</value>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 					</equals>
 				</or>
 			</visible>
@@ -370,7 +704,11 @@
 			<binding>
 				<command>nasal</command>
 				<script>
+<<<<<<< HEAD
 					DC10.doors.cargo_aft.open();
+=======
+					MD10.doors.cargo_aft.open();
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 				</script>
 			</binding>
 		</button>
@@ -382,6 +720,7 @@
 				<or>
 					<equals>
 						<property>sim/aircraft</property>
+<<<<<<< HEAD
 						<value>DC-10-30</value>
 					</equals>
 					<equals>
@@ -391,6 +730,17 @@
 					<equals>
 						<property>sim/aircraft</property>
 						<value>DC-10-30CF</value>
+=======
+						<value>MD-10P</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-10ACF</value>
+					</equals>
+					<equals>
+						<property>sim/aircraft</property>
+						<value>MD-10F</value>
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 					</equals>
 				</or>
 			</visible>
@@ -402,7 +752,11 @@
 			<binding>
 				<command>nasal</command>
 				<script>
+<<<<<<< HEAD
 					DC10.doors.cargo_aft.close();
+=======
+					MD10.doors.cargo_aft.close();
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 				</script>
 			</binding>
 		</button>
@@ -436,7 +790,11 @@
 			<binding>
 				<command>nasal</command>
 				<script>
+<<<<<<< HEAD
 					DC10.doors.cargo_main.open();
+=======
+					MD10.doors.cargo_main.open();
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 				</script>
 			</binding>
 		</button>
@@ -458,7 +816,11 @@
 			<binding>
 				<command>nasal</command>
 				<script>
+<<<<<<< HEAD
 					DC10.doors.cargo_main.close();
+=======
+					MD10.doors.cargo_main.close();
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 				</script>
 			</binding>
 		</button>
@@ -481,6 +843,11 @@
 				<command>dialog-close</command>
 			</binding>
 		</button>
+<<<<<<< HEAD
 		
 	</group>
+=======
+	</group>
+
+>>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 </PropertyList>

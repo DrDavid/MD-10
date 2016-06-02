@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Aircraft property settings specific to the KC-10A -->
+<!-- Revisions to tanker light settings: DrDavid and Jwocky, 28 Aug 14. -->
+
+<PropertyList include="MD-10-main.xml">
+
+    <sim>
+        <description>McDonnell Douglas KC-10 (tanker)</description>
+        <flight-model>yasim</flight-model>
+        <aero>KC-10</aero>
+		
+	<status>pre-beta</status>
+
+	<rating>
+		<FDM type="int">4</FDM>
+		<systems type="int">4</systems>
+		<cockpit type="int">4</cockpit>
+		<model type="int">4</model>
+	</rating>
+
+	<startup>
+		<splash-texture>Aircraft/MD-10/MD-10.jpg</splash-texture>
+	</startup>
+
+        <model>
+            <path>Aircraft/MD-10/Models/KC-10.xml</path>
+            <livery>
+		<file type="string">Blank</file>
+            </livery>
+        </model>
+
+        <weight n="1">
+            <name>Fuel</name>
+        </weight>
+
+        <menubar>
+            <default>
+                <menu n="100">
+                    <label>McDonnell Douglas KC-10</label>
+		    <item n="100">
+			<label>Extend/retract tanker boom</label>
+			<binding>
+			    <command>nasal</command>
+			    <script>
+					MD10.doors.boom.toggle();
+			    </script>
+			</binding>
+		    </item>
+                </menu>
+            </default>
+        </menubar>
+
+        <multiplay>
+            <refuel>
+                <type>boom</type>
+            </refuel>
+        </multiplay>
+    </sim>
+
+    <instrumentation>
+        <!-- Radar for air-to-air refueling capability (required for receiving fuel only) -->
+        <radar>
+            <range type="int" archive="y">200</range>
+            <minimized type="bool" archive="y">false</minimized>
+        </radar>
+    </instrumentation>
+
+    <systems>
+        <refuel>
+            <type>boom</type>
+            <serviceable type="bool">true</serviceable>
+        </refuel>
+    </systems>
+
+    <input>
+        <keyboard>
+            <key n="6">
+                <name>Ctrl-F</name>
+                <desc>Extend/retract tanker boom</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                        MD10.doors.boom.toggle();
+                    </script>
+                </binding>
+            </key>
+        </keyboard>
+    </input>
+
+    <tanker type="bool">false</tanker>
+
+    <nasal>
+        <aar>
+            <file>Aircraft/Generic/aar.nas</file>
+        </aar>
+    </nasal>
+
+</PropertyList>

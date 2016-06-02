@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Wing engine model -->
+
+<PropertyList>
+
+	<path>MD-10-engine-nacelle.ac</path>
+
+	<params>
+		<on-fire>engines/engine[0]/on-fire</on-fire>
+		<n1>engines/engine[0]/n1</n1>
+		<reverser-pos-norm>engines/engine[0]/reverser-pos-norm</reverser-pos-norm>
+	</params>
+
+	<model>
+		<name>Engine</name>
+		<path>Aircraft/MD-10/Models/GE-CF6-50.xml</path>
+		<overlay>
+			<params>
+				<on-fire alias="../../../../params/on-fire" />
+				<n1 alias="../../../../params/n1" />
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>-1.5</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Contrail</name>
+		<path>Aircraft/MD-10/Models/Effects/contrail.xml</path>
+		<overlay>
+			<params>
+				<n1 alias="../../../../params/n1" />
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>4.393</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+	</model>
+
+	<animation>
+		<name>Reverse thrust</name>
+		<type>translate</type>
+		<object-name>Reverser</object-name>
+		<object-name>ReverserRear</object-name>
+		<property alias="../../params/reverser-pos-norm" />
+		<factor>0.4</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Livery select</name>
+		<type>material</type>
+		<object-name>Nacelle</object-name>
+		<property-base>sim/model/livery</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Blank.png</texture>
+	</animation>
+
+	<effect>
+		<name>Nacelle reflect</name>
+		<inherits-from>Aircraft/MD-10/Models/Effects/MD10reflect</inherits-from>
+		<object-name>Nacelle</object-name>
+	</effect>
+	<effect>
+		<name>Intake reflect</name>
+		<inherits-from>Aircraft/MD-10/Models/Effects/MD10chrome_reflect</inherits-from>
+		<object-name>Intake</object-name>
+		<object-name>Nozzle</object-name>
+	</effect>
+
+</PropertyList>
