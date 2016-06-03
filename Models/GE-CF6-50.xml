@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<<<<<<< HEAD
 <!-- McDonnell Douglas MD-10-10 -->
-=======
-<!-- McDonnell Douglas MD-10 -->
->>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 <!-- General Electric CF6-50 jet engine model -->
 
 <PropertyList>
@@ -18,11 +14,7 @@
 
 	<model>
 		<name>Fire</name>
-<<<<<<< HEAD
 		<path>Aircraft/MD-10-10/Models/Effects/enginefire.xml</path>
-=======
-		<path>Aircraft/MD-10/Models/Effects/enginefire.xml</path>
->>>>>>> 7cfb14060b50d8a644f666df80a92ca6992ffc77
 		<condition>
 			<property alias="../../../params/on-fire" />
 		</condition>
