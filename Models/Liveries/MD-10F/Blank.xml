@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name>Blank</name>
+				<texture>Blank.png</texture>
+				<registration>G-FGFS</registration>
+				<enable-configuration-switch type="bool">true</enable-configuration-switch>
+				<has-center-gear type="bool">true</has-center-gear>
+			</livery>
+		</model>
+	</sim>
+
+</PropertyList>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Fuselage model, PAX version -->
+
+<PropertyList>
+
+    <path>MD-10-fuselage.ac</path>
+    
+    <!-- Lighting -->
+    <animation>
+	<name>Cabin lights</name>
+	<type>material</type>
+	<object-name>Windows</object-name>
+	<condition>
+	    <greater-than>
+		<property>systems/electrical/outputs/cabin-lights</property>
+		<value>15</value>
+	    </greater-than>
+	</condition>
+	<emission>
+	    <red>0.5</red>
+	    <green>0.4941</green>
+	    <blue>0.3275</blue>
+	</emission>
+    </animation>
+
+    <!-- Cargo doors -->
+    <animation>
+	<name>Forward cargo door pick</name>
+	<type>pick</type>
+	<object-name>Cargo1</object-name>
+	<object-name>Cargo1Int</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>nasal</command>
+		<script>
+		    MD10.doors.cargo_fwd.toggle();
+		</script>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<name>Forward cargo door rotate</name>
+	<type>rotate</type>
+	<object-name>Cargo1</object-name>
+	<object-name>Cargo1Int</object-name>
+	<property>sim/model/door-positions/cargo-fwd/position-norm</property>
+	<factor>158</factor>
+	<axis>
+	    <x>1</x>
+	    <y>0</y>
+	    <z>0</z>
+	</axis>
+	<center>
+	    <x-m>0</x-m>
+	    <y-m>2.896</y-m>
+	    <z-m>4.385</z-m>
+	</center>
+    </animation>
+
+    <animation>
+	<name>Aft cargo door pick</name>
+	<type>pick</type>
+	<object-name>Cargo2</object-name>
+	<object-name>Cargo2Int</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable type="bool">false</repeatable>
+	    <binding>
+		<command>nasal</command>
+		<script>
+		    MD10.doors.cargo_aft.toggle();
+		</script>
+	    </binding>
+	</action>
+    </animation>
+    <animation>
+	<name>Aft cargo door rotate</name>
+	<type>rotate</type>
+	<object-name>Cargo2</object-name>
+	<object-name>Cargo2Int</object-name>
+	<property>sim/model/door-positions/cargo-aft/position-norm</property>
+	<factor>158</factor>
+	<axis>
+	    <x1-m>9.514</x1-m>
+	    <y1-m>2.856</y1-m>
+	    <z1-m>4.385</z1-m>
+	    <x2-m>11.401</x2-m>
+	    <y2-m>2.778</y2-m>
+	    <z2-m>4.385</z2-m>
+	</axis>
+    </animation>
+
+    <foo include="MD-10-fuselage-main.xml" omit-node="y" />
+
+</PropertyList>

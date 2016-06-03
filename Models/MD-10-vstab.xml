@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Vertical stabilizer model -->
+
+<PropertyList>
+
+	<path>MD-10-vstab.ac</path>
+
+	<model>
+		<name>Engine</name>
+		<path>Aircraft/MD-10/Models/GE-CF6-50.xml</path>
+		<overlay>
+			<params>
+				<on-fire>engines/engine[1]/on-fire</on-fire>
+				<n1>engines/engine[1]/rpm</n1>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>18</x-m>
+			<y-m>0</y-m>
+			<z-m>9.54</z-m>
+			<pitch-deg>2</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Contrail</name>
+		<path>Aircraft/MD-10/Models/Effects/contrail.xml</path>
+		<overlay>
+			<params>
+				<n1>engines/engine[1]/rpm</n1>
+			</params>
+		</overlay>
+		<offsets>
+			<x-m>26.839</x-m>
+			<y-m>0</y-m>
+			<z-m>9.224</z-m>
+		</offsets>
+	</model>
+
+	<animation>
+		<name>Engine reverser</name>
+		<type>translate</type>
+		<object-name>EngineReverser</object-name>
+		<object-name>EngineReverserRear</object-name>
+		<property>engines/engine[1]/reverser-pos-norm</property>
+		<factor>0.4</factor>
+		<axis>
+			<x1-m>23.527</x1-m>
+			<y1-m>0</y1-m>
+			<z1-m>9.34</z1-m>
+			<x2-m>24.871</x2-m>
+			<y2-m>0</y2-m>
+			<z2-m>9.293</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Rudder rotate</name>
+		<type>rotate</type>
+		<object-name>Rudder</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
+		<factor>60</factor>
+		<axis>
+			<x1-m>21.217</x1-m>
+			<y1-m>0</y1-m>
+			<z1-m>11.584</z1-m>
+			<x2-m>25.134</x2-m>
+			<y2-m>0</y2-m>
+			<z2-m>17.328</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Livery select</name>
+		<type>material</type>
+		<object-name>Vstab</object-name>
+		<property-base>sim/model/livery</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Blank.png</texture>
+	</animation>
+
+	<effect>
+		<name>Tail reflect</name>
+		<inherits-from>Aircraft/MD-10/Models/Effects/MD10reflect</inherits-from>
+		<object-name>Vstab</object-name>
+	</effect>
+	<effect>
+		<name>Intake reflect</name>
+		<inherits-from>Aircraft/MD-10/Models/Effects/MD10chrome_reflect</inherits-from>
+		<object-name>EngineIntake</object-name>
+	</effect>
+
+</PropertyList>

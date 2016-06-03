@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Automatic Brake System configuration -->
+
+<!-- Some of this code is based on the Boeing 777 and the work of James Turner -->
+
+<PropertyList>
+    <!-- Main autobrake engaging logic -->
+    <logic>
+	<name>Engaged</name>
+	<input>
+	    <and>
+		<property>/systems/autobrakes/serviceable</property>
+		<!-- Induced touchdown delay -->
+		<!-- this property also depends on ground spoiler deployment -->
+		<equals>
+		    <property>/systems/autobrakes/brake-ready-state</property>
+		    <value>1</value>
+		</equals>
+		<!-- Selector must not be on OFF -->
+		<not>
+		    <equals>
+			<property>/controls/gear/ABS-select</property>
+			<value>0</value>
+		    </equals>
+		</not>
+		<!-- From flight manual -->
+		<!-- brakes must be applied < 40% -->
+		<less-than>
+		    <property>/controls/gear/brake-left</property>
+		    <value>0.4</value>
+		</less-than>
+		<less-than>
+		    <property>/controls/gear/brake-right</property>
+		    <value>0.4</value>
+		</less-than>
+		<!-- throttles 1 and 3 must be < 15 degrees -->
+		<less-than>
+		    <property>/controls/engines/engine[0]/throttle</property>
+		    <value>0.2</value>
+		</less-than>
+		<less-than>
+		    <property>/controls/engines/engine[2]/throttle</property>
+		    <value>0.2</value>
+		</less-than>
+	    </and>
+	</input>
+	<output>/systems/autobrakes/engaged</output>
+    </logic>
+    <!-- Touchdown delay timers -->
+    <!-- Basically, create a 1 or 3-second delay using a rate-of-change limiter -->
+    <!-- 3-second delay for min and med levels -->
+    <filter>
+	<name>3-second touchdown delay</name>
+	<type>noise-spike</type>
+	<max-rate-of-change>0.3333333</max-rate-of-change>
+	<enable>
+	    <condition>
+		<or>
+		    <equals>
+			<property>/controls/gear/ABS-select</property>
+			<value>1</value>
+		    </equals>
+		    <equals>
+			<property>/controls/gear/ABS-select</property>
+			<value>2</value>
+		    </equals>
+		</or>
+	    </condition>
+	</enable>
+	<input>
+	    <expression>
+		<!-- Ground spoilers must be deployed -->
+		<!-- just ceil() the extension value -->
+		<ceil>
+		    <property>/controls/flight/spoilers-ground-cmd-norm</property>
+		</ceil>
+	    </expression>
+	</input>
+	<output>/systems/autobrakes/brake-ready-state</output>
+    </filter>
+    <!-- 1-second delay for max level -->
+    <filter>
+	<name>1-second touchdown delay</name>
+	<type>noise-spike</type>
+	<max-rate-of-change>1.0</max-rate-of-change>
+	<enable>
+	    <condition>
+		<equals>
+		    <property>/controls/gear/ABS-select</property>
+		    <value>3</value>
+		</equals>
+	    </condition>
+	</enable>
+	<input>
+	    <expression>
+		<!-- Ground spoilers must be deployed -->
+		<!-- just ceil() the extension value -->
+		<ceil>
+		    <property>/controls/flight/spoilers-ground-cmd-norm</property>
+		</ceil>
+	    </expression>
+	</input>
+	<output>/systems/autobrakes/brake-ready-state</output>
+    </filter>
+    <!-- Deceleration computer (dampened) -->
+    <filter>
+	<name>Deceleration meter</name>
+	<type>noise-spike</type>
+	<max-rate-of-change>5.0</max-rate-of-change>
+	<input>
+	    <scale>-1.0</scale>
+	    <property>/accelerations/pilot/x-accel-fps_sec</property>
+	</input>
+	<output>/systems/autobrakes/deceleration-fps_sec</output>
+    </filter>
+    <!-- Minimum brake controller -->
+    <pi-simple-controller>
+	<name>Min controller</name>
+	<enable>
+	    <condition>
+		<and>
+		    <property>/systems/autobrakes/engaged</property>
+		    <equals>
+			<property>/controls/gear/ABS-select</property>
+			<value>1</value>
+		    </equals>
+		</and>
+	    </condition>
+	</enable>
+	<input>
+	    <property>/systems/autobrakes/deceleration-fps_sec</property>
+	</input>
+	<reference>
+	    <!-- ripped from the A320... -->
+	    <value>5.6</value>
+	</reference>
+	<output>/systems/autobrakes/brake-cmd-norm</output>
+	<min>0.0</min>
+	<max>1.0</max>
+	<config>
+	    <Kp>1.0</Kp>
+	    <Ki>0.0</Ki>
+	</config>
+    </pi-simple-controller>
+    <!-- Medium brake controller -->
+    <pi-simple-controller>
+	<name>Med controller</name>
+	<enable>
+	    <condition>
+		<and>
+		    <property>/systems/autobrakes/engaged</property>
+		    <equals>
+			<property>/controls/gear/ABS-select</property>
+			<value>2</value>
+		    </equals>
+		</and>
+	    </condition>
+	</enable>
+	<input>
+	    <property>/systems/autobrakes/deceleration-fps_sec</property>
+	</input>
+	<reference>
+	    <!-- ripped from the A320... -->
+	    <value>9.8</value>
+	</reference>
+	<output>/systems/autobrakes/brake-cmd-norm</output>
+	<min>0.0</min>
+	<max>1.0</max>
+	<config>
+	    <Kp>1.0</Kp>
+	    <Ki>0.0</Ki>
+	</config>
+    </pi-simple-controller>
+    <!-- Maximum brake controller -->
+    <filter>
+	<name>Max controller</name>
+	<type>gain</type>
+	<gain>1.0</gain>
+	<enable>
+	    <condition>
+		<and>
+		    <property>/systems/autobrakes/engaged</property>
+		    <equals>
+			<property>/controls/gear/ABS-select</property>
+			<value>3</value>
+		    </equals>
+		</and>
+	    </condition>
+	</enable>
+	<input>1.0</input>
+	<output>/systems/autobrakes/brake-cmd-norm</output>
+    </filter>
+</PropertyList>

@@ -360,3 +360,7 @@ proprietary programs.  If your program is a subroutine library, you may
 consider it more useful to permit linking proprietary applications with the
 library.  If this is what you want to do, use the GNU Library General
 Public License instead of this License.
+
+All files licensed under the GNU General Public License, version 2 or above.
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 (Tanker) -->
+<!-- KC-10 boom -->
+
+<PropertyList>
+
+	<path>KC-10-boom.ac</path>
+	
+	<animation>
+		<type>material</type>
+		<object-name>Operator</object-name>
+		<emission>
+			<red>7.0</red>
+			<green>7.0</green>
+			<blue>7.0</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<name>Boom rotate</name>
+		<type>rotate</type>
+		<object-name>Boom</object-name>
+		<object-name>Hose</object-name>
+		<property>sim/model/door-positions/boom/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.7</ind><dep>40</dep></entry>
+			<entry><ind>1</ind><dep>40</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>17.371</x-m>
+			<y-m>0</y-m>
+			<z-m>3.189</z-m>
+		</center>
+	</animation>
+	
+	<animation>
+		<name>Boom extend</name>
+		<type>translate</type>
+		<object-name>Hose</object-name>
+		<property>sim/model/door-positions/boom/position-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.7</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>3.6</dep></entry>
+		</interpolation>
+		<axis>
+			<x1-m>17.371</x1-m>
+			<y1-m>0</y1-m>
+			<z1-m>3.189</z1-m>
+			<x2-m>24.241</x2-m>
+			<y2-m>0</y2-m>
+			<z2-m>4.759</z2-m>
+		</axis>
+	</animation>
+	
+	
+
+	<animation>
+		<name>Livery select</name>
+		<type>material</type>
+		<object-name>Boom</object-name>
+		<property-base>sim/model/livery</property-base>
+		<texture-prop>texture</texture-prop>
+		<texture>Blank-tanker.png</texture>
+	</animation>
+
+</PropertyList>

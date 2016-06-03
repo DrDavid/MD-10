@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- McDonnell Douglas MD-10 -->
+<!-- Aircraft property settings specific to the MD-10P -->
+
+<PropertyList include="MD-10-main.xml">
+
+	<sim>
+		<description>McDonnell Douglas MD-10P</description>
+		<flight-model>yasim</flight-model>
+		<aero>MD-10P</aero>
+		
+		<status>pre-beta</status>
+
+		<rating>
+			<FDM type="int">4</FDM>
+			<systems type="int">4</systems>
+			<cockpit type="int">4</cockpit>
+			<model type="int">4</model>
+		</rating>
+
+		<startup>
+			<splash-texture>Aircraft/MD-10/MD-10.jpg</splash-texture>
+		</startup>
+
+		<model>
+			<path>Aircraft/MD-10/Models/MD-10.xml</path>
+			<livery>
+				<file>Blank</file>
+			</livery>
+		</model>
+
+		<weight n="1">
+			<name>Passengers/Baggage</name>
+		</weight>
+
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>McDonnell Douglas MD-10P</label>
+				</menu>
+			</default>
+		</menubar>
+	</sim>
+
+</PropertyList>

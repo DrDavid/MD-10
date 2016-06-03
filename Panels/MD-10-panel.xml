@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Bombardier CRJ700 series --><!-- Adapted for MD-10 Series by David Waggoner 25Jan14 --> 
+<!-- 2d cockpit panel -->
+
+<!-- Requires 737-300 to be installed -->
+
+<PropertyList>
+
+	<name>McDonnel-Douglas MD-10 2d panel</name>
+	<background>MD-10/Panels/MD-10-panel-bg.png</background>
+	<w>1024</w>
+	<h>768</h>
+	
+	<instruments>
+		<instrument include="/Aircraft/MD-10/Instruments/pfd2.xml">
+			<name>PFD</name>
+			<x>350</x>
+			<y>140</y>
+			<w>280</w>
+			<h>280</h>
+		</instrument>
+		<instrument include="/Aircraft/MD-10/Instruments/pfd1.xml">
+			<name>MFD</name>
+			<x>620</x>
+			<y>140</y>
+			<w>280</w>
+			<h>280</h>
+		</instrument>
+		<instrument include="/Aircraft/MD-10/Instruments/eicas.xml">
+			<name>EICAS</name>
+			<x>890</x>
+			<y>140</y>
+			<w>280</w>
+			<h>280</h>
+		</instrument>
+		<instrument include="/Aircraft/MD-10/Instruments/autopilot-panel.xml">
+			<name>MCP</name>
+			<x>787</x>
+			<y>373</y>
+			<w>473</w>
+			<h>200</h>
+		</instrument>
+		<instrument include="/Aircraft/MD-10/Instruments/clock.xml">
+			<name>Clock</name>
+			<x>131</x>
+			<y>95</y>
+			<w>110</w>
+			<h>110</h>
+		</instrument>
+		<instrument include="/Aircraft/Instruments/gyro.xml">
+			<name>Compass</name>
+			<x>963</x>
+			<y>707</y>
+			<w>122</w>
+			<h>122</h>
+		</instrument>
+	</instruments>
+
+</PropertyList>
