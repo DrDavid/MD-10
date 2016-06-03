@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10-10 -->
+<!-- McDonnell Douglas MD-10 -->
 <!-- Main model, all variants -->
 
 <PropertyList>
@@ -11,7 +11,7 @@
 
 			# MP props
 			var vals = model.getNode("sim/multiplay/generic");
-			var props_file = io.read_properties("Aircraft/MD-10-10/Systems/MD-10-10-multiplayer.xml");
+			var props_file = io.read_properties("Aircraft/MD-10/Systems/MD-10-multiplayer.xml");
 			foreach (var ref; props_file.getChildren("reference"))
 			{
 				var val = vals.getChild(ref.getNode("type").getValue(), ref.getNode("index").getValue(), 1);
@@ -28,7 +28,7 @@
 				if (char == "/") break;
 				livery_path = char ~ livery_path;
 			}
-			livery_path = "Aircraft/MD-10-10/Models/Liveries/" ~ livery_path;
+			livery_path = "Aircraft/MD-10/Models/Liveries/" ~ livery_path;
 			var livery_update = aircraft.livery_update.new(livery_path);
 
 			# Animated jetway support over MP
@@ -48,27 +48,27 @@
 
 	<model>
 		<name>Wings</name>
-		<path>Aircraft/MD-10-10/Models/MD-10-10-wings.xml</path>
+		<path>Aircraft/MD-10/Models/MD-10-wings.xml</path>
 	</model>
 
 	<model>
 		<name>Hstab</name>
-		<path>Aircraft/MD-10-10/Models/MD-10-10-hstab.xml</path>
+		<path>Aircraft/MD-10/Models/MD-10-hstab.xml</path>
 	</model>
 
 	<model>
 		<name>Vstab</name>
-		<path>Aircraft/MD-10-10/Models/MD-10-10-vstab.xml</path>
+		<path>Aircraft/MD-10/Models/MD-10-vstab.xml</path>
 	</model>
 
 	<model>
 		<name>Landing gear</name>
-		<path>Aircraft/MD-10-10/Models/MD-10-10-gear.xml</path>
+		<path>Aircraft/MD-10/Models/MD-10-gear.xml</path>
 	</model>
 
 	<model>
 		<name>Flight deck</name>
-		<path>Aircraft/MD-10-10/Models/cockpit/cockpit.xml</path>
+		<path>Aircraft/MD-10/Models/cockpit/cockpit.xml</path>
 		<offsets>
 			<x-m>1.65</x-m>
 			<y-m>0</y-m>
@@ -78,7 +78,7 @@
 
 	<model>
 		<name>Engine 1</name>
-		<path>Aircraft/MD-10-10/Models/MD-10-10-engine.xml</path>
+		<path>Aircraft/MD-10/Models/MD-10-engine.xml</path>
 		<overlay>
 			<params>
 				<on-fire>engines/engine[0]/on-fire</on-fire>
@@ -96,7 +96,7 @@
 
 	<model>
 		<name>Engine 3</name>
-		<path>Aircraft/MD-10-10/Models/MD-10-10-engine.xml</path>
+		<path>Aircraft/MD-10/Models/MD-10-engine.xml</path>
 		<overlay>
 			<params>
 				<on-fire>engines/engine[2]/on-fire</on-fire>
@@ -124,7 +124,7 @@
 
 	<model>
 		<name>Left navigation light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/rednav.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/rednav.xml</path>
 		<offsets>
 			<x-m>11.937</x-m>
 			<y-m>-25.148</y-m>
@@ -133,7 +133,7 @@
 	</model>
 	<model>
 		<name>Right navigation light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/greennav.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/greennav.xml</path>
 		<offsets>
 			<x-m>11.937</x-m>
 			<y-m>25.148</y-m>
@@ -143,7 +143,7 @@
 
 	<model>
 		<name>Left front strobe light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/strobe.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/strobe.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/strobe[0]</source>
@@ -157,7 +157,7 @@
 	</model>
 	<model>
 		<name>Left rear strobe light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/strobe.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/strobe.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/strobe[1]</source>
@@ -171,7 +171,7 @@
 	</model>
 	<model>
 		<name>Right front strobe light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/strobe.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/strobe.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/strobe[0]</source>
@@ -185,7 +185,7 @@
 	</model>
 	<model>
 		<name>Right rear strobe light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/strobe.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/strobe.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/strobe[1]</source>
@@ -200,7 +200,7 @@
 
 	<model>
 		<name>Port landing light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/landing-wing.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/landing-wing.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/landing-light-port</source>
@@ -214,7 +214,7 @@
 	</model>
 	<model>
 		<name>Port landing light (inside)</name>
-		<path>Aircraft/MD-10-10/Models/Lights/landing-wing-inside.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/landing-wing-inside.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/landing-light-port</source>
@@ -228,7 +228,7 @@
 	</model>
 	<model>
 		<name>Left nose landing light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/landing-nose-fuselage.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/landing-nose-fuselage.xml</path>
 		<offsets>
 			<x-m>-21.9</x-m>
 			<y-m>-2.15</y-m>
@@ -237,7 +237,7 @@
 	</model>
 	<model>
 		<name>Nose gear landing light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/landing-nose-gear.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/landing-nose-gear.xml</path>
 		<offsets>
 			<x-m>-19</x-m>
 			<y-m>0</y-m>
@@ -246,7 +246,7 @@
 	</model>
 	<model>
 		<name>Right nose landing light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/landing-nose-fuselage.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/landing-nose-fuselage.xml</path>
 		<offsets>
 			<x-m>-21.9</x-m>
 			<y-m>2.15</y-m>
@@ -255,7 +255,7 @@
 	</model>
 	<model>
 		<name>Starboard landing light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/landing-wing.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/landing-wing.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/landing-light-stbd</source>
@@ -269,7 +269,7 @@
 	</model>
 	<model>
 		<name>Starboard landing light (inside)</name>
-		<path>Aircraft/MD-10-10/Models/Lights/landing-wing-inside.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/landing-wing-inside.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/landing-light-stbd</source>
@@ -284,7 +284,7 @@
 
 	<model>
 		<name>Top beacon light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/beacon.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/beacon.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/beacon[0]</source>
@@ -298,7 +298,7 @@
 	</model>
 	<model>
 		<name>Bottom beacon light</name>
-		<path>Aircraft/MD-10-10/Models/Lights/beacon.xml</path>
+		<path>Aircraft/MD-10/Models/Lights/beacon.xml</path>
 		<overlay>
 			<params>
 				<source>systems/electrical/outputs/beacon[1]</source>
@@ -331,7 +331,7 @@
 	</model>
 	<model>
 		<name>Port gear tire smoke</name>
-		<path>Aircraft/MD-10-10/Models/Effects/tyre-smoke.xml</path>
+		<path>Aircraft/MD-10/Models/Effects/tyre-smoke.xml</path>
 		<overlay>
 			<params>
 				<tyre-smoke>gear/gear[2]/tyre-smoke</tyre-smoke>
@@ -345,7 +345,7 @@
 	</model>
 	<model>
 		<name>Port gear tire spray</name>
-		<path>Aircraft/MD-10-10/Models/Effects/rain.xml</path>
+		<path>Aircraft/MD-10/Models/Effects/rain.xml</path>
 		<overlay>
 			<params>
 				<spray>gear/gear[2]/spray</spray>
@@ -361,7 +361,7 @@
 	</model>
 	<model>
 		<name>Starboard gear tire smoke</name>
-		<path>Aircraft/MD-10-10/Models/Effects/tyre-smoke.xml</path>
+		<path>Aircraft/MD-10/Models/Effects/tyre-smoke.xml</path>
 		<overlay>
 			<params>
 				<tyre-smoke>gear/gear[4]/tyre-smoke</tyre-smoke>
@@ -375,7 +375,7 @@
 	</model>
 	<model>
 		<name>Starboard gear tire spray</name>
-		<path>Aircraft/MD-10-10/Models/Effects/rain.xml</path>
+		<path>Aircraft/MD-10/Models/Effects/rain.xml</path>
 		<overlay>
 			<params>
 				<spray>gear/gear[4]/spray</spray>
@@ -391,7 +391,7 @@
 	</model>
 	<model>
 		<name>Center gear tire smoke</name>
-		<path>Aircraft/MD-10-10/Models/Effects/tyre-smoke.xml</path>
+		<path>Aircraft/MD-10/Models/Effects/tyre-smoke.xml</path>
 		<overlay>
 			<params>
 				<tyre-smoke>gear/gear[5]/tyre-smoke</tyre-smoke>
@@ -405,7 +405,7 @@
 	</model>
 	<model>
 		<name>Center gear tire spray</name>
-		<path>Aircraft/MD-10-10/Models/Effects/rain.xml</path>
+		<path>Aircraft/MD-10/Models/Effects/rain.xml</path>
 		<overlay>
 			<params>
 				<spray>gear/gear[5]/spray</spray>

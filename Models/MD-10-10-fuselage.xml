@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10-10 -->
+<!-- McDonnell Douglas MD-10 -->
 <!-- Fuselage model, PAX version -->
 
 <PropertyList>
 
-    <path>MD-10-10-fuselage.ac</path>
+    <path>MD-10-fuselage.ac</path>
     
     <!-- Lighting -->
     <animation>
@@ -94,6 +94,6 @@
 	</axis>
     </animation>
 
-    <foo include="MD-10-10-fuselage-main.xml" omit-node="y" />
+    <foo include="MD-10-fuselage-main.xml" omit-node="y" />
 
 </PropertyList>

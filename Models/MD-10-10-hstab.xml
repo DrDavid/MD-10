@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10-10 -->
+<!-- McDonnell Douglas MD-10 -->
 <!-- Horizontal stabilizer model -->
 
 <PropertyList>
 
-	<path>MD-10-10-hstab.ac</path>
+	<path>MD-10-hstab.ac</path>
 
 	<animation>
 		<name>Left elevator</name>

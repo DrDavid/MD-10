@@ -36,7 +36,7 @@
 		    		  <animation>
 <type>shader</type>
 <shader>chrome</shader>
-<texture>Aircraft/MD-10-10/Models/cockpit/chrome_cockpit.png</texture>
+<texture>Aircraft/MD-10/Models/cockpit/chrome_cockpit.png</texture>
 <object-name>compass.glass</object-name>
 </animation>
 

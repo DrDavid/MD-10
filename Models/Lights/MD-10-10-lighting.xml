@@ -7,7 +7,7 @@
 	<!-- Green Naviagation Light -->
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/greennav.xml</path>
+<path>Aircraft/MD-10/Models/Lights/greennav.xml</path>
 <name>GreenLight</name>     
    <condition>
 		<property>controls/lighting/nav-lights</property>
@@ -20,7 +20,7 @@
 </model>
 
 <model>
- <path>Aircraft/MD-10-10/Models/Lights/light-green.xml</path>
+ <path>Aircraft/MD-10/Models/Lights/light-green.xml</path>
  <name>GreenLight</name>
     <condition>
 		<property>controls/lighting/nav-lights</property>
@@ -36,7 +36,7 @@
 <!-- Red Naviagation Light -->
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/rednav.xml</path>
+<path>Aircraft/MD-10/Models/Lights/rednav.xml</path>
 <name>RedLight</name>     
    <condition>
 		<property>controls/lighting/nav-lights</property>
@@ -49,7 +49,7 @@
 </model>
 
 <model>
- <path>Aircraft/MD-10-10/Models/Lights/light-red.xml</path>
+ <path>Aircraft/MD-10/Models/Lights/light-red.xml</path>
  <name>RedLight</name>
     <condition>
 		<property>controls/lighting/nav-lights</property>
@@ -64,7 +64,7 @@
 	<!-- Strobe right-->
 
 <model>
- <path>Aircraft/MD-10-10/Models/Lights/light-white.xml</path>
+ <path>Aircraft/MD-10/Models/Lights/light-white.xml</path>
  <name>Strobelight.1</name>
 	<condition>
 		<property>controls/lighting/strobe</property>
@@ -77,7 +77,7 @@
 </model>
 
 <model>
- <path>Aircraft/MD-10-10/Models/Lights/whitelight.xml</path>
+ <path>Aircraft/MD-10/Models/Lights/whitelight.xml</path>
  <name>Strobelight.1</name>
     <condition>
 		<property>controls/lighting/strobe</property>
@@ -100,7 +100,7 @@
 	<!-- Strobe left-->
 
 <model>
- <path>Aircraft/MD-10-10/Models/Lights/light-white.xml</path>
+ <path>Aircraft/MD-10/Models/Lights/light-white.xml</path>
  <name>Strobelight.2</name>
 	<condition>
 		<property>controls/lighting/strobe</property>
@@ -113,7 +113,7 @@
 </model>
 
 <model>
- <path>Aircraft/MD-10-10/Models/Lights/whitelight.xml</path>
+ <path>Aircraft/MD-10/Models/Lights/whitelight.xml</path>
  <name>Strobelight.2</name>
     <condition>
 		<property>controls/lighting/strobe</property>
@@ -136,7 +136,7 @@
 <!-- Beacon light -->
 
 <model>
-	<path>Aircraft/MD-10-10/Models/Lights/beacon.xml</path>
+	<path>Aircraft/MD-10/Models/Lights/beacon.xml</path>
 	<name>Beacon.Lower</name>
 	    <condition>
 		<property>controls/lighting/beacon</property>
@@ -150,7 +150,7 @@
 </model>
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/beacon_light.xml</path>
+<path>Aircraft/MD-10/Models/Lights/beacon_light.xml</path>
 	<name>Beacon.Lower.Light</name>
 		    <condition>
 		<property>controls/lighting/beacon</property>
@@ -164,7 +164,7 @@
 </model>
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/beacon.xml</path>
+<path>Aircraft/MD-10/Models/Lights/beacon.xml</path>
 	<name>Beacon.Upper</name>
 		    <condition>
 		<property>controls/lighting/beacon</property>
@@ -177,7 +177,7 @@
 </model>
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/beacon_light.xml</path>
+<path>Aircraft/MD-10/Models/Lights/beacon_light.xml</path>
 	<name>Beacon.Upper.Light</name>
 		    <condition>
 		<property>controls/lighting/beacon</property>
@@ -194,7 +194,7 @@
 
 <model>
 <name>landing.nose.1</name>
-<path>Aircraft/MD-10-10/Models/Lights/taxi-nose.xml</path>
+<path>Aircraft/MD-10/Models/Lights/taxi-nose.xml</path>
 	<offsets>
 		<x-m>-30.3489</x-m>
 		<y-m>-0.1179</y-m>
@@ -204,7 +204,7 @@
 
 <model>
 <name>landing.nose.1</name>
-<path>Aircraft/MD-10-10/Models/Lights/transparentlight.xml</path>
+<path>Aircraft/MD-10/Models/Lights/transparentlight.xml</path>
 	<offsets>
 		<x-m>-20.3912</x-m>
 		<y-m>-0.1901</y-m>
@@ -215,7 +215,7 @@
 
 <model>
 <name>landing.nose.2</name>
-<path>Aircraft/MD-10-10/Models/Lights/taxi-nose.xml</path>
+<path>Aircraft/MD-10/Models/Lights/taxi-nose.xml</path>
 	<offsets>
 		<x-m>-30.3489</x-m>
 		<y-m>0.1179</y-m>
@@ -225,7 +225,7 @@
 
 <model>
 <name>landing.nose.2</name>
-<path>Aircraft/MD-10-10/Models/Lights/transparentlight.xml</path>
+<path>Aircraft/MD-10/Models/Lights/transparentlight.xml</path>
 	<offsets>
 		<x-m>-20.3912</x-m>
 		<y-m>0.1901</y-m>
@@ -236,7 +236,7 @@
 
 <model>
 	<name>landing_left</name>
-	<path>Aircraft/MD-10-10/Models/Lights/taxi-nose.xml</path>
+	<path>Aircraft/MD-10/Models/Lights/taxi-nose.xml</path>
 	<offsets>
 	    <x-m>-33.0504</x-m>
 	    <y-m>-2.3523</y-m>
@@ -245,7 +245,7 @@
 </model> 
 <model>
 	<name>landing_left</name>
-	<path>Aircraft/MD-10-10/Models/Lights/transparentlight.xml</path>
+	<path>Aircraft/MD-10/Models/Lights/transparentlight.xml</path>
 	<offsets>
 	    <heading-deg>5</heading-deg>
 	    <pitch-deg>-15</pitch-deg>
@@ -264,7 +264,7 @@
 
 <model>
 	<name>landing_right</name>
-	<path>Aircraft/MD-10-10/Models/Lights/taxi-nose.xml</path>
+	<path>Aircraft/MD-10/Models/Lights/taxi-nose.xml</path>
 	<offsets>
 	    <x-m>-33.0504</x-m>
 	    <y-m>2.3523</y-m>
@@ -273,7 +273,7 @@
 </model> 
 <model>
 	<name>landing_right</name>
-	<path>Aircraft/MD-10-10/Models/Lights/transparentlight.xml</path>
+	<path>Aircraft/MD-10/Models/Lights/transparentlight.xml</path>
 	<offsets>
 	    <heading-deg>-5</heading-deg>
 	    <pitch-deg>-15</pitch-deg>
@@ -292,7 +292,7 @@
 
 <model>
 <name>turnoff_right</name>
-<path>Aircraft/MD-10-10/Models/Lights/taxi-nose.xml</path>
+<path>Aircraft/MD-10/Models/Lights/taxi-nose.xml</path>
 	<offsets>
 	<heading-deg>-30</heading-deg>
 		<x-m>-7.6805</x-m>
@@ -303,7 +303,7 @@
 
 <model>
 <name>turnoff_right</name>
-<path>Aircraft/MD-10-10/Models/Lights/transparentlight.xml</path>
+<path>Aircraft/MD-10/Models/Lights/transparentlight.xml</path>
 	<offsets>
 	<heading-deg>-30</heading-deg>
 		<x-m>-8.5061</x-m>
@@ -314,7 +314,7 @@
 
 <model>
 <name>turnoff_left</name>
-<path>Aircraft/MD-10-10/Models/Lights/transparentlight.xml</path>
+<path>Aircraft/MD-10/Models/Lights/transparentlight.xml</path>
 	<offsets>
 	<heading-deg>30</heading-deg>
 		<x-m>-8.5061</x-m>
@@ -326,7 +326,7 @@
 
 <model>
 <name>turnoff_left</name>
-<path>Aircraft/MD-10-10/Models/Lights/taxi-nose.xml</path>
+<path>Aircraft/MD-10/Models/Lights/taxi-nose.xml</path>
 	<offsets>
 	<heading-deg>30</heading-deg>
 		<x-m>-7.6805</x-m>
@@ -377,7 +377,7 @@
 <!-- Logo light -->
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/light-logo.xml</path>
+<path>Aircraft/MD-10/Models/Lights/light-logo.xml</path>
 	<offsets>
 		<x-m>26.268</x-m>
 		<y-m>-5.1541</y-m>
@@ -386,7 +386,7 @@
 </model> 
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/light-logo2.xml</path>
+<path>Aircraft/MD-10/Models/Lights/light-logo2.xml</path>
 	<offsets>
 		<x-m>26.268</x-m>
 		<y-m>5.1541</y-m>
@@ -398,7 +398,7 @@
 <!-- Wing lights -->
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/wing-light-right.xml</path>
+<path>Aircraft/MD-10/Models/Lights/wing-light-right.xml</path>
 <name>wing-light-right</name>
 	<offsets>
 		<x-m>-7.3573</x-m>
@@ -408,7 +408,7 @@
 </model> 
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/wing-light-left.xml</path>
+<path>Aircraft/MD-10/Models/Lights/wing-light-left.xml</path>
 <name>wing-light-left</name>
 	<offsets>
 		<x-m>-7.3573</x-m>
@@ -429,7 +429,7 @@
 <!-- Dashboard -->
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/dashboard-light.xml</path>
+<path>Aircraft/MD-10/Models/Lights/dashboard-light.xml</path>
 	<offsets>
 		<x-m>-27.4411</x-m>
 		<y-m>0</y-m>
@@ -438,7 +438,7 @@
 </model> 
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/dashboard-light.xml</path>
+<path>Aircraft/MD-10/Models/Lights/dashboard-light.xml</path>
 	<offsets>
     <heading-deg>90</heading-deg>
 		<x-m>-27.4411</x-m>
@@ -448,7 +448,7 @@
 </model> 
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/dashboard-light.xml</path>
+<path>Aircraft/MD-10/Models/Lights/dashboard-light.xml</path>
 	<offsets>
     <heading-deg>-90</heading-deg>
 		<x-m>-27.4411</x-m>
@@ -458,7 +458,7 @@
 </model> 
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/pedestal-light.xml</path>
+<path>Aircraft/MD-10/Models/Lights/pedestal-light.xml</path>
 	<offsets>
 		<x-m>-26.7652</x-m>
 		<y-m>-0.2236</y-m>
@@ -469,7 +469,7 @@
 <!-- MCP -->
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/mcp-light.xml</path>
+<path>Aircraft/MD-10/Models/Lights/mcp-light.xml</path>
 	<offsets>
 		<x-m>-27.2623</x-m>
 		<y-m>0</y-m>
@@ -478,7 +478,7 @@
 </model> 
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/mcp-light.xml</path>
+<path>Aircraft/MD-10/Models/Lights/mcp-light.xml</path>
 	<offsets>
 		<x-m>-27.2623</x-m>
 		<y-m>0.075</y-m>
@@ -487,7 +487,7 @@
 </model> 
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/mcp-light.xml</path>
+<path>Aircraft/MD-10/Models/Lights/mcp-light.xml</path>
 	<offsets>
 		<x-m>-27.2623</x-m>
 		<y-m>0.15</y-m>
@@ -496,7 +496,7 @@
 </model> 
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/mcp-light.xml</path>
+<path>Aircraft/MD-10/Models/Lights/mcp-light.xml</path>
 	<offsets>
 		<x-m>-27.2623</x-m>
 		<y-m>-0.15</y-m>
@@ -505,7 +505,7 @@
 </model> 
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/mcp-light.xml</path>
+<path>Aircraft/MD-10/Models/Lights/mcp-light.xml</path>
 	<offsets>
 		<x-m>-27.2623</x-m>
 		<y-m>-0.075</y-m>
@@ -516,7 +516,7 @@
 <!--Overhead flood-->
 
 <model>
-<path>Aircraft/MD-10-10/Models/Lights/oh-light.xml</path>
+<path>Aircraft/MD-10/Models/Lights/oh-light.xml</path>
 	<offsets>
 			<pitch-deg>160</pitch-deg>
 		<x-m>-27.1163</x-m>

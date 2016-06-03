@@ -1,4 +1,4 @@
-# MD-10-10 fuel system, John Williams, April 2014
+# MD-10 fuel system, John Williams, April 2014
 
 var fuelsys = {
     new : func {

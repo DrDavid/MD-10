@@ -1,17 +1,17 @@
 var Radio = gui.Dialog.new("sim/gui/dialogs/radios/dialog",
-        "Aircraft/MD-10-10/Systems/tranceivers.xml");
+        "Aircraft/MD-10/Systems/tranceivers.xml");
 		
 var ap_settings = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog",
-        "Aircraft/MD-10-10/Systems/autopilot-dlg.xml");
+        "Aircraft/MD-10/Systems/autopilot-dlg.xml");
 
 var tiller_steering = gui.Dialog.new("sim/gui/dialogs/tiller-steering/dialog",
-        "Aircraft/MD-10-10/Systems/tiller-steering.xml");
+        "Aircraft/MD-10/Systems/tiller-steering.xml");
 
 var ground_services = gui.Dialog.new("sim/gui/dialogs/ground_services/dialog",
-		"Aircraft/MD-10-10/Systems/ground_services-dlg.xml");
+		"Aircraft/MD-10/Systems/ground_services-dlg.xml");
 		
 var handy_viewer = gui.Dialog.new("sim/gui/dialogs/handy_viewer/dialog",
-		"Aircraft/MD-10-10/Systems/handy_viewer.xml");
+		"Aircraft/MD-10/Systems/handy_viewer.xml");
 gui.menuBind("radio", "dialogs.Radio.open()");
 gui.menuBind("autopilot-settings", "dialogs.ap_settings.open()");
 gui.menuBind("fuel-and-payload", "dialogs.showWeightDialog()");

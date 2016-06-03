@@ -9,7 +9,7 @@
         <!-- Engine 1 sound -->
         <engine>
             <name>Engine 1 sound 1 external</name>
-            <path>Aircraft/MD-10-10/Sounds/whine.wav</path>
+            <path>Aircraft/MD-10/Sounds/whine.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -43,7 +43,7 @@
         </engine>
         <engine>
             <name>Engine 1 sound 2 external</name>
-            <path>Aircraft/MD-10-10/Sounds/jet.wav</path>
+            <path>Aircraft/MD-10/Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -103,7 +103,7 @@
         <!-- Engine 2 sound -->
         <engine>
             <name>Engine 2 sound 1 external</name>
-            <path>Aircraft/MD-10-10/Sounds/whine.wav</path>
+            <path>Aircraft/MD-10/Sounds/whine.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -137,7 +137,7 @@
         </engine>
         <engine>
             <name>Engine 2 sound 2 external</name>
-            <path>Aircraft/MD-10-10/Sounds/jet.wav</path>
+            <path>Aircraft/MD-10/Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -197,7 +197,7 @@
         <!-- Engine 3 sound -->
         <engine>
             <name>Engine 3 sound 1 external</name>
-            <path>Aircraft/MD-10-10/Sounds/whine.wav</path>
+            <path>Aircraft/MD-10/Sounds/whine.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -231,7 +231,7 @@
         </engine>
         <engine>
             <name>Engine 2 sound 3 external</name>
-            <path>Aircraft/MD-10-10/Sounds/jet.wav</path>
+            <path>Aircraft/MD-10/Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <and>
@@ -317,7 +317,7 @@
 	<!-- Gear touchdown -->
 	<gear>
 	    <name>Left main gear touchdown</name>
-	    <path>Aircraft/MD-10-10/Sounds/touchdown.wav</path>
+	    <path>Aircraft/MD-10/Sounds/touchdown.wav</path>
 	    <mode>once</mode>
 	    <condition>
 		<property>gear/gear[2]/wow</property>
@@ -328,7 +328,7 @@
 	</gear>
 	<gear>
 	    <name>Right main gear touchdown</name>
-	    <path>Aircraft/MD-10-10/Sounds/touchdown.wav</path>
+	    <path>Aircraft/MD-10/Sounds/touchdown.wav</path>
 	    <mode>once</mode>
 	    <condition>
 		<property>gear/gear[4]/wow</property>
@@ -341,7 +341,7 @@
 	<!-- APU -->
 	<apu>
 	    <name>APU Start</name>
-	    <path>Aircraft/MD-10-10/Sounds/apu_strt.wav</path>
+	    <path>Aircraft/MD-10/Sounds/apu_strt.wav</path>
 	    <mode>once</mode>
 	    <condition>
 		<equals>
@@ -352,7 +352,7 @@
 	</apu>
 	<apu>
 	    <name>APU Run</name>
-	    <path>Aircraft/MD-10-10/Sounds/apu_run.wav</path>
+	    <path>Aircraft/MD-10/Sounds/apu_run.wav</path>
 	    <mode>looped</mode>
 	    <condition>
 		<equals>
@@ -363,7 +363,7 @@
 	</apu>
 	<apu>
 	    <name>APU Stop</name>
-	    <path>Aircraft/MD-10-10/Sounds/apu_stop.wav</path>
+	    <path>Aircraft/MD-10/Sounds/apu_stop.wav</path>
 	    <mode>once</mode>
 	    <condition>
 		<equals>
@@ -373,7 +373,7 @@
 	    </condition>
 	</apu>
 
-        <foo include="MD-10-10-internal-sound.xml" omit-node="y" />
+        <foo include="MD-10-internal-sound.xml" omit-node="y" />
     </fx>
 
 </PropertyList>

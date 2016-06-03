@@ -36,7 +36,7 @@
     </animation>
 
     <effect>
-	<inherits-from>Aircraft/MD-10-10/Models/Effects/engine</inherits-from>
+	<inherits-from>Aircraft/MD-10/Models/Effects/engine</inherits-from>
 	<object-name>oh_2_buttons</object-name>
     </effect>
 

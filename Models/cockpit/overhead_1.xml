@@ -1292,7 +1292,7 @@ FSC.btn
 	</animation>
 
 			<effect>
-		<inherits-from>Aircraft/MD-10-10/Models/Effects/engine</inherits-from>
+		<inherits-from>Aircraft/MD-10/Models/Effects/engine</inherits-from>
     <object-name>nosmoking.lever</object-name>
         <object-name>L-Lnd.toggle</object-name>
         <object-name>C-Lnd.toggle</object-name>
