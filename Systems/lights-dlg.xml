@@ -46,73 +46,130 @@
 		<text>
 			<label>Landing lights</label>
 		</text>
-
+		
 		<group>
 			<layout>hbox</layout>
-
-			<checkbox>
-				<halign>left</halign>
-				<label>Left</label>
-				<property>controls/lighting/landing-light-port</property>
-				<binding>
-					<command>dialog-apply</command>
-				</binding>
-				<live>true</live>
-			</checkbox>
-
-			<checkbox>
-				<halign>left</halign>
-				<label>Right</label>
-				<property>controls/lighting/landing-light-stbd</property>
-				<binding>
-					<command>dialog-apply</command>
-				</binding>
-				<live>true</live>
-			</checkbox>
-		</group>
-
-		<text>
-			<label>Nose</label>
-		</text>
-
-		<group>
-			<layout>hbox</layout>
-
-			<button>
-				<legend>OFF</legend>
-				<binding>
-					<command>property-assign</command>
-					<property>controls/lighting/landing-light-nose-switch</property>
-					<value>0</value>
-				</binding>
-			</button>
-
+			
 			<button>
 				<legend>TAXI</legend>
 				<binding>
 					<command>property-assign</command>
-					<property>controls/lighting/landing-light-nose-switch</property>
+					<property>controls/lighting/landing-light-port</property>
+					<value>0</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/lighting/landing-light-nose[1]</property>
 					<value>1</value>
 				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/lighting/landing-light-stbd</property>
+					<value>0</value>
+				</binding>
 			</button>
-
+			
+			<button>
+				<legend>OFF</legend>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/lighting/landing-light-port</property>
+					<value>0</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/lighting/landing-light-nose[1]</property>
+					<value>0</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/lighting/landing-light-stbd</property>
+					<value>0</value>
+				</binding>
+			</button>
+			
 			<button>
 				<legend>LAND</legend>
 				<binding>
 					<command>property-assign</command>
-					<property>controls/lighting/landing-light-nose-switch</property>
-					<value>2</value>
+					<property>controls/lighting/landing-light-port</property>
+					<value>1</value>
 				</binding>
-			</button>
-			<button>
-			
-				<legend>BOOM OPERATOR</legend>
 				<binding>
 					<command>property-assign</command>
-					<property>controls/lighting/landing-light-nose-switch</property>
-					<value>3</value>
+					<property>controls/lighting/landing-light-nose[1]</property>
+					<value>1</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/lighting/landing-light-stbd</property>
+					<value>1</value>
+				</binding>
+			</button>			
+		</group>
+		
+		<group>
+			<layout>hbox</layout>
+			
+			<button>
+				<legend>LEFT</legend>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/lighting/landing-light-port</property>
+					<value>0</value>
 				</binding>
 			</button>
+			
+			<button>
+				<legend>NOSE</legend>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/lighting/landing-light-nose[1]</property>
+					<value>0</value>
+				</binding>
+			</button>
+			
+			<button>
+				<legend>RIGHT</legend>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/lighting/landing-light-stbd</property>
+				</binding>
+			</button>			
+		</group>
+		
+		<group>
+			<layout>hbox</layout>		
+
+			<text>
+				<label>[LEFT]</label>
+				<visible>
+					<equals>
+						<property>controls/lighting/landing-light-port</property>
+						<value>1</value>
+					</equals>
+				</visible>
+			</text>
+		
+			<text>
+				<label>[NOSE]</label>
+				<visible>
+					<equals>
+						<property>controls/lighting/landing-light-nose[1]</property>
+						<value>1</value>
+					</equals>
+				</visible>
+			</text>
+		
+			<text>
+				<label>[RIGHT]</label>
+				<visible>
+					<equals>
+						<property>controls/lighting/landing-light-stbd</property>
+						<value>1</value>
+					</equals>
+				</visible>
+			</text>
 		</group>
 
 		<hrule />
@@ -178,27 +235,11 @@
 		</text>
 
 		<slider>
-			<pref-width>100</pref-width>
-			<property>controls/lighting/instruments-norm</property>
-			<binding>
-				<command>dialog-apply</command>
-			</binding>
-		</slider>
-		
-		<layout>table</layout>
-
-		<text>
 			<row>0</row>
 			<col>0</col>
 			<halign>center</halign>
-			<label>Flight deck displays</label>
-		</text>
-		<slider>
-			<row>1</row>
-			<col>0</col>
-			<halign>center</halign>
 			<pref-width>100</pref-width>
-			<property>controls/lighting/display-norm</property>
+			<property>controls/lighting/instruments-norm</property>
 			<step>0.05</step>
 			<min>0</min>
 			<max>1</max>
@@ -207,6 +248,8 @@
 				<command>dialog-apply</command>
 			</binding>
 		</slider>
+		
+		<layout>table</layout>
 		
 
 		<property>controls/lighting/cabin-lights</property>
@@ -251,7 +294,7 @@
 			<col>1</col>
 			<halign>center</halign>
 			<pref-width>100</pref-width>
-			<property>controls/lighting/panel-overhead-norm</property>
+			<property>controls/lighting/ovhd-panel-norm</property>
 			<step>0.05</step>
 			<min>0</min>
 			<max>1</max>

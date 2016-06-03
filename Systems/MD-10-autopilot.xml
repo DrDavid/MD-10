@@ -300,7 +300,7 @@
 		</config>
 	</pid-controller>
 	<!-- 1 : EPR -->
-	<!-- EPR limits aren't simulated yet, so let's just set the throttle to achieve maximum continuous thrust (aka 100%) -->
+	<!-- EPR limits aren't simulated yet, so let's just set the throttle to acheive maximum continuous thrust (aka 100%) -->
 	<filter>
 		<name>EPR speed controller</name>
 		<type>gain</type>

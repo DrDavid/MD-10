@@ -6,6 +6,19 @@
 <PropertyList>
 
 	<path>standby.ac</path>
+	
+  	<!-- Power on/off -->
+	<animation>
+		<name>Power on/off</name>
+		<type>select</type>
+		<object-name>Off</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</less-than>
+		</condition>
+	</animation>
 
 	<params>
 		<indicated-pitch-deg>instrumentation/attitude-indicator/indicated-pitch-deg</indicated-pitch-deg>
@@ -36,17 +49,10 @@
 	<animation>
 		<type>material</type>
 		<object-name>LCD</object-name>
-		<condition>
-			<greater-than-equals>
-				<property>systems/electrical/outputs/standby-instrument</property>
-				<value>15</value>
-			</greater-than-equals>
-		</condition>
 		<emission>
-			<red>1.5</red>
-			<green>1.965</green>
-			<blue>1.42</blue>
-			<factor-prop>controls/lighting/display-norm</factor-prop>
+			<red>0.8</red>
+			<green>0.8</green>
+			<blue>0.8</blue>
 		</emission>
 	</animation>
 
@@ -243,7 +249,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>ILSPtr</object-name>
-		<property>instrumentation/nav/heading-needle-deflection-norm</property>
+		<property>instrumentation/nav[0]/heading-needle-deflection-norm</property>
 		<factor>0.0115</factor>
 		<axis>
 			<x>0</x>
@@ -254,7 +260,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>GSPtr</object-name>
-		<property>instrumentation/nav/gs-needle-deflection-norm</property>
+		<property>instrumentation/nav[0]/gs-needle-deflection-norm</property>
 		<factor>0.0115</factor>
 		<axis>
 			<x>0</x>
@@ -346,27 +352,6 @@
 			</binding>
 		</action>
 	</animation>
-
-	<!-- Lightmaps -->
-	<effect>
-		<inherits-from>Aircraft/MD-10/Models/Effects/MD10lightmap</inherits-from>
-		<parameters>
-			<lightmap-factor-prop>sim/model/lights/panel-lightmap</lightmap-factor-prop>
-			<lightmap-factor n="0">
-				<use alias="../../lightmap-factor-prop" />
-			</lightmap-factor>
-			<lightmap-factor n="1">
-				<use alias="../../lightmap-factor-prop" />
-			</lightmap-factor>
-			<lightmap-factor n="2">
-				<use alias="../../lightmap-factor-prop" />
-			</lightmap-factor>
-			<texture n="3">
-				<image>Aircraft/MD-10/Models/Effects/Lightmaps/standby-lightmap.png</image>
-			</texture>
-		</parameters>
-		<object-name>Bezel</object-name>
-	</effect>
 	
 	<!-- Rembrandt !! -->
 	<effect>

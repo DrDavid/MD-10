@@ -294,6 +294,10 @@
 			<mode>looped</mode>
 			<path>roll.wav</path>
 			<condition>
+				<greater-than>
+				<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+				<value>1</value>
+				</greater-than>
 				<or>
 					<property>/gear/gear[0]/wow</property>
 					<property>/gear/gear[1]/wow</property>

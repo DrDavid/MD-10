@@ -7,7 +7,7 @@
 <PropertyList>
 
 	<sim>
-		<author>Ryan Miller (3d and FDM), David Waggoner (Refits and Upgrades), Peter Brendt (Jabberwocky), 5H1N0B1 and Philosopher (Canvas MFD)</author>
+		<author>Ryan Miller (3d and FDM), David Waggoner (Refits and Upgrades), Joshua Davidson (it0uchpods/411) Peter Brendt (Jabberwocky)</author>
 		
 		<aircraft-version>V01.01.00</aircraft-version>
 
@@ -95,11 +95,6 @@
 				<name>Pushback</name>
 				<path>Aircraft/MD-10/Systems/pushback.xml</path>
 			</autopilot>
-
-			<nav-display>
-				<name>Navdisplay</name>
-				<path>Aircraft/MD-10/Systems/nav-display.xml</path>
-			</nav-display>
 		
 		</systems>
 
@@ -107,8 +102,8 @@
 			<name>Captain View</name>
 			<internal type="bool" archive="y">true</internal>
 			<config>
-				<x-offset-m archive="y">-0.54</x-offset-m>
-				<y-offset-m archive="y">6.18</y-offset-m>
+				<x-offset-m archive="y">-0.59</x-offset-m>
+				<y-offset-m archive="y">6.108</y-offset-m>
 				<z-offset-m archive="y">-25.1</z-offset-m>
 			</config>
 		</view>
@@ -119,8 +114,8 @@
 			<internal type="bool" archive="y">true</internal>
 			<config>
 				<from-model type="bool">true</from-model>
-				<x-offset-m archive="y">0.54</x-offset-m>
-				<y-offset-m archive="y">6.18</y-offset-m>
+				<x-offset-m archive="y">0.59</x-offset-m>
+				<y-offset-m archive="y">6.10</y-offset-m>
 				<z-offset-m archive="y">-25.1</z-offset-m>
 			</config>
 		</view>
@@ -607,30 +602,18 @@
 			<inputs>
 				<arinc429>
 					<decision-height-ncd type="bool">false</decision-height-ncd>
-					<decision-height type="double">200</decision-height>
+					<decision-height type="double">250</decision-height>
 				</arinc429>
 			</inputs>
 			<speaker>
 				<max-dist>2</max-dist>
 				<reference-dist>1</reference-dist>
-				<volume>0.4</volume>
+				<volume>1.0</volume>
 			</speaker>
 			<voice>
-				<file-prefix type="string">Sounds/mk-viii/</file-prefix>
+				<file-prefix type="string">Aircraft/MD-10/Sounds/mk-viii/</file-prefix>
 			</voice>
 		</mk-viii>
-
-		<mfd n="0">
-			<page>0</page>
-			<tcas>0></tcas>
-			<wx>0</wx>
-		</mfd>
-
-		<mfd n="1">
-			<page>0</page>
-			<tcas>0></tcas>
-			<wx>0</wx>
-		</mfd>
 	</instrumentation>
 
 	<systems>
@@ -770,9 +753,6 @@
 	</input>
 
 	<nasal>
-		<interactive_cdu>
-			<file>Aircraft/MD-10/Nasal/cdu.nas</file>
-		</interactive_cdu>
 		<MD10>
 			<file>Aircraft/MD-10/Nasal/electrical.nas</file>
 			<file>Aircraft/MD-10/Nasal/engines.nas</file>
@@ -781,21 +761,11 @@
 			<file>Aircraft/MD-10/Nasal/instrumentation.nas</file>
 			<file>Aircraft/MD-10/Nasal/multiplayer.nas</file>
 			<file>Aircraft/MD-10/Nasal/systems.nas</file>
-			<file>Aircraft/MD-10/Models/Flightdeck/Instruments/Center-mfd/NDNew.nas</file>
-			<!-- file>Aircraft/MD-10/Models/Flightdeck/Instruments/Center-mfd/ND.nas</file -->
-			<!-- file>Aircraft/MD-10/Models/Flightdeck/Instruments/Center-mfd/fctl.nas</file -->
-			<!-- file>Aircraft/MD-10/Models/Flightdeck/Instruments/Center-mfd/eng.nas</file -->
-			<!-- file>Aircraft/MD-10/Models/Flightdeck/Instruments/Center-mfd/mfd.nas</file -->
+			<file>Aircraft/MD-10/Models/Flightdeck/Instruments/ND/ND.nas</file>
 		</MD10>
 		<systems>
 			<file>Aircraft/MD-10/Models/Flightdeck/Instruments/KLN90B/kln90b.nas</file>
 		</systems>
-		<m877>
-			<file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>
-		</m877>
-		<common>
-			<file>Aircraft/MD-10/Common/canvas_nd/navscreen.mfd</file>
-		</common>
     </nasal>
 
 </PropertyList>
