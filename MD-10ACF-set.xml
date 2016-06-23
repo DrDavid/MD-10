@@ -20,7 +20,8 @@
 		</rating>
 
 		<startup>
-			<splash-texture>Aircraft/MD-10/MD-10.jpg</splash-texture>
+			<splash-texture>Aircraft/MD-10/Splash/MD-10-splash1.png</splash-texture>
+			<splash-texture>Aircraft/MD-10/Splash/MD-10-splash2.png</splash-texture>
 		</startup>
 
 		<model>
