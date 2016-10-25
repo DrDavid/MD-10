@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10 -->
+<!-- McDonnell Douglas MD-10-Family -->
 <!-- Wing engine model -->
 
 <PropertyList>
@@ -10,7 +10,7 @@
 	<params>
 		<on-fire>engines/engine[0]/on-fire</on-fire>
 		<n1>engines/engine[0]/n1</n1>
-		<reverser-pos-norm>engines/engine[0]/reverser-pos-norm</reverser-pos-norm>
+		<reverser-pos-norm>sim/multiplay/generic/float[7]</reverser-pos-norm>
 	</params>
 
 	<model>
@@ -69,12 +69,12 @@
 
 	<effect>
 		<name>Nacelle reflect</name>
-		<inherits-from>Aircraft/MD-10/Models/Effects/MD10reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10/Models/Effects/MD11reflect</inherits-from>
 		<object-name>Nacelle</object-name>
 	</effect>
 	<effect>
 		<name>Intake reflect</name>
-		<inherits-from>Aircraft/MD-10/Models/Effects/MD10chrome_reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10/Models/Effects/MD11chrome_reflect</inherits-from>
 		<object-name>Intake</object-name>
 		<object-name>Nozzle</object-name>
 	</effect>

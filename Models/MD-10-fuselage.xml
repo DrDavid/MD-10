@@ -1,29 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10 -->
+<!-- McDonnell Douglas MD-10-Family -->
 <!-- Fuselage model, PAX version -->
 
 <PropertyList>
 
     <path>MD-10-fuselage.ac</path>
-    
-    <!-- Lighting -->
-    <animation>
-	<name>Cabin lights</name>
-	<type>material</type>
-	<object-name>Windows</object-name>
-	<condition>
-	    <greater-than>
-		<property>systems/electrical/outputs/cabin-lights</property>
-		<value>15</value>
-	    </greater-than>
-	</condition>
-	<emission>
-	    <red>0.5</red>
-	    <green>0.4941</green>
-	    <blue>0.3275</blue>
-	</emission>
-    </animation>
 
     <!-- Cargo doors -->
     <animation>
@@ -37,7 +19,7 @@
 	    <binding>
 		<command>nasal</command>
 		<script>
-		    MD10.doors.cargo_fwd.toggle();
+		    MD11.doors.cargo_fwd.toggle();
 		</script>
 	    </binding>
 	</action>
@@ -72,7 +54,7 @@
 	    <binding>
 		<command>nasal</command>
 		<script>
-		    MD10.doors.cargo_aft.toggle();
+		    MD11.doors.cargo_aft.toggle();
 		</script>
 	    </binding>
 	</action>

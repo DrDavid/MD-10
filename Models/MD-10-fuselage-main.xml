@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10 -->
+<!-- McDonnell Douglas MD-10-Family -->
 <!-- Fuselage model, all versions -->
 
 <PropertyList>
@@ -17,7 +17,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					MD10.doors.pax_l1.toggle();
+					MD11.doors.pax_l1.toggle();
 				</script>
 			</binding>
 		</action>
@@ -73,7 +73,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					MD10.doors.pax_l2.toggle();
+					MD11.doors.pax_l2.toggle();
 				</script>
 			</binding>
 		</action>
@@ -129,7 +129,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					MD10.doors.pax_l3.toggle();
+					MD11.doors.pax_l3.toggle();
 				</script>
 			</binding>
 		</action>
@@ -184,7 +184,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					MD10.doors.pax_l4.toggle();
+					MD11.doors.pax_l4.toggle();
 				</script>
 			</binding>
 		</action>
@@ -240,7 +240,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					MD10.doors.pax_r1.toggle();
+					MD11.doors.pax_r1.toggle();
 				</script>
 			</binding>
 		</action>
@@ -296,7 +296,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					MD10.doors.pax_r2.toggle();
+					MD11.doors.pax_r2.toggle();
 				</script>
 			</binding>
 		</action>
@@ -352,7 +352,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					MD10.doors.pax_r3.toggle();
+					MD11.doors.pax_r3.toggle();
 				</script>
 			</binding>
 		</action>
@@ -407,7 +407,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					MD10.doors.pax_r4.toggle();
+					MD11.doors.pax_r4.toggle();
 				</script>
 			</binding>
 		</action>
@@ -605,7 +605,7 @@
 		<type>rotate</type>
 		<object-name>GearRDoor2</object-name>
 		<object-name>GearRDoor2Int</object-name>
-		<property>gear/gear[3]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.1</ind><dep>90</dep></entry>
@@ -627,7 +627,7 @@
 		<object-name>GearRDoor1</object-name>
 		<object-name>GearRDoor1Int</object-name>
 		<object-name>Right main gear upper door</object-name>
-		<property>gear/gear[3]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.2</ind><dep>90</dep></entry>
@@ -648,7 +648,7 @@
 		<type>rotate</type>
 		<object-name>GearRDoor3</object-name>
 		<object-name>GearRDoor3Int</object-name>
-		<property>gear/gear[3]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.2</ind><dep>0</dep></entry>
@@ -669,7 +669,7 @@
 		<type>rotate</type>
 		<object-name>GearCDoorL1</object-name>
 		<object-name>GearCDoorL1Int</object-name>
-		<property>gear/gear[5]/position-norm</property>
+		<property>gear/gear[3]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.2</ind><dep>85</dep></entry>
@@ -690,7 +690,7 @@
 		<type>rotate</type>
 		<object-name>GearCDoorL2</object-name>
 		<object-name>GearCDoorL2Int</object-name>
-		<property>gear/gear[5]/position-norm</property>
+		<property>gear/gear[3]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.8</ind><dep>60</dep></entry>
@@ -710,7 +710,7 @@
 		<type>rotate</type>
 		<object-name>GearCDoorR1</object-name>
 		<object-name>GearCDoorR1Int</object-name>
-		<property>gear/gear[5]/position-norm</property>
+		<property>gear/gear[3]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.2</ind><dep>85</dep></entry>
@@ -731,7 +731,7 @@
 		<type>rotate</type>
 		<object-name>GearCDoorR2</object-name>
 		<object-name>GearCDoorR2Int</object-name>
-		<property>gear/gear[5]/position-norm</property>
+		<property>gear/gear[3]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>0.8</ind><dep>60</dep></entry>
@@ -758,7 +758,7 @@
 
 	<effect>
 		<name>Fuselage reflect</name>
-		<inherits-from>Aircraft/MD-10/Models/Effects/MD10reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10/Models/Effects/MD11reflect</inherits-from>
 		<object-name>Fuselage</object-name>
 	</effect>
 	<!-- Rembrandt !! -->

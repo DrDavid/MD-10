@@ -1,7 +1,7 @@
 <PropertyList>
 
 	<!-- <model>
-	<path>Aircraft/MD-10/Models/MD-10.xml</path>
+	<path>Aircraft/MD-10/Models/MD-10-Family.xml</path>
 		<offsets>
             <x-m>0</x-m>
             <y-m>0</y-m>
@@ -392,7 +392,7 @@
 
 	<!-- <model>
 	<name>Pushback</name>
-	<path>Aircraft\MD-10\Models\Pushback\Goldhofert.xml</path>
+	<path>Aircraft\MD-10-Family\Models\Pushback\Goldhofert.xml</path>
 		<condition>
 		<less-than-equals>
 			             <property>velocities/airspeed-kt</property>

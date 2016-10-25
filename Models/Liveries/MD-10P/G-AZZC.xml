@@ -11,7 +11,7 @@
 		</livery>
 		<wings>
 			<name type="string">Default</name>
-			<texture>md10-wings.png</texture>
+			<texture>MD11-wings.png</texture>
 		</wings>
 		<!-- #139def
 		<wings>

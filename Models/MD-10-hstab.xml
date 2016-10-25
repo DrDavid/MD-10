@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10 -->
+<!-- McDonnell Douglas MD-10-Family -->
 <!-- Horizontal stabilizer model -->
 
 <PropertyList>
@@ -11,8 +11,8 @@
 		<name>Left elevator</name>
 		<type>rotate</type>
 		<object-name>ElevatorL</object-name>
-		<property>controls/flight/elevator</property>
-		<factor>40</factor>
+		<property>controls/flight/elevator-pos</property>
+		<factor>15</factor>
 		<axis>
 			<x1-m>25.969</x1-m>
 			<y1-m>-10.736</y1-m>
@@ -26,8 +26,8 @@
 		<name>Right elevator</name>
 		<type>rotate</type>
 		<object-name>ElevatorR</object-name>
-		<property>controls/flight/elevator</property>
-		<factor>40</factor>
+		<property>controls/flight/elevator-pos</property>
+		<factor>15</factor>
 		<axis>
 			<x1-m>21.62</x1-m>
 			<y1-m>1.358</y1-m>

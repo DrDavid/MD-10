@@ -1,47 +1,86 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10 -->
-<!-- Aircraft property settings specific to the MD-10ACF -->
 
-<PropertyList include="MD-10-main.xml">
+<PropertyList include="MD-10ACF-main.xml">
 
-	<sim>
-		<description>McDonnell Douglas MD-10ACF</description>
-		<flight-model>yasim</flight-model>
-		<aero>MD-10ACF</aero>
+    <sim>
+	<description>Boeing/McDonnell Douglas MD-10ACF</description>
+	<flight-model>yasim</flight-model>
+	<aero>MD-10ACF</aero>
+	<startup>
+	    <splash-texture>Aircraft/MD-10/Splash/MD-10-splash1.png</splash-texture>
+	    <!--splash-texture>Aircraft/MD-10/Splash/MD-10-splash2.png</splash-texture-->
+        </startup>
 
-		<status>pre-beta</status>
+	<menubar>
+	    <default>
+		<menu n="100">
+		    <label>McDonnell Douglas MD-10ACF</label>
+		</menu>
+	    </default>
+	</menubar>
+		
+	<model n="0">
+	    <path>Aircraft/MD-10/Models/MD-10ACF.xml</path>
+	    <armrest type="double">0</armrest>
+	    <door>
+		<position-x-m type="float">-22.647</position-x-m>
+		<position-y-m type="float">-2.312</position-y-m>
+		<position-z-m type="float">4.746</position-z-m>
+		<jetway-hood-deg type="float">2</jetway-hood-deg>
+	    </door>
+	    <door>
+		<position-x-m type="float">-13.006</position-x-m>
+		<position-y-m type="float">-2.944</position-y-m>
+		<position-z-m type="float">4.746</position-z-m>
+		<jetway-hood-deg type="float">1</jetway-hood-deg>
+	    </door>
+	    <livery>
+		<file type="string">WHT</file>
+      	</livery>
+	</model>
+	<shutterspeed type="double">0.18</shutterspeed>
+		
+	<weight n="1">
+            <!--  328 pax max @ 180 lbs + cargo -->
+            <name>Cargo</name>
+            <weight-lb type="double">74840</weight-lb>
+            <max-lb type="double">167325</max-lb>
+            <min-lb type="double">0</min-lb>
+        </weight>
+    </sim>
 
-		<rating>
-			<FDM type="int">4</FDM>
-			<systems type="int">4</systems>
-			<cockpit type="int">4</cockpit>
-			<model type="int">4</model>
-		</rating>
+    <instrumentation n="0">
+        <cdu n="0">
+            <ident n="0">
+                <model>MD-10ACF</model>
+                <engines>CF6-80C2</engines>
+            </ident>
+        </cdu>
+    </instrumentation>
 
-		<startup>
-			<splash-texture>Aircraft/MD-10/Splash/MD-10-splash1.png</splash-texture>
-			<splash-texture>Aircraft/MD-10/Splash/MD-10-splash2.png</splash-texture>
-		</startup>
+    <autopilot n="0">
+        <constant>
+            <flare-base type="double">0.315</flare-base>
+			<flch-thrust type="double">0.85</flch-thrust>
+			<descent-profile-high-base type="double">0.13</descent-profile-high-base>
+			<descent-profile-high-rate type="double">-0.00094203</descent-profile-high-rate>
+			<descent-profile-low-base type="double">0.12</descent-profile-low-base>
+			<descent-profile-low-rate type="double">-0.00050725</descent-profile-low-rate>
+        </constant>
+    </autopilot>
+    
+    <nasal n="0">
+        <MD11>
+            <file>Aircraft/MD-10/Nasal/liveriesACF.nas</file>
+        </MD11>
+    </nasal>
 
-		<model>
-			<path>Aircraft/MD-10/Models/MD-10.xml</path>
-			<livery>
-				<file>blank</file>
-			</livery>
-		</model>
-
-		<weight n="1">
-			<name>Passengers/Baggage</name>
-		</weight>
-
-		<menubar>
-			<default>
-				<menu n="100">
-					<label>MD-10ACF</label>
-				</menu>
-			</default>
-		</menubar>
-	</sim>
+	<limits>
+	    <mass-and-balance>
+		<maximum-takeoff-mass-lbs>602500</maximum-takeoff-mass-lbs>
+		<maximum-landing-mass-lbs>471500</maximum-landing-mass-lbs>
+	    </mass-and-balance>
+	</limits>
 
 </PropertyList>

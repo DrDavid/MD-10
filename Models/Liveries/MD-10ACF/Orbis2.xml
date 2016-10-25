@@ -7,8 +7,7 @@
 			<livery>
 				<name>ORBIS New Flying Eye Hospital</name>
 				<texture>Liveries/MD-10ACF/orbis2.png</texture>
-				<registration>N220AF</registration>
-                                <enable-configuration-switch type="bool">true</enable-configuration-switch>
+				<registration>N220AU</registration>
 				<has-center-gear type="bool">true</has-center-gear>
 			</livery>
 		</model>

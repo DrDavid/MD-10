@@ -7,47 +7,6 @@
 
 	<path>MD-10F-fuselage.ac</path>
 
-	<animation>
-		<name>PAX windows</name>
-		<type>select</type>
-		<object-name>Windows</object-name>
-		<condition>
-			<equals>
-				<property>sim/model/configuration</property>
-				<value>pax</value>
-			</equals>
-		</condition>
-	</animation>
-	<animation>
-		<name>Cargo no windows</name>
-		<type>select</type>
-		<object-name>NoWindows</object-name>
-		<object-name>MC_NoWindows</object-name>
-		<condition>
-			<equals>
-				<property>sim/model/configuration</property>
-				<value>cargo</value>
-			</equals>
-		</condition>
-	</animation>
-	
-	<!-- Lighting -->
-	<animation>
-		<name>Cabin lights</name>
-		<type>material</type>
-		<object-name>Windows</object-name>
-		<condition>
-			<greater-than>
-				<property>systems/electrical/outputs/cabin-lights</property>
-				<value>15</value>
-			</greater-than>
-		</condition>
-		<emission>
-			<red>0.5</red>
-			<green>0.4941</green>
-			<blue>0.3275</blue>
-		</emission>
-	</animation>
 
 	<!-- Cargo doors -->
 	<animation>
@@ -61,7 +20,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					MD10.doors.cargo_fwd.toggle();
+					MD11.doors.cargo_fwd.toggle();
 				</script>
 			</binding>
 		</action>
@@ -96,7 +55,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					MD10.doors.cargo_aft.toggle();
+					MD11.doors.cargo_aft.toggle();
 				</script>
 			</binding>
 		</action>
@@ -123,7 +82,6 @@
 		<type>pick</type>
 		<object-name>MainCargo</object-name>
 		<object-name>MainCargoInt</object-name>
-		<object-name>MC_NoWindows</object-name>
 		<action>
 			<button>0</button>
 			<repeatable type="bool">false</repeatable>
@@ -132,7 +90,7 @@
 				<script>
 					if (getprop("sim/model/configuration") == "cargo")
 					{
-						MD10.doors.cargo_main.toggle();
+						MD11.doors.cargo_main.toggle();
 					}
 				</script>
 			</binding>
@@ -143,7 +101,6 @@
 		<type>rotate</type>
 		<object-name>MainCargo</object-name>
 		<object-name>MainCargoInt</object-name>
-		<object-name>MC_NoWindows</object-name>
 		<property>sim/model/door-positions/cargo-main/position-norm</property>
 		<factor>165</factor>
 		<axis>
