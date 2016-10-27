@@ -771,7 +771,7 @@
 				<property>/instrumentation/afds/inputs/ias-mach-selected</property>
 			</condition>
 			<prop>/velocities/mach</prop>
-			<scale>488.0</scale>
+			<scale>1000.0</scale>
 		</input>
 		<reference>
 			<condition>
@@ -784,7 +784,7 @@
 				<property>/instrumentation/afds/inputs/ias-mach-selected</property>
 			</condition>
 			<prop>/autopilot/internal/target-mach</prop>
-			<scale>488.0</scale>
+			<scale>1000.0</scale>
 		</reference>
 		<output>
 			<prop>/autopilot/internal/target-pitch-deg</prop>
@@ -858,7 +858,7 @@
 
   
 	<pid-controller>
-		<name>Elevator Control Speed with Pitch</name>
+		<name>IT-CONTROLLER: FLCH</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -911,7 +911,7 @@
 	</pid-controller>
 
 	<pid-controller>
-		<name>Elevator Control Normal</name>
+		<name>IT-CONTROLLER: PITCH</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -963,7 +963,7 @@
 	</pid-controller>
 	
 	<filter>
-		<name>Elevator control filter</name>
+		<name>PITCH CONTROL FILTER</name>
 		<debug>false</debug>
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>
@@ -984,7 +984,7 @@
 	</filter>
 	
 	<pid-controller>
-		<name>AP PITCH HELPER PLUS</name>
+		<name>IT-CONTROLLER: AUTOTRIM 1</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -1022,7 +1022,7 @@
 	</pid-controller>
 	
 	<pid-controller>
-		<name>AP PITCH HELPER MINUS</name>
+		<name>IT-CONTROLLER: AUTOTRIM -1</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -1060,7 +1060,7 @@
 	</pid-controller>
 		
 	<filter>
-		<name>Elevator trim control filter</name>
+		<name>AUTOTRIM FILTER</name>
 		<debug>false</debug>
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>

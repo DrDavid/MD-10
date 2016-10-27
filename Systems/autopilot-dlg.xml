@@ -895,9 +895,10 @@
 	    <pref-height>60</pref-height>
 	    <legend>AP OFF</legend>
 	    <binding>
-		<command>property-assign</command>
-		<property>instrumentation/afds/inputs/AP</property>
-		<value>0</value>
+		<command>nasal</command>
+		<script>
+		if (getprop("instrumentation/afds/inputs/AP") or getprop("controls/switches/apoffsound")) MD11.afds.APyokebtn();
+		</script>
 	    </binding>
 	</button>
 	<button>
