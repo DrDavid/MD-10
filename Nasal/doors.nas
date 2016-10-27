@@ -10,3 +10,16 @@ rightDoor4 = aircraft.door.new( "/sim/model/door-positions/rightDoor4", 10, 0 );
 leftDoor4 = aircraft.door.new( "/sim/model/door-positions/leftDoor4", 10, 0 );
 cargoDoor = aircraft.door.new( "/sim/model/door-positions/cargoDoor", 10, 0 );
 nose_cone = aircraft.door.new( "/sim/model/door-positions/nose_cone", 10, 0 );
+
+# For boom
+var Door =
+{
+	new: func(name, transit_time)
+	{
+		return aircraft.door.new("sim/model/door-positions/" ~ name, transit_time);
+	}
+};
+var doors =
+{
+	boom: Door.new("boom", 5)
+};

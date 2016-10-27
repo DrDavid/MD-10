@@ -15,6 +15,6 @@
 		<path>Aircraft/MD-10/Models/KC-10-boom.xml</path>
 	</model>
 
-	<foo include="MD-10main.xml" omit-node="y" />
+	<foo include="MD-10-main.xml" omit-node="y" />
 
 </PropertyList>

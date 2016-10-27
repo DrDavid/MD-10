@@ -274,7 +274,7 @@
             <click8 type="bool">0</click8>
             <FastenSeatbelt type="bool">0</FastenSeatbelt>
             <cabinalert type="bool">0</cabinalert>
-        </sound>	
+        </sound>		
 	
 	<hud>
             <enable3d>false</enable3d>
