@@ -237,7 +237,7 @@
 		<path>Aircraft/MD-10/Systems/MD11-flt-ctrls.xml</path>
 	    </autopilot>
 	    <autopilot>
-		<path>Aircraft/MD-11/Systems/pressurization.xml</path>
+		<path>Aircraft/MD-10/Systems/pressurization.xml</path>
 	    </autopilot>
             <!--autopilot>
                 <name>Autobrake system</name>

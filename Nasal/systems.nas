@@ -1194,5 +1194,5 @@ var update_systems = func {
 
 var dialogs =
 {
-	doors: gui.Dialog.new("sim/gui/dialogs/doors/dialog", "Aircraft/MD-11/Systems/doors-dlg.xml"),
+	doors: gui.Dialog.new("sim/gui/dialogs/doors/dialog", "Aircraft/MD-10/Systems/doors-dlg.xml"),
 };
