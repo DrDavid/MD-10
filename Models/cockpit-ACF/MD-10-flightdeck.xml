@@ -174,7 +174,7 @@
 <!-- Multi-Control Panel -->
 
 <model>
-<path>Aircraft/MD-10/Models/cockpit-ACF/Instruments/MCP/MCP.xml</path>
+<path>Aircraft/MD-10/Models/cockpit-ACF/Instruments/MCP/mcp.xml</path>
 <offsets>
 <x-m>-3.035</x-m>
 <y-m>0</y-m>
