@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 
-<PropertyList include="MD-10ACF-main.xml">
+<PropertyList include="MD-10ERX-main.xml">
 
     <sim>
-	<description>Boeing/McDonnell Douglas MD-10ACF</description>
+	<description>Boeing/McDonnell Douglas MD-10ERX</description>
 	<flight-model>yasim</flight-model>
-	<aero>MD-10ACF</aero>
+	<aero>MD-10ERX</aero>
 	<startup>
 	    <splash-texture>Aircraft/MD-10/Splash/MD-10-splash1.png</splash-texture>
 	    <!--splash-texture>Aircraft/MD-10/Splash/MD-10-splash2.png</splash-texture-->
@@ -15,13 +15,13 @@
 	<menubar>
 	    <default>
 		<menu n="100">
-		    <label>McDonnell Douglas MD-10ACF</label>
+		    <label>McDonnell Douglas MD-10ERX</label>
 		</menu>
 	    </default>
 	</menubar>
 		
 	<model n="0">
-	    <path>Aircraft/MD-10/Models/MD-10ACF.xml</path>
+	    <path>Aircraft/MD-10/Models/MD-10ERX.xml</path>
 	    <armrest type="double">0</armrest>
 	    <door>
 		<position-x-m type="float">-22.647</position-x-m>
@@ -72,7 +72,7 @@
     
     <nasal n="0">
         <MD11>
-            <file>Aircraft/MD-10/Nasal/liveriesACF.nas</file>
+            <file>Aircraft/MD-10/Nasal/liveriesERX.nas</file>
         </MD11>
     </nasal>
 
