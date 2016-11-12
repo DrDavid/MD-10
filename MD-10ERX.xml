@@ -149,7 +149,7 @@
     </thruster>
     <!-- Nosegear -->
     <gear x="18.8" y="0.0" z="-0.451" compression="0.4" spring="0.8" damp="4.0">
-	<control-input control="STEER" axis="/controls/gear/nosegear-steering-cmd-norm" src0="-1.0" dst0="-1.2217304764" src1="1.0" dst1="1.2217304764" />
+	<control-input control="STEER" axis="/controls/gear/nosegear-steering-cmd-cmd" src0="-1.0" dst0="-1.2217304764" src1="1.0" dst1="1.2217304764" />
 	<control-output control="STEER" prop="/gear/gear[0]/steering-norm" />
 	<control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 	<control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
