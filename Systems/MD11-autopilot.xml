@@ -3,6 +3,15 @@
 
 <PropertyList>
 
+  <predict-simple>
+    <name>MACH 10 SECOND PREDICTOR</name>
+    <debug>false</debug>
+    <input>/velocities/mach</input>
+    <output>/autopilot/internal/lookahead-10-sec-mach</output>
+    <seconds>10.0</seconds>
+    <filter-gain>0.0</filter-gain>
+  </predict-simple>
+
   <!-- =============================================================== -->
   <!--                        Lateral Modes                            -->
   <!-- =============================================================== -->
@@ -770,7 +779,7 @@
 			<condition>
 				<property>/instrumentation/afds/inputs/ias-mach-selected</property>
 			</condition>
-			<prop>/velocities/mach</prop>
+			<prop>/autopilot/internal/lookahead-10-sec-mach</prop>
 			<scale>1000.0</scale>
 		</input>
 		<reference>
