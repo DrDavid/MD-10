@@ -5,6 +5,12 @@
 
 <PropertyList>
 
+	<multiplay>
+ 		<refuel>
+ 			<type>boom</type>
+ 		</refuel>
+	</multiplay>
+ 
 	<model>
 		<name>Fuselage</name>
 		<path>Aircraft/MD-10/Models/KC-10-fuselage.xml</path>

@@ -71,6 +71,11 @@
                 <engines>CF6-50C</engines>
             </ident>
         </cdu>
+        <!-- Radar for air-to-air refueling capability (required for receiving fuel only) -->
+          <radar>
+          	  <range type="int" archive="y">200</range>
+              <minimized type="bool" archive="y">false</minimized>
+          </radar>
     </instrumentation>
 
     <autopilot n="0">
@@ -88,6 +93,9 @@
         <MD11>
             <file>Aircraft/MD-10/Nasal/liveriesK.nas</file>
         </MD11>
+        <damage>
+            <file>Aircraft/MD-10/Nasal/damage.nas</file>
+        </damage>
     </nasal>
 
 	<limits>
