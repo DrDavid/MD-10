@@ -64,6 +64,16 @@
         </multiplay>
     </sim>
 
+    <tanker type="bool">true</tanker>
+
+	<systems>
+		<refuel>
+		 <type>boom</type>
+		 <serviceable type="bool">true</serviceable>
+		 <max-fuel-transfer-lbs-min>6000</max-fuel-transfer-lbs-min>
+		</refuel>
+	</systems>
+
     <instrumentation n="0">
         <cdu n="0">
             <ident n="0">
@@ -96,6 +106,9 @@
         <damage>
             <file>Aircraft/MD-10/Nasal/damage.nas</file>
         </damage>
+        <aar>
+            <file>Aircraft/Generic/aar.nas</file>
+        </aar>
     </nasal>
 
 	<limits>
