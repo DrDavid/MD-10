@@ -64,20 +64,15 @@
         </multiplay>
     </sim>
 
- <tanker type="bool">true</tanker>
+    <tanker type="bool">true</tanker>
 
-    <systems>
-        <refuel>
-            <type>boom</type>
-            <serviceable type="bool">true</serviceable>
-<max-fuel-transfer-lbs-min>6000</max-fuel-transfer-lbs-min>
-        </refuel>
-        <refuel>
-            <type>probe</type>
-            <serviceable type="bool">true</serviceable>
-<max-fuel-transfer-lbs-min>4000</max-fuel-transfer-lbs-min>
-        </refuel>
-    </systems>
+	<systems>
+		<refuel>
+		 <type>boom</type>
+		 <serviceable type="bool">true</serviceable>
+		 <max-fuel-transfer-lbs-min>6000</max-fuel-transfer-lbs-min>
+		</refuel>
+	</systems>
 
     <instrumentation n="0">
         <cdu n="0">
@@ -86,6 +81,11 @@
                 <engines>CF6-50C</engines>
             </ident>
         </cdu>
+        <!-- Radar for air-to-air refueling capability (required for receiving fuel only) -->
+          <radar>
+          	  <range type="int" archive="y">200</range>
+              <minimized type="bool" archive="y">false</minimized>
+          </radar>
     </instrumentation>
 
     <autopilot n="0">
@@ -103,6 +103,12 @@
         <MD11>
             <file>Aircraft/MD-10/Nasal/liveriesK.nas</file>
         </MD11>
+        <damage>
+            <file>Aircraft/MD-10/Nasal/damage.nas</file>
+        </damage>
+        <aar>
+            <file>Aircraft/Generic/aar.nas</file>
+        </aar>
     </nasal>
 
 	<limits>
