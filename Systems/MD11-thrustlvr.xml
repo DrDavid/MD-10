@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <filter>
+        <name>IAS speed limit</name>
+        <type>gain</type>
+        <gain>1.0</gain>
+        <input>
+            <condition>
+                <greater-than>
+                    <property>/controls/flight/flaps</property>
+                    <value>0.0</value>
+                </greater-than>
+            </condition>
+
+            <expression>
+                <table>
+                    <property>/controls/flight/flaps</property> 
+                    <entry><ind>0.440</ind><dep>235</dep></entry>
+                    <entry><ind>0.560</ind><dep>210</dep></entry>
+                    <entry><ind>0.700</ind><dep>190</dep></entry>
+                    <entry><ind>1.0</ind><dep>175</dep></entry>
+                </table>
+            </expression>
+        </input>
+
+        <input>
+            <condition>
+                <greater-than>
+                    <property>/gear/gear/position-norm</property>
+                    <value>0.0</value>
+                </greater-than>
+            </condition>
+            <value>260</value>
+        </input>
+
+        <input> 
+            <!-- basic IAS limit based upon table 777/1003, Sec1.Page4 in the
+              continental manual -->
+            <expression>
+                <table>
+                    <property>instrumentation/altimeter/indicated-altitude-ft</property> 
+                    <entry><ind>0</ind><dep>330</dep></entry> <!-- clean Vmo -->
+                    <entry><ind>30000</ind><dep>330</dep></entry>
+                    <entry><ind>41300</ind><dep>248</dep></entry>
+                </table>
+            </expression>
+        </input>
+    
+        <output>instrumentation/afds/max-airspeed-kts</output>
+    </filter>
+
+    <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+
+        <input>
+            <expression>
+                <min>
+                    <property>/it-autoflight/input/spd-kts</property>
+                    <property>instrumentation/afds/max-airspeed-kts</property>
+                </min>
+            </expression>
+        </input>
+
+        <output>instrumentation/afds/ias-target-kt</output>
+    </filter>
+
+	<filter>
+		<name>Throttle 1</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<input>
+			<property>/controls/engines/engine[0]/throttle</property>
+		</input>
+		<output>/controls/engines/engine[0]/throttle-act</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>
+			<condition>
+				<equals>
+					<property>/it-autoflight/output/athr</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<value>0.95</value>
+		</max-rate-of-change>
+		<max-rate-of-change>
+			<condition>
+				<equals>
+					<property>/it-autoflight/output/athr</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<value>2</value>
+		</max-rate-of-change>
+	</filter>
+	
+	<filter>
+		<name>Throttle 2</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<input>
+			<property>/controls/engines/engine[1]/throttle</property>
+		</input>
+		<output>/controls/engines/engine[1]/throttle-act</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>
+			<condition>
+				<equals>
+					<property>/it-autoflight/output/athr</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<value>0.95</value>
+		</max-rate-of-change>
+		<max-rate-of-change>
+			<condition>
+				<equals>
+					<property>/it-autoflight/output/athr</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<value>2</value>
+		</max-rate-of-change>
+	</filter>
+	
+	<filter>
+		<name>Throttle 3</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<input>
+			<property>/controls/engines/engine[2]/throttle</property>
+		</input>
+		<output>/controls/engines/engine[2]/throttle-act</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>
+			<condition>
+				<equals>
+					<property>/it-autoflight/output/athr</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<value>0.95</value>
+		</max-rate-of-change>
+		<max-rate-of-change>
+			<condition>
+				<equals>
+					<property>/it-autoflight/output/athr</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<value>2</value>
+		</max-rate-of-change>
+	</filter>
+
+
+</PropertyList>

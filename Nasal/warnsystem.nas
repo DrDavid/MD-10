@@ -106,8 +106,6 @@ var WEU =
         setlistener(prop1 ~ "/serviceable",             func { Weu.update_listener_inputs() } );
 
         setlistener("instrumentation/mk-viii/inputs/discretes/gear-override", func { Weu.update_listener_inputs() } );
-        setlistener("controls/engines/engine/throttle-act", func { Weu.update_throttle_input() } );
-        setlistener("instrumentation/afds/inputs/AP",     func { Weu.update_ap_mode();});
         m.update_listener_inputs();
         
         # update inputs now and then...
@@ -125,7 +123,7 @@ var WEU =
 #### takeoff config warnings ####
     takeoff_config_warnings : func
     {
-        if (me.speed >= getprop("instrumentation/afds/max-airspeed-kts")+5)
+        if (me.speed >= 900) # Disabled for now
             append(me.msgs_alert,"OVERSPEED");
 
         if (me.radio_alt<=30)
@@ -290,7 +288,7 @@ var WEU =
         me.targetspeed.setValue(target_speed);
 
 		# Flap placard speed display switch
-		target_speed = getprop("autopilot/settings/target-speed-kt");
+		target_speed = getprop("/it-autoflight/input/spd-kts");
 		if(abs(target_speed - me.flap.getValue()) < 30) me.flap_on.setValue(1);
 		else me.flap_on.setValue(0);
 		if(abs(target_speed - me.fl1.getValue()) < 30) me.fl1_on.setValue(1);
@@ -362,31 +360,6 @@ var WEU =
         me.apu_running   = getprop("controls/electric/APU-generator");
         me.rudder_trim   = getprop("controls/flight/rudder-trim");
         me.elev_trim     = getprop("controls/flight/elevator-trim");
-    },
-
-#### update throttle input ####
-    update_throttle_input : func()
-    {
-        me.throttle = getprop("controls/engines/engine/throttle-act");
-    },
-
-#### update autopilot mode ####
-    update_ap_mode : func()
-    {
-       var ap_mode = getprop("instrumentation/afds/inputs/AP");
-       if ((!ap_mode)and(me.ap_mode))
-       {
-           # AP has disengaged
-           me.ap_disengaged = 1;
-           # display "AP DISCONNECT" for 5 seconds
-           settimer(func { Weu.update_ap_mode() }, 5);
-       }
-       else
-       {
-           me.ap_disengaged = 0;
-       }
-       me.apwarning.setBoolValue(me.ap_disengaged);
-       me.ap_mode = ap_mode;
     },
 
 #### main WEU update ####

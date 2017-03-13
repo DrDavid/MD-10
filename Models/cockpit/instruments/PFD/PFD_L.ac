@@ -5,16 +5,18 @@ MATERIAL "Lights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 50  trans 0
 MATERIAL "black" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 50  trans 0
 MATERIAL "magenta_rembrandt" rgb 0.7 0.0531 0.5509  amb 1 1 1  emis 0.6103 0.6103 0.6103  spec 0 0 0  shi 50  trans 0
 OBJECT world
-kids 64
+kids 65
 OBJECT poly
-name "FDroll_rembrandt"
-loc 0.0009213 0.0065674 0.0127071
-crease 45.000000
+name "FDpitch_rembrandt"
+loc 0.003015 -0.0161929 0.00300154
+data 9
+Plane.020
+crease 30.000000
 numvert 4
-0 0.0134049 0.0004676
-0 -0.0134049 0.0004676
-0 -0.0134049 -0.0004676
-0 0.0134049 -0.0004676
+0 0.023512 -0.013993
+0 0.023512 0.0334437
+0 0.0220492 0.0334437
+0 0.0220492 -0.013993
 numsurf 1
 SURF 0x0
 mat 4
@@ -23,6 +25,66 @@ refs 4
 0 0 0
 1 0 0
 2 0 0
+kids 0
+OBJECT poly
+name "FDroll_rembrandt"
+loc 0.003015 -0.0017061 -0.0204428
+data 9
+Plane.019
+crease 30.000000
+numvert 4
+0 0.0321791 0.0338861
+0 -0.0156753 0.0338861
+0 -0.0156753 0.0324522
+0 0.0321791 0.0324522
+numsurf 1
+SURF 0x0
+mat 4
+refs 4
+3 0 0
+0 0 0
+1 0 0
+2 0 0
+kids 0
+OBJECT poly
+name "FDpitch"
+loc 0.003015 -0.0161929 0.00300154
+data 9
+Plane.020
+crease 30.000000
+numvert 4
+0 0.0220492 -0.013993
+0 0.0220492 0.0334437
+0 0.023512 0.0334437
+0 0.023512 -0.013993
+numsurf 1
+SURF 0x0
+mat 4
+refs 4
+0 0 0
+3 0 0
+2 0 0
+1 0 0
+kids 0
+OBJECT poly
+name "FDroll"
+loc 0.003015 -0.0017061 -0.0204428
+data 9
+Plane.019
+crease 30.000000
+numvert 4
+0 0.0321791 0.0324522
+0 -0.0156753 0.0324522
+0 -0.0156753 0.0338861
+0 0.0321791 0.0338861
+numsurf 1
+SURF 0x0
+mat 4
+refs 4
+0 0 0
+3 0 0
+2 0 0
+1 0 0
 kids 0
 OBJECT poly
 name "apoff1"
@@ -47,7 +109,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atoff1"
-loc 0.000984333 0.0733507 0.0579427
+loc 0.000981323 0.0733507 0.0579427
 data 10
 enginepane
 texture "atoff1.JPG"
@@ -88,7 +150,7 @@ refs 4
 2 1.00067 0.000756443
 kids 0
 OBJECT poly
-name "apoff"
+name "apoff0"
 loc 0.000984626 0.0733507 0.0353034
 data 10
 enginepane
@@ -1997,42 +2059,6 @@ refs 4
 9 0 0
 14 0 0
 15 0 0
-kids 0
-OBJECT poly
-name "FDpitch_rembrandt"
-loc 0.0009213 0.0065674 0.0128195
-crease 45.000000
-numvert 4
-0 -0.000468 -0.0135774
-0 -0.000468 0.0135774
-0 0.000468 0.0135774
-0 0.000468 -0.0135774
-numsurf 1
-SURF 0x0
-mat 4
-refs 4
-0 0 0
-3 0 0
-2 0 0
-1 0 0
-kids 0
-OBJECT poly
-name "FDroll_rembrandt"
-loc 0.0009213 0.0065674 0.0127071
-crease 45.000000
-numvert 4
-0 0.0134049 -0.0004676
-0 -0.0134049 -0.0004676
-0 -0.0134049 0.0004676
-0 0.0134049 0.0004676
-numsurf 1
-SURF 0x0
-mat 4
-refs 4
-0 0 0
-3 0 0
-2 0 0
-1 0 0
 kids 0
 OBJECT poly
 name "gspointer"

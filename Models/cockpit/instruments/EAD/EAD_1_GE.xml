@@ -64,7 +64,7 @@
   	  <animation>
     <type>rotate</type>
 		<object-name>throttle.position.1</object-name>
-        <property>controls/engines/engine/throttle-lever</property>
+        <property>controls/engines/engine/throttle-act</property>
 <interpolation>
 <entry><ind>0</ind><dep>38</dep></entry>
 <entry><ind>1</ind><dep>177</dep></entry>
@@ -182,7 +182,7 @@
     	  <animation>
     <type>rotate</type>
 		<object-name>throttle.position.2</object-name>
-        <property>controls/engines/engine[1]/throttle-lever</property>
+        <property>controls/engines/engine[1]/throttle-act</property>
 <interpolation>
 <entry><ind>0</ind><dep>38</dep></entry>
 <entry><ind>1</ind><dep>177</dep></entry>
@@ -300,7 +300,7 @@
       	  <animation>
     <type>rotate</type>
 		<object-name>throttle.position.3</object-name>
-        <property>controls/engines/engine[2]/throttle-lever</property>
+        <property>controls/engines/engine[2]/throttle-act</property>
 <interpolation>
 <entry><ind>0</ind><dep>38</dep></entry>
 <entry><ind>1</ind><dep>177</dep></entry>

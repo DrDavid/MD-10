@@ -102,8 +102,8 @@ var update_alt = func {
 	# Calculate target cabin rate
 	var VS = getprop("/velocities/vertical-speed-fps") * 60;
 	if (mode.getValue() == 1) {
-	    if (getprop("autopilot/settings/altitude-setting-ft") > 11000) {
-		var alt_set = getprop("autopilot/settings/altitude-setting-ft");
+	    if (getprop("/it-autoflight/internal/alt") > 11000) {
+		var alt_set = getprop("/it-autoflight/internal/alt");
 	    } else {
 		var alt_set = 39000;
 	    }
@@ -210,7 +210,7 @@ var update_mode = func {
 	if (mode.getValue() == 1) {
 	    var target = 7750;
 	    if (landing_alt.getValue() > 4000) target = 8000;
-	    var alt_setting = getprop("autopilot/settings/altitude-setting-ft");
+	    var alt_setting = getprop("/it-autoflight/internal/alt");
 	    if (alt_setting > 42750) target = alt_setting - 35000;
 	    if (p_diff.getValue() > 35000) target = pressure_alt.getValue() - 35000;
 	    cabin_target.setValue(target);

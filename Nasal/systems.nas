@@ -329,6 +329,8 @@ var RHeng=Engine.new(2);
 var wiper = Wiper.new("controls/electric/wipers","systems/electrical/bus-volts");
 
 setlistener("sim/signals/fdm-initialized", func {
+	itaf.ap_init();
+	var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");
 	setprop("/controls/flight/zero", "0");
     SndOut.setDoubleValue(0.15);
     chronometer.stop();
