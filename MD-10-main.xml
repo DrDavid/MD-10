@@ -286,10 +286,10 @@
 	<it-autoflight>
 		<config>
 			<roll>
-				<umin>-0.50</umin>
-				<umax>0.50</umax>
+				<umin>-0.60</umin>
+				<umax>0.60</umax>
 				<kp>0.09</kp>
-				<kp-vloc>0.09</kp-vloc>
+				<kp-vloc>0.12</kp-vloc>
 				<ti>10.0</ti>
 				<td>0.00001</td>
 				<kp-cws>0.09</kp-cws>
@@ -304,7 +304,7 @@
 			</pitch>
 			<cmd>
 				<roll-scale>6.8</roll-scale>
-				<vorloc>-5.0</vorloc>
+				<vorloc>-4.5</vorloc>
 				<alt>0.03</alt>
 				<vs>0.07</vs>
 				<fpa>0.30</fpa>
@@ -319,15 +319,18 @@
 		</config>
 		<settings>
 			<enable-cws>0</enable-cws> <!-- Enable/Disable CWS -->
-			<flare-altitude>35</flare-altitude> <!-- Autoland Flare AGL -->
-			<land-enable>0</land-enable> <!-- Enable/Disable Autoland -->
+			<flare-altitude>20</flare-altitude> <!-- Autoland Flare AGL -->
+			<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
 			<land-flap>0.7</land-flap> <!-- Minimum Flap used for Landing -->
 			<retard-ft>40</retard-ft> <!-- Enable Thrust Retard -->
-			<retard-enable>0</retard-enable> <!-- AGL to Thrust Retard -->
-			<togaspd>158</togaspd> <!-- V2 + 10kts -->
+			<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
+			<togaspd>161</togaspd> <!-- V2 + 10kts -->
 			<lat-agl-ft>200</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to HDG, or LNAV -->
 			<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
 		</settings>
+		<custom>
+			<afds-ovrd>0</afds-ovrd>
+		</custom>
 	</it-autoflight>
 
     <engines n="0">

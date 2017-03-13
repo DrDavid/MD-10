@@ -516,29 +516,69 @@ setlistener("instrumentation/tcas/outputs/traffic-alert", func(traffic_alert){
 
 ## FLAPS/SLATS
 ##############
+# Custom Flap/Slat System by Joshua Davidson (it0uchpods/411)
+# Dial a Flap will be added as soon as I can find enough infos about it
+
+setprop("/controls/flight/flap-lever", 0);
+
 controls.flapsDown = func(step) {
-    if (step > 0) {
-	if (getprop("controls/flight/slats") == 0 and getprop("systems/hydraulic/equipment/enable-slat")) {
-	    setprop("controls/flight/slats",1);
-	    return;
+	if (step == 1) {
+		if (getprop("/controls/flight/flap-lever") == 0) {
+			setprop("/controls/flight/slats", 1.00);
+			setprop("/controls/flight/flaps", 0.00);
+			setprop("/controls/flight/flap-lever", 1);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 1) {
+			setprop("/controls/flight/slats", 1.00);
+			setprop("/controls/flight/flaps", 0.31);
+			setprop("/controls/flight/flap-lever", 2);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 2) {
+			setprop("/controls/flight/slats", 1.00);
+			setprop("/controls/flight/flaps", 0.58);
+			setprop("/controls/flight/flap-lever", 3);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 3) {
+			setprop("/controls/flight/slats", 1.00);
+			setprop("/controls/flight/flaps", 0.70);
+			setprop("/controls/flight/flap-lever", 4);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 4) {
+			setprop("/controls/flight/slats", 1.00);
+			setprop("/controls/flight/flaps", 1.00);
+			setprop("/controls/flight/flap-lever", 5);
+			return;
+		}
+	} else if (step == -1) {
+		if (getprop("/controls/flight/flap-lever") == 5) {
+			setprop("/controls/flight/slats", 1.00);
+			setprop("/controls/flight/flaps", 0.70);
+			setprop("/controls/flight/flap-lever", 4);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 4) {
+			setprop("/controls/flight/slats", 1.00);
+			setprop("/controls/flight/flaps", 0.58);
+			setprop("/controls/flight/flap-lever", 3);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 3) {
+			setprop("/controls/flight/slats", 1.00);
+			setprop("/controls/flight/flaps", 0.31);
+			setprop("/controls/flight/flap-lever", 2);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 2) {
+			setprop("/controls/flight/slats", 1.00);
+			setprop("/controls/flight/flaps", 0.00);
+			setprop("/controls/flight/flap-lever", 1);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 1) {
+			setprop("/controls/flight/slats", 0.00);
+			setprop("/controls/flight/flaps", 0.00);
+			setprop("/controls/flight/flap-lever", 0);
+			return;
+		}
+	} else {
+		return 0;
 	}
-    }
-    if (step < 0) {
-	if (getprop("controls/flight/flaps") == 0 and getprop("systems/hydraulic/equipment/enable-slat"))
-	    setprop("controls/flight/slats",0);
-    }
-    if (getprop("systems/hydraulic/equipment/enable-flap")) {
-        if(step == 0) return;
-	if(step > 0 and getprop("gear/gear[0]/wow")) setprop("controls/flight/droop",1);
-        if(props.globals.getNode("/sim/flaps") != nil) {
-                globals.controls.stepProps("/controls/flight/flaps", "/sim/flaps", step);
-                return;
-        }
-        # Hard-coded flaps movement in 3 equal steps:
-        var val = 0.3333334 * step + getprop("/controls/flight/flaps");
-        setprop("/controls/flight/flaps", val > 1 ? 1 : val < 0 ? 0 : val);
-    }
-    if (getprop("controls/flight/flaps") == 0) setprop("controls/flight/droop",0);
 }
 setlistener("controls/flight/flaps", func { controls.click(6) } );
 

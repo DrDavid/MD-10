@@ -5,9 +5,9 @@
 <airplane version="YASIM_VERSION_32" mass="283975">
     <!-- Approach configuration based on stall chart http://tinypic.com/hsqd1l.jpg (from airliners.net thread http://www.airliners.net/aviation-forums/tech_ops/read.main/135496/) -->
     <approach speed="134" aoa="4.0" fuel="0.2">
-	<control-setting axis="/controls/engines/engine[0]/throttle-act" value="0.4" />
-	<control-setting axis="/controls/engines/engine[1]/throttle-act" value="0.4" />
-	<control-setting axis="/controls/engines/engine[2]/throttle-act" value="0.4" />
+	<control-setting axis="/controls/engines/engine[0]/throttle-act" value="0.6" />
+	<control-setting axis="/controls/engines/engine[1]/throttle-act" value="0.6" />
+	<control-setting axis="/controls/engines/engine[2]/throttle-act" value="0.6" />
 	<control-setting axis="/controls/flight/flaps" value="1.0" />
 	<control-setting axis="/controls/flight/slats" value="1.0" />
 	<control-setting axis="/controls/gear/gear-down" value="1.0" />

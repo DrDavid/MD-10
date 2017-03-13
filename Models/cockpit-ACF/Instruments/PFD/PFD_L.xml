@@ -22,6 +22,7 @@
         </condition>
     </animation>
 	
+	
 	<!-- Flight Director System -->
     <animation>
         <type>select</type>
@@ -2103,7 +2104,7 @@
 	</animation>
 	
     <text>
-        <name>Flap13</name>
+        <name>Flap15</name>
         <offsets>
             <x-m>0.0025</x-m>
             <y-m>-0.086</y-m>
@@ -2112,7 +2113,7 @@
         <alignment>left-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
 		<type>literal</type>
-		<text>FLAPS 13</text>
+		<text>FLAPS 15</text>
         <font>helvetica_bold.txf</font>
         <character-size>0.006</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -2124,7 +2125,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>Flap13</object-name>
+		<object-name>Flap15</object-name>
 		<condition>
 			<equals>
 				<property>/controls/flight/flap-lever</property>
@@ -2134,7 +2135,7 @@
 	</animation>
 	
     <text>
-        <name>Flap18</name>
+        <name>Flap28</name>
         <offsets>
             <x-m>0.0025</x-m>
             <y-m>-0.086</y-m>
@@ -2143,7 +2144,7 @@
         <alignment>left-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
 		<type>literal</type>
-		<text>FLAPS 18</text>
+		<text>FLAPS 28</text>
         <font>helvetica_bold.txf</font>
         <character-size>0.006</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -2155,7 +2156,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>Flap18</object-name>
+		<object-name>Flap28</object-name>
 		<condition>
 			<equals>
 				<property>/controls/flight/flap-lever</property>
@@ -2165,7 +2166,7 @@
 	</animation>
 	
     <text>
-        <name>Flap25</name>
+        <name>Flap35</name>
         <offsets>
             <x-m>0.0025</x-m>
             <y-m>-0.086</y-m>
@@ -2174,7 +2175,7 @@
         <alignment>left-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
 		<type>literal</type>
-		<text>FLAPS 25</text>
+		<text>FLAPS 35</text>
         <font>helvetica_bold.txf</font>
         <character-size>0.006</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -2186,7 +2187,7 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>Flap25</object-name>
+		<object-name>Flap35</object-name>
 		<condition>
 			<equals>
 				<property>/controls/flight/flap-lever</property>
@@ -2196,7 +2197,7 @@
 	</animation>
 	
     <text>
-        <name>Flap40</name>
+        <name>Flap50</name>
         <offsets>
             <x-m>0.0025</x-m>
             <y-m>-0.086</y-m>
@@ -2205,7 +2206,7 @@
         <alignment>left-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
 		<type>literal</type>
-		<text>FLAPS 40</text>
+		<text>FLAPS 50</text>
         <font>helvetica_bold.txf</font>
         <character-size>0.006</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -2217,7 +2218,7 @@
 
 	<animation>
 		<type>select</type>
-		<object-name>Flap40</object-name>
+		<object-name>Flap50</object-name>
 		<condition>
 			<equals>
 				<property>/controls/flight/flap-lever</property>

@@ -2077,16 +2077,10 @@
 		<type>select</type>
 		<object-name>Slat</object-name>
 		<condition>
-			<and>
-				<equals>
-					<property>/controls/flight/flap-lever</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<property>/controls/flight/flaps</property>
-					<value>0.00</value>
-				</equals>
-			</and>
+			<equals>
+				<property>/controls/flight/flap-lever</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 	
@@ -2115,8 +2109,8 @@
 		<object-name>Flap15</object-name>
 		<condition>
 			<equals>
-				<property>/controls/flight/flaps</property>
-				<value>0.31</value>
+				<property>/controls/flight/flap-lever</property>
+				<value>2</value>
 			</equals>
 		</condition>
 	</animation>
@@ -2146,8 +2140,8 @@
 		<object-name>Flap28</object-name>
 		<condition>
 			<equals>
-				<property>/controls/flight/flaps</property>
-				<value>0.58</value>
+				<property>/controls/flight/flap-lever</property>
+				<value>3</value>
 			</equals>
 		</condition>
 	</animation>
@@ -2177,8 +2171,8 @@
 		<object-name>Flap35</object-name>
 		<condition>
 			<equals>
-				<property>/controls/flight/flaps</property>
-				<value>0.70</value>
+				<property>/controls/flight/flap-lever</property>
+				<value>4</value>
 			</equals>
 		</condition>
 	</animation>
@@ -2208,8 +2202,8 @@
 		<object-name>Flap50</object-name>
 		<condition>
 			<equals>
-				<property>/controls/flight/flaps</property>
-				<value>1.00</value>
+				<property>/controls/flight/flap-lever</property>
+				<value>5</value>
 			</equals>
 		</condition>
 	</animation>
