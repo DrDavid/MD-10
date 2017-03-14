@@ -348,6 +348,10 @@
 		</settings>
 		<custom>
 			<afds-ovrd>0</afds-ovrd>
+			<vs-fpa>0</vs-fpa>
+			<kts-sel>200</kts-sel>
+			<mach-sel>0.68</mach-sel>
+			<hdg-sel>360</hdg-sel>
 		</custom>
 	</it-autoflight>
     
