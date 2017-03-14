@@ -65,7 +65,7 @@
 <!-- PFD Primary Flight Display Copilot-->
 
 <model>
-<path>Aircraft/MD-10/Models/cockpit-ACF/Instruments/PFD/PFD_L.xml</path>
+<path>Aircraft/MD-10/Models/cockpit-ACF/Instruments/PFD/PFD_R.xml</path>
 <offsets>
 <x-m>-3.05</x-m>
 <y-m>0.6820</y-m>

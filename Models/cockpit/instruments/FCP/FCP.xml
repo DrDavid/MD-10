@@ -1268,6 +1268,11 @@
         <action>
             <button>0</button>
             <repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>/it-autoflight/input/vert</property>
+				<value>8</value>
+			</binding>
             <binding>
                 <command>nasal</command>
                 <script>controls.click(4);</script>

@@ -331,6 +331,8 @@ var wiper = Wiper.new("controls/electric/wipers","systems/electrical/bus-volts")
 setlistener("sim/signals/fdm-initialized", func {
 	itaf.ap_init();
 	var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");
+	setprop("/it-autoflight/input/fd1", 1);
+	setprop("/it-autoflight/input/fd2", 1);
 	setprop("/controls/flight/zero", "0");
     SndOut.setDoubleValue(0.15);
     chronometer.stop();
@@ -1257,4 +1259,16 @@ setlistener("/it-autoflight/input/spd-mach", func {
 
 setlistener("/it-autoflight/input/hdg", func {
 	setprop("/it-autoflight/custom/hdg-sel", abs(getprop("/it-autoflight/input/hdg")));
+});
+
+setlistener("/it-autoflight/output/vert", func {
+	if (getprop("/it-autoflight/output/vert") == 1) {
+		setprop("/it-autoflight/custom/vs-fpa", 0);
+	}
+});
+
+setlistener("/it-autoflight/output/vert", func {
+	if (getprop("/it-autoflight/output/vert") == 5) {
+		setprop("/it-autoflight/custom/vs-fpa", 1);
+	}
 });
