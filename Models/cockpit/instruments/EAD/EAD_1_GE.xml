@@ -44,7 +44,7 @@
 	  <animation>
     <type>rotate</type>
 		<object-name>limit1</object-name>
-    <property>engines/engine[0]/n1-limit</property>
+    <property>controls/engines/n1limx100</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
 <entry><ind>110</ind><dep>180</dep></entry>
@@ -162,7 +162,7 @@
 	  <animation>
     <type>rotate</type>
 		<object-name>limit2</object-name>
-    <property>engines/engine[1]/n1-limit</property>
+    <property>controls/engines/n1limx100</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
 <entry><ind>110</ind><dep>180</dep></entry>
@@ -280,7 +280,7 @@
 	  <animation>
     <type>rotate</type>
 		<object-name>limit3</object-name>
-    <property>engines/engine[2]/n1-limit</property>
+    <property>controls/engines/n1limx100</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
 <entry><ind>110</ind><dep>180</dep></entry>
@@ -487,7 +487,7 @@
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%3.1f T/O LIM</format>
-        <property>engines/engine[1]/n1-limit</property>
+        <property>controls/engines/n1limx100</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.0065</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
