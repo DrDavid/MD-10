@@ -5,10 +5,20 @@
 	
   <apoff>
    <name>apoff</name>
-   <mode>looped</mode>
    <path>/Aircraft/MD-10/Sounds/apoff.wav</path>
    <condition>
-     <property>/controls/switches/apoffsound</property>
+	 <property>/it-autoflight/sound/apoffsound</property>
+   </condition>
+   <volume>
+    <factor>10.0</factor>
+   </volume>
+  </apoff>
+  
+  <apoff>
+   <name>apoff2</name>
+   <path>/Aircraft/MD-10/Sounds/apoff.wav</path>
+   <condition>
+	 <property>/it-autoflight/sound/apoffsound2</property>
    </condition>
    <volume>
     <factor>10.0</factor>
