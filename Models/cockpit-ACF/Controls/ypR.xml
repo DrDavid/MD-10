@@ -73,14 +73,15 @@
 				<value type="bool">false</value>
 			    </binding>
 			</mod-up>
-			<!--binding>
-				<command>property-assign</command>
-				<property>instrumentation/afds/inputs/AP</property>
-				<value>0</value>
-			</binding-->
 			<binding>
-				<command>nasal</command>
-				<script>MD11.afds.APyokebtn(); controls.click(1);</script>
+				<command>property-assign</command>
+				<property>/it-autoflight/input/ap1</property>
+				<value>0</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>/it-autoflight/input/ap2</property>
+				<value>0</value>
 			</binding>
 		</action>
 	</animation>
