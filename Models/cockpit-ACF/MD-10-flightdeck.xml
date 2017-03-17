@@ -188,8 +188,8 @@
 <model>
 <path>Aircraft/MD-10/Models/cockpit-ACF/Instruments/RadioPanel/radiopanel-left.xml</path>
 <offsets>
-<x-m>-2.920</x-m>
-<y-m>-0.950</y-m>
+<x-m>-2.630</x-m>
+<y-m>-0.955</y-m>
 <z-m>0.706</z-m>
 <pitch-deg>-95</pitch-deg>
 </offsets>
@@ -197,8 +197,8 @@
 <model>
 <path>Aircraft/MD-10/Models/cockpit-ACF/Instruments/RadioPanel/radiopanel-right.xml</path>
 <offsets>
-<x-m>-2.920</x-m>
-<y-m>0.950</y-m>
+<x-m>-2.630</x-m>
+<y-m>0.955</y-m>
 <z-m>0.706</z-m>
 <pitch-deg>-95</pitch-deg>
 </offsets>
@@ -219,18 +219,6 @@
 <y-m>0.003</y-m>
 <z-m>0.640</z-m>
 <pitch-deg>-87</pitch-deg>
-</offsets>
-</model>
-
-<!-- GPS KNL90B from Beechcraft 1900D -->
-
-<model>
-<path>Aircraft/MD-10/Models/cockpit-ACF/Instruments/KLN90B/kln90b.xml</path>
-<offsets>
-<x-m>-3.000</x-m>
-<y-m>-0.584</y-m>
-<z-m>1.120</z-m>
-<pitch-deg>-10</pitch-deg>
 </offsets>
 </model>
 
