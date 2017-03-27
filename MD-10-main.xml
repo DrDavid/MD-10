@@ -286,10 +286,10 @@
 	<it-autoflight>
 		<config>
 			<roll>
-				<umin>-0.60</umin>
-				<umax>0.60</umax>
+				<umin>-0.45</umin>
+				<umax>0.45</umax>
 				<kp>0.09</kp>
-				<kp-vloc>0.12</kp-vloc>
+				<kp-vloc>0.09</kp-vloc>
 				<ti>10.0</ti>
 				<td>0.00001</td>
 				<kp-cws>0.09</kp-cws>
@@ -303,8 +303,9 @@
 				<kp-cws>-0.07</kp-cws>
 			</pitch>
 			<cmd>
-				<roll-scale>6.8</roll-scale>
-				<vorloc>-4.5</vorloc>
+				<roll-kp>-2.1</roll-kp>
+				<roll-scale>1.7</roll-scale>
+				<vorloc>-5.0</vorloc>
 				<alt>0.03</alt>
 				<vs>0.07</vs>
 				<fpa>0.30</fpa>
