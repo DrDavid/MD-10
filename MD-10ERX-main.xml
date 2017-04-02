@@ -301,60 +301,61 @@
         
     </sim>
 	
-	<it-autoflight>
-		<config>
-			<roll>
-				<umin>-0.45</umin>
-				<umax>0.45</umax>
-				<kp>0.09</kp>
-				<kp-vloc>0.09</kp-vloc>
-				<ti>10.0</ti>
-				<td>0.00001</td>
-				<kp-cws>0.09</kp-cws>
-			</roll>
-			<pitch>
-				<umin>-0.50</umin>
-				<umax>0.50</umax>
-				<kp>-0.08</kp>
-				<ti>10.0</ti>
-				<td>0.0001</td>
-				<kp-cws>-0.07</kp-cws>
-			</pitch>
-			<cmd>
-				<roll-kp>-2.1</roll-kp>
-				<roll-scale>1.7</roll-scale>
-				<vorloc>-5.0</vorloc>
-				<alt>0.03</alt>
-				<vs>0.07</vs>
-				<fpa>0.30</fpa>
-				<flch>-4.0</flch>
-				<gs>0.11</gs>
-			</cmd>
-			<autoland>
-				<kp-roll>0.10</kp-roll>
-				<kp-pitch>0.07</kp-pitch>
-				<kp-rudder>-0.3</kp-rudder>
-			</autoland>
-		</config>
-		<settings>
-			<enable-cws>0</enable-cws> <!-- Enable/Disable CWS -->
-			<flare-altitude>20</flare-altitude> <!-- Autoland Flare AGL -->
-			<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
-			<land-flap>0.7</land-flap> <!-- Minimum Flap used for Landing -->
-			<retard-ft>40</retard-ft> <!-- Enable Thrust Retard -->
-			<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
-			<togaspd>161</togaspd> <!-- V2 + 10kts -->
-			<lat-agl-ft>200</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to HDG, or LNAV -->
-			<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
-		</settings>
-		<custom>
-			<afds-ovrd>0</afds-ovrd>
-			<vs-fpa>0</vs-fpa>
-			<kts-sel>200</kts-sel>
-			<mach-sel>0.68</mach-sel>
-			<hdg-sel>360</hdg-sel>
-		</custom>
-	</it-autoflight>
+<it-autoflight>
+	<config>
+		<roll>
+			<umin>-0.45</umin>
+			<umax>0.45</umax>
+			<kp>0.09</kp>
+			<kp-vloc>0.09</kp-vloc>
+			<ti>10.0</ti>
+			<td>0.00001</td>
+			<kp-cws>0.09</kp-cws>
+		</roll>
+		<pitch>
+			<umin>-0.50</umin>
+			<umax>0.50</umax>
+			<kp>-0.08</kp>
+			<ti>10.0</ti>
+			<td>0.0001</td>
+			<kp-cws>-0.07</kp-cws>
+		</pitch>
+		<cmd>
+			<roll-kp>-2.1</roll-kp>
+			<roll-scale>1.7</roll-scale>
+			<vorloc>-5.0</vorloc>
+			<alt>0.03</alt>
+			<vs>0.07</vs>
+			<fpa>0.30</fpa>
+			<flch>-4.0</flch>
+			<gs>0.11</gs>
+		</cmd>
+		<autoland>
+			<kp-roll>0.10</kp-roll>
+			<kp-pitch>0.07</kp-pitch>
+			<kp-rudder>-0.3</kp-rudder>
+		</autoland>
+	</config>
+	<settings>
+		<default-bank-limit>30</default-bank-limit> <!-- Set the Default Bank Limit -->
+		<enable-cws>0</enable-cws> <!-- Enable/Disable CWS -->
+		<flare-altitude>20</flare-altitude> <!-- Autoland Flare AGL -->
+		<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
+		<land-flap>0.7</land-flap> <!-- Minimum Flap used for Landing -->
+		<retard-ft>40</retard-ft> <!-- Enable Thrust Retard -->
+		<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
+		<togaspd>161</togaspd> <!-- V2 + 10kts -->
+		<lat-agl-ft>200</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to HDG, or LNAV -->
+		<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
+	</settings>
+	<custom>
+		<afds-ovrd>0</afds-ovrd>
+		<vs-fpa>0</vs-fpa>
+		<kts-sel>200</kts-sel>
+		<mach-sel>0.68</mach-sel>
+		<hdg-sel>360</hdg-sel>
+	</custom>
+</it-autoflight>
     
     <steering-mode>0</steering-mode>
     
