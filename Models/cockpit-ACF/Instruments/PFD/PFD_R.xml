@@ -1104,6 +1104,49 @@
             <height type="int">64</height>
         </font-resolution>
     </text>
+	
+    <text>
+        <name>APVertM</name>
+        <offsets>
+            <x-m>0.004</x-m>
+            <y-m>0.038</y-m>
+            <z-m>0.075</z-m>
+        </offsets>
+        <alignment>center-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">text-value</type>
+        <format type="string">%s</format>
+		<property>/modes/pfd/fma/pitch-mode</property>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.007</character-size>
+        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">64</width>
+            <height type="int">64</height>
+        </font-resolution>
+    </text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>APVert</object-name>
+		<condition>
+			<not-equals>
+				<property>/it-autoflight/output/vert</property>
+				<value>8</value>
+			</not-equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>APVertM</object-name>
+		<condition>
+			<equals>
+				<property>/it-autoflight/output/vert</property>
+				<value>8</value>
+			</equals>
+		</condition>
+	</animation>
 
     <text>
         <name>APVertArm</name>
@@ -1647,6 +1690,7 @@
         <type>material</type><!--magenta-->
         <object-name>TRK-annun</object-name>
 		<object-name>APLatM</object-name>
+		<object-name>APVertM</object-name>
         <emission>
             <red>0.7</red>
             <green>0.3</green>
