@@ -330,7 +330,7 @@ var wiper = Wiper.new("controls/electric/wipers","systems/electrical/bus-volts")
 
 setlistener("sim/signals/fdm-initialized", func {
 	itaf.ap_init();
-	var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-88/Systems/autopilot-dlg.xml");
+	var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/MD-10/Systems/autopilot-dlg.xml");
 	setprop("/it-autoflight/input/fd1", 1);
 	setprop("/it-autoflight/input/fd2", 1);
 	setprop("/controls/flight/zero", "0");
