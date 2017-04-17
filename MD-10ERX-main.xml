@@ -154,21 +154,6 @@
                             <script>dialogs.tiller_steering.open()</script>
                         </binding>
                     </item>
-		    <item>
-			<label>Toggle Skyboat Steering</label>
-			<binding>
-			    <command>nasal</command>
-			    <script>
-				if (getprop("/steering-mode") == 0) {
-					setprop("/steering-mode", "1");
-					gui.popupTip("Tiller Steering set to SKYBOAT mode!");
-				} else if (getprop("/steering-mode") == 1) {
-					setprop("/steering-mode", "0");
-					gui.popupTip("Tiller Steering set to NORMAL mode!");
-				}
-			    </script>
-			</binding>
-		    </item>
                 </menu>
             </default>
         </menubar>
@@ -356,8 +341,6 @@
 		<hdg-sel>360</hdg-sel>
 	</custom>
 </it-autoflight>
-    
-    <steering-mode>0</steering-mode>
     
         <gear n="0">
         <gear n="0">
