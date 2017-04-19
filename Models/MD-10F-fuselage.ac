@@ -5525,7 +5525,7 @@ kids 0
 OBJECT poly
 name "windshield.frames"
 loc -14.2799 5.15645 -0.00264508
-texture "/Applications/FlightGear.app/Contents/Resources/data/Aircraft/MD-11/Models/fan.png"
+texture "fan.png"
 crease 45.000000
 numvert 450
 -11.8801 1.21589 -0.147123
