@@ -234,6 +234,9 @@
 		<path>Aircraft/MD-10/Systems/MD11-flt-ctrls.xml</path>
 	    </autopilot>
 	    <autopilot>
+		<path>Aircraft/MD-10/Systems/steering.xml</path>
+	    </autopilot>
+	    <autopilot>
 		<path>Aircraft/MD-10/Systems/pressurization.xml</path>
 	    </autopilot>
             <!--autopilot>
