@@ -37,8 +37,8 @@
 
     <wing x="-1.08" y="3.0" z="4.235" length="28.06" chord="12.0" sweep="35.0" taper="0.31" camber="0.05" dihedral="6.4" incidence="3.6" twist="-2.9" idrag="1.15">
 	<stall aoa="8.0" width="5" peak="0.8" />
-	<flap0 start="0.0" end="0.52" lift="1.2" drag="1.4" />
-	<flap1 start="0.53" end="0.825" lift="1.2" drag="1.5" />
+	<flap0 start="0.0" end="0.52" lift="1.2" drag="1.5" />
+	<flap1 start="0.53" end="0.825" lift="1.2" drag="1.6" />
 	<slat start="0.0" end="0.85" aoa="3.0" drag="1.1" />
 	<spoiler start="0.03" end="0.45" lift="0.5" drag="1.6" />
 	<control-input axis="/controls/flight/flaps" control="FLAP0"/>
@@ -66,9 +66,9 @@
     </wing>
 
     <!-- Horizontal stabilizers -->
-    <hstab x="-19.448" y="0.91" z="5.632" length="11.5" chord="8.0" sweep="30.0" taper="0.4" dihedral="10.6" camber="-0.1" twist="-1.0" idrag="1.1">
+    <hstab x="-19.448" y="0.91" z="5.632" length="13.5" chord="8.0" sweep="30.0" taper="0.4" dihedral="10.6" camber="-0.1" twist="-1.0" idrag="1.1">
 	<stall aoa="15.0" width="7" peak="1.5" />
-	<flap0 start="0.0" end="1.0" lift="1.5" drag="1.3" />
+	<flap0 start="0.0" end="1.0" lift="1.7" drag="1.3" />
 	<control-input axis="/controls/flight/elevator-pos" control="FLAP0" src0="-1.0" dst0="-0.7" src1="1.0" dst1="0.7"/>
 	<control-input axis="/controls/flight/elevator-trim" control="FLAP0" />
 	<control-output control="FLAP0"  prop="/surface-positions/elevator-pos-norm" />
@@ -92,21 +92,21 @@
     <fuselage ax="-14.534" ay="0.0" az="9.654" bx="-24.871" by="0.0" bz="9.293" width="2.84" taper="0.94" midpoint="0.0" />
     <fuselage ax="7.142" ay="-8.138" az="2.536" bx="2.461" by="-8.138" bz="2.536" width="2.742" taper="0.94" midpoint="0.0" />
     <!-- Actual engines -->
-    <jet x="3.541" y="8.138" z="3.541" mass="9047.0" thrust="52500.0" afterburner="0" rotate="0.0" n1-idle="23.4" n1-max="110.0" n2-idle="64.7" n2-max="108.0" tsfc="0.332" egt="700.0" epr="2.0" exhaust-speed="1555.0" spool-time="3.0">
+    <jet x="3.541" y="8.138" z="3.541" mass="9047.0" thrust="61500.0" afterburner="0" rotate="0.0" n1-idle="23.4" n1-max="110.0" n2-idle="64.7" n2-max="108.0" tsfc="0.332" egt="700.0" epr="2.0" exhaust-speed="1555.0" spool-time="3.0">
 	<control-input axis="/controls/engines/engine[0]/throttle-act" control="THROTTLE" />
 	<control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST" />
 	<control-output control="REVERSE_THRUST" prop="/engines/engine[0]/reverser-pos-norm" />
 	<control-speed control="REVERSE_THRUST" transition-time="1.0" />
 	<actionpt x="2.461" y="8.138" z="2.536" />
     </jet>
-    <jet x="-30.564" y="0.0" z="10.5002" mass="9047.0" thrust="52500.0" afterburner="0" rotate="0.0" n1-idle="23.4" n1-max="110.0" n2-idle="64.7" n2-max="108.0" tsfc="0.332" egt="700.0" epr="2.0" exhaust-speed="1555.0" spool-time="3.0">
+    <jet x="-30.564" y="0.0" z="10.5002" mass="9047.0" thrust="61500.0" afterburner="0" rotate="0.0" n1-idle="23.4" n1-max="110.0" n2-idle="64.7" n2-max="108.0" tsfc="0.332" egt="700.0" epr="2.0" exhaust-speed="1555.0" spool-time="3.0">
 	<control-input axis="/controls/engines/engine[1]/throttle-act" control="THROTTLE" />
 	<control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST" />
 	<control-output control="REVERSE_THRUST" prop="/engines/engine[1]/reverser-pos-norm" />
 	<control-speed control="REVERSE_THRUST" transition-time="1.0" />
 	<actionpt x="-24.871" y="0.0" z="9.293" />
     </jet>
-    <jet x="3.541" y="-8.138" z="3.541" mass="9047.0" thrust="52500.0" afterburner="0" rotate="0.0" n1-idle="23.4" n1-max="110.0" n2-idle="64.7" n2-max="108.0" tsfc="0.332" egt="700.0" epr="2.0" exhaust-speed="1555.0" spool-time="3.0">
+    <jet x="3.541" y="-8.138" z="3.541" mass="9047.0" thrust="61500.0" afterburner="0" rotate="0.0" n1-idle="23.4" n1-max="110.0" n2-idle="64.7" n2-max="108.0" tsfc="0.332" egt="700.0" epr="2.0" exhaust-speed="1555.0" spool-time="3.0">
 	<control-input axis="/controls/engines/engine[2]/throttle-act" control="THROTTLE" />
 	<control-input axis="/controls/engines/engine[2]/reverser" control="REVERSE_THRUST" />
 	<control-output control="REVERSE_THRUST" prop="/engines/engine[2]/reverser-pos-norm" />
@@ -146,11 +146,11 @@
     </gear>
     <!-- Fuel and payload -->
     <!-- Left wing tanks-->
-    <tank x="-3.0" y="7.5" z="3.5" jet="true" capacity="40602" />
+    <tank x="3.0" y="7.5" z="3.5" jet="true" capacity="40602" />
     <!-- Center tank -->
-    <tank x="-1.08" y="0.0" z="3.0503" jet="true" capacity="64038" />
+    <tank x="1.08" y="0.0" z="3.0503" jet="true" capacity="64038" />
     <!-- Right wing tanks -->
-    <tank x="-3.0" y="-7.5" z="3.5" jet="true" capacity="40602" />
+    <tank x="3.0" y="-7.5" z="3.5" jet="true" capacity="40602" />
     
     
     <tank x="-1.08" y="0.0" z="3.0503" jet="true" capacity="98108" />
@@ -158,9 +158,9 @@
 
     <!-- Ballast to adjust center of gravity -->
     <!-- Redistribute the mass toward the nose -->
-    <ballast x="25.0" y="0.0" z="2.3" mass="50000.0" />
+    <ballast x="16.0" y="0.0" z="2.3" mass="50000.0" />
     <!-- Weight of the main landing gear assemblies (approx.) -->
-    <ballast x="-8.8" y="0.0" z="2.3" mass="150000.0" />
+    <ballast x="-2.8" y="0.0" z="2.3" mass="150000.0" />
 
     <!-- Payload information from http://www.acp-logistics.com/DC-10-charter-mcdonnell-douglas.html -->
     <!-- Crew -->
