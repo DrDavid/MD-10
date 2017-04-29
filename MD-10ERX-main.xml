@@ -310,7 +310,7 @@
 			<roll-scale>1.7</roll-scale>
 			<vorloc>-5.0</vorloc>
 			<alt>0.03</alt>
-			<vs>0.03</vs>
+			<vs>0.05</vs>
 			<fpa>0.30</fpa>
 			<gs>0.11</gs>
 		</cmd>
