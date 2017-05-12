@@ -2,7 +2,7 @@
 
 <!-- McDonnell Douglas MD-10 -->
 
-<PropertyList>
+<PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
 
     <sim>
 	<author>Joshua Davidson (it0uchpods/411), J Maverick 16</author>
@@ -10,8 +10,8 @@
         <rating>
             <FDM type="int">3</FDM>
             <systems type="int">4</systems>
-            <cockpit type="int">3</cockpit>
-            <model type="int">5</model>
+            <cockpit type="int">4</cockpit>
+            <model type="int">4</model>
         </rating>
 	<shutterspeed type="double">0.18</shutterspeed>
 	<instrument-options>
