@@ -32,14 +32,14 @@
 		<type>rotate</type>
 		<object-name>BLimit.knob</object-name>
 		<object-name>BLimit.knob.indicator</object-name>
-		<property>/it-autoflight/input/bank-limit</property>
+		<property>/it-autoflight/input/bank-limit-sw</property>
 		<interpolation>
-			<entry><ind>5</ind><dep>300</dep></entry>
-			<entry><ind>10</ind><dep>240</dep></entry>
-			<entry><ind>15</ind><dep>180</dep></entry>
-			<entry><ind>20</ind><dep>120</dep></entry>
-			<entry><ind>25</ind><dep>60</dep></entry>
-			<entry><ind>30</ind><dep>0</dep></entry>
+			<entry><ind>1</ind><dep>300</dep></entry>
+			<entry><ind>2</ind><dep>240</dep></entry>
+			<entry><ind>3</ind><dep>180</dep></entry>
+			<entry><ind>4</ind><dep>120</dep></entry>
+			<entry><ind>5</ind><dep>60</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
 		</interpolation>
 		<center>
             <x-m>-25.7153</x-m>
@@ -1237,10 +1237,10 @@
 					<property>systems/electrical/outputs/avionics</property>
 				</condition>
 				<command>property-adjust</command>
-				<property>/it-autoflight/input/bank-limit</property>
-				<step>5</step>
-				<min>5</min>
-				<max>35</max>
+				<property>/it-autoflight/input/bank-limit-sw</property>
+				<step>1</step>
+				<min>0</min>
+				<max>6</max>
 				<wrap>true</wrap>
 			</binding>
 		</action>
@@ -1252,10 +1252,10 @@
 					<property>systems/electrical/outputs/avionics</property>
 				</condition>
 				<command>property-adjust</command>
-				<property>/it-autoflight/input/bank-limit</property>
-				<step>-5</step>
-				<min>5</min>
-				<max>35</max>
+				<property>/it-autoflight/input/bank-limit-sw</property>
+				<step>-1</step>
+				<min>0</min>
+				<max>6</max>
 				<wrap>true</wrap>
 			</binding>
 		</action>
