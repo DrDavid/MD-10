@@ -70,12 +70,6 @@
         </constant>
     </autopilot>
     
-    <nasal n="0">
-        <MD11>
-            <file>Aircraft/MD-10/Nasal/liveriesERX.nas</file>
-        </MD11>
-    </nasal>
-
 	<limits>
 	    <mass-and-balance>
 		<maximum-takeoff-mass-lbs>602500</maximum-takeoff-mass-lbs>
