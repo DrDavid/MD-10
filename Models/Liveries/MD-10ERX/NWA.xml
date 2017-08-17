@@ -6,7 +6,7 @@
 		<model>
 			<livery>
 				<name>Northwest Airlines (Old -2003)</name>
-				<texture>Liveries/MD-10ACF/NWA.png</texture>
+				<texture>Liveries/MD-10ERX/NWA.png</texture>
 				<registration>N223NW</registration>
 				<has-center-gear type="bool">true</has-center-gear>
 			</livery>

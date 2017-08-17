@@ -6,7 +6,7 @@
 		<model>
 			<livery>
 				<name>Alitalia</name>
-				<texture>Liveries/MD-10ACF/AZA.png</texture>
+				<texture>Liveries/MD-10ERX/AZA.png</texture>
 				<registration>I-DYNU</registration>
 				<has-center-gear type="bool">true</has-center-gear>
 			</livery>

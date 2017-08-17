@@ -6,7 +6,7 @@
 		<model>
 			<livery>
 				<name>Lufthansa</name>
-				<texture>Liveries/MD-10ACF/DLH.png</texture>
+				<texture>Liveries/MD-10ERX/DLH.png</texture>
 				<registration>D-ADMO</registration>
 				<enable-configuration-switch type="bool">true</enable-configuration-switch>
 				<has-center-gear type="bool">true</has-center-gear>

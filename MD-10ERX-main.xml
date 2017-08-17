@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <!-- McDonnell Douglas MD-10-Family -->
 
@@ -817,6 +817,7 @@
 			<file>Aircraft/MD-10/Nasal/gear-tilt.nas</file>
 			<file>Aircraft/MD-10/Nasal/efis.nas</file>
 			<file>Aircraft/MD-10/Nasal/PFD_FMA.nas</file>
+			<file>Aircraft/MD-10/Nasal/liveriesERX.nas</file>
 		</MD11>
 		<itaf>
 			<file>Aircraft/MD-10/Nasal/it-autoflight.nas</file>

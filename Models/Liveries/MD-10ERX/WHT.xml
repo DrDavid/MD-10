@@ -6,7 +6,7 @@
 		<model>
 			<livery>
 				<name>Blank</name>
-				<texture>Liveries/MD-10ACF/WHT.png</texture>
+				<texture>Liveries/MD-10ERX/WHT.png</texture>
 				<registration>N366FE</registration>
 				<configuration type="string">cargo</configuration>
 				<enable-configuration-switch type="bool">false</enable-configuration-switch>

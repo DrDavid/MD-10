@@ -5,7 +5,7 @@
     <model>
 		<livery>
 			<name type="string">Laker Airways (Skytrain)</name>
-			<texture>Liveries/MD-10ACF/G-AZZC.png</texture>
+			<texture>Liveries/MD-10ERX/G-AZZC.png</texture>
 			<registration>G-AZZC</registration>
 			<has-center-gear type="bool">true</has-center-gear>
 		</livery>
