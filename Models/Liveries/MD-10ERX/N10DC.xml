@@ -4,7 +4,7 @@
   <sim><model>
     <livery>
       <name>DC-10 Prototype _ N10DC _</name>
-      <texture>Liveries/MD-10ACF/N10DC.png</texture>
+      <texture>Liveries/MD-10ERX/N10DC.png</texture>
       <registration>N10DC</registration>
     <has-center-gear type="bool">true</has-center-gear></livery>
   </model></sim>
