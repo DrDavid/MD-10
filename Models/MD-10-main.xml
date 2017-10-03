@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10 -->
+<!-- McDonnell Douglas MD-10-Family -->
 <!-- Main model, all variants -->
 
 <PropertyList>
@@ -11,7 +11,7 @@
 
 			# MP props
 			var vals = model.getNode("sim/multiplay/generic");
-			var props_file = io.read_properties("Aircraft/MD-10/Systems/MD-10-multiplayer.xml");
+			var props_file = io.read_properties("Aircraft/MD-10/Systems/MD-10multiplayer.xml");
 			foreach (var ref; props_file.getChildren("reference"))
 			{
 				var val = vals.getChild(ref.getNode("type").getValue(), ref.getNode("index").getValue(), 1);
@@ -68,11 +68,11 @@
 
 	<model>
 		<name>Flight deck</name>
-		<path>Aircraft/MD-10/Models/Flightdeck/MD-10-flightdeck.xml</path>
+		<path>Aircraft/MD-10/Models/cockpit/cockpit.xml</path>
 		<offsets>
-			<x-m>-23</x-m>
+			<x-m>1.65</x-m>
 			<y-m>0</y-m>
-			<z-m>4.74</z-m>
+			<z-m>-1.2</z-m>
 		</offsets>
 	</model>
 
@@ -369,7 +369,7 @@
 		<path>Aircraft/MD-10/Models/Effects/tyre-smoke.xml</path>
 		<overlay>
 			<params>
-				<tyre-smoke>gear/gear[2]/tyre-smoke</tyre-smoke>
+				<tyre-smoke>gear/gear[1]/tyre-smoke</tyre-smoke>
 			</params>
 		</overlay>
 		<offsets>
@@ -383,9 +383,9 @@
 		<path>Aircraft/MD-10/Models/Effects/rain.xml</path>
 		<overlay>
 			<params>
-				<spray>gear/gear[2]/spray</spray>
-				<sprayspeed-ms>gear/gear[2]/sprayspeed-ms</sprayspeed-ms>
-				<spray-density>gear/gear[2]/spray-density</spray-density>
+				<spray>gear/gear[1]/spray</spray>
+				<sprayspeed-ms>gear/gear[1]/sprayspeed-ms</sprayspeed-ms>
+				<spray-density>gear/gear[1]/spray-density</spray-density>
 			</params>
 		</overlay>
 		<offsets>
@@ -399,12 +399,12 @@
 		<path>Aircraft/MD-10/Models/Effects/tyre-smoke.xml</path>
 		<overlay>
 			<params>
-				<tyre-smoke>gear/gear[4]/tyre-smoke</tyre-smoke>
+				<tyre-smoke>gear/gear[2]/tyre-smoke</tyre-smoke>
 			</params>
 		</overlay>
 		<offsets>
 			<x-m>3.455</x-m>
-			<y-m>-5.25</y-m>
+			<y-m>5.25</y-m>
 			<z-m>-0.615</z-m>
 		</offsets>
 	</model>
@@ -413,14 +413,14 @@
 		<path>Aircraft/MD-10/Models/Effects/rain.xml</path>
 		<overlay>
 			<params>
-				<spray>gear/gear[4]/spray</spray>
-				<sprayspeed-ms>gear/gear[4]/sprayspeed-ms</sprayspeed-ms>
-				<spray-density>gear/gear[4]/spray-density</spray-density>
+				<spray>gear/gear[2]/spray</spray>
+				<sprayspeed-ms>gear/gear[2]/sprayspeed-ms</sprayspeed-ms>
+				<spray-density>gear/gear[2]/spray-density</spray-density>
 			</params>
 		</overlay>
 		<offsets>
 			<x-m>3.455</x-m>
-			<y-m>-5.25</y-m>
+			<y-m>5.25</y-m>
 			<z-m>-0.615</z-m>
 		</offsets>
 	</model>
@@ -429,7 +429,7 @@
 		<path>Aircraft/MD-10/Models/Effects/tyre-smoke.xml</path>
 		<overlay>
 			<params>
-				<tyre-smoke>gear/gear[5]/tyre-smoke</tyre-smoke>
+				<tyre-smoke>gear/gear[3]/tyre-smoke</tyre-smoke>
 			</params>
 		</overlay>
 		<offsets>
@@ -443,9 +443,9 @@
 		<path>Aircraft/MD-10/Models/Effects/rain.xml</path>
 		<overlay>
 			<params>
-				<spray>gear/gear[5]/spray</spray>
-				<sprayspeed-ms>gear/gear[5]/sprayspeed-ms</sprayspeed-ms>
-				<spray-density>gear/gear[5]/spray-density</spray-density>
+				<spray>gear/gear[3]/spray</spray>
+				<sprayspeed-ms>gear/gear[3]/sprayspeed-ms</sprayspeed-ms>
+				<spray-density>gear/gear[3]/spray-density</spray-density>
 			</params>
 		</overlay>
 		<offsets>

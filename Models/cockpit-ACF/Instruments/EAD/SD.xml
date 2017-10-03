@@ -1,0 +1,105 @@
+﻿
+<PropertyList>
+
+ <path>SD.ac</path>
+ 
+    <animation>
+    <type>scale</type>
+    <x-offset>1.1</x-offset>
+    <y-offset>1.1</y-offset>
+    <z-offset>1.1</z-offset>
+    </animation>
+	
+    <animation>
+        <type>select</type>
+        <object-name>Off</object-name>
+        <condition>
+            <less-than>
+                <property>systems/electrical/outputs/efis</property>
+                <value>15</value>
+            </less-than>
+        </condition>
+    </animation>
+
+
+	<model>
+		<name>CONFIG</name>
+		<path>Aircraft/MD-10/Models/cockpit/instruments/EAD/CONFIG.xml</path>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>CONFIG</object-name>
+		<condition>
+			<equals>
+				<property>/controls/sd/mode</property>
+				<value>CONFIG</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>STATUS</name>
+		<path>Aircraft/MD-10/Models/cockpit/instruments/EAD/STATUS.xml</path>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>STATUS</object-name>
+		<condition>
+			<equals>
+				<property>/controls/sd/mode</property>
+				<value>STATUS</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>MISC</name>
+		<path>Aircraft/MD-10/Models/cockpit/instruments/EAD/MISC.xml</path>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>MISC</object-name>
+		<condition>
+			<equals>
+				<property>/controls/sd/mode</property>
+				<value>MISC</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>CONSEQ</name>
+		<path>Aircraft/MD-10/Models/cockpit/instruments/EAD/CONSEQ.xml</path>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>CONSEQ</object-name>
+		<condition>
+			<equals>
+				<property>/controls/sd/mode</property>
+				<value>CONSEQ</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>ND</name>
+		<path>Aircraft/MD-10/Models/cockpit/instruments/EAD/ND.xml</path>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>ND</object-name>
+		<condition>
+			<equals>
+				<property>/controls/sd/mode</property>
+				<value>ND</value>
+			</equals>
+		</condition>
+	</animation>
+
+</PropertyList>

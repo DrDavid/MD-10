@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <filter>
+        <name>Steering Normal</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/controls/flight/rudder</property> 
+                    <entry><ind>-1.0</ind><dep>-1.0</dep></entry>
+                    <entry><ind> 0.0</ind><dep> 0.0</dep></entry>
+                    <entry><ind> 1.0</ind><dep> 1.0</dep></entry>
+                </table>
+            </expression>
+			<condition>
+				<equals>
+					<property>/controls/flight/auto-coordination</property>
+					<value>false</value>
+				</equals>
+			</condition>
+        </input>
+        <input> 
+            <expression>
+                <table>
+                    <property>/controls/flight/rudder</property> 
+                    <entry><ind>-0.5</ind><dep>-1.0</dep></entry>
+                    <entry><ind> 0.0</ind><dep> 0.0</dep></entry>
+                    <entry><ind> 0.5</ind><dep> 1.0</dep></entry>
+                </table>
+            </expression>
+			<condition>
+				<equals>
+					<property>/controls/flight/auto-coordination</property>
+					<value>true</value>
+				</equals>
+			</condition>
+        </input>
+		<output>/controls/gear/nosegear-steering-cmd-norm</output>
+    </filter>
+
+</PropertyList>

@@ -1,8 +1,0 @@
-Changelog:
-----------
-
-v0.0.1		initial alpha release
-
-v0.0.2		release for FG 2.4.0
-
-v0.0.3		release for FG 2.8.0

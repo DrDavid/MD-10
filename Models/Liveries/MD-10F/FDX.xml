@@ -10,7 +10,7 @@
 				<registration>N366FE</registration>
 				<configuration type="string">cargo</configuration>
 				<enable-configuration-switch type="bool">false</enable-configuration-switch>
-				<has-center-gear type="bool">false</has-center-gear>
+				<has-center-gear type="bool">true</has-center-gear>
 			</livery>
 		</model>
 	</sim>

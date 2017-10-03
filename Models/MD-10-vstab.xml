@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10 -->
+<!-- McDonnell Douglas MD-10-Family -->
 <!-- Vertical stabilizer model -->
 
 <PropertyList>
@@ -44,7 +44,7 @@
 		<type>translate</type>
 		<object-name>EngineReverser</object-name>
 		<object-name>EngineReverserRear</object-name>
-		<property>engines/engine[1]/reverser-pos-norm</property>
+		<property>sim/multiplay/generic/float[9]</property>
 		<factor>0.4</factor>
 		<axis>
 			<x1-m>23.527</x1-m>
@@ -61,7 +61,7 @@
 		<type>rotate</type>
 		<object-name>Rudder</object-name>
 		<property>surface-positions/rudder-pos-norm</property>
-		<factor>60</factor>
+		<factor>40</factor>
 		<axis>
 			<x1-m>21.217</x1-m>
 			<y1-m>0</y1-m>
@@ -83,12 +83,12 @@
 
 	<effect>
 		<name>Tail reflect</name>
-		<inherits-from>Aircraft/MD-10/Models/Effects/MD10reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10/Models/Effects/MD11reflect</inherits-from>
 		<object-name>Vstab</object-name>
 	</effect>
 	<effect>
 		<name>Intake reflect</name>
-		<inherits-from>Aircraft/MD-10/Models/Effects/MD10chrome_reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10/Models/Effects/MD11chrome_reflect</inherits-from>
 		<object-name>EngineIntake</object-name>
 	</effect>
 
